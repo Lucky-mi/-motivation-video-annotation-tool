@@ -77,7 +77,15 @@ class Config:
         if env_value:
             return env_value
         # 否则从配置文件读取
-        return self.get(f'api_keys.{service}')
+        def get(self, key: str, default=None) -> Optional[str]:
+            """获取配置值（支持点号访问）"""
+            keys = key.split('.')
+            value = self.config
+            for k in keys:
+                value = value.get(k, {})
+                if value == {}:
+                    return default
+            return value if value != {} else default
 
 # 全局配置实例
-config = Config()
+config: Config = Config()

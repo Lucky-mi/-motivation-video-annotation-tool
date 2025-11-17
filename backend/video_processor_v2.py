@@ -4,23 +4,28 @@
 """
 import cv2
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 from datetime import timedelta
-import google.generativeai as genai
 import json
 import re
+
+# Google Generative AI 导入（类型检查忽略）
+try:
+    import google.generativeai as genai  # type: ignore
+except ImportError:
+    genai = None  # 如果未安装，设为 None
 
 class SmartVideoProcessor:
     """智能视频处理器：结合传统方法和VLM"""
     
-    def __init__(self, output_dir: str = "data/keyframes", gemini_api_key: str = None):
+    def __init__(self, output_dir: str = "data/keyframes", gemini_api_key: Optional[str] = None):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
-        
+
         # 配置Gemini
-        if gemini_api_key:
-            genai.configure(api_key=gemini_api_key)
-            self.model = genai.GenerativeModel('gemini-1.5-flash')
+        if gemini_api_key and genai is not None:
+            genai.configure(api_key=gemini_api_key)  # type: ignore
+            self.model = genai.GenerativeModel('gemini-1.5-flash')  # type: ignore
         else:
             self.model = None
     
@@ -116,11 +121,11 @@ class SmartVideoProcessor:
     
     def analyze_video_with_gemini(self, video_path: str) -> Dict:
         """使用Gemini分析视频"""
-        if not self.model:
-            raise ValueError("未配置Gemini API key")
-        
+        if not self.model or genai is None:
+            raise ValueError("未配置Gemini API key或未安装google-generativeai")
+
         print(f"📤 正在上传视频到Gemini: {Path(video_path).name}")
-        video_file = genai.upload_file(path=video_path)
+        video_file = genai.upload_file(path=video_path)  # type: ignore
         print(f"✅ 上传完成，URI: {video_file.uri}")
         
         prompt = """

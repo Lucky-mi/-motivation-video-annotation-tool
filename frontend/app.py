@@ -139,9 +139,22 @@ def main():
         else:
             st.info("暂无视频，请上传或从文件夹加载")
     
-    # 主区域：视频处理
-    if st.session_state.current_video:
+    # 主区域：视频处理或标注
+    if st.session_state.get('show_annotation_editor', False):
+        # 显示标注编辑器
+        from frontend.annotation_editor import editor
+
+        # 返回按钮
+        if st.button("⬅️ 返回视频列表"):
+            st.session_state.show_annotation_editor = False
+            st.rerun()
+
+        st.markdown("---")
+        editor.render()
+
+    elif st.session_state.current_video:
         show_video_processing_area()
+
     else:
         st.info("👈 请从侧边栏选择或上传视频")
 
@@ -204,6 +217,23 @@ def show_video_processing_area():
     # 显示已提取的关键帧
     if st.session_state.keyframes:
         show_keyframes()
+
+        # 添加标注按钮
+        st.markdown("---")
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            if st.button("📝 开始标注", type="primary", use_container_width=True):
+                # 加载或创建标注
+                from frontend.annotation_editor import editor
+                annotation = editor.load_or_create_annotation(
+                    st.session_state.current_video,
+                    st.session_state.keyframes
+                )
+                st.session_state.current_annotation = annotation
+                st.session_state.show_annotation_editor = True
+                st.rerun()
+
 
 
 def extract_keyframes(video_path: str, mode: str):
