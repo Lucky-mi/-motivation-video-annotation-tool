@@ -10,5 +10,5 @@ extraction:
   max_frames: 50
 
 api_keys:
-  gemini: AIzaSyAvuJNymWF0IW7BQMKxEtAO6M3vTD6U5Mw # 或者直接填写你的API key
+  gemini: null# 或者直接填写你的API key
   openai: null
