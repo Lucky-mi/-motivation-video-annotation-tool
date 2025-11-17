@@ -55,16 +55,16 @@ def main():
                 "采样间隔（秒）",
                 min_value=1.0,
                 max_value=30.0,
-                value=float(config.get('extraction.interval_seconds', 5.0)),
+                value=config.get_float('extraction.interval_seconds', 5.0),
                 step=0.5
             )
             config.set('extraction.interval_seconds', interval)
-            
+
             max_frames = st.number_input(
                 "最大帧数",
                 min_value=10,
                 max_value=200,
-                value=int(config.get('extraction.max_frames', 50))
+                value=config.get_int('extraction.max_frames', 50)
             )
             config.set('extraction.max_frames', max_frames)
         
@@ -97,7 +97,7 @@ def main():
             
             if uploaded_files:
                 if st.button("💾 保存上传的视频"):
-                    video_dir = Path(config.get('paths.videos'))
+                    video_dir = Path(config.get_str('paths.videos', 'data/videos'))
                     video_dir.mkdir(parents=True, exist_ok=True)
                     
                     saved_count = 0
@@ -114,7 +114,7 @@ def main():
         with st.expander("📂 从本地文件夹加载"):
             local_folder = st.text_input(
                 "输入文件夹路径",
-                value=config.get('paths.videos'),
+                value=config.get_str('paths.videos', 'data/videos'),
                 key='local_folder'
             )
             
@@ -193,7 +193,7 @@ def show_video_processing_area():
         st.subheader("视频信息")
         try:
             processor = SmartVideoProcessor(
-                output_dir=config.get('paths.keyframes'),
+                output_dir=config.get_str('paths.keyframes', 'data/keyframes'),
                 gemini_api_key=config.get_api_key('gemini')
             )
             
@@ -239,7 +239,7 @@ def show_video_processing_area():
 def extract_keyframes(video_path: str, mode: str):
     """提取关键帧"""
     processor = SmartVideoProcessor(
-        output_dir=config.get('paths.keyframes'),
+        output_dir=config.get_str('paths.keyframes', 'data/keyframes'),
         gemini_api_key=config.get_api_key('gemini')
     )
     
@@ -249,8 +249,8 @@ def extract_keyframes(video_path: str, mode: str):
                 # 均匀采样
                 keyframes = processor.extract_uniform_frames(
                     video_path,
-                    interval_seconds=config.get('extraction.interval_seconds'),
-                    max_frames=config.get('extraction.max_frames')
+                    interval_seconds=config.get_float('extraction.interval_seconds', 5.0),
+                    max_frames=config.get_int('extraction.max_frames', 50)
                 )
                 st.session_state.keyframes = keyframes
                 st.success(f"✅ 提取完成！共 {len(keyframes)} 帧")
@@ -313,7 +313,7 @@ def show_keyframes():
 if __name__ == "__main__":
     # 自动加载视频列表
     if not st.session_state.video_list:
-        video_dir = Path(config.get('paths.videos'))
+        video_dir = Path(config.get_str('paths.videos', 'data/videos'))
         if video_dir.exists():
             load_videos_from_folder(str(video_dir))
     

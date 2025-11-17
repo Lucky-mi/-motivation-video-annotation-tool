@@ -28,7 +28,7 @@ class AnnotationEditor:
     def load_or_create_annotation(self, video_path: str, keyframes: List[Dict]) -> Dict:
         """加载或创建标注"""
         video_name = Path(video_path).stem
-        annotation_path = Path(config.get('paths.annotations')) / f"{video_name}.json"
+        annotation_path = Path(config.get_str('paths.annotations', 'data/annotations')) / f"{video_name}.json"
         
         # 尝试加载已有标注
         annotation = self.schema.load_annotation(str(annotation_path))
@@ -49,7 +49,7 @@ class AnnotationEditor:
         
         annotation = st.session_state.current_annotation
         video_name = Path(annotation['video_info']['video_path']).stem
-        annotation_path = Path(config.get('paths.annotations')) / f"{video_name}.json"
+        annotation_path = Path(config.get_str('paths.annotations', 'data/annotations')) / f"{video_name}.json"
         
         self.schema.save_annotation(annotation, str(annotation_path))
         st.session_state.annotation_changed = False

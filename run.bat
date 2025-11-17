@@ -1,4 +1,5 @@
 @echo off
+
 REM VLM Motivation 标注平台 - Windows 启动脚本
 
 echo ========================================
