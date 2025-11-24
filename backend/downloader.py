@@ -200,6 +200,12 @@ class VideoDownloader:
             'retries': 3,  # 重试3次
         }
 
+        # 可选：如果有cookies文件，使用它来绕过年龄限制
+        cookies_path = Path("cookies.txt")
+        if cookies_path.exists():
+            ydl_opts['cookiefile'] = str(cookies_path)
+            logger.debug(f"✅ 使用 cookies: {cookies_path}")
+
         try:
             logger.info(f"⬇️ 开始下载: {url}")
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -312,6 +318,12 @@ class VideoDownloader:
             }
         }
 
+        # 可选：如果有cookies文件，使用它来绕过年龄限制
+        # 取消下面的注释并提供cookies文件路径
+        # cookies_path = Path("cookies.txt")
+        # if cookies_path.exists():
+        #     ydl_opts['cookiefile'] = str(cookies_path)
+
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             try:
                 # 多搜一些作为备选，方便过滤
@@ -367,7 +379,13 @@ class VideoDownloader:
                                         break
                         except Exception as e:
                             # 单个视频获取失败，继续下一个
-                            logger.debug(f"跳过视频 {video_id}: {e}")
+                            error_msg = str(e)
+                            if "Sign in to confirm your age" in error_msg or "age" in error_msg.lower():
+                                logger.debug(f"⏭️ 跳过需要年龄验证的视频: {video_id}")
+                            elif "Video unavailable" in error_msg:
+                                logger.debug(f"⏭️ 跳过不可用视频: {video_id}")
+                            else:
+                                logger.debug(f"⏭️ 跳过视频 {video_id}: {error_msg[:100]}")
                             continue
 
             except Exception as e:

@@ -28,6 +28,7 @@ from search_config import (
     ENABLE_AI_REVIEW,
     STRICT_MODE,
     AUTO_DELETE_REJECTED,
+    AI_REVIEW_WORKERS,
     print_config
 )
 
@@ -137,39 +138,74 @@ def main():
     # 更新要处理的视频列表
     unique_videos = scored_videos
 
-    # 阶段2: 下载和AI审核
+    # 阶段2-3: 流水线处理（下载 → 审核 → 删除，批次处理）
     print("\n" + "=" * 80)
-    print(f"📍 阶段 2/3: 下载视频{'并AI审核' if ENABLE_AI_REVIEW else ''}")
+    print(f"📍 阶段 2/3: 流水线处理 (批次大小: {AI_REVIEW_WORKERS})")
+    print(f"💡 边下载边审核，立即释放不通过视频的磁盘空间")
     print("=" * 80)
 
     approved_count = 0
     rejected_count = 0
     failed_count = 0
 
-    for idx, video_info in enumerate(unique_videos, 1):
-        print(f"\n[{idx}/{len(unique_videos)}]")
-        print(f"  标题: {video_info['title'][:70]}...")
-        print(f"  时长: {video_info['duration']}秒 | 关键词: {video_info['search_keyword']}")
+    # 分批处理，每批 = AI_REVIEW_WORKERS 个视频
+    batch_size = AI_REVIEW_WORKERS
+    total_batches = (len(unique_videos) + batch_size - 1) // batch_size
 
-        try:
-            # 下载
-            download_result = downloader.download_from_url(video_info['url'])
-            video_path = download_result['video_path']
+    for batch_idx in range(total_batches):
+        start_idx = batch_idx * batch_size
+        end_idx = min(start_idx + batch_size, len(unique_videos))
+        batch = unique_videos[start_idx:end_idx]
 
-            # AI审核
-            if ENABLE_AI_REVIEW and content_filter:
-                review_result = content_filter.check_video_content(
-                    video_path,
-                    strict_mode=STRICT_MODE
-                )
+        print(f"\n📦 批次 {batch_idx + 1}/{total_batches} (视频 {start_idx + 1}-{end_idx})")
+
+        # 1. 批量下载
+        downloaded = []
+        for idx, video_info in enumerate(batch, start=start_idx + 1):
+            print(f"  [{idx}/{len(unique_videos)}] 下载: {video_info['title'][:50]}...")
+            try:
+                download_result = downloader.download_from_url(video_info['url'])
+                downloaded.append({
+                    'info': video_info,
+                    'path': download_result['video_path'],
+                    'duration': download_result['duration']
+                })
+                print(f"    ✅ 成功")
+            except Exception as e:
+                failed_count += 1
+                print(f"    ❌ 失败: {e}")
+
+        if not downloaded:
+            print(f"  ⚠️ 本批次无成功下载")
+            continue
+
+        # 2. 并行AI审核
+        if ENABLE_AI_REVIEW and content_filter:
+            print(f"  🤖 并行审核 {len(downloaded)} 个视频...")
+            video_paths = [v['path'] for v in downloaded]
+
+            review_results = content_filter.batch_check(
+                video_paths,
+                strict_mode=STRICT_MODE,
+                max_workers=AI_REVIEW_WORKERS
+            )
+
+            # 3. 处理结果并立即删除拒绝的视频
+            batch_approved = 0
+            batch_rejected = 0
+
+            for video_data in downloaded:
+                video_info = video_data['info']
+                video_path = video_data['path']
+                review_result = review_results.get(video_path, {"pass": False, "reason": "审核失败"})
 
                 approved = review_result.get('pass', False)
 
-                # 添加到数据库
+                # 入库
                 downloader.add_video_link(
                     url=video_info['url'],
                     title=video_info['title'],
-                    duration=video_info['duration'],
+                    duration=video_data['duration'],
                     keyword=video_info['search_keyword'],
                     approved=approved,
                     review_reason=review_result.get('reason', '')
@@ -177,28 +213,31 @@ def main():
 
                 if approved:
                     approved_count += 1
-                    print(f"  ✅ 通过 | {review_result.get('reason', '')}")
-                    print(f"     置信度: {review_result.get('confidence', 0):.2f} | 价值: {review_result.get('分析价值', '')}")
+                    batch_approved += 1
                 else:
                     rejected_count += 1
-                    print(f"  ❌ 拒绝 | {review_result.get('reason', '')}")
-
+                    batch_rejected += 1
+                    # 立即删除，释放空间
                     if AUTO_DELETE_REJECTED:
-                        Path(video_path).unlink()
-                        print("  🗑️ 已删除")
-            else:
+                        Path(video_path).unlink(missing_ok=True)
+
+            print(f"  📊 本批: ✅ {batch_approved} | ❌ {batch_rejected}")
+
+        else:
+            # 不审核，直接入库
+            for video_data in downloaded:
+                video_info = video_data['info']
                 downloader.add_video_link(
                     url=video_info['url'],
                     title=video_info['title'],
-                    duration=video_info['duration'],
+                    duration=video_data['duration'],
                     keyword=video_info['search_keyword'],
                     approved=None
                 )
-                print("  ✅ 已下载（未审核）")
 
-        except Exception as e:
-            failed_count += 1
-            print(f"  ❌ 失败: {e}")
+    print(f"\n{'='*80}")
+    print(f"✅ 流水线处理完成")
+    failed_count = failed_count
 
     # 阶段3: 统计
     print("\n" + "=" * 80)

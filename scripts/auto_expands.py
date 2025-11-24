@@ -132,56 +132,87 @@ class AutoExpanderV2:
         logger.info(f"{'='*60}")
 
     def _process_candidates(self, candidates, auto_download):
-        """去重、下载与审核"""
-        new_count = 0
+        """去重、下载与审核（优化并行版）"""
+        # 1. 去重
+        new_videos = []
         for vid in candidates:
             url = vid['url']
-            title = vid.get('title', 'Unknown')
-            source = vid.get('source_type', 'unknown')
-
-            # 1. 去重
             if url in self.existing_urls:
                 continue
-            
-            self.existing_urls.add(url) # 标记为已处理
-            new_count += 1
-            
-            logger.info(f"  Found: [{source}] {title[:30]}...")
 
-            if not auto_download:
-                continue
+            self.existing_urls.add(url)
+            new_videos.append(vid)
 
-            # 2. 下载 & 审核流程
-            try:
-                # 下载
-                dl_info = self.downloader.download_from_url(url)
-                video_path = dl_info['video_path']
-                
-                # AI 审核
-                review = self.filter.check_video_content(video_path, strict_mode=True)
-                approved = review.get('pass', False)
-                
-                # 入库
-                self.downloader.add_video_link(
-                    url=url,
-                    title=title,
-                    duration=dl_info['duration'],
-                    keyword=f"AutoExpand-{source}", # 标记来源
-                    approved=approved,
-                    review_reason=review.get('reason', '')
-                )
-                
-                if approved:
-                    logger.info(f"    ✅ 审核通过! ({review.get('reason')})")
-                else:
-                    logger.info(f"    ❌ 审核拒绝. ({review.get('reason')})")
-                    Path(video_path).unlink(missing_ok=True) # 删除垃圾文件
+            title = vid.get('title', 'Unknown')
+            source = vid.get('source_type', 'unknown')
+            logger.info(f"  新视频: [{source}] {title[:40]}...")
 
-            except Exception as e:
-                logger.error(f"    处理异常: {e}")
-
-        if new_count == 0:
+        if not new_videos:
             logger.info("    (没有发现新视频)")
+            return
+
+        if not auto_download:
+            logger.info(f"  发现 {len(new_videos)} 个新视频（跳过下载）")
+            return
+
+        # 2. 批量下载
+        logger.info(f"  开始下载 {len(new_videos)} 个新视频...")
+        downloaded = []
+
+        for vid in new_videos:
+            try:
+                dl_info = self.downloader.download_from_url(vid['url'])
+                downloaded.append({
+                    'url': vid['url'],
+                    'title': vid.get('title', 'Unknown'),
+                    'source': vid.get('source_type', 'unknown'),
+                    'path': dl_info['video_path'],
+                    'duration': dl_info['duration']
+                })
+                logger.info(f"    ✅ 下载: {vid.get('title', '')[:30]}...")
+            except Exception as e:
+                logger.error(f"    ❌ 下载失败: {e}")
+
+        if not downloaded:
+            logger.warning("  没有成功下载的视频")
+            return
+
+        # 3. 并行AI审核
+        logger.info(f"  开始并行审核 {len(downloaded)} 个视频...")
+        video_paths = [d['path'] for d in downloaded]
+
+        review_results = self.filter.batch_check(
+            video_paths,
+            strict_mode=True,
+            max_workers=3  # 并发数
+        )
+
+        # 4. 处理审核结果并入库
+        approved_count = 0
+        rejected_count = 0
+
+        for video_data in downloaded:
+            video_path = video_data['path']
+            review = review_results.get(video_path, {"pass": False, "reason": "审核失败"})
+            approved = review.get('pass', False)
+
+            # 入库
+            self.downloader.add_video_link(
+                url=video_data['url'],
+                title=video_data['title'],
+                duration=video_data['duration'],
+                keyword=f"AutoExpand-{video_data['source']}",
+                approved=approved,
+                review_reason=review.get('reason', '')
+            )
+
+            if approved:
+                approved_count += 1
+            else:
+                rejected_count += 1
+                Path(video_path).unlink(missing_ok=True)
+
+        logger.info(f"  审核完成: ✅ {approved_count} | ❌ {rejected_count}")
 
 def main():
     parser = argparse.ArgumentParser(description="混合策略视频扩展器")

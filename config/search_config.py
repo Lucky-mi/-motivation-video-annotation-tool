@@ -31,6 +31,11 @@ STRICT_MODE = True
 # 审核失败的视频是否自动删除
 AUTO_DELETE_REJECTED = True
 
+# AI审核并发数（同时审核的视频数量）
+# 建议值: 3-5 (取决于网速和API配额)
+# 数值越大速度越快，但API请求也越多
+AI_REVIEW_WORKERS = 5
+
 # ==================== 关键词预设 ====================
 
 # 最小集合（6个关键词，快速测试）
@@ -280,6 +285,8 @@ def print_config():
     print(f"预计搜索总数: {estimated_count} 个视频")
     print(f"视频时长范围: {MIN_DURATION}-{MAX_DURATION} 秒")
     print(f"AI审核: {'启用 (' + ('严格模式' if STRICT_MODE else '标准模式') + ')' if ENABLE_AI_REVIEW else '禁用'}")
+    if ENABLE_AI_REVIEW:
+        print(f"AI并发数: {AI_REVIEW_WORKERS} (同时审核{AI_REVIEW_WORKERS}个视频)")
     print(f"自动删除未通过: {'是' if AUTO_DELETE_REJECTED else '否'}")
     print("=" * 60)
     print(f"\n关键词列表:")
