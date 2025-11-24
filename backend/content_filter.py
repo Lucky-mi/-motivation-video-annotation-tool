@@ -234,28 +234,34 @@ class ContentFilter:
 
 ### 输出格式（必须严格遵守JSON格式）：
 
-```json
+**重要：仅输出纯净的JSON，不要添加任何markdown标记、注释或其他文字！**
+
 {{
-  "pass": true/false,
-  "reason": "简洁说明通过/不通过的核心理由，重点描述【观察到的行为】而非对话内容（50字内）",
-  "category": "选择一个：conflict/emotional_reaction/social_interaction/relationship/conversation/drama/other",
+  "pass": true,
+  "reason": "简洁说明通过或不通过的核心理由（50字内，避免使用单引号）",
+  "category": "conflict",
   "confidence": 0.85,
   "人物数量": 2,
-  "可观察行为": "描述看到的表情、动作、肢体语言等（非对话内容）",
-  "互动类型": "眼神交流/肢体接触/推拉动作/表情反应/姿态变化/无明显互动",
-  "情感强度": "高/中/低",
-  "分析价值": "高/中/低",
-  "关键场景描述": "用一句话描述最有价值的行为场景（非对话场景）"
+  "可观察行为": "描述看到的表情动作肢体语言",
+  "互动类型": "肢体接触",
+  "情感强度": "中",
+  "分析价值": "高",
+  "关键场景描述": "用一句话描述最有价值的行为场景"
 }}
-```
+
+### category 可选值：
+conflict, emotional_reaction, social_interaction, relationship, conversation, drama, other
+
+### 互动类型可选值：
+眼神交流, 肢体接触, 推拉动作, 表情反应, 姿态变化, 无明显互动
 
 ### 重要提示：
-- 只输出JSON，不要任何其他文字
-- ⚠️ **核心**：必须基于【可观察的行为】判断，而非对话或字幕
-- 如果视频主要是对话/讲解，缺乏行为展现，应该【拒绝】
-- 对于边缘案例，偏向保守（不通过）
-- confidence表示你的判断信心（0.0-1.0）
-- 优先考虑研究价值（能否观察到心智状态的行为表现）
+- **仅输出JSON对象，不要```json标记，不要其他文字**
+- reason字段避免使用单引号，改用双引号或括号
+- ⚠️ **核心**：必须基于可观察的行为判断而非对话或字幕
+- 如果视频主要是对话/讲解缺乏行为展现应该拒绝
+- 对于边缘案例偏向保守（不通过）
+- confidence表示判断信心（0.0-1.0）
 
 现在请审核这个视频："""
 
@@ -278,8 +284,35 @@ class ContentFilter:
             else:
                 json_str = response_text.strip()
 
+            # 清理可能的问题字符
+            import re
+
+            # 1. 移除 BOM 和其他隐藏字符
+            json_str = json_str.encode('utf-8', errors='ignore').decode('utf-8')
+
+            # 2. 移除可能的控制字符（保留换行和制表符）
+            json_str = re.sub(r'[\x00-\x08\x0b-\x0c\x0e-\x1f\x7f-\x9f]', '', json_str)
+
+            # 3. 尝试修复常见的 Markdown 格式问题
+            # 移除可能残留的 markdown 标记
+            json_str = re.sub(r'^```(json)?\s*', '', json_str)
+            json_str = re.sub(r'\s*```$', '', json_str)
+
             # 尝试直接解析
-            result = json.loads(json_str)
+            try:
+                result = json.loads(json_str)
+            except json.JSONDecodeError as json_err:
+                # 如果失败，尝试使用 json_repair（如果可用）
+                logger.warning(f"标准JSON解析失败，尝试修复: {json_err}")
+                try:
+                    import json_repair
+                    result = json_repair.loads(json_str)
+                    logger.info("✅ 使用 json_repair 成功修复JSON")
+                except (ImportError, Exception) as repair_err:
+                    logger.error(f"json_repair 也失败: {repair_err}")
+                    # 打印详细的调试信息
+                    logger.debug(f"JSON字符串前100字符: {repr(json_str[:100])}")
+                    raise json_err  # 重新抛出原始错误
 
             # 确保必需字段存在
             standardized_result = {
@@ -297,12 +330,29 @@ class ContentFilter:
             return standardized_result
 
         except json.JSONDecodeError as e:
-            logger.error(f"JSON解析失败: {e}\n原始响应: {response_text}")
+            logger.error(f"JSON解析失败: {e}")
+            logger.error(f"错误位置: line {e.lineno} column {e.colno}")
+            logger.error(f"原始响应:\n{response_text}")
+
+            # 显示问题区域
+            if "```json" in response_text or "```" in response_text:
+                if "```json" in response_text:
+                    json_str = response_text.split("```json")[1].split("```")[0].strip()
+                else:
+                    json_str = response_text.split("```")[1].split("```")[0].strip()
+
+                lines = json_str.split('\n')
+                if e.lineno <= len(lines):
+                    problem_line = lines[e.lineno - 1]
+                    logger.error(f"问题行 ({e.lineno}): {problem_line}")
+                    logger.error(f"问题位置: {' ' * (e.colno - 1)}^")
+
             return {
                 "pass": False,
                 "reason": "AI响应格式错误",
                 "confidence": 0.0,
-                "raw_response": response_text[:500]
+                "raw_response": response_text[:500],
+                "error_detail": f"JSON解析失败: {e}"
             }
         except Exception as e:
             logger.error(f"解析响应时出错: {e}")
@@ -312,37 +362,41 @@ class ContentFilter:
                 "confidence": 0.0
             }
 
-    def batch_check(self, video_paths: list, strict_mode: bool = True) -> Dict[str, Dict]:
+    def batch_check(self, video_paths: list, strict_mode: bool = True, max_workers: int = 5) -> Dict[str, Dict]:
         """
-        批量检查多个视频
-
+        批量检查多个视频 (并行加速版)
         Args:
-            video_paths: 视频路径列表
-            strict_mode: 是否使用严格模式
-
-        Returns:
-            {video_path: result} 的字典
+            max_workers: 同时审核的视频数量 (建议 3-5，取决于你的网速和 API 配额)
         """
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+        
         results = {}
         total = len(video_paths)
+        logger.info(f"🚀 开始批量并发审核 {total} 个视频 (并发数: {max_workers})...")
 
-        logger.info(f"🚀 开始批量审核 {total} 个视频...")
-
-        for idx, video_path in enumerate(video_paths, 1):
-            logger.info(f"[{idx}/{total}] 审核: {Path(video_path).name}")
+        # 定义单个任务函数
+        def process_one(path):
             try:
-                result = self.check_video_content(video_path, strict_mode)
-                results[video_path] = result
+                logger.info(f"➡️ 开始审核: {Path(path).name}")
+                return path, self.check_video_content(path, strict_mode)
             except Exception as e:
-                logger.error(f"审核失败: {e}")
-                results[video_path] = {
-                    "pass": False,
-                    "reason": f"审核异常: {str(e)}",
-                    "confidence": 0.0
-                }
+                logger.error(f"❌ 审核异常 {Path(path).name}: {e}")
+                return path, {"pass": False, "reason": f"异常: {str(e)}", "confidence": 0.0}
+
+        # 使用线程池并发执行
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # 提交所有任务
+            future_to_video = {executor.submit(process_one, path): path for path in video_paths}
+            
+            # 获取结果
+            for i, future in enumerate(as_completed(future_to_video), 1):
+                path, result = future.result()
+                results[path] = result
+                status = "✅" if result.get('pass') else "❌"
+                logger.info(f"[{i}/{total}] {status} 完成: {Path(path).name}")
 
         # 统计结果
         passed = sum(1 for r in results.values() if r.get("pass", False))
-        logger.info(f"✅ 批量审核完成: {passed}/{total} 个视频通过审核")
+        logger.info(f"🏁 批量审核完成: {passed}/{total} 个视频通过审核")
 
         return results

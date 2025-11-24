@@ -14,7 +14,7 @@ KEYWORD_SET = "standard"  # 改成 "tv_drama" 搜索电视剧片段，"mega" 搜
 CUSTOM_KEYWORDS = None  # 例如: ["psychology video", "social behavior"]
 
 # 每个关键词搜索的视频数量（增加这个数字可以得到更多候选视频）
-VIDEOS_PER_KEYWORD = 5  # 改成 10、20 等可以搜索更多
+VIDEOS_PER_KEYWORD = 20  # 改成 10、20 等可以搜索更多
 
 # 视频时长过滤（秒）
 MIN_DURATION = 30   # 最短30秒
