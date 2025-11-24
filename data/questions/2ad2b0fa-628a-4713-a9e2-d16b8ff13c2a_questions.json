@@ -1,0 +1,91 @@
+{
+  "question_set_id": "01afa2f2-f213-4068-9bee-94d99da099e4",
+  "video_id": "2ad2b0fa-628a-4713-a9e2-d16b8ff13c2a",
+  "video_name": "2ad2b0fa-628a-4713-a9e2-d16b8ff13c2a.mp4",
+  "questions": [
+    {
+      "question_id": "6a6550db-a4c9-40cf-bf70-8126e34b6f4c",
+      "question_text": "在时间戳00:00，人物的desire是什么?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "渴望控制局面或威胁他人。",
+          "is_correct": true,
+          "explanation": "三个人闯入房间，并且其中一人在大喊大叫，这表明他们可能想要控制局面，通过恐吓来达到某种目的，例如获取信息、资源或者实施报复。结合昏暗的环境，这种可能性进一步增加。"
+        },
+        {
+          "option_id": "B",
+          "text": "渴望寻找失物。",
+          "is_correct": false,
+          "explanation": "虽然闯入房间可能涉及搜寻，但大喊大叫的行为与平静地寻找失物不符。闯入和叫喊更多地指向了冲突或强制行为，而非寻找遗失物品。这是基于行为和场景推断之间的不匹配。"
+        },
+        {
+          "option_id": "C",
+          "text": "渴望逃离危险。",
+          "is_correct": false,
+          "explanation": "虽然闯入动作迅速，可能包含某种紧迫感，但关键帧信息没有直接表明他们是在逃离危险。他们的行为更多指向主动地闯入，而非被动地逃离。这是忽略了主动行为的意义。"
+        },
+        {
+          "option_id": "D",
+          "text": "渴望获得他人的帮助。",
+          "is_correct": false,
+          "explanation": "大喊大叫和闯入行为通常不是寻求帮助的方式。求助通常会表现出更加温和和寻求合作的态度。这种选择是基于常见社交规范的错误推断，将暴力行为误解为求助行为。"
+        }
+      ],
+      "correct_option_id": "A",
+      "related_frame_ids": [
+        0
+      ],
+      "reasoning_process": "基于视觉线索和行为分析，三人闯入房间且一人大喊大叫，暗示了他们具有侵略性和控制欲。Garage或basement的环境和昏暗的灯光，更增强了这种威胁的氛围。选项A准确地捕捉了这种渴望控制或威胁他人的意图。其他选项则基于对行为的错误解读，例如将攻击性行为误解为寻找失物或求助，或者将主动入侵行为误解为逃离危险。",
+      "question_meta": {},
+      "created_at": "2025-11-19T21:27:25.940217",
+      "verified": false,
+      "verification_notes": ""
+    },
+    {
+      "question_id": "edde599a-f11f-4e9b-8f36-a59fba74358a",
+      "question_text": "在时间戳00:22，身穿红色西装的男人的desire(渴望)是什么?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "希望Carter放下枪，阻止潜在的暴力行为。",
+          "is_correct": true,
+          "explanation": "男人命令“Carter放下枪”，表明他希望阻止即将发生的枪击事件，避免暴力升级或可能的伤亡。这是基于保护他人和他自己的安全的强烈愿望。"
+        },
+        {
+          "option_id": "B",
+          "text": "希望Carter服从他的权威，以维护自己的地位。",
+          "is_correct": false,
+          "explanation": "虽然红色西装可能暗示权威，但仅凭这句话并不能确定他的主要动机是维护地位。希望他人服从命令可能是结果，但更根本的可能是希望阻止暴力。这是将权威与潜在的权力欲望混淆。"
+        },
+        {
+          "option_id": "C",
+          "text": "希望Carter被逮捕并受到惩罚。",
+          "is_correct": false,
+          "explanation": "这句话的重点是阻止当下的行为，而不是事后的惩罚。虽然逮捕可能是之后的结果，但这不是立即的desire。这是一个对句子结果的误解。"
+        },
+        {
+          "option_id": "D",
+          "text": "希望Carter承认自己的失败。",
+          "is_correct": false,
+          "explanation": "没有任何迹象表明 Carter正在进行一项竞争性的活动或处于需要承认失败的境地。“放下枪”这一行为暗示着与失败无关的情况，更倾向于暴力冲突或威胁。这是将情景进行了过度解读。"
+        }
+      ],
+      "correct_option_id": "A",
+      "related_frame_ids": [
+        6
+      ],
+      "reasoning_process": "基于视觉线索和行为分析，身穿红色西装的男人使用了权威性的命令语气：“Carter放下枪”。结合“放下枪”这一动作的潜在危险性，可以推断出他最主要的desire是阻止暴力行为，从而保护 Carter 和其他人的安全。虽然他可能也有维护权威或其他目的，但阻止暴力事件是最直接和紧迫的需求。",
+      "question_meta": {},
+      "created_at": "2025-11-19T21:27:42.327984",
+      "verified": false,
+      "verification_notes": ""
+    }
+  ],
+  "total_questions": 2,
+  "verified_questions": 0,
+  "metadata": {},
+  "created_at": "2025-11-19T21:27:47.988499",
+  "last_modified": "2025-11-19T21:27:47.988506",
+  "ai_provider": "gemini-2.0-flash-exp"
+}

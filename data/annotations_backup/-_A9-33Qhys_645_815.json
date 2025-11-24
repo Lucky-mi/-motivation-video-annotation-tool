@@ -1,0 +1,431 @@
+{
+  "video_id": "-_A9-33Qhys_645_815",
+  "video_name": "-_A9-33Qhys_645_815.mp4",
+  "video_path": "data/videos/-_A9-33Qhys_645_815.mp4",
+  "duration": 0.0,
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0000_t1.00s.jpg",
+      "timestamp_seconds": 1,
+      "action": {
+        "timestamp": 1,
+        "timestamp_formatted": "00:01",
+        "action_description": "一个戴头盔的年轻人从摩托车上下来，准备取下头盔，另外两个人迎接他。",
+        "visual_context": "室外，乡村的建筑，路面平坦。",
+        "objects": [
+          "摩托车",
+          "头盔",
+          "建筑"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B"
+        ],
+        "scene": "乡村",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "摘下头盔，方便交流。",
+        "implicit_desire": "融入当地环境，建立良好关系。",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "主动摘头盔，表示愿意友好交流，避免疏离感。",
+        "visual_cues": [
+          "微笑",
+          "点头"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0001_t4.00s.jpg",
+      "timestamp_seconds": 4,
+      "action": {
+        "timestamp": 4,
+        "timestamp_formatted": "00:04",
+        "action_description": "中年男人A指向年轻人，介绍他是县长的联络员。",
+        "visual_context": "室外，三人站在宣传栏前，背景是乡村建筑。",
+        "objects": [
+          "宣传栏",
+          "建筑"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B"
+        ],
+        "scene": "乡村",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "介绍年轻人的身份。",
+        "implicit_desire": "抬高年轻人的地位，引起重视。",
+        "desire_category": "esteem",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "强调县长联络员身份，暗示年轻人有背景，值得尊重。",
+        "visual_cues": [
+          "尊敬的语气",
+          "点头"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0002_t12.00s.jpg",
+      "timestamp_seconds": 12,
+      "action": {
+        "timestamp": 12,
+        "timestamp_formatted": "00:12",
+        "action_description": "中年男人B主动与年轻人握手，并自称“大林”，让年轻人称呼他“建林哥”。",
+        "visual_context": "室外，三人站在宣传栏前，背景是乡村建筑。",
+        "objects": [
+          "手"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B"
+        ],
+        "scene": "乡村",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "拉近与年轻人的关系。",
+        "implicit_desire": "建立私人友谊，方便日后合作。",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "主动要求称呼“哥”，暗示亲近，希望获得年轻人的好感。",
+        "visual_cues": [
+          "热情的笑容"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0003_t21.00s.jpg",
+      "timestamp_seconds": 21,
+      "action": {
+        "timestamp": 21,
+        "timestamp_formatted": "00:21",
+        "action_description": "中年男人A催促年轻人和中年男人B一起吃饭聊天。",
+        "visual_context": "室外，三人站在摩托车旁，准备离开。",
+        "objects": [
+          "摩托车"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B"
+        ],
+        "scene": "乡村",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "安排饭局，增进了解。",
+        "implicit_desire": "通过饭局建立更紧密的联系，便于后续工作推进。",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "积极安排饭局，暗示有求于年轻人，希望获得支持。",
+        "visual_cues": [
+          "热情的邀请"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0004_t38.00s.jpg",
+      "timestamp_seconds": 38,
+      "action": {
+        "timestamp": 38,
+        "timestamp_formatted": "00:38",
+        "action_description": "中年男人A在饭桌上强调他对村子的重要性，以及建林哥（中年男人B）对他的依赖。",
+        "visual_context": "室内，饭桌，大家正在吃饭。",
+        "objects": [
+          "饭桌",
+          "食物"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B",
+          "村民"
+        ],
+        "scene": "室内",
+        "confidence": 0.7
+      },
+      "motivation": {
+        "explicit_motivation": "炫耀自己的能力和地位。",
+        "implicit_desire": "寻求年轻人的认可和赞赏，巩固自己的地位。",
+        "desire_category": "esteem",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "不断强调自己的重要性，试图给年轻人留下深刻印象，获得好感。",
+        "visual_cues": [
+          "夸张的语气",
+          "手势"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.7
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 5,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0005_t55.00s.jpg",
+      "timestamp_seconds": 55,
+      "action": {
+        "timestamp": 55,
+        "timestamp_formatted": "00:55",
+        "action_description": "中年男人B制止中年男人A的吹嘘。",
+        "visual_context": "室内，饭桌，大家正在吃饭。",
+        "objects": [
+          "饭桌",
+          "食物"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B",
+          "村民"
+        ],
+        "scene": "室内",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "阻止中年男人A继续夸大其词。",
+        "implicit_desire": "维护自身形象，避免给年轻人留下不好的印象。",
+        "desire_category": "esteem",
+        "motivation_type": "intrinsic",
+        "implicit_level": 2,
+        "reasoning": "担心过度吹嘘适得其反，影响自己在年轻人心中的形象。",
+        "visual_cues": [
+          "略带尴尬的笑容"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 6,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0006_t66.00s.jpg",
+      "timestamp_seconds": 66,
+      "action": {
+        "timestamp": 66,
+        "timestamp_formatted": "01:06",
+        "action_description": "中年男人B表示自己本来不想来参加饭局，更愿意在家吃咸菜稀饭。",
+        "visual_context": "室内，饭桌，大家正在吃饭。",
+        "objects": [
+          "饭桌",
+          "食物"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B",
+          "村民"
+        ],
+        "scene": "室内",
+        "confidence": 0.7
+      },
+      "motivation": {
+        "explicit_motivation": "表达自己不喜欢应酬。",
+        "implicit_desire": "暗示自己是被迫参加，并非主动寻求关系。",
+        "desire_category": "self_actualization",
+        "motivation_type": "intrinsic",
+        "implicit_level": 4,
+        "reasoning": "希望通过表达对饭局的厌恶，体现自己追求简单生活，不慕权贵的品质。",
+        "visual_cues": [
+          "无奈的表情"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.7
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 7,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0007_t82.00s.jpg",
+      "timestamp_seconds": 82,
+      "action": {
+        "timestamp": 82,
+        "timestamp_formatted": "01:22",
+        "action_description": "中年男人A评论中年男人B“特别低调”。",
+        "visual_context": "室内，饭桌，大家正在吃饭。",
+        "objects": [
+          "饭桌",
+          "食物"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B",
+          "村民"
+        ],
+        "scene": "室内",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "评价中年男人B。",
+        "implicit_desire": "试图掌握话语权，引导年轻人对中年男人B的看法。",
+        "desire_category": "esteem",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "通过评价他人，来间接展现自己的判断力和影响力。",
+        "visual_cues": [
+          "自信的表情"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 8,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0008_t101.00s.jpg",
+      "timestamp_seconds": 101,
+      "action": {
+        "timestamp": 101,
+        "timestamp_formatted": "01:41",
+        "action_description": "中年男人B拒绝和年轻人喝酒，声称自己酒精过敏。",
+        "visual_context": "室内，饭桌，大家正在吃饭。",
+        "objects": [
+          "酒杯"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B",
+          "村民"
+        ],
+        "scene": "室内",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "拒绝喝酒。",
+        "implicit_desire": "维护健康，也可能暗示不愿与不熟悉的人过度亲近。",
+        "desire_category": "safety",
+        "motivation_type": "intrinsic",
+        "implicit_level": 3,
+        "reasoning": "用健康理由拒绝喝酒，避免被强迫，也可能是一种自我保护。",
+        "visual_cues": [
+          "严肃的表情"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 9,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0009_t134.00s.jpg",
+      "timestamp_seconds": 134,
+      "action": {
+        "timestamp": 134,
+        "timestamp_formatted": "02:14",
+        "action_description": "年轻人主动向中年男人B敬酒。",
+        "visual_context": "室内，饭桌，大家正在吃饭。",
+        "objects": [
+          "酒杯"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B",
+          "村民"
+        ],
+        "scene": "室内",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "表达敬意。",
+        "implicit_desire": "建立良好关系，寻求支持。",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "主动敬酒，表示对中年男人B的尊重，希望建立合作关系。",
+        "visual_cues": [
+          "微笑"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 10,
+      "frame_path": "data/keyframes/-_A9-33Qhys_645_815/frame_0010_t161.00s.jpg",
+      "timestamp_seconds": 161,
+      "action": {
+        "timestamp": 161,
+        "timestamp_formatted": "02:41",
+        "action_description": "年轻人向中年男人B请求添加微信",
+        "visual_context": "室内，饭桌，大家正在吃饭。",
+        "objects": [
+          "手机"
+        ],
+        "characters": [
+          "年轻人",
+          "中年男人A",
+          "中年男人B",
+          "村民"
+        ],
+        "scene": "室内",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "为了方便后续交流",
+        "implicit_desire": "希望能够保持长期联系",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "主动请求添加联系方式是为了后续更方便沟通",
+        "visual_cues": [
+          "期待的眼神"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    }
+  ],
+  "transitions": [
+    {
+      "from_timestamp": 66,
+      "to_timestamp": 101,
+      "trigger_event": "提起吃饭和喝酒",
+      "motivation_before": "追求个人舒适",
+      "motivation_after": "维护自身形象，适应环境",
+      "desire_before": "不希望被人打扰",
+      "desire_after": "建立好感，方便工作",
+      "transition_type": "internal_struggle",
+      "intensity": 3
+    }
+  ],
+  "overall_trajectory": "故事讲述了一个年轻人来到乡村，与当地村干部互动的故事。主要围绕人际关系建立，以及个体在社会环境中的适应与妥协展开。",
+  "created_at": "2025-11-20T08:37:10.022938",
+  "last_modified": "2025-11-20T08:37:10.022950",
+  "annotator": "AI_Batch",
+  "status": "ai_generated",
+  "total_frames": 11,
+  "annotated_frames": 0,
+  "ai_generated_frames": 11
+}

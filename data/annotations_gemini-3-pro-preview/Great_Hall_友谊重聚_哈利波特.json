@@ -1,0 +1,98 @@
+{
+  "video_id": "Great_Hall_友谊重聚_哈利波特",
+  "video_name": "Great_Hall_友谊重聚_哈利波特.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Great_Hall_友谊重聚_哈利波特/frame_0000_t2.00s.jpg",
+      "timestamp_seconds": 2,
+      "action": {
+        "timestamp": 2,
+        "timestamp_formatted": "00:02",
+        "action_description": "赫敏站在礼堂门口，有些迟疑地微笑着看向大厅内。",
+        "visual_context": "霍格沃茨大礼堂门口，光线温暖，背景有其他学生。",
+        "scene": "大礼堂入口"
+      },
+      "motivation": {
+        "explicit_motivation": "康复后回到学校并寻找朋友。",
+        "implicit_desire": "渴望归属感与重新融入群体。",
+        "reasoning": "她在门口的停顿和羞涩的微笑表现出一种'回归'的不确定感，渴望确认自己仍被接纳。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Great_Hall_友谊重聚_哈利波特/frame_0001_t5.00s.jpg",
+      "timestamp_seconds": 5,
+      "action": {
+        "timestamp": 5,
+        "timestamp_formatted": "00:05",
+        "action_description": "罗恩看到赫敏后表情从惊讶转为惊喜，哈利随后也露出灿烂的笑容。",
+        "visual_context": "格兰芬多长桌，周围坐满了学生，食物丰盛。",
+        "scene": "大礼堂长桌"
+      },
+      "motivation": {
+        "explicit_motivation": "确认朋友不仅活着而且康复了。",
+        "implicit_desire": "对安全感确认的满足以及对他人的关爱。",
+        "reasoning": "罗恩张大的嘴和定格的表情显示出巨大的心理冲击后的如释重负。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Great_Hall_友谊重聚_哈利波特/frame_0002_t10.00s.jpg",
+      "timestamp_seconds": 10,
+      "action": {
+        "timestamp": 10,
+        "timestamp_formatted": "00:10",
+        "action_description": "赫敏在长桌间的过道上奔跑，目光紧锁着哈利和罗恩。",
+        "visual_context": "大礼堂过道，两旁是鼓掌或注视的学生。",
+        "scene": "大礼堂过道"
+      },
+      "motivation": {
+        "explicit_motivation": "迫切地想要接近朋友。",
+        "implicit_desire": "释放积压的情感并寻求身体上的亲密连接（拥抱）。",
+        "reasoning": "奔跑的行为打破了通常的礼仪，表明情感冲动压倒了社会规范，显示出极度的渴望。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Great_Hall_友谊重聚_哈利波特/frame_0003_t14.00s.jpg",
+      "timestamp_seconds": 14,
+      "action": {
+        "timestamp": 14,
+        "timestamp_formatted": "00:14",
+        "action_description": "赫敏紧紧拥抱哈利，两人都闭眼或微笑，享受重逢时刻。",
+        "visual_context": "大礼堂中央，近景镜头。",
+        "scene": "朋友重逢"
+      },
+      "motivation": {
+        "explicit_motivation": "通过身体接触表达喜悦和庆祝。",
+        "implicit_desire": "巩固社会纽带与深层的情感依恋。",
+        "reasoning": "拥抱的力度和立即性象征着三人组（虽然此处主要是哈利）核心关系的修复和确认。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Great_Hall_友谊重聚_哈利波特/frame_0004_t16.00s.jpg",
+      "timestamp_seconds": 16,
+      "action": {
+        "timestamp": 16,
+        "timestamp_formatted": "00:16",
+        "action_description": "拥抱过后，哈利看着赫敏，两人面对面微笑，神情放松。",
+        "visual_context": "近景特写，背景模糊。",
+        "scene": "拥抱后的对视"
+      },
+      "motivation": {
+        "explicit_motivation": "确认彼此的安好。",
+        "implicit_desire": "获得心理上的平静与满足感。",
+        "reasoning": "危机解除后的宁静时刻，彼此的存在即是最大的心理支持。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "一段通过非语言交流（表情、奔跑、拥抱）展现创伤后（石化）回归群体并重建核心情感纽带的治愈时刻。"
+}

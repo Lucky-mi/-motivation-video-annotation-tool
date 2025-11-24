@@ -1,0 +1,116 @@
+{
+  "video_id": "Holt的敞篷车_Charles的尴尬",
+  "video_name": "Holt的敞篷车_Charles的尴尬.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的敞篷车_Charles的尴尬/frame_0000_t4.00s.jpg",
+      "timestamp_seconds": 4,
+      "action": {
+        "timestamp": 4,
+        "timestamp_formatted": "00:04",
+        "action_description": "Boyle loudly complains to Gina about a poorly parked car, mocking the driver as a 'clown'.",
+        "visual_context": "Busy police precinct office; Boyle is walking toward his desk with animated gestures.",
+        "scene": "Precinct Bullpen"
+      },
+      "motivation": {
+        "explicit_motivation": "To vent frustration about a parking inconvenience.",
+        "implicit_desire": "Esteem needs",
+        "reasoning": "By mocking the driver's competence and style, Boyle attempts to assert his own superiority and validate his adherence to social/parking norms.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的敞篷车_Charles的尴尬/frame_0001_t16.00s.jpg",
+      "timestamp_seconds": 16,
+      "action": {
+        "timestamp": 16,
+        "timestamp_formatted": "00:16",
+        "action_description": "Boyle enthusiastically invites Captain Holt to join him in complaining about the 'creep'.",
+        "visual_context": "Boyle turns to face Holt who has just exited his office; Gina looks concerned in the background.",
+        "scene": "Precinct Bullpen"
+      },
+      "motivation": {
+        "explicit_motivation": "To bond with his superior over a shared grievance.",
+        "implicit_desire": "Belongingness and love needs",
+        "reasoning": "Boyle seeks validation from an authority figure, attempting to create an 'us vs. them' social bond against the bad driver.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的敞篷车_Charles的尴尬/frame_0002_t23.00s.jpg",
+      "timestamp_seconds": 23,
+      "action": {
+        "timestamp": 23,
+        "timestamp_formatted": "00:23",
+        "action_description": "Captain Holt reveals the 'clown car' belongs to him and his husband.",
+        "visual_context": "Holt stands stoically; Boyle freezes mid-motion.",
+        "scene": "Precinct Bullpen"
+      },
+      "motivation": {
+        "explicit_motivation": "To correct Boyle's assumption and express pride in his vehicle.",
+        "implicit_desire": "Self-actualization",
+        "reasoning": "Holt is asserting his personal identity and breaking the stereotype Boyle projected onto the car owner.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的敞篷车_Charles的尴尬/frame_0003_t30.00s.jpg",
+      "timestamp_seconds": 30,
+      "action": {
+        "timestamp": 30,
+        "timestamp_formatted": "00:30",
+        "action_description": "Boyle realizes his mistake and listens in terror as Holt praises the car's 'spirit'.",
+        "visual_context": "Close-up on Boyle's face as it drops from excitement to horror.",
+        "scene": "Precinct Bullpen"
+      },
+      "motivation": {
+        "explicit_motivation": "To process the social threat he just created.",
+        "implicit_desire": "Safety needs",
+        "reasoning": "Boyle experiences immediate cognitive dissonance and fear of repercussions from insulting his boss.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的敞篷车_Charles的尴尬/frame_0004_t41.00s.jpg",
+      "timestamp_seconds": 41,
+      "action": {
+        "timestamp": 41,
+        "timestamp_formatted": "00:41",
+        "action_description": "Boyle lies, claiming his rant was about a 'strangler' he arrested, not the car.",
+        "visual_context": "Boyle stammering while facing Holt; trying to look professional.",
+        "scene": "Precinct Bullpen"
+      },
+      "motivation": {
+        "explicit_motivation": "To cover up his previous insults to avoid punishment.",
+        "implicit_desire": "Safety needs",
+        "reasoning": "Survival mechanism triggered to de-escalate the conflict and restore his standing with the authority figure.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 5,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的敞篷车_Charles的尴尬/frame_0005_t50.00s.jpg",
+      "timestamp_seconds": 50,
+      "action": {
+        "timestamp": 50,
+        "timestamp_formatted": "00:50",
+        "action_description": "Alone, Boyle realizes he now must actually find a strangler to validate his lie.",
+        "visual_context": "Boyle stands alone in the middle of the office, looking defeated.",
+        "scene": "Precinct Bullpen"
+      },
+      "motivation": {
+        "explicit_motivation": "To accept the burden of his fabrication.",
+        "implicit_desire": "Safety needs",
+        "reasoning": "The realization that protecting his social safety has created a difficult physical/professional obligation (the 'lie debt').",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "A subordinate's attempt to bond through mockery backfires when the target turns out to be his superior, forcing a frantic shift from ego-driven aggression to survival-driven deception."
+}

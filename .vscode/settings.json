@@ -1,0 +1,39 @@
+{
+  // Python 解释器配置
+  "python.analysis.typeCheckingMode": "basic",
+
+  // 类型检查严重性覆盖
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportGeneralTypeIssues": "none",
+    "reportOptionalMemberAccess": "warning",
+    "reportOptionalSubscript": "warning",
+    "reportOptionalIterable": "warning",
+    "reportOptionalContextManager": "warning",
+    "reportOptionalOperand": "warning"
+  },
+
+  // 自动完成设置
+  "python.analysis.completeFunctionParens": true,
+
+  // 导入建议
+  "python.analysis.autoImportCompletions": true,
+
+  // 类型提示显示
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+
+  // 文件编码
+  "files.encoding": "utf8",
+
+  // 自动保存
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // Python 格式化
+  "[python]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  }
+}

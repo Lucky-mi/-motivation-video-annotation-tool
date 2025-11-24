@@ -1,0 +1,66 @@
+# 问题生成Prompt模板
+# 可以随时修改,调用reload()即可生效
+
+desire_inference:
+  template: |
+    你是一位专业的心理学研究者,需要基于视频关键帧生成关于desire(渴望)的单选题。
+
+    ## 关键帧信息
+    - 时间戳: {timestamp}
+    - 动作描述: {action_description}
+    - 视觉上下文: {visual_context}
+
+    ## 任务
+    生成一个单选题,测试AI模型对人物desire的推理能力。
+    问题类型: "在这个场景中,人物的desire(渴望)是什么?"
+
+    要求:
+    1. 生成1个正确答案和3个有迷惑性的干扰项
+    2. 干扰项要基于常见的推理错误
+    3. 提供每个选项的解释
+    4. 说明你的推理过程
+
+    ## 输出格式(JSON)
+    {{
+      "question_text": "在时间戳{timestamp},人物的desire是什么?",
+      "options": [
+        {{"option_id": "A", "text": "...", "is_correct": true, "explanation": "..."}},
+        {{"option_id": "B", "text": "...", "is_correct": false, "explanation": "..."}},
+        {{"option_id": "C", "text": "...", "is_correct": false, "explanation": "..."}},
+        {{"option_id": "D", "text": "...", "is_correct": false, "explanation": "..."}}
+      ],
+      "correct_option_id": "A",
+      "reasoning": "基于视觉线索和行为分析..."
+    }}
+
+desire_reasoning:
+  template: |
+    你是一位专业的心理学研究者,需要基于视频关键帧生成关于desire推理过程的单选题。
+
+    ## 关键帧信息
+    - 时间戳: {timestamp}
+    - 动作描述: {action_description}
+    - 视觉上下文: {visual_context}
+    - 已知desire: {known_desire}
+
+    ## 任务
+    生成一个单选题,测试AI模型对desire推理过程的理解。
+    问题类型: "为什么判断人物的desire是{known_desire}?"
+
+    要求:
+    1. 生成1个正确的推理依据和3个错误的推理
+    2. 测试对视觉线索、行为模式的理解
+    3. 提供每个选项的解释
+
+    ## 输出格式(JSON)
+    {{
+      "question_text": "为什么判断人物的desire是{known_desire}?",
+      "options": [
+        {{"option_id": "A", "text": "...", "is_correct": true, "explanation": "..."}},
+        {{"option_id": "B", "text": "...", "is_correct": false, "explanation": "..."}},
+        {{"option_id": "C", "text": "...", "is_correct": false, "explanation": "..."}},
+        {{"option_id": "D", "text": "...", "is_correct": false, "explanation": "..."}}
+      ],
+      "correct_option_id": "A",
+      "reasoning": "..."
+    }}

@@ -1,0 +1,379 @@
+{
+  "video_id": "iabAuKv9KPg_0_90",
+  "video_name": "Adele访谈_日本旅行取消_飞行焦虑.mp4",
+  "video_path": "data/videos/Adele访谈_日本旅行取消_飞行焦虑.mp4",
+  "duration": 0.0,
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0000_t6.00s.jpg",
+      "timestamp_seconds": 6,
+      "action": {
+        "timestamp": 6,
+        "timestamp_formatted": "00:06",
+        "action_description": "Adele enters the room and asks where she should sit.",
+        "visual_context": "A brightly lit room with white sofas. A man in a suit gestures.",
+        "objects": [
+          "sofa",
+          "chair",
+          "man in suit",
+          "Adele"
+        ],
+        "characters": [
+          "Adele",
+          "Man in Suit"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To find a suitable place to sit for the interview.",
+        "implicit_desire": "To be accommodating and respectful.",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "The question is direct and practical, showing a desire to start the interview comfortably and politely.",
+        "visual_cues": [
+          "Smiling",
+          "looking at the man"
+        ],
+        "status": "human_modified",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0001_t17.00s.jpg",
+      "timestamp_seconds": 17,
+      "action": {
+        "timestamp": 17,
+        "timestamp_formatted": "00:17",
+        "action_description": "A woman in a black suit states her name is Ushi Hirosaki.",
+        "visual_context": "The same room. Ushi is sitting on the sofa with a man.",
+        "objects": [
+          "sofa",
+          "woman in suit",
+          "man in suit"
+        ],
+        "characters": [
+          "Ushi Hirosaki",
+          "Man in Suit"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.95
+      },
+      "motivation": {
+        "explicit_motivation": "To introduce herself formally.",
+        "implicit_desire": "To establish credibility and set the tone for a professional interview.",
+        "desire_category": "esteem",
+        "motivation_type": "extrinsic",
+        "implicit_level": 1,
+        "reasoning": "This is a standard introductory action in a professional setting.",
+        "visual_cues": [
+          "Reading from notes",
+          "direct eye contact with Adele"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.95
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0002_t23.00s.jpg",
+      "timestamp_seconds": 23,
+      "action": {
+        "timestamp": 23,
+        "timestamp_formatted": "00:23",
+        "action_description": "Adele repeats the name Ushi and thanks her.",
+        "visual_context": "Close-up shot of Adele on the sofa.",
+        "objects": [
+          "sofa",
+          "Adele"
+        ],
+        "characters": [
+          "Adele"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To acknowledge the introduction and show politeness.",
+        "implicit_desire": "To create a friendly and comfortable atmosphere.",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "Repeating the name shows active listening and respect for the speaker.",
+        "visual_cues": [
+          "Smiling",
+          "nodding"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0003_t28.00s.jpg",
+      "timestamp_seconds": 28,
+      "action": {
+        "timestamp": 28,
+        "timestamp_formatted": "00:28",
+        "action_description": "Ushi states that her English is 'not so very bad'.",
+        "visual_context": "Back on the sofa, with the man in suit next to her.",
+        "objects": [
+          "sofa",
+          "woman in suit",
+          "man in suit"
+        ],
+        "characters": [
+          "Ushi Hirosaki",
+          "Man in Suit"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "To manage Adele's expectations regarding her English proficiency.",
+        "implicit_desire": "To avoid potential misunderstandings and ensure a smooth interview.",
+        "desire_category": "safety",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "This statement is a pre-emptive measure to address any language barrier concerns.",
+        "visual_cues": [
+          "Slightly nervous expression"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0004_t40.00s.jpg",
+      "timestamp_seconds": 40,
+      "action": {
+        "timestamp": 40,
+        "timestamp_formatted": "00:40",
+        "action_description": "Ushi asks Adele if she has ever been to Japan.",
+        "visual_context": "The scene is still in the interview room.",
+        "objects": [
+          "sofa",
+          "woman in suit",
+          "man in suit"
+        ],
+        "characters": [
+          "Ushi Hirosaki",
+          "Man in Suit"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To inquire about Adele's experience with Japan.",
+        "implicit_desire": "To find common ground and initiate a more engaging conversation.",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "This is a typical ice-breaker question, used to build rapport and gather information.",
+        "visual_cues": [
+          "Looking directly at Adele"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 5,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0005_t43.00s.jpg",
+      "timestamp_seconds": 43,
+      "action": {
+        "timestamp": 43,
+        "timestamp_formatted": "00:43",
+        "action_description": "Adele states that she was meant to go to Japan twice, but couldn't fly that far.",
+        "visual_context": "Close-up on Adele.",
+        "objects": [
+          "sofa",
+          "Adele"
+        ],
+        "characters": [
+          "Adele"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.85
+      },
+      "motivation": {
+        "explicit_motivation": "To answer Ushi's question and explain her lack of experience with Japan.",
+        "implicit_desire": "To be honest and avoid appearing ignorant or uninterested.",
+        "desire_category": "belonging",
+        "motivation_type": "intrinsic",
+        "implicit_level": 3,
+        "reasoning": "The statement conveys a sense of regret and explains the reason behind her absence from Japan.",
+        "visual_cues": [
+          "Slightly apologetic tone"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.85
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 6,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0006_t50.00s.jpg",
+      "timestamp_seconds": 50,
+      "action": {
+        "timestamp": 50,
+        "timestamp_formatted": "00:50",
+        "action_description": "Adele further explains that she got to the plane but couldn't get on it.",
+        "visual_context": "Close-up on Adele.",
+        "objects": [
+          "sofa",
+          "Adele"
+        ],
+        "characters": [
+          "Adele"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "To provide more detail about why she didn't go to Japan.",
+        "implicit_desire": "To make the situation clear, and to possibly hint at a fear of flying.",
+        "desire_category": "safety",
+        "motivation_type": "intrinsic",
+        "implicit_level": 4,
+        "reasoning": "This further elaboration suggests a possible anxiety about flying which is a factor of personal safety.",
+        "visual_cues": [
+          "Slight hesitancy in her voice"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 7,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0007_t60.00s.jpg",
+      "timestamp_seconds": 60,
+      "action": {
+        "timestamp": 60,
+        "timestamp_formatted": "01:00",
+        "action_description": "Adele clarifies that she was meant to go to Tokyo but didn't go.",
+        "visual_context": "The interview scene.",
+        "objects": [
+          "sofa",
+          "Adele",
+          "Ushi Hirosaki"
+        ],
+        "characters": [
+          "Adele",
+          "Ushi Hirosaki"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.85
+      },
+      "motivation": {
+        "explicit_motivation": "To specify her destination in Japan.",
+        "implicit_desire": "To show that she had specific plans and it wasn't just a vague intention to visit Japan.",
+        "desire_category": "belonging",
+        "motivation_type": "intrinsic",
+        "implicit_level": 3,
+        "reasoning": "She is engaging in the conversation and clarifying the context of her previous statement.",
+        "visual_cues": [
+          "Gesturing with her hand",
+          "direct eye contact with Ushi Hirosaki"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.85
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 8,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0008_t64.00s.jpg",
+      "timestamp_seconds": 64,
+      "action": {
+        "timestamp": 64,
+        "timestamp_formatted": "01:04",
+        "action_description": "Ushi states I do not understand.",
+        "visual_context": "The interview scene.",
+        "objects": [
+          "sofa",
+          "Ushi Hirosaki",
+          "Adele"
+        ],
+        "characters": [
+          "Ushi Hirosaki",
+          "Adele"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.95
+      },
+      "motivation": {
+        "explicit_motivation": "To express her confusion.",
+        "implicit_desire": "To clarify the sequence of events, is Adele going or not.",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "She is trying to get an understanding of the situation.",
+        "visual_cues": [
+          "Looking at Adele with surprise.",
+          "raising her eyebrow"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.95
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 9,
+      "frame_path": "data/keyframes/Adele访谈_日本旅行取消_飞行焦虑/frame_0009_t71.00s.jpg",
+      "timestamp_seconds": 71,
+      "action": {
+        "timestamp": 71,
+        "timestamp_formatted": "01:11",
+        "action_description": "Ushi asks whether she has been in Japan but not in Tokyo.",
+        "visual_context": "The interview scene.",
+        "objects": [
+          "sofa",
+          "Ushi Hirosaki",
+          "Adele"
+        ],
+        "characters": [
+          "Ushi Hirosaki",
+          "Adele"
+        ],
+        "scene": "Interview Room",
+        "confidence": 0.95
+      },
+      "motivation": {
+        "explicit_motivation": "To clarify Adele's answer and to see if Adele has visited any part of Japan.",
+        "implicit_desire": "To completely understand the story and move forward.",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "She is trying to get a better understanding of Adele and continue with the interview.",
+        "visual_cues": [
+          "Looking at Adele with confusion.",
+          "raising her eyebrow"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.95
+      },
+      "is_transition": false
+    }
+  ],
+  "transitions": [],
+  "overall_trajectory": "This is an interview where the interviewer (Ushi) and Adele are trying to establish a connection. The confusion arises from Adele's cancelled trip to Tokyo, which initially made Ushi believe that Adele has been to Japan at least once.",
+  "created_at": "2025-11-20T10:21:57.171453",
+  "last_modified": "2025-11-20T19:07:21.083656",
+  "annotator": "AI_Batch",
+  "status": "ai_generated",
+  "total_frames": 10,
+  "annotated_frames": 0,
+  "ai_generated_frames": 10,
+  "is_renamed": true
+}

@@ -1,0 +1,80 @@
+{
+  "video_id": "Gloria与Claire_友谊危机_瑜伽馆风波",
+  "video_name": "Gloria与Claire_友谊危机_瑜伽馆风波.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Gloria与Claire_友谊危机_瑜伽馆风波/frame_0000_t12.00s.jpg",
+      "timestamp_seconds": 12,
+      "action": {
+        "timestamp": 12,
+        "timestamp_formatted": "00:12",
+        "action_description": "Gloria gestures towards the door and questions Cam about Claire's cold behavior.",
+        "visual_context": "Living room setting, Cam is lying on the couch, Gloria is standing.",
+        "scene": "Living Room Conversation"
+      },
+      "motivation": {
+        "explicit_motivation": "To understand why Claire is unfriendly towards her.",
+        "implicit_desire": "Acceptance by family members",
+        "reasoning": "Gloria expresses vulnerability regarding her step-daughter's rejection ('cold shoulder'), indicating a need for familial integration and social validation.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Gloria与Claire_友谊危机_瑜伽馆风波/frame_0001_t24.00s.jpg",
+      "timestamp_seconds": 24,
+      "action": {
+        "timestamp": 24,
+        "timestamp_formatted": "00:24",
+        "action_description": "Cam vigorously encourages Gloria to go catch up with Claire immediately.",
+        "visual_context": "Cam is lying down on the sofa, looking up at Gloria.",
+        "scene": "Living Room Manipulation"
+      },
+      "motivation": {
+        "explicit_motivation": "To encourage Gloria to bond with Claire.",
+        "implicit_desire": "Rest and solitude",
+        "reasoning": "Cam uses reverse psychology and feigned support for their relationship to remove Gloria from the room so he can nap.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Gloria与Claire_友谊危机_瑜伽馆风波/frame_0002_t34.00s.jpg",
+      "timestamp_seconds": 34,
+      "action": {
+        "timestamp": 34,
+        "timestamp_formatted": "00:34",
+        "action_description": "Gloria jumps out from behind a car to surprise Claire in the parking lot.",
+        "visual_context": "Outdoor parking lot, overcast day.",
+        "scene": "Parking Lot Ambush"
+      },
+      "motivation": {
+        "explicit_motivation": "To join Claire for yoga and bond.",
+        "implicit_desire": "Connection and friendship",
+        "reasoning": "Gloria's enthusiastic physical approach contrasts sharply with Claire's startled recoil, highlighting Gloria's genuine (albeit invasive) attempt at connection.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Gloria与Claire_友谊危机_瑜伽馆风波/frame_0003_t45.00s.jpg",
+      "timestamp_seconds": 45,
+      "action": {
+        "timestamp": 45,
+        "timestamp_formatted": "00:45",
+        "action_description": "Claire rubs her temple and invents a headache excuse to avoid yoga.",
+        "visual_context": "Standing in the parking lot near cars.",
+        "scene": "The Excuse"
+      },
+      "motivation": {
+        "explicit_motivation": "To avoid spending time with Gloria without being directly rude.",
+        "implicit_desire": "Autonomy and personal space",
+        "reasoning": "Claire employs a 'white lie' (avoidance behavior) to protect her personal time (yoga) from what she perceives as an intrusion, prioritizing her psychological comfort.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "A comedic exploration of avoidance behaviors where one character (Cam) manipulates a situation for physical comfort, causing another (Claire) to fabricate medical distress to protect her autonomy against a third character's (Gloria) aggressive attempts at belonging."
+}

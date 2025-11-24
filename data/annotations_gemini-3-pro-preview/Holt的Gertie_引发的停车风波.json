@@ -1,0 +1,116 @@
+{
+  "video_id": "Holt的Gertie_引发的停车风波",
+  "video_name": "Holt的Gertie_引发的停车风波.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的Gertie_引发的停车风波/frame_0000_t2.00s.jpg",
+      "timestamp_seconds": 2,
+      "action": {
+        "timestamp": 2,
+        "timestamp_formatted": "00:02",
+        "action_description": "Boyle aggressively complains to the bullpen about a car parked in Captain Holt's spot and partially in his.",
+        "visual_context": "Police precinct bullpen, Boyle walking in agitated.",
+        "scene": "The Rant"
+      },
+      "motivation": {
+        "explicit_motivation": "To vent frustration about a parking inconvenience.",
+        "implicit_desire": "Respect for territory and rules",
+        "reasoning": "Boyle's exaggerated anger ('Some clown') signals a need to assert his status and territorial boundaries within the workplace hierarchy.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的Gertie_引发的停车风波/frame_0001_t14.00s.jpg",
+      "timestamp_seconds": 14,
+      "action": {
+        "timestamp": 14,
+        "timestamp_formatted": "00:14",
+        "action_description": "Boyle mocks the specific type of car (convertible) and the driver's personality, unaware Holt is behind him.",
+        "visual_context": "Boyle standing near Gina's desk, making judgmental gestures.",
+        "scene": "The Unintended Insult"
+      },
+      "motivation": {
+        "explicit_motivation": "To mock the driver's perceived pretentiousness.",
+        "implicit_desire": "Social validation/Superiority",
+        "reasoning": "Boyle seeks bonding with Gina through shared judgment of 'sports car people,' projecting an image of humility against perceived arrogance.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的Gertie_引发的停车风波/frame_0002_t19.00s.jpg",
+      "timestamp_seconds": 19,
+      "action": {
+        "timestamp": 19,
+        "timestamp_formatted": "00:19",
+        "action_description": "Gina loudly interrupts to ask Holt about his car, attempting to signal Boyle to stop talking.",
+        "visual_context": "Gina looks wide-eyed at Holt, Boyle has his back to Holt.",
+        "scene": "The Intervention"
+      },
+      "motivation": {
+        "explicit_motivation": "To distract Holt and warn Boyle.",
+        "implicit_desire": "Group harmony/Conflict avoidance",
+        "reasoning": "Gina recognizes the social threat immediately and pivots the conversation to protect Boyle from his own ignorance.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的Gertie_引发的停车风波/frame_0003_t27.00s.jpg",
+      "timestamp_seconds": 27,
+      "action": {
+        "timestamp": 27,
+        "timestamp_formatted": "00:27",
+        "action_description": "Captain Holt affectionately describes his convertible, 'Gertie,' completely contradicting Boyle's profile of the driver.",
+        "visual_context": "Holt speaking calmly with pride; Boyle staring in horror.",
+        "scene": "The Revelation"
+      },
+      "motivation": {
+        "explicit_motivation": "To share his enthusiasm for his new vehicle.",
+        "implicit_desire": "Self-expression/Personal joy",
+        "reasoning": "Holt's rare display of emotion ('peppy broad') shows his attachment to the object, oblivious to Boyle's previous insults.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的Gertie_引发的停车风波/frame_0004_t42.00s.jpg",
+      "timestamp_seconds": 42,
+      "action": {
+        "timestamp": 42,
+        "timestamp_formatted": "00:42",
+        "action_description": "Boyle lies, claiming his 'creep' comment was about a strangler he arrested, to cover his tracks.",
+        "visual_context": "Boyle looking nervous, stuttering slightly.",
+        "scene": "The Panic Lie"
+      },
+      "motivation": {
+        "explicit_motivation": "To explain away the insult he just made.",
+        "implicit_desire": "Security of employment/status",
+        "reasoning": "Boyle's fight-or-flight response triggers a fabrication to avoid the social and professional punishment of insulting his superior.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 5,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Holt的Gertie_引发的停车风波/frame_0005_t51.00s.jpg",
+      "timestamp_seconds": 51,
+      "action": {
+        "timestamp": 51,
+        "timestamp_formatted": "00:51",
+        "action_description": "Boyle, alone, realizes he now has to find a strangler to arrest to make his lie true.",
+        "visual_context": "Boyle standing alone in the hallway, looking defeated.",
+        "scene": "The Consequences"
+      },
+      "motivation": {
+        "explicit_motivation": "To process the result of his lie.",
+        "implicit_desire": "Consistency/Avoiding cognitive dissonance",
+        "reasoning": "The realization that maintaining his social safety (the lie) has created a massive tangible burden (finding a criminal).",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "A comedic situational irony where a subordinate's attempt to assert dominance through complaining backfires when the object of his ridicule turns out to be his superior, forcing him into a desperate lie to preserve his professional safety."
+}

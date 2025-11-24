@@ -1,0 +1,332 @@
+{
+  "video_id": "04MPEghhUqI_75_137",
+  "video_name": "04MPEghhUqI_75_137.mp4",
+  "video_path": "data/videos/04MPEghhUqI_75_137.mp4",
+  "duration": 0.0,
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes/04MPEghhUqI_75_137/frame_0000_t0.00s.jpg",
+      "timestamp_seconds": 0,
+      "action": {
+        "timestamp": 0,
+        "timestamp_formatted": "00:00",
+        "action_description": "三个男人闯入一个房间，其中一人撞翻了桌子。",
+        "visual_context": "一个看起来像地下室的房间，光线昏暗，房间内有几个人围坐在一张桌子旁。",
+        "objects": [
+          "桌子",
+          "椅子",
+          "啤酒箱"
+        ],
+        "characters": [
+          "闯入者1",
+          "闯入者2",
+          "闯入者3",
+          "赌徒们"
+        ],
+        "scene": "地下室",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "打断房间里的活动",
+        "implicit_desire": "控制局面，展示权威",
+        "desire_category": "safety",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "闯入，破坏行为，表明企图通过武力控制。",
+        "visual_cues": [
+          "愤怒的表情",
+          "快速移动",
+          "破坏行为"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes/04MPEghhUqI_75_137/frame_0001_t4.00s.jpg",
+      "timestamp_seconds": 4,
+      "action": {
+        "timestamp": 4,
+        "timestamp_formatted": "00:04",
+        "action_description": "克里斯·塔克饰演的角色拿着枪命令房间里的人放下枪。",
+        "visual_context": "地下室，克里斯·塔克站在房间门口，拿着枪。",
+        "objects": [
+          "枪",
+          "啤酒箱"
+        ],
+        "characters": [
+          "克里斯·塔克",
+          "赌徒们"
+        ],
+        "scene": "地下室",
+        "confidence": 0.95
+      },
+      "motivation": {
+        "explicit_motivation": "维持秩序",
+        "implicit_desire": "控制局面，确保安全",
+        "desire_category": "safety",
+        "motivation_type": "extrinsic",
+        "implicit_level": 1,
+        "reasoning": "明确的命令表明希望结束对峙。",
+        "visual_cues": [
+          "命令的语气",
+          "坚定的眼神",
+          "举枪姿势"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.95
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes/04MPEghhUqI_75_137/frame_0002_t7.00s.jpg",
+      "timestamp_seconds": 7,
+      "action": {
+        "timestamp": 7,
+        "timestamp_formatted": "00:07",
+        "action_description": "穿着红色西装的角色要求知道一个小女孩的下落。",
+        "visual_context": "地下室，穿着红色西装的角色站在桌子旁边，询问。",
+        "objects": [
+          "桌子"
+        ],
+        "characters": [
+          "红色西装男",
+          "赌徒们"
+        ],
+        "scene": "地下室",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "寻找小女孩",
+        "implicit_desire": "保护或营救小女孩，或找到某种与她相关的物品",
+        "desire_category": "safety",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "询问特定目标表明有寻找的目的。",
+        "visual_cues": [
+          "严肃的表情",
+          "明确的询问"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes/04MPEghhUqI_75_137/frame_0003_t18.00s.jpg",
+      "timestamp_seconds": 18,
+      "action": {
+        "timestamp": 18,
+        "timestamp_formatted": "00:18",
+        "action_description": "成龙饰演的角色表情严肃，眼神坚定。",
+        "visual_context": "光线昏暗的房间，成龙站在阴影中。",
+        "objects": [],
+        "characters": [
+          "成龙"
+        ],
+        "scene": "房间",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "观察情况",
+        "implicit_desire": "评估威胁，准备行动",
+        "desire_category": "safety",
+        "motivation_type": "intrinsic",
+        "implicit_level": 2,
+        "reasoning": "表情表明他正在分析局势。",
+        "visual_cues": [
+          "严肃的表情",
+          "专注的眼神"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes/04MPEghhUqI_75_137/frame_0004_t30.00s.jpg",
+      "timestamp_seconds": 30,
+      "action": {
+        "timestamp": 30,
+        "timestamp_formatted": "00:30",
+        "action_description": "克里斯·塔克饰演的角色建议成龙饰演的角色离开，因为情况可能变得危险。",
+        "visual_context": "地下室，克里斯·塔克举着枪。",
+        "objects": [
+          "枪"
+        ],
+        "characters": [
+          "克里斯·塔克",
+          "成龙",
+          "赌徒们"
+        ],
+        "scene": "地下室",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "保护成龙",
+        "implicit_desire": "确保任务成功，避免成龙受到伤害",
+        "desire_category": "safety",
+        "motivation_type": "mixed",
+        "implicit_level": 1,
+        "reasoning": "建议离开表明希望保护某人免受潜在伤害。",
+        "visual_cues": [
+          "关心的语气",
+          "保护性的姿势"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 5,
+      "frame_path": "data/keyframes/04MPEghhUqI_75_137/frame_0005_t51.00s.jpg",
+      "timestamp_seconds": 51,
+      "action": {
+        "timestamp": 51,
+        "timestamp_formatted": "00:51",
+        "action_description": "克里斯·塔克饰演的角色将枪放下，捂住脸，似乎在哭或笑。",
+        "visual_context": "地下室，克里斯·塔克捂住脸。",
+        "objects": [
+          "枪"
+        ],
+        "characters": [
+          "克里斯·塔克"
+        ],
+        "scene": "地下室",
+        "confidence": 0.85
+      },
+      "motivation": {
+        "explicit_motivation": "掩饰情绪",
+        "implicit_desire": "缓解紧张，掩盖恐惧或紧张，放松",
+        "desire_category": "physiological",
+        "motivation_type": "intrinsic",
+        "implicit_level": 4,
+        "reasoning": "捂脸行为表明情绪复杂，可能试图隐藏真实感受。",
+        "visual_cues": [
+          "捂脸",
+          "不确定的肢体语言"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.85
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 6,
+      "frame_path": "data/keyframes/04MPEghhUqI_75_137/frame_0006_t54.00s.jpg",
+      "timestamp_seconds": 54,
+      "action": {
+        "timestamp": 54,
+        "timestamp_formatted": "00:54",
+        "action_description": "克里斯·塔克饰演的角色笑了，并叫红色西装男过来。",
+        "visual_context": "地下室，克里斯·塔克笑了，站在桌子旁边。",
+        "objects": [],
+        "characters": [
+          "克里斯·塔克",
+          "红色西装男",
+          "赌徒们"
+        ],
+        "scene": "地下室",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "缓和气氛，进一步交谈",
+        "implicit_desire": "建立信任，获取信息",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "邀请表明希望建立更紧密的联系。",
+        "visual_cues": [
+          "友好的笑容",
+          "邀请的手势"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 7,
+      "frame_path": "data/keyframes/04MPEghhUqI_75_137/frame_0007_t58.00s.jpg",
+      "timestamp_seconds": 58,
+      "action": {
+        "timestamp": 58,
+        "timestamp_formatted": "00:58",
+        "action_description": "克里斯·塔克饰演的角色和红色西装男抱在了一起。",
+        "visual_context": "地下室，两人拥抱。",
+        "objects": [],
+        "characters": [
+          "克里斯·塔克",
+          "红色西装男"
+        ],
+        "scene": "地下室",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "缓和气氛，假装和解",
+        "implicit_desire": "缓和紧张关系，建立虚假的安全感",
+        "desire_category": "belonging",
+        "motivation_type": "mixed",
+        "implicit_level": 3,
+        "reasoning": "拥抱行为可能是一种伪装，掩盖潜在的敌意。",
+        "visual_cues": [
+          "勉强的笑容",
+          "肢体僵硬"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    }
+  ],
+  "transitions": [
+    {
+      "from_timestamp": 0,
+      "to_timestamp": 4,
+      "trigger_event": "持枪闯入",
+      "motivation_before": "赌博",
+      "motivation_after": "恐惧,自卫",
+      "desire_before": "赢钱",
+      "desire_after": "生存",
+      "transition_type": "external_trigger",
+      "intensity": 5
+    },
+    {
+      "from_timestamp": 4,
+      "to_timestamp": 30,
+      "trigger_event": "克里斯塔克控制局面",
+      "motivation_before": "混乱，紧张",
+      "motivation_after": "寻求信息，保护",
+      "desire_before": "生存",
+      "desire_after": "完成任务",
+      "transition_type": "internal_trigger",
+      "intensity": 4
+    },
+    {
+      "from_timestamp": 30,
+      "to_timestamp": 54,
+      "trigger_event": "放下枪",
+      "motivation_before": "试图控制",
+      "motivation_after": "缓和气氛",
+      "desire_before": "完成任务",
+      "desire_after": "建立信任",
+      "transition_type": "internal_trigger",
+      "intensity": 3
+    }
+  ],
+  "overall_trajectory": "场景从突如其来的暴力对峙开始，通过克里斯·塔克角色的介入逐渐缓和，最终试图通过建立信任的方式获取信息。整个过程充满了紧张和伪装，每个角色的动机都交织在一起，为了生存、控制和完成任务。",
+  "created_at": "2025-11-20T08:37:53.422850",
+  "last_modified": "2025-11-20T08:37:53.422875",
+  "annotator": "AI_Batch",
+  "status": "ai_generated",
+  "total_frames": 8,
+  "annotated_frames": 0,
+  "ai_generated_frames": 8
+}

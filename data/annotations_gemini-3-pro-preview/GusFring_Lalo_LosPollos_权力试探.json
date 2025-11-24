@@ -1,0 +1,134 @@
+{
+  "video_id": "GusFring_Lalo_LosPollos_权力试探",
+  "video_name": "GusFring_Lalo_LosPollos_权力试探.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/GusFring_Lalo_LosPollos_权力试探/frame_0000_t1.00s.jpg",
+      "timestamp_seconds": 1,
+      "action": {
+        "timestamp": 1,
+        "timestamp_formatted": "00:01",
+        "action_description": "Gus stands over the table with a polite, professional smile, hands clasped, inquiring how he can help.",
+        "visual_context": "Brightly lit fast-food restaurant interior, low angle shot looking up at Gus.",
+        "scene": "Los Pollos Hermanos Dining Area"
+      },
+      "motivation": {
+        "explicit_motivation": "To provide excellent customer service.",
+        "implicit_desire": "Control and concealment of true identity.",
+        "reasoning": "Gus maintains a perfect facade of a humble business owner to hide his criminal empire. The rigid posture suggests disciplined self-control.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/GusFring_Lalo_LosPollos_权力试探/frame_0001_t6.00s.jpg",
+      "timestamp_seconds": 6,
+      "action": {
+        "timestamp": 6,
+        "timestamp_formatted": "00:06",
+        "action_description": "Lalo leans forward ingratiatingly, asking if it is possible to meet the owner, feigning ignorance.",
+        "visual_context": "Lalo seated at a red booth next to the window, Nacho seated silently beside him.",
+        "scene": "Los Pollos Hermanos Dining Area"
+      },
+      "motivation": {
+        "explicit_motivation": "To compliment the establishment.",
+        "implicit_desire": "To assess the opponent and establish a power dynamic.",
+        "reasoning": "Lalo knows exactly who Gus is. His request is a psychological probe to see how Gus handles direct confrontation under the guise of a customer.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/GusFring_Lalo_LosPollos_权力试探/frame_0002_t13.00s.jpg",
+      "timestamp_seconds": 13,
+      "action": {
+        "timestamp": 13,
+        "timestamp_formatted": "00:13",
+        "action_description": "Lalo reacts with exaggerated surprise and delight upon hearing Gus is the owner.",
+        "visual_context": "Close-up on Lalo's expressive face.",
+        "scene": "Los Pollos Hermanos Dining Area"
+      },
+      "motivation": {
+        "explicit_motivation": "To express luck and gratitude.",
+        "implicit_desire": "Deception and manipulation.",
+        "reasoning": "The reaction is theatrical and disingenuous ('How lucky for me'). He is testing Gus's patience and trying to disarm him with excessive friendliness.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/GusFring_Lalo_LosPollos_权力试探/frame_0003_t19.00s.jpg",
+      "timestamp_seconds": 19,
+      "action": {
+        "timestamp": 19,
+        "timestamp_formatted": "00:19",
+        "action_description": "Lalo proposes franchising and expresses an eagerness to invest.",
+        "visual_context": "Lalo gesturing with open hands; Nacho looks down, visibly tense.",
+        "scene": "Los Pollos Hermanos Dining Area"
+      },
+      "motivation": {
+        "explicit_motivation": "To discuss a business opportunity.",
+        "implicit_desire": "Infiltration and dominance.",
+        "reasoning": "This is a veiled threat. 'Investing' implies becoming a partner or taking a piece of Gus's business. It's an aggressive move masked as a compliment.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/GusFring_Lalo_LosPollos_权力试探/frame_0004_t22.00s.jpg",
+      "timestamp_seconds": 22,
+      "action": {
+        "timestamp": 22,
+        "timestamp_formatted": "00:22",
+        "action_description": "Gus suggests moving to his office to discuss the matter further.",
+        "visual_context": "Gus standing tall, looking down at the seated men.",
+        "scene": "Los Pollos Hermanos Dining Area"
+      },
+      "motivation": {
+        "explicit_motivation": "To have a professional business meeting.",
+        "implicit_desire": "To contain the threat and remove it from the public eye.",
+        "reasoning": "Gus recognizes the danger of discussing 'business' in the open. He reasserts control by changing the location to his territory (the office).",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 5,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/GusFring_Lalo_LosPollos_权力试探/frame_0005_t27.00s.jpg",
+      "timestamp_seconds": 27,
+      "action": {
+        "timestamp": 27,
+        "timestamp_formatted": "00:27",
+        "action_description": "Lalo points to the food and tells Nacho, 'Don't waste that,' before leaving.",
+        "visual_context": "Lalo standing up, Nacho remaining seated with food.",
+        "scene": "Los Pollos Hermanos Dining Area"
+      },
+      "motivation": {
+        "explicit_motivation": "To prevent food waste.",
+        "implicit_desire": "To assert dominance over a subordinate.",
+        "reasoning": "Even while engaging Gus, Lalo takes a moment to command Nacho, reinforcing the hierarchy and keeping Nacho in a submissive, waiting role.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 6,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/GusFring_Lalo_LosPollos_权力试探/frame_0006_t30.00s.jpg",
+      "timestamp_seconds": 30,
+      "action": {
+        "timestamp": 30,
+        "timestamp_formatted": "00:30",
+        "action_description": "Gus turns and walks away with a stony expression; Lalo follows with a smirk.",
+        "visual_context": "Tracking shot following Gus through the restaurant.",
+        "scene": "Los Pollos Hermanos Dining Area"
+      },
+      "motivation": {
+        "explicit_motivation": "Leading the guest to the office.",
+        "implicit_desire": "Preparation for confrontation.",
+        "reasoning": "As soon as Gus turns his back, the 'customer service' smile vanishes. He is now the drug kingpin calculating his next move against a dangerous rival.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "A high-stakes psychological chess match where a cartel enforcer uses a facade of charm to intimidate a rival kingpin in a public setting."
+}

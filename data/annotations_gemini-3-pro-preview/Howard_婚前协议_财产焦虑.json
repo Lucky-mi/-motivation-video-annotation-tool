@@ -1,0 +1,80 @@
+{
+  "video_id": "Howard_婚前协议_财产焦虑",
+  "video_name": "Howard_婚前协议_财产焦虑.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_婚前协议_财产焦虑/frame_0000_t16.00s.jpg",
+      "timestamp_seconds": 16,
+      "action": {
+        "timestamp": 16,
+        "timestamp_formatted": "00:16",
+        "action_description": "Raj leans in and offers cliché advice to Leonard regarding the secret about the prenup.",
+        "visual_context": "Cafeteria setting, Raj and Leonard seated at a table.",
+        "scene": "Cafeteria Discussion"
+      },
+      "motivation": {
+        "explicit_motivation": "To provide a solution to Leonard's dilemma.",
+        "implicit_desire": "To be seen as wise and socially competent.",
+        "reasoning": "Raj mimics television tropes ('The Bachelor') to navigate a complex social situation, indicating a desire for social validation.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_婚前协议_财产焦虑/frame_0001_t23.00s.jpg",
+      "timestamp_seconds": 23,
+      "action": {
+        "timestamp": 23,
+        "timestamp_formatted": "00:23",
+        "action_description": "Howard enters enthusiastically, showing off a large Rice Krispie treat.",
+        "visual_context": "Howard approaches the table with a tray.",
+        "scene": "Howard's Arrival"
+      },
+      "motivation": {
+        "explicit_motivation": "To share his excitement about a good deal on a snack.",
+        "implicit_desire": "Physiological satisfaction and simple joy.",
+        "reasoning": "Howard is focused entirely on immediate gratification (sugar) and value, oblivious to the social tension.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_婚前协议_财产焦虑/frame_0002_t38.00s.jpg",
+      "timestamp_seconds": 38,
+      "action": {
+        "timestamp": 38,
+        "timestamp_formatted": "00:38",
+        "action_description": "Leonard nervously reveals to Howard that Bernadette is considering a prenup.",
+        "visual_context": "Close-up on Leonard and Howard across the table.",
+        "scene": "The Revelation"
+      },
+      "motivation": {
+        "explicit_motivation": "To warn his friend and relieve the burden of keeping a secret.",
+        "implicit_desire": "To maintain trust and safety in the friendship.",
+        "reasoning": "Leonard's hesitation and tone suggest anxiety about the conflict, prioritizing transparency to avoid future blame.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_婚前协议_财产焦虑/frame_0003_t50.00s.jpg",
+      "timestamp_seconds": 50,
+      "action": {
+        "timestamp": 50,
+        "timestamp_formatted": "00:50",
+        "action_description": "Raj repeats his earlier advice ('Follow your heart') to Howard.",
+        "visual_context": "Raj sits next to Howard, looking unhelpful.",
+        "scene": "Raj's Intervention"
+      },
+      "motivation": {
+        "explicit_motivation": "To comfort Howard with the same advice he gave Leonard.",
+        "implicit_desire": "To participate in the emotional support dynamic.",
+        "reasoning": "Raj recycles advice indiscriminately, showing a lack of genuine insight but a desire to belong to the conversation.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "Howard navigates a potential ego-threat regarding a prenup by rationalizing his financial inferiority and asserting his worth through trivial assets, while Raj provides comedic distraction through misplaced emotional priorities."
+}

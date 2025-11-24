@@ -1,0 +1,64 @@
+# requirements_v2.txt - 改进版依赖
+
+# ========== 核心框架 ==========
+# 前端框架
+streamlit>=1.28.0
+
+# 后端API框架
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# ========== 视频处理 ==========
+opencv-python-headless>=4.8.1.78
+numpy>=1.24.0
+pillow>=10.0.0
+
+# ========== AI模型 ==========
+# Gemini (必须)
+google-generativeai>=0.3.0
+
+# OpenAI (可选)
+# 如需使用OpenAI GPT-4V,取消下面注释:
+# openai>=1.0.0
+
+# Anthropic Claude (可选)
+# 如需使用Claude,取消下面注释:
+# anthropic>=0.8.0
+
+# ========== 数据验证 ==========
+pydantic>=2.0.0
+
+# ========== 配置管理 ==========
+pyyaml>=6.0.0
+python-dotenv>=1.0.0
+
+# ========== HTTP请求 ==========
+requests>=2.31.0
+httpx>=0.25.0
+
+# ========== 异步支持 ==========
+aiofiles>=23.2.0
+asyncio>=3.4.3
+
+# ========== 数据处理 ==========
+pandas>=2.0.0  # 可选,用于数据分析
+openpyxl>=3.1.0  # 可选,导出Excel
+
+# ========== 日志 ==========
+loguru>=0.7.0  # 可选,更好的日志
+
+# ========== 安全 ==========
+python-jose[cryptography]>=3.3.0  # JWT token
+passlib[bcrypt]>=1.7.4  # 密码哈希
+
+# ========== 测试 (开发环境) ==========
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# ========== 代码质量 (开发环境) ==========
+black>=23.0.0  # 代码格式化
+flake8>=6.0.0  # 代码检查
+mypy>=1.5.0    # 类型检查
+yt-dlp>=2023.0.0

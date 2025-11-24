@@ -1,0 +1,98 @@
+{
+  "video_id": "Howard_WoW_cybersex_分手原因",
+  "video_name": "Howard_WoW_cybersex_分手原因.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_WoW_cybersex_分手原因/frame_0000_t2.00s.jpg",
+      "timestamp_seconds": 2,
+      "action": {
+        "timestamp": 2,
+        "timestamp_formatted": "00:02",
+        "action_description": "霍华德把手插在口袋里，目光回避，告诉佩妮他不想说分手原因。",
+        "visual_context": "公寓走廊，佩妮双臂交叉站在门口，霍华德显得局促不安。",
+        "scene": "公寓门口对话"
+      },
+      "motivation": {
+        "explicit_motivation": "回避谈论令人尴尬的话题",
+        "implicit_desire": "维护自尊与面子",
+        "reasoning": "霍华德此时感到羞耻，试图通过回避话题来保护自我形象不被嘲笑。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_WoW_cybersex_分手原因/frame_0001_t21.00s.jpg",
+      "timestamp_seconds": 21,
+      "action": {
+        "timestamp": 21,
+        "timestamp_formatted": "00:21",
+        "action_description": "霍华德坐在沙发上，解释游戏角色可以在游戏中发生性关系。",
+        "visual_context": "两人坐在客厅沙发上，霍华德身体前倾，试图将话题合理化。",
+        "scene": "客厅沙发对话"
+      },
+      "motivation": {
+        "explicit_motivation": "为接下来的尴尬故事做铺垫",
+        "implicit_desire": "寻求理解与共情",
+        "reasoning": "霍华德试图将一种边缘行为正常化，观察佩妮的反应以判断安全距离。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_WoW_cybersex_分手原因/frame_0002_t37.00s.jpg",
+      "timestamp_seconds": 37,
+      "action": {
+        "timestamp": 37,
+        "timestamp_formatted": "00:37",
+        "action_description": "霍华德承认伯纳黛特在他进行'网络性行为'时走了进来。",
+        "visual_context": "霍华德表情痛苦，佩妮露出难以置信的表情。",
+        "scene": "客厅沙发对话"
+      },
+      "motivation": {
+        "explicit_motivation": "坦白具体的过错行为",
+        "implicit_desire": "通过忏悔减轻内疚感",
+        "reasoning": "尽管极其尴尬，霍华德需要宣泄这个秘密来寻求可能的解决方案。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_WoW_cybersex_分手原因/frame_0003_t45.00s.jpg",
+      "timestamp_seconds": 45,
+      "action": {
+        "timestamp": 45,
+        "timestamp_formatted": "00:45",
+        "action_description": "佩妮嘲讽地问霍华德是要跟伯纳黛特谈还是跟那个巨魔谈。",
+        "visual_context": "佩妮一脸震惊加嘲笑，霍华德显得更加沮丧。",
+        "scene": "客厅沙发对话"
+      },
+      "motivation": {
+        "explicit_motivation": "通过幽默表达对该行为荒谬性的批判",
+        "implicit_desire": "确认社会规范",
+        "reasoning": "佩妮无法抑制对这种非传统出轨方式的嘲笑，在此过程中确认了她在现实社交规范中的优越感。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Howard_WoW_cybersex_分手原因/frame_0004_t55.00s.jpg",
+      "timestamp_seconds": 55,
+      "action": {
+        "timestamp": 55,
+        "timestamp_formatted": "00:55",
+        "action_description": "霍华德辩解说那个巨魔实际上可能是一个50岁的卡车司机。",
+        "visual_context": "霍华德摊开双手进行逻辑辩护，佩妮无语地看着他。",
+        "scene": "客厅沙发对话"
+      },
+      "motivation": {
+        "explicit_motivation": "通过逻辑合理化来减轻罪责",
+        "implicit_desire": "寻求开脱与关系修复",
+        "reasoning": "霍华德使用了一种极客逻辑（对方不是真女人=不算出轨）作为心理防御机制，但这在现实情感逻辑中完全失效。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "视频展示了霍华德在极度尴尬中坦白因沉迷网络游戏虚拟性行为而导致分手的过程，揭示了他试图通过荒谬的逻辑合理化自己的错误，以及佩妮对此感到的震惊与嘲讽。"
+}

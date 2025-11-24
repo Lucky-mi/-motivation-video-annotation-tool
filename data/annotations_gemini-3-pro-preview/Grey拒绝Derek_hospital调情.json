@@ -1,0 +1,98 @@
+{
+  "video_id": "Grey拒绝Derek_hospital调情",
+  "video_name": "Grey拒绝Derek_hospital调情.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Grey拒绝Derek_hospital调情/frame_0000_t2.00s.jpg",
+      "timestamp_seconds": 2,
+      "action": {
+        "timestamp": 2,
+        "timestamp_formatted": "00:02",
+        "action_description": "Meredith keeps her eyes closed and head down, clutching patient files, while Derek stands silently beside her.",
+        "visual_context": "Inside a quiet hospital elevator.",
+        "scene": "Elevator Silence"
+      },
+      "motivation": {
+        "explicit_motivation": "To avoid social interaction and maintain focus.",
+        "implicit_desire": "Need for personal space and emotional protection.",
+        "reasoning": "Her closed eyes and rigid posture suggest she is bracing herself against the tension in the enclosed space.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Grey拒绝Derek_hospital调情/frame_0001_t5.00s.jpg",
+      "timestamp_seconds": 5,
+      "action": {
+        "timestamp": 5,
+        "timestamp_formatted": "00:05",
+        "action_description": "Meredith abruptly breaks the silence to state she is not going out with him.",
+        "visual_context": "Elevator interior, medium shot of both characters.",
+        "scene": "Preemptive Rejection"
+      },
+      "motivation": {
+        "explicit_motivation": "To establish a clear boundary before being asked.",
+        "implicit_desire": "To assert control over a professionally ambiguous situation.",
+        "reasoning": "She speaks without looking at him initially, indicating nervousness masked as assertiveness.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Grey拒绝Derek_hospital调情/frame_0002_t7.00s.jpg",
+      "timestamp_seconds": 7,
+      "action": {
+        "timestamp": 7,
+        "timestamp_formatted": "00:07",
+        "action_description": "Derek looks at Meredith calmly and asks if he actually asked her out.",
+        "visual_context": "Elevator interior, focus on Derek.",
+        "scene": "The Counter-Question"
+      },
+      "motivation": {
+        "explicit_motivation": "To challenge her assumption and reclaim the upper hand.",
+        "implicit_desire": "Playful connection and intellectual engagement.",
+        "reasoning": "His calm demeanor contrasts with her tension, shifting the power dynamic.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Grey拒绝Derek_hospital调情/frame_0003_t10.00s.jpg",
+      "timestamp_seconds": 10,
+      "action": {
+        "timestamp": 10,
+        "timestamp_formatted": "00:10",
+        "action_description": "Derek smiles slightly and asks if she *wants* to go out with him.",
+        "visual_context": "Elevator interior.",
+        "scene": "The Flirtatious Trap"
+      },
+      "motivation": {
+        "explicit_motivation": "To force her to admit her attraction.",
+        "implicit_desire": "Validation of mutual romantic interest.",
+        "reasoning": "The smirk indicates he knows there is mutual attraction despite her protest.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Grey拒绝Derek_hospital调情/frame_0004_t13.00s.jpg",
+      "timestamp_seconds": 13,
+      "action": {
+        "timestamp": 13,
+        "timestamp_formatted": "00:13",
+        "action_description": "Meredith emphatically states she is not dating or sleeping with him again.",
+        "visual_context": "Elevator interior.",
+        "scene": "Clarifying Boundaries"
+      },
+      "motivation": {
+        "explicit_motivation": "To reaffirm professional boundaries and deny the temptation.",
+        "implicit_desire": "Preservation of professional reputation and self-respect.",
+        "reasoning": "Her listing of specific prohibitions suggests she is trying to convince herself as much as him.",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "A tense but flirtatious elevator encounter where Meredith attempts to establish professional boundaries while Derek playfully dismantles her defenses, highlighting the underlying romantic tension."
+}

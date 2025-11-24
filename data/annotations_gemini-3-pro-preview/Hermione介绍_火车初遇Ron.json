@@ -1,0 +1,80 @@
+{
+  "video_id": "Hermione介绍_火车初遇Ron",
+  "video_name": "Hermione介绍_火车初遇Ron.mp4",
+  "model_used": "gemini-3-pro-preview",
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Hermione介绍_火车初遇Ron/frame_0000_t0.00s.jpg",
+      "timestamp_seconds": 0,
+      "action": {
+        "timestamp": 0,
+        "timestamp_formatted": "00:00",
+        "action_description": "赫敏·格兰杰自信地看着镜头（罗恩的方向），身体微微前倾。",
+        "visual_context": "霍格沃茨特快列车包厢内，光线温暖。",
+        "scene": "霍格沃茨特快列车初遇"
+      },
+      "motivation": {
+        "explicit_motivation": "建立社交主导地位并引起注意",
+        "implicit_desire": "获得认可与尊重",
+        "reasoning": "她主动进入陌生环境并保持强烈的眼神接触，显示出对自我能力的自信和对掌控社交局面的渴望。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Hermione介绍_火车初遇Ron/frame_0001_t1.00s.jpg",
+      "timestamp_seconds": 1,
+      "action": {
+        "timestamp": 1,
+        "timestamp_formatted": "00:01",
+        "action_description": "赫敏清晰有力地报出自己的全名：“我是赫敏·格兰杰。”",
+        "visual_context": "面部特写，表情严肃而专注。",
+        "scene": "霍格沃茨特快列车初遇"
+      },
+      "motivation": {
+        "explicit_motivation": "确立身份并进行正式的自我介绍",
+        "implicit_desire": "建立自我身份认同",
+        "reasoning": "她强调名字的语气表明她希望被认真对待，不仅是社交礼仪，也是一种智力自信的展示。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Hermione介绍_火车初遇Ron/frame_0002_t3.00s.jpg",
+      "timestamp_seconds": 3,
+      "action": {
+        "timestamp": 3,
+        "timestamp_formatted": "00:03",
+        "action_description": "赫敏停顿并反问对方：“那你呢？”，眉毛微微上扬，带有期待和审视。",
+        "visual_context": "此时镜头仍聚焦在赫敏脸上，她在等待回应。",
+        "scene": "霍格沃茨特快列车初遇"
+      },
+      "motivation": {
+        "explicit_motivation": "获取对方信息以完成社交交换",
+        "implicit_desire": "寻求社交秩序与归属感",
+        "reasoning": "这种询问不仅是礼貌，更是一种测试，她在评估对方是否符合她的社交标准。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes_gemini-3-pro-preview/Hermione介绍_火车初遇Ron/frame_0003_t4.00s.jpg",
+      "timestamp_seconds": 4,
+      "action": {
+        "timestamp": 4,
+        "timestamp_formatted": "00:04",
+        "action_description": "听到罗恩含糊不清的回答“罗恩·韦斯莱”后，赫敏抿嘴，眼神中流露出一丝不屑或失望。",
+        "visual_context": "赫敏面部表情发生微妙变化，从期待转为轻微的批判。",
+        "scene": "霍格沃茨特快列车初遇"
+      },
+      "motivation": {
+        "explicit_motivation": "评估新同学的礼仪和素质",
+        "implicit_desire": "通过比较确认优越感",
+        "reasoning": "罗恩满嘴食物的回答打破了赫敏对正式社交礼仪的期待，她的反应显示出一种心理上的优越感和对“不规范”行为的排斥。",
+        "model_version": "gemini-3-pro-preview"
+      }
+    }
+  ],
+  "overall_trajectory": "赫敏在霍格沃茨特快列车上强势登场，通过自信的自我介绍和对同伴礼仪的审视，迅速确立了她作为一个注重规则、追求卓越且略带傲慢的学霸形象。"
+}

@@ -1,0 +1,348 @@
+  {
+  "video_id": "-7ZmDHudOEM_0_90",
+  "video_name": "-7ZmDHudOEM_0_90.mp4",
+  "video_path": "data/videos/-7ZmDHudOEM_0_90.mp4",
+  "duration": 0.0,
+  "keyframes": [
+    {
+      "frame_id": 0,
+      "frame_path": "data/keyframes/-7ZmDHudOEM_0_90/frame_0000_t0.00s.jpg",
+      "timestamp_seconds": 0,
+      "action": {
+        "timestamp": 0,
+        "timestamp_formatted": "00:00",
+        "action_description": "Gloria confronts Claire, placing her hands on her hips and looking directly at her.",
+        "visual_context": "Brightly lit kitchen with several people. Pies and plates on the counter.",
+        "objects": [
+          "Gloria",
+          "Claire",
+          "kitchen counter",
+          "pies",
+          "plates"
+        ],
+        "characters": [
+          "Gloria",
+          "Claire"
+        ],
+        "scene": "Kitchen",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To express her feelings of being disliked.",
+        "implicit_desire": "To feel accepted and loved by Claire and the family.",
+        "desire_category": "belonging",
+        "motivation_type": "intrinsic",
+        "implicit_level": 3,
+        "reasoning": "Gloria's posture and direct gaze indicate a strong need to communicate her feelings, not just make a statement. The underlying desire is to be accepted.",
+        "visual_cues": [
+          "Hands on hips",
+          "Direct eye contact",
+          "Raised voice"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 1,
+      "frame_path": "data/keyframes/-7ZmDHudOEM_0_90/frame_0001_t3.00s.jpg",
+      "timestamp_seconds": 3,
+      "action": {
+        "timestamp": 3,
+        "timestamp_formatted": "00:03",
+        "action_description": "Phil leans against a pillar and observes the interaction between Gloria and Claire with a slightly amused expression.",
+        "visual_context": "Kitchen, with pies on the counter. Phil is an observer to the interaction.",
+        "objects": [
+          "Phil",
+          "Pillar",
+          "Pies",
+          "Gloria",
+          "Claire"
+        ],
+        "characters": [
+          "Phil"
+        ],
+        "scene": "Kitchen",
+        "confidence": 0.8
+      },
+      "motivation": {
+        "explicit_motivation": "To witness the drama unfolding and offer his perspective.",
+        "implicit_desire": "To mediate and add humor to diffuse tension.",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 3,
+        "reasoning": "Phil's position and expression suggest he's enjoying the conflict and anticipating an opportunity to interject. He likely wants to be the peacemaker and comedian.",
+        "visual_cues": [
+          "Leaning",
+          "Amused expression",
+          "Observing"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.8
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 2,
+      "frame_path": "data/keyframes/-7ZmDHudOEM_0_90/frame_0002_t10.00s.jpg",
+      "timestamp_seconds": 10,
+      "action": {
+        "timestamp": 10,
+        "timestamp_formatted": "00:10",
+        "action_description": "Phil gestures to Claire, encouraging her to express her feelings to Gloria.",
+        "visual_context": "Kitchen, following Gloria's statement. Claire and Phil respond.",
+        "objects": [
+          "Phil",
+          "Claire",
+          "Gloria",
+          "Gesture"
+        ],
+        "characters": [
+          "Phil",
+          "Claire",
+          "Gloria"
+        ],
+        "scene": "Kitchen",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To facilitate communication and resolution between Gloria and Claire.",
+        "implicit_desire": "To feel like a helpful mediator and maintain family harmony.",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "Phil actively encourages Claire to express her emotions, signaling a desire to resolve the conflict in a 'therapeutic' way.",
+        "visual_cues": [
+          "Gesturing",
+          "Encouraging tone"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 3,
+      "frame_path": "data/keyframes/-7ZmDHudOEM_0_90/frame_0003_t24.00s.jpg",
+      "timestamp_seconds": 24,
+      "action": {
+        "timestamp": 24,
+        "timestamp_formatted": "00:24",
+        "action_description": "Gloria demonstrates the face she perceives Claire makes at her.",
+        "visual_context": "Close up of Gloria making a face, looking at Claire.",
+        "objects": [
+          "Gloria",
+          "Claire",
+          "face"
+        ],
+        "characters": [
+          "Gloria",
+          "Claire"
+        ],
+        "scene": "Kitchen",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To clarify what behavior causes her discomfort.",
+        "implicit_desire": "To be taken seriously and understood by Claire.",
+        "desire_category": "esteem",
+        "motivation_type": "intrinsic",
+        "implicit_level": 2,
+        "reasoning": "By demonstrating the 'face', Gloria is trying to make Claire understand her perspective and validate her feelings.",
+        "visual_cues": [
+          "Facial expression",
+          "Direct gaze",
+          "Defensive stance"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 4,
+      "frame_path": "data/keyframes/-7ZmDHudOEM_0_90/frame_0004_t35.00s.jpg",
+      "timestamp_seconds": 35,
+      "action": {
+        "timestamp": 35,
+        "timestamp_formatted": "00:35",
+        "action_description": "Gloria expresses her feelings of being unwelcomed in the family.",
+        "visual_context": "Gloria and Claire in the kitchen. Phil is in the background.",
+        "objects": [
+          "Gloria",
+          "Claire",
+          "Phil",
+          "kitchen"
+        ],
+        "characters": [
+          "Gloria",
+          "Claire",
+          "Phil"
+        ],
+        "scene": "Kitchen",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To voice her deepest insecurities to Claire.",
+        "implicit_desire": "To be reassured of her place within the family.",
+        "desire_category": "belonging",
+        "motivation_type": "intrinsic",
+        "implicit_level": 1,
+        "reasoning": "This direct statement is a clear expression of Gloria's feeling of not being accepted.",
+        "visual_cues": [
+          "Exaggerated gestures",
+          "Direct eye contact",
+          "Emotional tone"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 5,
+      "frame_path": "data/keyframes/-7ZmDHudOEM_0_90/frame_0005_t48.00s.jpg",
+      "timestamp_seconds": 48,
+      "action": {
+        "timestamp": 48,
+        "timestamp_formatted": "00:48",
+        "action_description": "Claire apologizes for Gloria feeling unwelcome.",
+        "visual_context": "After Gloria expresses her feelings, Claire speaks earnestly.",
+        "objects": [
+          "Claire",
+          "Gloria"
+        ],
+        "characters": [
+          "Claire",
+          "Gloria"
+        ],
+        "scene": "Kitchen",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To reassure Gloria.",
+        "implicit_desire": "To improve their relationship and alleviate Gloria's insecurities.",
+        "desire_category": "belonging",
+        "motivation_type": "extrinsic",
+        "implicit_level": 2,
+        "reasoning": "Claire expresses remorse and attempts to address Gloria's concerns.",
+        "visual_cues": [
+          "Earnest expression",
+          "Direct eye contact",
+          "Soft tone"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 6,
+      "frame_path": "data/keyframes/-7ZmDHudOEM_0_90/frame_0006_t71.00s.jpg",
+      "timestamp_seconds": 71,
+      "action": {
+        "timestamp": 71,
+        "timestamp_formatted": "01:11",
+        "action_description": "Gloria smiles and acknowledges her defensiveness.",
+        "visual_context": "The tension has diffused. Gloria is more relaxed.",
+        "objects": [
+          "Gloria",
+          "Claire",
+          "Phil"
+        ],
+        "characters": [
+          "Gloria",
+          "Claire",
+          "Phil"
+        ],
+        "scene": "Kitchen",
+        "confidence": 0.9
+      },
+      "motivation": {
+        "explicit_motivation": "To acknowledge Claire's point.",
+        "implicit_desire": "To move towards a more genuine and less guarded relationship.",
+        "desire_category": "belonging",
+        "motivation_type": "intrinsic",
+        "implicit_level": 3,
+        "reasoning": "Gloria's smile and acknowledgment suggest she's willing to let go of her defensiveness and trust Claire's intentions.",
+        "visual_cues": [
+          "Smile",
+          "Relaxed posture"
+        ],
+        "status": "ai_generated",
+        "confidence": 0.9
+      },
+      "is_transition": false
+    },
+    {
+      "frame_id": 7,
+      "frame_path": "data/keyframes/-7ZmDHudOEM_0_90/frame_0007_t78.00s.jpg",
+      "timestamp_seconds": 78,
+      "action": {
+        "timestamp": 78,
+        "timestamp_formatted": "01:18",
+        "action_description": "Claire and Gloria hug.",
+        "visual_context": "They resolve the conflict with a physical embrace.",
+        "objects": [
+          "Gloria",
+          "Claire",
+          "hug"
+        ],
+        "characters": [
+          "Gloria",
+          "Claire"
+        ],
+        "scene": "Kitchen",
+        "confidence": 1.0
+      },
+      "motivation": {
+        "explicit_motivation": "To show affection and resolution.",
+        "implicit_desire": "To solidify their bond and confirm their acceptance of each other.",
+        "desire_category": "belonging",
+        "motivation_type": "mixed",
+        "implicit_level": 1,
+        "reasoning": "The hug is a clear sign of reconciliation and acceptance.",
+        "visual_cues": [
+          "Hug",
+          "Smiling faces"
+        ],
+        "status": "ai_generated",
+        "confidence": 1.0
+      },
+      "is_transition": false
+    }
+  ],
+  "transitions": [
+    {
+      "from_timestamp": 0,
+      "to_timestamp": 35,
+      "trigger_event": "Gloria expressing her feelings of being disliked.",
+      "motivation_before": "Maintain familial harmony.",
+      "motivation_after": "To feel safe and welcome.",
+      "desire_before": "A positive relationship.",
+      "desire_after": "To be accepted.",
+      "transition_type": "internal_trigger",
+      "intensity": 5
+    },
+    {
+      "from_timestamp": 35,
+      "to_timestamp": 78,
+      "trigger_event": "Claire apologizing and expressing love.",
+      "motivation_before": "To feel insecure and unwelcome.",
+      "motivation_after": "To feel accepted and valued.",
+      "desire_before": "To belong to the family.",
+      "desire_after": "To deepen the bond with Claire.",
+      "transition_type": "external_trigger",
+      "intensity": 5
+    }
+  ],
+  "overall_trajectory": "Gloria confronts Claire about feeling disliked, triggering an emotional confrontation that leads to Claire apologizing and reassuring Gloria of her place in the family. This leads to a reconciliation and a deeper bond between the two characters.",
+  "created_at": "2025-11-20T08:36:07.487669",
+  "last_modified": "2025-11-20T08:36:07.487682",
+  "annotator": "AI_Batch",
+  "status": "ai_generated",
+  "total_frames": 8,
+  "annotated_frames": 0,
+  "ai_generated_frames": 8
+}

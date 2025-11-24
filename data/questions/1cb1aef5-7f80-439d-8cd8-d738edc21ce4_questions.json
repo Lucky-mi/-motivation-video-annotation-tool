@@ -1,0 +1,169 @@
+{
+  "question_set_id": "b888c86d-8297-4576-93ce-cf9a7273fff6",
+  "video_id": "1cb1aef5-7f80-439d-8cd8-d738edc21ce4",
+  "video_name": "1cb1aef5-7f80-439d-8cd8-d738edc21ce4.mp4",
+  "questions": [
+    {
+      "question_id": "f2d602af-673d-447c-b7df-b15a2a23b827",
+      "question_text": "在时间戳00:00,人物A(Gretchen)的desire(渴望)是什么?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "引起Jason的注意并与他互动。",
+          "is_correct": true,
+          "explanation": "人物A惊讶地指着Jason，并大声说出他的名字，这表明她渴望被Jason注意到，并希望接下来能和他互动。惊讶的表情也暗示了这种渴望可能并非每天都能实现，因此更为强烈。"
+        },
+        {
+          "option_id": "B",
+          "text": "避免与Jason相遇，因为她感到尴尬或不情愿。",
+          "is_correct": false,
+          "explanation": "虽然惊讶可能包含轻微的负面情绪，但人物A指着并大声说出对方的名字，是一种积极的寻求互动的行为，避免相遇不符合这一行为逻辑。这是混淆了惊讶表情中的负面可能性。"
+        },
+        {
+          "option_id": "C",
+          "text": "购买一件新的粉色上衣。",
+          "is_correct": false,
+          "explanation": "虽然人物A穿着粉色上衣，但这只是视觉上下文的一部分，并没有证据表明她渴望购买一件新的粉色上衣。这属于将人物的穿着与人物的渴望直接关联的错误推理。"
+        },
+        {
+          "option_id": "D",
+          "text": "离开拥挤的购物中心，寻找更安静的地方。",
+          "is_correct": false,
+          "explanation": "虽然购物中心人流涌动，但人物A的注意力集中在Jason身上，并没有任何迹象表明她对环境感到不适或渴望离开。 这是基于环境的推测，而忽略了人物的关键行为指向。"
+        }
+      ],
+      "correct_option_id": "A",
+      "related_frame_ids": [
+        0
+      ],
+      "reasoning_process": "基于视觉线索和行为分析，人物A的惊讶表情和指认动作表明她对Jason的出现感到兴奋，并渴望得到他的注意，从而与他互动。 其他选项未能抓住人物行为的关键指向，或者过度依赖环境信息。",
+      "question_meta": {},
+      "created_at": "2025-11-19T21:40:52.181505",
+      "verified": false,
+      "verification_notes": ""
+    },
+    {
+      "question_id": "d062a823-6f06-4724-bd13-30d094463eae",
+      "question_text": "在时间戳00:03，人物B (Jason) 的desire是什么?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "渴望与人物C (Taylor) 建立更深入的联系，或者分享彼此的想法和感受。",
+          "is_correct": true,
+          "explanation": "人物B和人物C坐在喷泉旁交谈，这是一个典型的社交场景。在这种场景下，人们通常渴望建立联系，互相了解，或者分享感受。拿着饮料可以看作是促进交流的一种方式。因此，渴望更深入的联系是最合理的推断。"
+        },
+        {
+          "option_id": "B",
+          "text": "渴望尽快喝完手里的饮料，因为口渴。",
+          "is_correct": false,
+          "explanation": "虽然拿着饮料表明人物B可能口渴，但是仅仅基于拿着饮料这个动作就断定他最渴望的是喝完饮料，过于片面。缺乏更多的视觉信息支持，比如人物B是否正在快速饮用，或者看起来非常焦渴。这种推断忽略了社交场景的背景。"
+        },
+        {
+          "option_id": "C",
+          "text": "渴望离开拥挤的购物中心，享受片刻的宁静。",
+          "is_correct": false,
+          "explanation": "虽然购物中心人流拥挤，可能让人感到不适，但人物B既然选择坐在喷泉旁与人交谈，就说明他当前的行为指向社交互动，而非逃离。这种推断基于对环境的普遍认知，忽略了人物B的具体行为。"
+        },
+        {
+          "option_id": "D",
+          "text": "渴望购买更多的商品，满足购物欲。",
+          "is_correct": false,
+          "explanation": "虽然场景发生在购物中心，人物B手里拿着饮料，没有其他迹象表明他正在购物或者对购物感兴趣。因此，将渴望设定为购买更多商品是无根据的。这种推断错误地将人物放置的环境等同于人物的desire。"
+        }
+      ],
+      "correct_option_id": "A",
+      "related_frame_ids": [
+        1
+      ],
+      "reasoning_process": "基于视觉线索和行为分析，人物B (Jason) 和人物C (Taylor) 坐在喷泉旁交谈这一行为表明他们正处于社交互动中。在这样的场景下，最合理的推断是他们渴望建立联系，分享想法，或者加深彼此的了解。人物B手里拿着饮料，可以理解为一种促进社交的手段。其他选项的推断缺乏足够的视觉证据支持，或者忽略了社交场景的背景。",
+      "question_meta": {},
+      "created_at": "2025-11-19T21:40:58.659379",
+      "verified": false,
+      "verification_notes": ""
+    },
+    {
+      "question_id": "27f3f439-6911-4bee-a872-6a23f0cd281a",
+      "question_text": "在时间戳00:08, 人物E (Regina) 的desire是什么?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "帮助她的朋友（可能是被甩的）摆脱困境并给予支持。",
+          "is_correct": true,
+          "explanation": "Regina 听到朋友被 Jason 'blow off' 后非常愤怒，立刻想拿过朋友的手机，表明她想要采取行动帮助朋友，减轻朋友的痛苦，并维护朋友的尊严。从语气和行为上来看，她渴望为朋友提供支持并解决问题。"
+        },
+        {
+          "option_id": "B",
+          "text": "自己联系 Jason 羞辱他，为朋友出气。",
+          "is_correct": false,
+          "explanation": "虽然 Regina 看起来很愤怒，并且说 Jason 是 'little skeez'，但她真正渴望的可能是维护朋友的尊严和提供实际帮助，而不是仅仅为了出气。直接羞辱 Jason 可能会让事情变得更糟，并不能真正解决朋友被 'blow off' 的问题，而且朋友可能并不想让 Regina 直接羞辱Jason。"
+        },
+        {
+          "option_id": "C",
+          "text": "从朋友那里拿走手机，避免她做出冲动的事情。",
+          "is_correct": false,
+          "explanation": "虽然 Regina 拿手机的动作看起来也像是阻止朋友冲动，但从她的语气和之前的对话来看，她更倾向于主动出击帮助朋友，而不是被动地阻止。如果她只是想阻止朋友冲动，她可能会直接劝说，而不是要手机。因此这不符合最主要的渴望。"
+        },
+        {
+          "option_id": "D",
+          "text": "自己想办法和 Jason 约会，以此来报复他。",
+          "is_correct": false,
+          "explanation": "从现有信息来看，没有任何迹象表明 Regina 对 Jason 感兴趣。她的愤怒和行动都是为了帮助朋友，而不是出于个人感情。让Regina与她朋友的前男友约会，这个假设没有充分依据。"
+        }
+      ],
+      "correct_option_id": "A",
+      "related_frame_ids": [
+        3
+      ],
+      "reasoning_process": "基于视觉线索和行为分析，Regina 对朋友被不公平对待感到愤怒，并且立即采取行动想要帮助朋友。她的渴望是支持她的朋友，并采取积极行动以减轻朋友的痛苦。选项 B 虽然有一定可能，但 Regina 的最终目的是为了帮助朋友，而非单纯地为了出气。选项 C 和 D 与 Regina 的言行和情境不符。",
+      "question_meta": {},
+      "created_at": "2025-11-19T21:41:07.251630",
+      "verified": false,
+      "verification_notes": ""
+    },
+    {
+      "question_id": "e128dcbc-2e3d-4f44-b79b-91ddba64e78a",
+      "question_text": "在时间戳00:23，人物E拨打电话，背景是人物B和人物C坐在购物中心。人物E的desire(渴望)最可能是以下哪项?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "渴望与人物B或C沟通，可能需要他们的帮助或建议，或者通知他们一些事情。",
+          "is_correct": true,
+          "explanation": "E拨打电话的行为表明其渴望与某人建立联系。结合背景信息，最直接的推断是E希望与背景中的B或C沟通。购物中心可能暗示他们正在一起购物或有其他的计划，E的电话可能是为了协调，寻求帮助，或者通知他们一些信息。"
+        },
+        {
+          "option_id": "B",
+          "text": "渴望离开购物中心，因为拨打电话可能是为了叫车或寻求其他的出行方式。",
+          "is_correct": false,
+          "explanation": "虽然拨打电话可能与交通有关，但直接推断E渴望离开购物中心并不合理。没有直接的视觉线索支持这个结论。这是一种过度解读，混淆了手段和目的。 电话也可能只是为了通知某人晚到，而非直接离开。"
+        },
+        {
+          "option_id": "C",
+          "text": "渴望购买某件商品，并打电话咨询价格或库存信息。",
+          "is_correct": false,
+          "explanation": "购物中心背景可能让人联想到购买商品。然而，没有证据表明E正看着商品或正在购物。这是一种基于背景的联想，但缺乏直接的行为支持。拨打电话的目的可能与购物无关，而与更广泛的社交活动有关。"
+        },
+        {
+          "option_id": "D",
+          "text": "渴望独自一人，并打电话寻求远离人物B和C的理由。",
+          "is_correct": false,
+          "explanation": "虽然人物E可能渴望独处，但没有任何视觉线索暗示这一点。拨打电话的行为更倾向于沟通，而非逃避。 这种推断是基于可能存在的负面情绪，但缺乏证据支持。 事实上三人一起在购物中心的背景可能暗示着某种友好的社交关系。"
+        }
+      ],
+      "correct_option_id": "A",
+      "related_frame_ids": [
+        5
+      ],
+      "reasoning_process": "基于视觉线索和行为分析，人物E拨打电话的行为表明他/她渴望与某人建立联系。最直接的推断是，E希望与背景中的B或C沟通。 购物中心的背景可能暗示着他们正在一起购物或者有其他的计划， E的电话可能是为了协调，寻求帮助或者通知他们一些信息。 其他选项虽然也可能存在，但缺乏直接的证据支持，属于过度解读或基于刻板印象的推断。",
+      "question_meta": {},
+      "created_at": "2025-11-19T21:41:15.092487",
+      "verified": false,
+      "verification_notes": ""
+    }
+  ],
+  "total_questions": 4,
+  "verified_questions": 0,
+  "metadata": {},
+  "created_at": "2025-11-19T21:41:21.518681",
+  "last_modified": "2025-11-19T21:41:21.518702",
+  "ai_provider": "gemini-2.0-flash-exp"
+}
