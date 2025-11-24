@@ -15,6 +15,7 @@ import json
 from datetime import datetime
 from backend.downloader import VideoDownloader
 from backend.content_filter import ContentFilter
+from backend.video_scorer import VideoScorer
 
 # 导入配置
 sys.path.insert(0, str(project_root / "config"))
@@ -48,6 +49,14 @@ def main():
     print("\n📦 初始化组件...")
     downloader = VideoDownloader()
     content_filter = ContentFilter() if ENABLE_AI_REVIEW else None
+    scorer = VideoScorer()  # 初始化评分系统
+
+    # 显示学习到的模式
+    if scorer.channel_stats:
+        print("  ✅ 评分系统已加载历史数据")
+        scorer.print_statistics()
+    else:
+        print("  ⚠️ 评分系统无历史数据，将使用默认规则")
 
     # 获取关键词
     keywords = get_keywords()
@@ -89,11 +98,44 @@ def main():
         print("❌ 未搜索到任何视频")
         return
 
+    # 阶段1.5: 智能评分和预筛选
+    print("\n" + "=" * 80)
+    print("📍 阶段 1.5/3: 智能评分预筛选")
+    print("=" * 80)
+
+    scored_videos = []
+    skip_count = 0
+
+    for video in unique_videos:
+        score_result = scorer.score_video(video)
+        video['pre_score'] = score_result['score']
+        video['pre_recommendation'] = score_result['recommendation']
+        video['score_reasons'] = score_result['reasons']
+
+        if score_result['recommendation'] == 'skip':
+            skip_count += 1
+            print(f"⏭️ 跳过低分视频 (分数: {score_result['score']:.2f}): {video['title'][:60]}...")
+        else:
+            scored_videos.append(video)
+            priority_mark = "⭐" if score_result['recommendation'] == 'priority' else "  "
+            print(f"{priority_mark} 保留 (分数: {score_result['score']:.2f}): {video['title'][:60]}...")
+
+    print(f"\n📊 预筛选结果:")
+    print(f"  - 保留: {len(scored_videos)} 个")
+    print(f"  - 跳过: {skip_count} 个")
+    print(f"  - 节省AI成本: {skip_count * 100 / len(unique_videos):.1f}%")
+
+    # 按分数排序（优先处理高分视频）
+    scored_videos.sort(key=lambda x: x['pre_score'], reverse=True)
+
     # 保存搜索结果
     search_result_file = Path("data/search_results.json")
     with open(search_result_file, 'w', encoding='utf-8') as f:
-        json.dump(unique_videos, f, ensure_ascii=False, indent=2)
+        json.dump(scored_videos, f, ensure_ascii=False, indent=2)
     print(f"💾 搜索结果已保存: {search_result_file}")
+
+    # 更新要处理的视频列表
+    unique_videos = scored_videos
 
     # 阶段2: 下载和AI审核
     print("\n" + "=" * 80)

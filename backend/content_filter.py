@@ -10,7 +10,8 @@ import time
 from pathlib import Path
 from typing import Dict, Optional
 import logging
-
+import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold  # <--- 新增这行
 logger = logging.getLogger(__name__)
 
 
@@ -72,12 +73,20 @@ class ContentFilter:
 
             logger.info("  ✅ 视频已就绪，开始AI审核...")
 
-            # 3. 生成审核结果
+            # 3. 生成审核结果（降低安全限制以处理争吵等场景）
+            from google.generativeai.types import HarmCategory, HarmBlockThreshold
+
             response = self.analyzer.model.generate_content(
                 [video_file, filter_prompt],
                 generation_config={
                     "max_output_tokens": 2048,
-                    "temperature": 0.1  # 低温度以获得更一致的结果
+                    "temperature": 0.1
+                },
+                safety_settings={
+                    HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+                    HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+                    HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+                    HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
                 }
             )
 
@@ -87,7 +96,28 @@ class ContentFilter:
             except Exception as e:
                 logger.warning(f"清理云端文件失败: {e}")
 
-            # 5. 解析结果
+            # 5. 检查响应状态
+            if not response.candidates or response.candidates[0].finish_reason != 1:
+                # finish_reason: 1=STOP (正常), 2=SAFETY (安全过滤), 3=MAX_TOKENS
+                finish_reason = response.candidates[0].finish_reason if response.candidates else "UNKNOWN"
+                logger.warning(f"  ⚠️ AI响应异常: finish_reason={finish_reason}")
+
+                if finish_reason == 2:
+                    # 安全过滤触发，但这些视频（争吵等）对研究有价值
+                    return {
+                        "pass": True,  # 仍然通过，因为争吵场景对ToM研究重要
+                        "reason": "视频内容触发安全过滤（可能包含冲突场景），但对心智理论研究有价值",
+                        "confidence": 0.6,
+                        "safety_filtered": True
+                    }
+                else:
+                    return {
+                        "pass": False,
+                        "reason": f"AI响应异常: finish_reason={finish_reason}",
+                        "confidence": 0.0
+                    }
+
+            # 6. 解析结果
             result = self._parse_filter_response(response.text)
             logger.info(f"  🎯 审核完成: {'✅ 通过' if result['pass'] else '❌ 不通过'} - {result['reason']}")
 
@@ -112,6 +142,13 @@ class ContentFilter:
         """
         if strict_mode:
             criteria_section = """
+    ### 🛡️ 视觉纯净度要求 (关键):
+    我们只需要**原始的、电影感**的画面。
+    - ❌ **拒绝** 带有大量后期花字、特效字幕、表情包贴纸的视频（如综艺节目风格）。
+    - ❌ **拒绝** 带有硬字幕（Hardcoded Subtitles）的视频，特别是字幕直接解释了人物心理或对话内容的。
+    - ✅ **保留** 仅有少量必要水印或不影响画面主体的视频。
+    
+    如果视频画面看起来像是一个经过大量后期加工的解说视频或综艺，请直接【拒绝】。
 ### 核心筛选标准（严格模式）：
 
 ⚠️ **关键要求：心智理论必须通过【动作和交互】体现，而非仅通过对话或字幕！**
@@ -241,10 +278,7 @@ class ContentFilter:
             else:
                 json_str = response_text.strip()
 
-            # 尝试修复常见的JSON格式问题
-            json_str = json_str.replace("'", '"')  # 单引号转双引号
-            json_str = json_str.replace("True", "true").replace("False", "false")
-
+            # 尝试直接解析
             result = json.loads(json_str)
 
             # 确保必需字段存在
