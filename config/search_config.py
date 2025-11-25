@@ -7,14 +7,15 @@ YouTube搜索和审核配置
 # ==================== 搜索配置 ====================
 
 # 选择要使用的关键词集合（可以修改这里来改变搜索数量）
-# 选项: "minimal", "standard", "extensive", "full", "tv_drama", "movie_clips", "documentary", "mega"
-KEYWORD_SET = "standard"  # 改成 "tv_drama" 搜索电视剧片段，"mega" 搜索全部
+# 基础选项: "minimal", "standard", "extensive", "full", "tv_drama", "movie_clips", "documentary", "mega"
+# 优化选项: "real_optimized" (推荐!), "film_focused", "hybrid_best"
+KEYWORD_SET = "real_optimized"  # 推荐使用优化关键词，预期通过率 50-60%
 
 # 自定义关键词（如果不为None，则使用自定义关键词而不是预设）
 CUSTOM_KEYWORDS = None  # 例如: ["psychology video", "social behavior"]
 
 # 每个关键词搜索的视频数量（增加这个数字可以得到更多候选视频）
-VIDEOS_PER_KEYWORD = 20  # 改成 10、20 等可以搜索更多
+VIDEOS_PER_KEYWORD = 10  # 改成 10、20 等可以搜索更多
 
 # 视频时长过滤（秒）
 MIN_DURATION = 30   # 最短30秒
@@ -244,6 +245,104 @@ KEYWORDS_MEGA = (
     KEYWORDS_DOCUMENTARY
 )
 
+# ==================== 优化关键词集 (2025-11-25) ====================
+# 重点：避免 reaction 视频、硬字幕、动画，提高审核通过率
+
+# 真实场景优化版（推荐！预期通过率 50-60%）
+KEYWORDS_REAL_OPTIMIZED = [
+    # 监控摄像头类（无字幕，真实场景）
+    "security camera fight",
+    "caught on camera argument",
+    "dash cam road rage",
+    "cctv footage confrontation",
+
+    # 公共冲突（真实性高，行为明显）
+    "public freakout real",
+    "karen freakout caught",
+    "street confrontation real",
+    "restaurant argument caught",
+
+    # 真实情感场景（避免 "reaction" 词）
+    "proposal caught on camera",
+    "surprise reunion soldier",
+    "emotional reunion real",
+    "breakup caught on video",
+
+    # 电视真人秀（质量稳定）
+    "reality show argument",
+    "real housewives fight",
+    "couples therapy session",
+
+    # 著名节目片段（高质量，已验证）
+    "Kitchen Nightmares Gordon Ramsay",
+    "What Would You Do ABC",
+    "Undercover Boss reveal",
+
+    # 新闻/纪录片镜头
+    "confrontation footage",
+    "altercation caught on tape",
+    "incident caught on camera"
+]
+
+# 电影/剧集专注版（稳定质量，较少字幕）
+KEYWORDS_FILM_FOCUSED = [
+    # 电影情感场景
+    "movie argument scene",
+    "film emotional breakdown",
+    "cinema fight scene",
+    "movie couple fight",
+
+    # 电视剧冲突
+    "tv show argument",
+    "drama confrontation scene",
+    "tv series fight",
+    "drama emotional scene",
+
+    # 特定类型剧集
+    "crime drama interrogation",
+    "medical drama emergency",
+    "family drama conflict",
+    "thriller confrontation",
+
+    # 经典剧集
+    "Breaking Bad scene",
+    "Game of Thrones scene",
+    "The Office scene",
+    "Friends scene"
+]
+
+# 混合最优策略（平衡真实与质量）
+KEYWORDS_HYBRID_BEST = [
+    # 真实场景 (40%)
+    "caught on camera fight",
+    "security footage argument",
+    "public argument real",
+    "dash cam confrontation",
+    "karen freakout",
+    "street fight caught",
+
+    # 电视剧/电影 (40%)
+    "tv show argument scene",
+    "movie fight scene",
+    "drama emotional scene",
+    "cinema confrontation",
+    "tv series conflict",
+    "film breakdown scene",
+
+    # 真人秀/纪录片 (20%)
+    "reality show fight",
+    "Kitchen Nightmares scene",
+    "What Would You Do"
+]
+
+# 综合超大集合（推荐用于大规模采集）
+KEYWORDS_MEGA = (
+    KEYWORDS_FULL +
+    KEYWORDS_TV_DRAMA +
+    KEYWORDS_MOVIE_CLIPS +
+    KEYWORDS_DOCUMENTARY
+)
+
 # ==================== 辅助函数 ====================
 
 def get_keywords():
@@ -259,7 +358,11 @@ def get_keywords():
         "tv_drama": KEYWORDS_TV_DRAMA,
         "movie_clips": KEYWORDS_MOVIE_CLIPS,
         "documentary": KEYWORDS_DOCUMENTARY,
-        "mega": KEYWORDS_MEGA
+        "mega": KEYWORDS_MEGA,
+        # 新增优化关键词集
+        "real_optimized": KEYWORDS_REAL_OPTIMIZED,
+        "film_focused": KEYWORDS_FILM_FOCUSED,
+        "hybrid_best": KEYWORDS_HYBRID_BEST
     }
 
     return keyword_sets.get(KEYWORD_SET, KEYWORDS_STANDARD)
