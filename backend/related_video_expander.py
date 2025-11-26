@@ -23,7 +23,10 @@ class RelatedVideoExpander:
                 'youtube': {
                     'player_client': ['android']
                 }
-            }
+            },
+            # Windows 端口复用修复
+            'source_address': '0.0.0.0',  # 绑定所有可用地址
+            'socket_timeout': 30,          # 设置超时避免端口占用
         }
 
     def find_related_videos(
@@ -106,7 +109,9 @@ class RelatedVideoExpander:
             # 获取频道的视频列表
             search_opts = self.ydl_opts_base.copy()
             search_opts['playlistend'] = max_videos
+            search_opts['skip_download'] = True
 
+            # 🔧 关键修复：只使用一个 YoutubeDL 实例处理所有操作
             with yt_dlp.YoutubeDL(search_opts) as ydl:
                 logger.info(f"  获取频道视频列表...")
                 playlist_info = ydl.extract_info(f"{channel_url}/videos", download=False)
@@ -115,12 +120,6 @@ class RelatedVideoExpander:
                     return videos
 
                 # 逐个获取视频详情
-                detail_opts = {
-                    'quiet': True,
-                    'no_warnings': True,
-                    'skip_download': True,
-                }
-
                 for entry in playlist_info['entries']:
                     if not entry:
                         continue
@@ -128,29 +127,29 @@ class RelatedVideoExpander:
                     try:
                         video_url = f"https://www.youtube.com/watch?v={entry['id']}"
 
-                        with yt_dlp.YoutubeDL(detail_opts) as detail_ydl:
-                            video_info = detail_ydl.extract_info(video_url, download=False)
+                        # 🔧 复用同一个 ydl 实例,而不是创建新实例
+                        video_info = ydl.extract_info(video_url, download=False)
 
-                            duration = video_info.get('duration', 0)
+                        duration = video_info.get('duration', 0)
 
-                            # 时长过滤
-                            if duration < min_duration or duration > max_duration:
-                                continue
+                        # 时长过滤
+                        if duration < min_duration or duration > max_duration:
+                            continue
 
-                            # 排除直播
-                            if video_info.get('is_live') or video_info.get('was_live'):
-                                continue
+                        # 排除直播
+                        if video_info.get('is_live') or video_info.get('was_live'):
+                            continue
 
-                            videos.append({
-                                'url': video_url,
-                                'title': video_info.get('title', ''),
-                                'duration': duration,
-                                'channel': video_info.get('uploader', ''),
-                                'view_count': video_info.get('view_count', 0)
-                            })
+                        videos.append({
+                            'url': video_url,
+                            'title': video_info.get('title', ''),
+                            'duration': duration,
+                            'channel': video_info.get('uploader', ''),
+                            'view_count': video_info.get('view_count', 0)
+                        })
 
-                            if len(videos) >= max_videos:
-                                break
+                        if len(videos) >= max_videos:
+                            break
 
                     except Exception as e:
                         logger.debug(f"  跳过视频 {entry.get('id')}: {e}")

@@ -73,7 +73,33 @@ class VideoScorer:
 
         except Exception as e:
             logger.warning(f"⚠️ 无法分析历史数据: {e}")
-
+    # 在 VideoScorer 类中添加这个新方法
+    def save_score_to_db(self, video_url: str, score_result: Dict):
+        """将评分结果保存回数据库"""
+        if not self.links_path.exists():
+            return
+            
+        try:
+            with open(self.links_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                
+            updated = False
+            for video in data.get('videos', []):
+                if video['url'] == video_url:
+                    # 保存分数和理由
+                    video['ai_score'] = score_result['score']
+                    video['score_reason'] = "; ".join(score_result['reasons'])
+                    video['score_recommendation'] = score_result['recommendation']
+                    updated = True
+                    break
+            
+            if updated:
+                with open(self.links_path, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                # logger.info(f"💾 分数已保存: {video_url[:30]}...")
+                
+        except Exception as e:
+            logger.error(f"保存分数失败: {e}")
     def _extract_keywords(self, title: str, is_good: bool):
         """提取标题关键词"""
         # 简单的关键词提取（可以改进）

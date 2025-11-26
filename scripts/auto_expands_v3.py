@@ -211,13 +211,29 @@ class AutoExpanderV3:
             return
 
         # === 2. 评分 ===
+        logger.info(f"  🧠 智能评分预筛选...")
         scored_videos = []
+
         for video in new_videos:
-            res = self.scorer.score_video(video)
-            video['pre_score'] = res['score']
-            if res['recommendation'] != 'skip':
+            score_result = self.scorer.score_video(video)
+            
+            # 记录在临时变量里
+            video['pre_score'] = score_result['score']
+            video['pre_recommendation'] = score_result['recommendation']
+            video['score_reasons'] = score_result['reasons']
+            
+            # ================= 🔴 新增：如果这是库里已有的视频，就把分数存回去 =================
+            # 注意：这里的 video 可能是新搜到的（不在库里），也可能是库里的。
+            # 但既然我们现在是在扩展新视频，通常还没入库。
+            # 所以我们要在【入库的时候】把分数带上。
+            # =========================================================================
+
+            if score_result['recommendation'] == 'skip':
+                stats['pre_filtered'] += 1
+                logger.info(f"    ⏭️ 跳过低分 ({score_result['score']:.2f})")
+            else:
                 scored_videos.append(video)
-                # print log...
+                # ...
         
         scored_videos.sort(key=lambda x: x['pre_score'], reverse=True)
         
@@ -255,14 +271,27 @@ class AutoExpanderV3:
             
             approved = review.get('pass', False)
             
-            # 入库
+            # 入库（关键修改：把分数存进去！）
             self.downloader.add_video_link(
-                url=vid['url'],
-                title=vid.get('title', 'Unknown'),
-                duration=item['duration'],
-                keyword=f"AutoExpand-{vid.get('source_type')}",
+                url=video_data['url'],
+                title=video_data['title'],
+                duration=video_data['duration'],
+                keyword=f"AutoExpand-{video_data['source']}",
                 approved=approved,
-                review_reason=review.get('reason', '')
+                review_reason=review.get('reason', ''),
+                
+                # 👇 这里如果 downloader.py 支持额外字段最好，如果不支持，
+                # 我们就在这里手动调 scorer 保存
+            )
+            
+            # 手动保存分数到数据库（最稳妥的方式）
+            self.scorer.save_score_to_db(
+                video_data['url'],
+                {
+                    'score': video_data['pre_score'],
+                    'reasons': video_data.get('score_reasons', []),
+                    'recommendation': video_data.get('pre_recommendation', 'unknown')
+                }
             )
             
             if not approved:

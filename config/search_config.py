@@ -9,13 +9,14 @@ YouTube搜索和审核配置
 # 选择要使用的关键词集合（可以修改这里来改变搜索数量）
 # 基础选项: "minimal", "standard", "extensive", "full", "tv_drama", "movie_clips", "documentary", "mega"
 # 优化选项: "real_optimized" (推荐!), "film_focused", "hybrid_best"
-KEYWORD_SET = "real_optimized"  # 推荐使用优化关键词，预期通过率 50-60%
+KEYWORD_SET = "full"  # 推荐使用优化关键词，预期通过率 50-60%
 
 # 自定义关键词（如果不为None，则使用自定义关键词而不是预设）
 CUSTOM_KEYWORDS = None  # 例如: ["psychology video", "social behavior"]
 
 # 每个关键词搜索的视频数量（增加这个数字可以得到更多候选视频）
-VIDEOS_PER_KEYWORD = 10  # 改成 10、20 等可以搜索更多
+# 建议值: 3-5 (避免被限制), 10+ (快速收集但风险高)
+VIDEOS_PER_KEYWORD = 5  # 推荐：保守配置，避免触发反爬虫
 
 # 视频时长过滤（秒）
 MIN_DURATION = 30   # 最短30秒
@@ -33,9 +34,43 @@ STRICT_MODE = True
 AUTO_DELETE_REJECTED = True
 
 # AI审核并发数（同时审核的视频数量）
-# 建议值: 3-5 (取决于网速和API配额)
-# 数值越大速度越快，但API请求也越多
-AI_REVIEW_WORKERS = 5
+#
+# 🎯 渐进式并发配置建议（从低到高逐步尝试）：
+#
+# 阶段 1 - 保守模式（推荐新手/调试）：
+#   AI_REVIEW_WORKERS = 1
+#   优点: 最稳定，资源占用最低，适合调试
+#   缺点: 速度较慢（每个视频 30-60 秒）
+#   适用: Windows 系统初次使用，或遇到套接字错误时
+#
+# 阶段 2 - 标准模式（推荐日常使用）：
+#   AI_REVIEW_WORKERS = 2-3
+#   优点: 速度提升 2-3 倍，资源占用可控
+#   缺点: 可能偶尔出现套接字资源不足
+#   适用: Windows 系统稳定运行后，网络良好
+#   注意: 需要定期监控，如果出错降回 1
+#
+# 阶段 3 - 高速模式（推荐高配机器）：
+#   AI_REVIEW_WORKERS = 5-8
+#   优点: 速度快，批量处理效率高
+#   缺点: 资源占用高，Windows 上容易出错
+#   适用: Linux/Mac 系统，或 Windows 高配机器 + 稳定网络
+#   注意: 可能触发 Google API 速率限制
+#
+# 阶段 4 - 极速模式（仅限高级用户）：
+#   AI_REVIEW_WORKERS = 10+
+#   优点: 极快的处理速度
+#   缺点: 极易触发限制，需要代理池和 API 配额管理
+#   适用: 专业部署环境，配合代理轮换和多账号
+#
+# 💡 使用建议：
+# 1. 从 1 开始测试，确保能稳定运行 10+ 个视频
+# 2. 逐步提高到 2-3，观察是否有错误
+# 3. 如果出现 "WinError 10055" 或 "套接字"错误，立即降回 1
+# 4. Linux/Mac 用户可以直接从 3 开始
+# 5. 使用代理可以提高稳定性，允许更高并发
+#
+AI_REVIEW_WORKERS = 3  # 当前配置：保守模式（修改此值来调整并发）
 
 # ==================== 关键词预设 ====================
 
@@ -272,11 +307,6 @@ KEYWORDS_REAL_OPTIMIZED = [
     "reality show argument",
     "real housewives fight",
     "couples therapy session",
-
-    # 著名节目片段（高质量，已验证）
-    "Kitchen Nightmares Gordon Ramsay",
-    "What Would You Do ABC",
-    "Undercover Boss reveal",
 
     # 新闻/纪录片镜头
     "confrontation footage",

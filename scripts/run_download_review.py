@@ -160,7 +160,7 @@ def main():
 
         print(f"\n📦 批次 {batch_idx + 1}/{total_batches} (视频 {absolute_start}-{absolute_end})")
 
-        # 1. 批量下载
+        # 1. 批量下载（增加延迟，避免套接字耗尽）
         downloaded = []
         for idx, video_info in enumerate(batch, start=absolute_start):
             print(f"  [{idx}/{start_idx + len(videos_to_process)}] 下载: {video_info['title'][:50]}...")
@@ -178,12 +178,22 @@ def main():
                     'duration': download_result['duration']
                 })
                 print(f"    ✅ 成功")
+
+                # 关键优化：下载成功后等待，让系统释放套接字资源
+                import time
+                time.sleep(2)  # 等待2秒，让连接完全关闭
+
             except Exception as e:
                 failed_count += 1
                 error_msg = str(e)
 
+                # 如果是套接字错误，增加等待时间
+                if "10055" in error_msg or "套接字" in error_msg or "缓冲区" in error_msg:
+                    print(f"    ⚠️ 系统资源不足，等待释放...")
+                    import time
+                    time.sleep(10)  # 等待10秒让系统恢复
                 # 如果是速率限制错误，提示用户
-                if "速率限制" in error_msg:
+                elif "速率限制" in error_msg:
                     print(f"    ⚠️ 遇到速率限制，已自动减速")
                     print(f"    💡 提示: 可以用 --start {idx - 1} 从此处继续")
                 else:

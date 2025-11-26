@@ -61,7 +61,8 @@ class VideoDownloader:
     def __init__(self, output_dir: str = "data/Youtube_videos",
                  links_file: str = "data/youtube_links.json",
                  search_history_file: str = "data/searched_history.json",
-                 request_delay: tuple = (1, 3)):
+                 request_delay: tuple = (1, 3),
+                 proxy: Optional[str] = None):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -76,6 +77,7 @@ class VideoDownloader:
         self._request_count = 0
         self._rate_limited = False
         self._consecutive_rate_limits = 0
+        self.proxy = proxy  # 代理地址，例如 "http://127.0.0.1:7890"
 
         self.links_db = self._load_links_database()
         self.search_history = self._load_search_history()
@@ -119,18 +121,37 @@ class VideoDownloader:
             'quiet': True,
             'no_warnings': True,
             'ignoreerrors': True,
-            'retries': 5,
-            'socket_timeout': 30,
-            'sleep_interval': 3,
-            'max_sleep_interval': 10,
-            'sleep_interval_requests': 1,
-            'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'retries': 10,  # 增加重试次数
+            'socket_timeout': 30,  # 增加超时容忍
+            # ... 其他配置保持不变 ...
+            'http_chunk_size': 10485760,
+            'extractor_args': {
+                'youtube': {
+                    'player_client': ['android', 'web'], # 增加 web 客户端作为备选
+                }
+            },
+            # ============== 新增/修改以下部分 ==============
+            # 强制关闭长连接，下载完立刻释放端口
+            'http_headers': {
+                'Connection': 'close',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            },
+            # 强制使用 IPv4（IPv6 在 Windows 上有时会加剧此问题）
+            'force_ipv4': True,
         }
-        
+
+        # 添加代理支持
+        if self.proxy:
+            opts['proxy'] = self.proxy
+            logger.info(f"🌐 使用代理: {self.proxy}")
+
         cookies_path = Path("cookies.txt")
         if cookies_path.exists():
             opts['cookiefile'] = str(cookies_path)
-            
+            logger.debug("🍪 使用 cookies.txt")
+        else:
+            logger.warning("⚠️ cookies.txt 不存在，可能会被限制访问")
+
         return opts
 
     def _load_links_database(self) -> Dict:
@@ -264,7 +285,7 @@ class VideoDownloader:
         # 使用最佳兼容性配置
         ydl_opts = self._get_base_opts()
         ydl_opts.update({
-            'format': 'best[ext=mp4]/best',     # 下载最佳单一文件(含音频)，避免合并
+            'format': 'best',     # 下载最佳单一文件(含音频)，避免合并
             'outtmpl': out_tmpl,
             'noplaylist': True,
             'ignoreerrors': False, # 既然要检查质量，就不要忽略错误

@@ -13,7 +13,7 @@ import logging
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold  # <--- 新增这行
 logger = logging.getLogger(__name__)
-
+import asyncio
 
 class ContentFilter:
     """AI驱动的视频内容筛选器 - 专注于心智理论研究需求"""
@@ -28,7 +28,7 @@ class ContentFilter:
         api_key = config.get_api_key('gemini')
         self.analyzer = VLMAnalyzer(api_key=api_key, model_name=model_name)
 
-    def check_video_content(self, video_path: str, strict_mode: bool = True) -> Dict:
+    async def check_video_content(self, video_path: str, strict_mode: bool = True) -> Dict:
         """
         检查视频内容是否符合心智理论研究要求
 
@@ -48,18 +48,36 @@ class ContentFilter:
         # 构建专业的筛选 Prompt
         filter_prompt = self._build_filter_prompt(strict_mode)
 
+        video_file = None  # 初始化用于 finally 块
         try:
             import google.generativeai as genai
 
-            # 1. 上传视频
+            # 1. 上传视频 (添加重试机制)
             logger.info("  📤 上传视频到AI服务...")
-            video_file = genai.upload_file(path=video_path)
+            max_upload_retries = 3
+            upload_success = False
+
+            for retry in range(max_upload_retries):
+                try:
+                    video_file = genai.upload_file(path=video_path)
+                    upload_success = True
+                    break
+                except Exception as upload_err:
+                    if "10055" in str(upload_err) or "buffer space" in str(upload_err):
+                        wait_time = (retry + 1) * 5  # 递增等待时间
+                        logger.warning(f"  ⚠️ 端口耗尽,等待 {wait_time}s 后重试 ({retry+1}/{max_upload_retries})...")
+                        time.sleep(wait_time)
+                    else:
+                        raise  # 其他错误直接抛出
+
+            if not upload_success:
+                raise Exception("视频上传失败: 端口资源耗尽")
 
             # 2. 等待处理
             max_wait = 120  # 最多等待2分钟
             wait_time = 0
             while video_file.state.name == "PROCESSING":
-                time.sleep(2)
+                await asyncio.sleep(2)
                 wait_time += 2
                 video_file = genai.get_file(video_file.name)
 
@@ -374,11 +392,19 @@ conflict, emotional_reaction, social_interaction, relationship, conversation, dr
         total = len(video_paths)
         logger.info(f"🚀 开始批量并发审核 {total} 个视频 (并发数: {max_workers})...")
 
-        # 定义单个任务函数
+        # 定义单个任务函数（修复：使用 asyncio 运行协程）
         def process_one(path):
             try:
                 logger.info(f"➡️ 开始审核: {Path(path).name}")
-                return path, self.check_video_content(path, strict_mode)
+                # 在新的事件循环中运行异步函数
+                import asyncio
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+                try:
+                    result = loop.run_until_complete(self.check_video_content(path, strict_mode))
+                    return path, result
+                finally:
+                    loop.close()
             except Exception as e:
                 logger.error(f"❌ 审核异常 {Path(path).name}: {e}")
                 return path, {"pass": False, "reason": f"异常: {str(e)}", "confidence": 0.0}
@@ -387,7 +413,7 @@ conflict, emotional_reaction, social_interaction, relationship, conversation, dr
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             # 提交所有任务
             future_to_video = {executor.submit(process_one, path): path for path in video_paths}
-            
+
             # 获取结果
             for i, future in enumerate(as_completed(future_to_video), 1):
                 path, result = future.result()
