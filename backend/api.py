@@ -49,10 +49,12 @@ app.add_middleware(
 VIDEOS_DIR = Path(config.get_str('paths.videos', 'data/videos'))
 KEYFRAMES_DIR = Path(config.get_str('paths.keyframes', 'data/keyframes'))
 ANNOTATIONS_DIR = Path(config.get_str('paths.annotations', 'data/annotations'))
+ANNOTATIONS_TEST_DIR = Path("data/annotations_test")
 
 VIDEOS_DIR.mkdir(parents=True, exist_ok=True)
 KEYFRAMES_DIR.mkdir(parents=True, exist_ok=True)
 ANNOTATIONS_DIR.mkdir(parents=True, exist_ok=True)
+ANNOTATIONS_TEST_DIR.mkdir(parents=True, exist_ok=True)
 
 # 初始化VLM分析器
 vlm_analyzer = VLMAnalyzer(api_key=config.get_api_key('gemini'))
@@ -155,6 +157,34 @@ async def get_video(video_id: str):
         raise HTTPException(status_code=404, detail="视频不存在")
     
     return FileResponse(video_files[0])
+
+
+@app.get("/videos/file")
+async def get_video_by_path(video_path: str):
+    """
+    通过路径获取视频文件（支持相对路径和绝对路径）
+    """
+    video_file = Path(video_path)
+    
+    # 如果是相对路径，尝试从项目根目录查找
+    if not video_file.is_absolute():
+        # 尝试多个可能的路径
+        possible_paths = [
+            Path("data") / video_path,
+            Path("data/Youtube_videos") / video_path,
+            Path(video_path)
+        ]
+        for path in possible_paths:
+            if path.exists():
+                video_file = path
+                break
+        else:
+            raise HTTPException(status_code=404, detail=f"视频文件不存在: {video_path}")
+    else:
+        if not video_file.exists():
+            raise HTTPException(status_code=404, detail=f"视频文件不存在: {video_path}")
+    
+    return FileResponse(video_file)
 
 
 # ============= AI分析 =============
@@ -402,6 +432,303 @@ async def get_keyframe_image(video_id: str, frame_filename: str):
         raise HTTPException(status_code=404, detail="关键帧不存在")
     
     return FileResponse(frame_path)
+
+
+# ============= annotations_test 目录管理 =============
+
+@app.get("/annotations_test/list")
+async def list_annotations_test():
+    """
+    列出 annotations_test 目录中的所有标注文件
+    """
+    annotations = []
+    for ann_file in ANNOTATIONS_TEST_DIR.glob("*.json"):
+        try:
+            with open(ann_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                video_id = data.get("video_id", ann_file.stem)
+                video_path = data.get("video_path", "")
+                
+                annotations.append({
+                    "video_id": video_id,
+                    "file_name": ann_file.name,
+                    "video_path": video_path,
+                    "duration_seconds": data.get("duration_seconds", 0),
+                    "annotator": data.get("annotator", ""),
+                    "annotation_timestamp": data.get("annotation_timestamp", ""),
+                    "total_characters": len(data.get("characters", [])),
+                    "total_desires": len(data.get("desire_motivation_analysis", [])),
+                    "total_transitions": len(data.get("desire_transitions", [])),
+                    "total_sequences": len(data.get("behavioral_sequence", [])),
+                })
+        except Exception as e:
+            # 跳过损坏的文件
+            continue
+    
+    return {"annotations": annotations}
+
+
+@app.get("/annotations_test/{video_id}")
+async def get_annotation_test(video_id: str):
+    """
+    获取 annotations_test 目录中的标注文件
+    支持通过 video_id 或文件名查找
+    """
+    # 首先尝试通过 video_id 查找
+    for ann_file in ANNOTATIONS_TEST_DIR.glob("*.json"):
+        try:
+            with open(ann_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                if data.get("video_id") == video_id or ann_file.stem == video_id:
+                    return data
+        except:
+            continue
+    
+    raise HTTPException(status_code=404, detail="标注文件不存在")
+
+
+@app.put("/annotations_test/{video_id}")
+async def update_annotation_test(video_id: str, annotation_data: dict):
+    """
+    更新 annotations_test 目录中的标注文件
+    """
+    # 查找文件
+    ann_file = None
+    for f in ANNOTATIONS_TEST_DIR.glob("*.json"):
+        try:
+            with open(f, 'r', encoding='utf-8') as file:
+                data = json.load(file)
+                if data.get("video_id") == video_id or f.stem == video_id:
+                    ann_file = f
+                    break
+        except:
+            continue
+    
+    if not ann_file:
+        raise HTTPException(status_code=404, detail="标注文件不存在")
+    
+    # 更新数据
+    annotation_data["last_modified"] = datetime.now().isoformat()
+    
+    # 保存
+    with open(ann_file, 'w', encoding='utf-8') as f:
+        json.dump(annotation_data, f, ensure_ascii=False, indent=2)
+    
+    return {"message": "更新成功", "video_id": video_id}
+
+
+@app.get("/annotations_test/{video_id}/segments")
+async def get_annotation_segments(video_id: str):
+    """
+    提取标注文件中的所有时间戳段
+    返回格式化的段列表，用于前端显示
+    """
+    # 获取标注数据
+    annotation_data = None
+    for ann_file in ANNOTATIONS_TEST_DIR.glob("*.json"):
+        try:
+            with open(ann_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                if data.get("video_id") == video_id or ann_file.stem == video_id:
+                    annotation_data = data
+                    break
+        except:
+            continue
+    
+    if not annotation_data:
+        raise HTTPException(status_code=404, detail="标注文件不存在")
+    
+    segments = []
+    
+    # 提取角色状态段
+    for char in annotation_data.get("characters", []):
+        char_id = char.get("character_id", "")
+        
+        # initial_state
+        if "initial_state" in char:
+            state = char["initial_state"]
+            ts = state.get("timestamp_seconds", 0)
+            segments.append({
+                "segment_id": f"char_{char_id}_initial",
+                "type": "character_initial_state",
+                "character_id": char_id,
+                "start_seconds": ts,
+                "end_seconds": ts,
+                "description": f"角色 {char_id} 初始状态",
+                "data": state,
+                "review_status": state.get("review_status", "pending")  # pending, approved, needs_revision
+            })
+        
+        # final_state
+        if "final_state" in char:
+            state = char["final_state"]
+            ts = state.get("timestamp_seconds", 0)
+            segments.append({
+                "segment_id": f"char_{char_id}_final",
+                "type": "character_final_state",
+                "character_id": char_id,
+                "start_seconds": ts,
+                "end_seconds": ts,
+                "description": f"角色 {char_id} 最终状态",
+                "data": state,
+                "review_status": state.get("review_status", "pending")
+            })
+    
+    # 提取 desire_motivation_analysis 段
+    for desire in annotation_data.get("desire_motivation_analysis", []):
+        temporal = desire.get("temporal_scope", {})
+        start = temporal.get("start_seconds", 0)
+        end = temporal.get("end_seconds", 0)
+        segments.append({
+            "segment_id": desire.get("analysis_id", ""),
+            "type": "desire_motivation",
+            "character_id": desire.get("character_id", ""),
+            "start_seconds": start,
+            "end_seconds": end,
+            "description": f"欲望分析: {desire.get('desire_label', '')}",
+            "data": desire,
+            "review_status": desire.get("review_status", "pending")
+        })
+    
+    # 提取 desire_transitions 段
+    for trans in annotation_data.get("desire_transitions", []):
+        temporal = trans.get("temporal_boundaries", {})
+        start = temporal.get("onset_timestamp_seconds", 0)
+        end = temporal.get("offset_timestamp_seconds", 0)
+        segments.append({
+            "segment_id": trans.get("transition_id", ""),
+            "type": "desire_transition",
+            "character_id": trans.get("character_id", ""),
+            "start_seconds": start,
+            "end_seconds": end,
+            "description": f"欲望转换: {trans.get('transition_type', '')}",
+            "data": trans,
+            "review_status": trans.get("review_status", "pending")
+        })
+    
+    # 提取 behavioral_sequence 段
+    for seq in annotation_data.get("behavioral_sequence", []):
+        start = seq.get("timestamp_start_seconds", 0)
+        end = seq.get("timestamp_end_seconds", 0)
+        segments.append({
+            "segment_id": seq.get("sequence_id", ""),
+            "type": "behavioral_sequence",
+            "character_id": seq.get("character_id", ""),
+            "start_seconds": start,
+            "end_seconds": end,
+            "description": f"行为序列: {seq.get('behavior_category', '')}",
+            "data": seq,
+            "review_status": seq.get("review_status", "pending")
+        })
+    
+    # 提取 key_segments_for_qa 段
+    for seg in annotation_data.get("key_segments_for_qa", []):
+        start = seg.get("start_timestamp_seconds", 0)
+        end = seg.get("end_timestamp_seconds", 0)
+        segments.append({
+            "segment_id": seg.get("segment_id", ""),
+            "type": "key_segment_qa",
+            "character_id": "",
+            "start_seconds": start,
+            "end_seconds": end,
+            "description": f"QA关键段: {seg.get('segment_description', '')}",
+            "data": seg,
+            "review_status": seg.get("review_status", "pending")
+        })
+    
+    # 按时间排序
+    segments.sort(key=lambda x: x["start_seconds"])
+    
+    return {"segments": segments, "video_id": video_id}
+
+
+@app.post("/annotations_test/{video_id}/segments/{segment_id}/review")
+async def update_segment_review_status(
+    video_id: str,
+    segment_id: str,
+    review_data: dict
+):
+    """
+    更新标注段的审核状态
+    review_data: {"review_status": "pending|approved|needs_revision", "notes": "..."}
+    """
+    review_status = review_data.get("review_status", "pending")
+    notes = review_data.get("notes", "")
+    
+    # 获取标注数据
+    ann_file = None
+    annotation_data = None
+    for f in ANNOTATIONS_TEST_DIR.glob("*.json"):
+        try:
+            with open(f, 'r', encoding='utf-8') as file:
+                data = json.load(file)
+                if data.get("video_id") == video_id or f.stem == video_id:
+                    ann_file = f
+                    annotation_data = data
+                    break
+        except:
+            continue
+    
+    if not annotation_data:
+        raise HTTPException(status_code=404, detail="标注文件不存在")
+    
+    # 更新对应段的状态
+    updated = False
+    
+    # 在 characters 中查找
+    for char in annotation_data.get("characters", []):
+        if f"char_{char.get('character_id')}_initial" == segment_id:
+            char["initial_state"]["review_status"] = review_status
+            if notes:
+                char["initial_state"]["review_notes"] = notes
+            updated = True
+        elif f"char_{char.get('character_id')}_final" == segment_id:
+            char["final_state"]["review_status"] = review_status
+            if notes:
+                char["final_state"]["review_notes"] = notes
+            updated = True
+    
+    # 在 desire_motivation_analysis 中查找
+    for desire in annotation_data.get("desire_motivation_analysis", []):
+        if desire.get("analysis_id") == segment_id:
+            desire["review_status"] = review_status
+            if notes:
+                desire["review_notes"] = notes
+            updated = True
+    
+    # 在 desire_transitions 中查找
+    for trans in annotation_data.get("desire_transitions", []):
+        if trans.get("transition_id") == segment_id:
+            trans["review_status"] = review_status
+            if notes:
+                trans["review_notes"] = notes
+            updated = True
+    
+    # 在 behavioral_sequence 中查找
+    for seq in annotation_data.get("behavioral_sequence", []):
+        if seq.get("sequence_id") == segment_id:
+            seq["review_status"] = review_status
+            if notes:
+                seq["review_notes"] = notes
+            updated = True
+    
+    # 在 key_segments_for_qa 中查找
+    for seg in annotation_data.get("key_segments_for_qa", []):
+        if seg.get("segment_id") == segment_id:
+            seg["review_status"] = review_status
+            if notes:
+                seg["review_notes"] = notes
+            updated = True
+    
+    if not updated:
+        raise HTTPException(status_code=404, detail="标注段不存在")
+    
+    # 保存
+    annotation_data["last_modified"] = datetime.now().isoformat()
+    with open(ann_file, 'w', encoding='utf-8') as f:
+        json.dump(annotation_data, f, ensure_ascii=False, indent=2)
+    
+    return {"message": "审核状态更新成功", "segment_id": segment_id, "review_status": review_status}
 
 
 # ============= 工具函数 =============
