@@ -16,6 +16,8 @@ except ImportError:
     genai = None
     GENAI_AVAILABLE = False
 
+from .prompt_loader import PromptLoader
+
 class SmartVideoProcessor:
     """智能视频处理器：结合传统方法和VLM"""
     
@@ -29,6 +31,8 @@ class SmartVideoProcessor:
             self.model = genai.GenerativeModel('gemini-2.5-flash')
         else:
             self.model = None
+
+        self.prompt_loader = PromptLoader("backend/prompts/video_processor_prompts.yaml")
     
     def get_video_info(self, video_path: str) -> dict:
         """获取视频基本信息"""
@@ -130,33 +134,9 @@ class SmartVideoProcessor:
 
         print(f"📤 准备分析视频: {video_path_obj.name} ({file_size_mb:.2f}MB)")
 
-        prompt = """
-        请仔细观看这个视频，分析人物的motivation/desire变化。
 
-        请按以下JSON格式输出：
-        {
-            "key_moments": [
-                {
-                    "timestamp": "00:15",
-                    "timestamp_seconds": 15,
-                    "action_description": "人物表情从专注变为焦虑",
-                    "explicit_motivation": "想要完成工作",
-                    "implicit_desire": "渴望被认可，担心无法按时完成",
-                    "trigger_event": "接到催促电话",
-                    "implicit_level": 4,
-                    "visual_cues": ["皱眉", "紧张的手势"],
-                    "confidence": 0.8
-                }
-            ],
-            "overall_narrative": "从自信完成任务 → 焦虑逃避 → 重新振作",
-            "suggested_keyframe_timestamps": [5, 15, 30, 45]
-        }
 
-        注意：
-        1. 重点关注**隐性motivation**，不只是表面行为
-        2. 标注motivation转变的**触发事件**
-        3. 建议5-10个关键时刻即可
-        """
+        prompt = self.prompt_loader.get_prompt("video_processing.template")
 
         # 上传视频文件
         print("📤 上传视频到Gemini...")

@@ -1,0 +1,404 @@
+{
+  "video_id": "1.10",
+  "video_path": "data\\Youtube_videos\\1.10.mp4",
+  "duration_seconds": 99,
+  "annotation_timestamp": "2025-12-08T14:13:19.354001",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Formal legislative chamber (Australian Senate); red leather seating, wood paneling.",
+    "social_context": "Parliamentary session; high-stakes political discourse involving formal protocol.",
+    "temporal_context": "Daytime session.",
+    "emotional_atmosphere": "Tense, initially confused/shocked, shifting to confrontational and emotionally charged.",
+    "salient_objects": [
+      "Black burqa (garment)",
+      "Microphones",
+      "Parliamentary papers"
+    ],
+    "activity_type": "Political debate/demonstration"
+  },
+  "characters": [
+    {
+      "character_id": "person_female_black_dress",
+      "physical_description": "Female, red hair, black dress (initially covered by black burqa), fair skin.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Provocateur / Speaker",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anticipation",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Walking purposefully while obscured, then standing to remove garment with deliberate movements.",
+        "apparent_goal": "To create a visual spectacle and draw attention to a political point.",
+        "behavioral_evidence": [
+          "Entering chamber in full face covering",
+          "Removing covering with dramatic timing",
+          "Direct gaze at presiding officer"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 98,
+        "emotional_state": {
+          "primary_emotion": "Defensiveness",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated, listening to rebuttal, slight tension in jaw, blinking rate increases.",
+        "apparent_goal": "To endure the rebuttal while maintaining composure.",
+        "behavioral_evidence": [
+          "Static seated posture",
+          "Maintains gaze forward but expression tightens",
+          "Swallowing/throat clearing motion"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_dominance_display",
+          "psychological_basis": "Esteem (Maslow) / Status Signaling",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "moderate",
+          "peak_moment_seconds": 20,
+          "behavioral_evidence": [
+            "Initial dramatic reveal commands room attention (high)",
+            "Later sits silently while being reprimanded by authority figure (decreasing)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "person_male_glasses",
+      "physical_description": "Male, bald, glasses, dark suit, gold tie.",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "Respondent / Authority Figure",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Surprise",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated, looking around in confusion, audible gasps.",
+        "apparent_goal": "To understand the disruption.",
+        "behavioral_evidence": [
+          "Head turning",
+          "Furrowed brow",
+          "Mouth slightly open"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 98,
+        "emotional_state": {
+          "primary_emotion": "Anger/Indignation",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Standing, leaning forward over desk, pointing finger, emphatic vocal projection.",
+        "apparent_goal": "To morally condemn the previous action and assert group norms.",
+        "behavioral_evidence": [
+          "Rhythmic hand gestures emphasizing speech",
+          "Stern facial expression",
+          "Direct, unblinking gaze at person_female_black_dress"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "emotional_arousal",
+          "psychological_basis": "Circumplex Model",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 90,
+          "behavioral_evidence": [
+            "Starts with calm observation",
+            "Voice volume and pitch increase significantly during speech",
+            "Gestures become more expansive and forceful"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "person_female_black_dress",
+      "desire_label": "Social_Norm_Challenge_Execution",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 23,
+        "duration_seconds": 23
+      },
+      "reasoning_chain": "Subject enters wearing attire prohibited/unusual for the setting -> Removes it dramatically -> Indicates a planned performance to challenge norms or gain attention.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 5,
+          "behavior_type": "body_movement",
+          "description": "Walking into the chamber wearing a full burqa, contrasting with all other attendees."
+        },
+        {
+          "timestamp_seconds": 19,
+          "behavior_type": "gesture",
+          "description": "Theatrical removal of the head covering."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Epistemic_Information_Dissemination",
+          "reasoning": "She may view this purely as an educational demonstration, though the theatricality suggests norm challenge is primary.",
+          "why_not_primary": "The method is provocative rather than purely instructional."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "person_female_black_dress",
+      "desire_label": "Safety_Threat_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "belief",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 24,
+        "end_seconds": 56,
+        "duration_seconds": 32
+      },
+      "reasoning_chain": "Subject verbally links the burqa to terrorism and national security threats -> Expresses fear on behalf of the populace -> Motivates the call for a ban.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 38,
+          "behavior_type": "facial_expression",
+          "description": "Serious, grave expression while discussing 'foiled national threats'."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "person_male_glasses",
+      "desire_label": "Social_Cohesion_Maintenance",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 57,
+        "end_seconds": 99,
+        "duration_seconds": 42
+      },
+      "reasoning_chain": "Subject identifies the previous act as a 'stunt' -> Warns against offending religious groups -> Prioritizes social harmony and respect over the security argument presented.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 105,
+          "behavior_type": "facial_expression",
+          "description": "Stern, admonishing expression."
+        },
+        {
+          "timestamp_seconds": 125,
+          "behavior_type": "gesture",
+          "description": "Rhythmic pointing/chopping hand motion indicating firm boundary setting."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Moral_Superiority_Display",
+          "reasoning": "The subject receives applause and takes a high moral ground, suggesting an esteem motivation.",
+          "why_not_primary": "The content of the speech focuses on the feelings of 'other Australians' (religious minorities), pointing to social cohesion as the root driver."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "person_male_glasses",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 0,
+        "offset_timestamp_seconds": 5,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 1,
+        "description": "Entry of person_female_black_dress in a burqa.",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Cognitive_Routine_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 2,
+          "marker_type": "vocal_reaction",
+          "description": "Audible 'Oh' and 'What on earth?'"
+        },
+        {
+          "timestamp_seconds": 3,
+          "marker_type": "gaze_redirect",
+          "description": "Sharp head turn toward the entrance."
+        }
+      ],
+      "visual_marker_of_change": "The moment the head snaps up and eyes widen upon seeing the figure enter.",
+      "psychological_interpretation": "Violation of expectation (BDI belief mismatch) triggers an orienting response and immediate need to identify the stimulus."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "person_male_glasses",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 57,
+        "offset_timestamp_seconds": 65,
+        "transition_duration_seconds": 8
+      },
+      "trigger_event": {
+        "timestamp_seconds": 56,
+        "description": "Conclusion of person_female_black_dress's statement.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Observation_Mode",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Norm_Enforcement_Seeking",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 58,
+          "marker_type": "postural_change",
+          "description": "Standing up abruptly to take the floor."
+        },
+        {
+          "timestamp_seconds": 60,
+          "marker_type": "facial_shift",
+          "description": "Transition from observation to a hardened, stern jawline."
+        }
+      ],
+      "visual_marker_of_change": "The deliberate, forceful manner of standing up and adjusting the jacket, signaling a shift from listener to aggressor/corrector.",
+      "psychological_interpretation": "The agent moves from processing the event to formulating a response (Intention formation), driven by a desire to correct the perceived social transgression."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 17,
+      "timestamp_end_seconds": 22,
+      "character_id": "person_female_black_dress",
+      "behavior_category": "body_movement",
+      "behavior_description": "Lifts burqa over head, shakes hair, places burqa on desk.",
+      "intensity": "moderate",
+      "target": "group_senate_members",
+      "inferred_mental_state": "Confidence, deliberate provocation.",
+      "relevance_to_desire": "Demonstrates the 'stunt' aspect of the desire Social_Norm_Challenge_Execution."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 105,
+      "timestamp_end_seconds": 115,
+      "character_id": "person_male_glasses",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Furrowed brows, direct eye contact, shaking head slightly while speaking.",
+      "intensity": "strong",
+      "target": "person_female_black_dress",
+      "inferred_mental_state": "Disapproval, moral outrage.",
+      "relevance_to_desire": "Direct evidence of Social_Norm_Enforcement_Seeking."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 110,
+      "timestamp_end_seconds": 120,
+      "character_id": "person_female_black_dress",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Neutral expression, slight blinking, swallowing.",
+      "intensity": "subtle",
+      "target": "person_male_glasses",
+      "inferred_mental_state": "Processing criticism, masking emotional reaction (possibly shame or defiance).",
+      "relevance_to_desire": "Indicates a shift to Social_Composure_Maintenance."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_001",
+      "start_timestamp_seconds": 0,
+      "end_timestamp_seconds": 10,
+      "segment_description": "Entry of the senator in a burqa and the room's reaction.",
+      "psychological_significance": "Clear example of 'Expectation Violation' leading to collective Epistemic_Uncertainty.",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "desire_identification"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "qa_seg_002",
+      "start_timestamp_seconds": 100,
+      "end_timestamp_seconds": 130,
+      "segment_description": "Attorney General's emotional rebuttal.",
+      "psychological_significance": "High-arousal display of moral indignation and social norm enforcement.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "social_dynamics_analysis"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "person_female_black_dress__person_male_glasses",
+      "character_1_id": "person_female_black_dress",
+      "character_2_id": "person_male_glasses",
+      "relationship_type": "political_adversaries",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Person 1's action triggers Person 2's high-arousal defense response. Person 2's response forces Person 1 into a passive listening state.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 100,
+          "description": "Person 2 directly addresses Person 1 ('Senator Hanson, no...'), establishing dominance."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene is highly performative. 'Desires' here are often strategic political moves rather than raw biological needs, requiring interpretation through the lens of social status and norm enforcement.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

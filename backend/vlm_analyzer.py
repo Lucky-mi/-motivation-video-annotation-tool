@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 from datetime import timedelta
 from dotenv import load_dotenv
+from .prompt_loader import PromptLoader
 
 # 加载环境变量
 load_dotenv()
@@ -49,12 +50,12 @@ class VLMAnalyzer:
         if not model_name:
             model_name = os.getenv('GEMINI_MODEL', 'gemini-2.0-flash')
 
-        if api_key and genai is not None:
-            genai.configure(api_key=api_key)
             self.model = genai.GenerativeModel(model_name)
             print(f"🤖 使用模型: {model_name}")
         else:
             self.model = None
+
+        self.prompt_loader = PromptLoader("backend/prompts/video_analysis_prompts.yaml")
     
     def analyze_video_comprehensive(
         self,
@@ -164,43 +165,7 @@ class VLMAnalyzer:
     
     def _build_comprehensive_prompt(self, analyze_actions: bool, analyze_motivations: bool) -> str:
         """构建 Prompt - 强调简洁性以防截断"""
-        return """
-你是一位专业的心理学视频分析专家。请分析这个视频的关键时刻。
-
-请按以下 JSON 格式输出（保持简洁，不要过度啰嗦，确保 JSON 格式完整）：
-
-```json
-{
-  "key_moments": [
-    {
-      "timestamp_seconds": 15,
-      "action_description": "客观描述动作",
-      "visual_context": "环境描述",
-      "objects": ["物体1"],
-      "characters": ["角色A"],
-      "scene": "场景名",
-      
-      "explicit_motivation": "显性动机",
-      "implicit_desire": "隐性渴望 (基于马斯洛需求)",
-      "desire_category": "safety",
-      "motivation_type": "intrinsic",
-      "implicit_level": 4,
-      "reasoning": "简短的推理依据",
-      "visual_cues": ["线索1"],
-      "confidence": 0.9
-    }
-  ],
-  "transitions": [],
-  "overall_narrative": "一句话总结",
-  "suggested_keyframe_timestamps": [15, 30]
-}
-要求：
-
-只输出 JSON，不要其他废话。
-
-提取 5-10 个最具代表性的关键帧即可，不用太多。
-
-确保 JSON 语法正确，尤其是结尾的闭合括号。 """
+        return self.prompt_loader.get_prompt("comprehensive_video")
 
     def extract_keyframes_from_video(
         self, 

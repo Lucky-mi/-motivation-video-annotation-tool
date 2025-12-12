@@ -1,0 +1,428 @@
+{
+  "video_id": "0dbf3518-8af2-47b8-b787-77707250b088",
+  "video_path": "data\\Youtube_videos\\0dbf3518-8af2-47b8-b787-77707250b088.mp4",
+  "duration_seconds": 182,
+  "annotation_timestamp": "2025-12-08T13:15:20.358063",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Dimly lit dining room, intimate domestic setting, followed by a living room couch scene",
+    "social_context": "Dyadic conversation, shifting from tense confrontation to emotional reconciliation",
+    "temporal_context": "Evening/Night",
+    "emotional_atmosphere": "High tension, regret, distress, transitioning to tenderness and nostalgia",
+    "salient_objects": [
+      "Dining table",
+      "Letters/Envelopes",
+      "Water bill"
+    ],
+    "activity_type": "Relationship conflict resolution / Past trauma disclosure"
+  },
+  "characters": [
+    {
+      "character_id": "character_male_soldier",
+      "physical_description": "Adult male, short military haircut, wearing light blue/grey military service shirt with chevrons",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The accuser / later the comforter",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Frustration",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated, leaning forward, furrowed brow, persistent eye contact seeking answers",
+        "apparent_goal": "To understand why the relationship ended via letter",
+        "behavioral_evidence": [
+          "Repetitive questioning ('Why didn't you call?')",
+          "Leaning into the table space",
+          "Shaking head in disbelief"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 180,
+        "emotional_state": {
+          "primary_emotion": "Tenderness",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Relaxed posture, soft facial expression, physical closeness on couch",
+        "apparent_goal": "To reconnect and reminisce",
+        "behavioral_evidence": [
+          "Smiling at the letter",
+          "Soft vocal tone",
+          "Sitting close to female character"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "aggression_level",
+          "psychological_basis": "emotion_model",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 107,
+          "behavioral_evidence": [
+            "Demanding 'Give me an answer' with increased volume",
+            "Sudden drop in tension after the hug"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "empathy_toward_partner",
+          "psychological_basis": "tom_framework",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 208,
+          "behavioral_evidence": [
+            "Initially dismissive of her silence",
+            "Visibly softening when she explains her father's illness",
+            "Initiating the hug to comfort her"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "character_female_blonde",
+      "physical_description": "Adult female, long blonde hair, white button-down shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The accused / The explainer",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Guilt/Apprehension",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Avoidant gaze, small movements, soft voice, protective posture",
+        "apparent_goal": "To avoid escalating the conflict",
+        "behavioral_evidence": [
+          "Looking down",
+          "Quiet responses",
+          "Stillness"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 180,
+        "emotional_state": {
+          "primary_emotion": "Nostalgia/Relief",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Smiling, open posture, sharing items (letters)",
+        "apparent_goal": "To share memories",
+        "behavioral_evidence": [
+          "Laughing softly",
+          "Handing the letter to the male",
+          "Relaxed shoulders"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "emotional_distress",
+          "psychological_basis": "circumplex_model",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 146,
+          "behavioral_evidence": [
+            "Quiet avoidance initially",
+            "Explosive shouting and crying during explanation",
+            "Calmness in the final segment"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "male_explanation_seeking",
+      "character_id": "character_male_soldier",
+      "desire_label": "Epistemic_Explanation_Seeking",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 115,
+        "duration_seconds": 115
+      },
+      "reasoning_chain": "Character expresses confusion ('I don't know why I came here') -> Escalates to direct questioning ('Why didn't you call?') -> Interprets silence as a lack of respect/care -> Demands cognitive closure regarding the breakup.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 23,
+          "behavior_type": "verbal_inquiry",
+          "description": "Repeatedly asking 'Why didn't you call?'"
+        },
+        {
+          "timestamp_seconds": 107,
+          "behavior_type": "facial_expression",
+          "description": "Intense staring, furrowed brows, demanding 'Give me an answer.'"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Respect_Restoration",
+          "reasoning": "He feels slighted by the letter and wants acknowledgment that he deserved better treatment.",
+          "why_not_primary": "The primary behavioral drive is interrogative (seeking information) rather than purely posturing for status."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "female_empathy_elicitation",
+      "character_id": "character_female_blonde",
+      "desire_label": "Social_Empathy_Elicitation",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 116,
+        "end_seconds": 200,
+        "duration_seconds": 84
+      },
+      "reasoning_chain": "Character transitions from avoidance to confrontation -> Explains the extreme hardship she faced (father's illness) -> Uses high arousal displays to force the male to understand her emotional reality and validate her choices.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 124,
+          "behavior_type": "body_movement",
+          "description": "Stands up abruptly, pacing, using expansive gestures."
+        },
+        {
+          "timestamp_seconds": 130,
+          "behavior_type": "verbal_content_and_tone",
+          "description": "Shouting 'You think it was easy for me without you?' - framing herself as a victim of circumstance needing understanding."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Competence_Defense",
+          "reasoning": "She is defending her ability to handle a crisis ('Tim was sick, he needed me'), countering the implication that she was weak or unfaithful.",
+          "why_not_primary": "The emotional breakdown suggests a need for connection/forgiveness (Belonging) more than just proving competence (Esteem)."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "male_comfort_provision",
+      "character_id": "character_male_soldier",
+      "desire_label": "Social_Support_Provision",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 201,
+        "end_seconds": 220,
+        "duration_seconds": 19
+      },
+      "reasoning_chain": "Male observes female's extreme distress -> His facial expression shifts from anger to concern -> He initiates physical contact (hug) to regulate her emotion.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 206,
+          "behavior_type": "proxemic_change",
+          "description": "Closes the distance, wraps arms around her."
+        },
+        {
+          "timestamp_seconds": 210,
+          "behavior_type": "facial_expression",
+          "description": "Eyes close, head bows into her, signaling shared sorrow and comfort."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_anger_to_empathy",
+      "character_id": "character_male_soldier",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 195,
+        "offset_timestamp_seconds": 205,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 190,
+        "description": "Female character breaks down sobbing, admitting she had 'no choice' and tried to call.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Explanation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Support_Provision",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 200,
+          "marker_type": "facial_shift",
+          "description": "Furrowed 'angry' brow relaxes into a 'sad' brow; mouth tension dissipates."
+        },
+        {
+          "timestamp_seconds": 204,
+          "marker_type": "postural_change",
+          "description": "Shoulders drop, leans in not to intimidate, but to hold."
+        }
+      ],
+      "visual_marker_of_change": "The moment he steps forward and his face drops from rigid interrogation to soft concern as she cries.",
+      "psychological_interpretation": "The realization of the partner's suffering overrides the ego-driven need for explanation. The BDI state shifts from 'I want to know why I was wronged' to 'I want to stop her pain'."
+    },
+    {
+      "transition_id": "trans_female_avoidance_to_confrontation",
+      "character_id": "character_female_blonde",
+      "transition_type": "conflict",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 110,
+        "offset_timestamp_seconds": 120,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 108,
+        "description": "Male character demands 'Give me an answer' aggressively.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Conflict_Avoidance",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Empathy_Elicitation",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 116,
+          "marker_type": "posture_shift",
+          "description": "She stands up abruptly, breaking the passive seated posture."
+        },
+        {
+          "timestamp_seconds": 120,
+          "marker_type": "voice_modulation",
+          "description": "Volume increases significantly, tone becomes strident."
+        }
+      ],
+      "visual_marker_of_change": "The moment she stands up from the table and begins shouting back.",
+      "psychological_interpretation": "The pressure from the male character blocked the avoidance strategy (Frustration), leading to a 'Fight' response where she actively seeks to justify her actions (Esteem/Belonging)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 30,
+      "character_id": "character_male_soldier",
+      "behavior_category": "body_movement",
+      "behavior_description": "Sitting at table, looking down then up, shaking head.",
+      "intensity": "moderate",
+      "target": "character_female_blonde",
+      "inferred_mental_state": "Disbelief and internal processing of rejection.",
+      "relevance_to_desire": "Indicates the 'Belief' component of BDI is being challenged (mismatch between expectation of love and reality of the letter)."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 120,
+      "timestamp_end_seconds": 150,
+      "character_id": "character_female_blonde",
+      "behavior_category": "gesture",
+      "behavior_description": "Rapid hand gestures, pacing, chest heaving.",
+      "intensity": "strong",
+      "target": "character_male_soldier",
+      "inferred_mental_state": "High arousal, desperation to be understood.",
+      "relevance_to_desire": "Demonstrates the intensity of the 'Desire' for vindication/empathy."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 207,
+      "timestamp_end_seconds": 220,
+      "character_id": "character_male_soldier",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Embracing the female character, holding her head.",
+      "intensity": "strong",
+      "target": "character_female_blonde",
+      "inferred_mental_state": "Compassion, forgiveness.",
+      "relevance_to_desire": "Marks the resolution of the conflict desire and the emergence of affiliation."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_confrontation_climax",
+      "start_timestamp_seconds": 100,
+      "end_timestamp_seconds": 160,
+      "segment_description": "The male demands an answer, and the female explodes with her explanation about her sick father.",
+      "psychological_significance": "High-intensity emotional transition where hidden motivations (caregiving burden) are revealed, altering the ToM of the accuser.",
+      "potential_qa_types": [
+        "transition_detection",
+        "desire_identification",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_reconciliation",
+      "start_timestamp_seconds": 200,
+      "end_timestamp_seconds": 220,
+      "segment_description": "The hug and emotional release.",
+      "psychological_significance": "Shows the shift from antagonistic goals to cooperative/affiliative goals.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "affect_change_detection"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "character_male_soldier__character_female_blonde",
+      "character_1_id": "character_male_soldier",
+      "character_2_id": "character_female_blonde",
+      "relationship_type": "Estranged lovers",
+      "interaction_quality": "mixed",
+      "mutual_influence": "The male's aggression triggers the female's defensive outburst. The female's vulnerability triggers the male's compassion.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 108,
+          "description": "Male pushes for answer -> Female snaps."
+        },
+        {
+          "timestamp_seconds": 207,
+          "description": "Male hugs Female -> Female accepts comfort."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video contains a distinct time jump/scene change around 2:23 to a calmer coda. The annotation treats the primary conflict (0:00-2:20) as the main source for desire dynamics.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

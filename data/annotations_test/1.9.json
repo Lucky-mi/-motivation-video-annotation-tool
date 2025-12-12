@@ -1,0 +1,365 @@
+{
+  "video_id": "1.9",
+  "video_path": "data\\Youtube_videos\\1.9.mp4",
+  "duration_seconds": 47,
+  "annotation_timestamp": "2025-12-08T13:51:13.469421",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Conference room or seminar hall with a podium and whiteboard",
+    "social_context": "Group activity (educational seminar/workshop)",
+    "temporal_context": "During a presentation",
+    "emotional_atmosphere": "Authoritative, energetic, instructional",
+    "salient_objects": [
+      "podium",
+      "whiteboard",
+      "microphone"
+    ],
+    "activity_type": "public_speaking"
+  },
+  "characters": [
+    {
+      "character_id": "speaker_black_suit",
+      "physical_description": "Adult male, black suit jacket, black shirt, grey trousers, messy hair",
+      "estimated_age_group": "adult",
+      "role_in_scene": "instructor/speaker",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Dynamic, expansive gestures, leaning forward, authoritative stance",
+        "apparent_goal": "To demonstrate a social dynamic concept to the audience",
+        "behavioral_evidence": [
+          "Rapid speech rate",
+          "Pointing gestures",
+          "Interrupting the hypothetical interlocutor ('Nope')"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 47,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Direct eye contact with camera, pointing gesture, energetic",
+        "apparent_goal": "To persuade viewers to purchase tickets",
+        "behavioral_evidence": [
+          "Direct address to camera",
+          "Pointing at lens",
+          "Rapid closing statement"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "dominance_display",
+          "psychological_basis": "Social hierarchy and status signaling",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 2,
+          "behavioral_evidence": [
+            "Interrupting the 'student' at 00:02",
+            "Using the 'baiting' hand gesture at 00:16",
+            "Directing the audience's interpretation"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "emotional_regulation",
+          "psychological_basis": "Self-regulation and composure",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 31,
+          "behavioral_evidence": [
+            "Shift from agitated mimicry (00:16-00:23) to 'grounded' posture (00:31)",
+            "Hands pressing down on torso to signify stability"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "speaker_black_suit",
+      "desire_label": "Esteem_Competence_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 39,
+        "duration_seconds": 39
+      },
+      "reasoning_chain": "The subject is on a stage (context of authority). He corrects a hypothetical response ('Nope') and explains a complex social dynamic. His body language is expansive and demonstrative. This indicates a desire to be seen as competent, knowledgeable, and authoritative.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 2,
+          "behavior_type": "verbal_interruption",
+          "description": "Says 'Nope' immediately, asserting superior knowledge of the interaction."
+        },
+        {
+          "timestamp_seconds": 14,
+          "behavior_type": "gesture",
+          "description": "Points at whiteboard/audience to direct attention to his analysis."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Dominance_Assertion",
+          "reasoning": "The behavior could be interpreted purely as establishing hierarchy rather than displaying competence, given the aggressive interruption.",
+          "why_not_primary": "The context is educational (seminar), suggesting the dominance is a tool for teaching (competence) rather than the end goal itself."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "speaker_black_suit",
+      "desire_label": "Social_Conflict_Simulation",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 16,
+        "end_seconds": 23,
+        "duration_seconds": 7
+      },
+      "reasoning_chain": "The subject intentionally mimics a negative social interaction ('baiting'). He uses specific hand gestures (beckoning) and facial expressions (mock confusion/aggression) to simulate a conflict scenario for the audience.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 16,
+          "behavior_type": "gesture",
+          "description": "Beckoning hand motion ('Come through the door')."
+        },
+        {
+          "timestamp_seconds": 19,
+          "behavior_type": "facial_expression",
+          "description": "Furrowed brow and intense gaze mimicking an aggressor."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "speaker_black_suit",
+      "desire_label": "Resource_Acquisition_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 40,
+        "end_seconds": 47,
+        "duration_seconds": 7
+      },
+      "reasoning_chain": "The video cuts to a direct address where the subject asks viewers to 'click the link' and 'book your ticket'. This is a clear shift to a transactional motivation.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 40,
+          "behavior_type": "gesture",
+          "description": "Pointing directly at the camera/viewer."
+        },
+        {
+          "timestamp_seconds": 44,
+          "behavior_type": "body_movement",
+          "description": "Rapid, urgent movements emphasizing scarcity ('before it fills out')."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Affiliation_Seeking",
+          "reasoning": "He is inviting people to join him ('see you there').",
+          "why_not_primary": "The explicit mention of 'booking tickets' and 'link in bio' points to a commercial/resource transaction as the primary driver."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "speaker_black_suit",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 30,
+        "offset_timestamp_seconds": 32,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 30,
+        "description": "Completion of the conflict simulation roleplay",
+        "trigger_type": "internal_state_change"
+      },
+      "desire_before": {
+        "label": "Social_Conflict_Simulation",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Self_Regulation_Demonstration",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 31,
+          "marker_type": "postural_change",
+          "description": "Hands move from outward/beckoning to pressing against own torso/stomach."
+        },
+        {
+          "timestamp_seconds": 32,
+          "marker_type": "facial_shift",
+          "description": "Face relaxes from the 'mock aggressive' expression to a neutral, serious teaching expression."
+        }
+      ],
+      "visual_marker_of_change": "The moment the hands stop beckoning and place firmly on the stomach/solar plexus area.",
+      "psychological_interpretation": "The subject shifts from enacting the 'aggressor' (high arousal simulation) to demonstrating the 'grounded' state (low arousal, stability), physically embodying the concept of emotional neutrality."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "speaker_black_suit",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 39,
+        "offset_timestamp_seconds": 40,
+        "transition_duration_seconds": 1
+      },
+      "trigger_event": {
+        "timestamp_seconds": 40,
+        "description": "Video cut/scene change",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Esteem_Competence_Display",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Resource_Acquisition_Seeking",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 40,
+          "marker_type": "gaze_redirect",
+          "description": "Gaze shifts from audience (off-camera) to direct lens focus."
+        }
+      ],
+      "visual_marker_of_change": "The hard cut in the video to a different background (wood wall).",
+      "psychological_interpretation": "A shift from the 'teacher' persona (providing value) to the 'marketer' persona (requesting action/resources)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 3,
+      "character_id": "speaker_black_suit",
+      "behavior_category": "gesture",
+      "behavior_description": "Points finger, shakes head, interrupts with 'Nope'.",
+      "intensity": "strong",
+      "target": "audience_member (hypothetical or real)",
+      "inferred_mental_state": "Certainty, Authority",
+      "relevance_to_desire": "Establishes the 'Esteem_Competence_Display' by correcting the student."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 16,
+      "timestamp_end_seconds": 19,
+      "character_id": "speaker_black_suit",
+      "behavior_category": "gesture",
+      "behavior_description": "Beckoning hand motion with both hands, pulling towards chest.",
+      "intensity": "strong",
+      "target": "audience (general)",
+      "inferred_mental_state": "Provocation (Simulated)",
+      "relevance_to_desire": "Visualizes the concept of 'baiting' (Social_Conflict_Simulation)."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 31,
+      "timestamp_end_seconds": 34,
+      "character_id": "speaker_black_suit",
+      "behavior_category": "posture_shift",
+      "behavior_description": "Places hands flat on stomach, stands still, slows speech.",
+      "intensity": "moderate",
+      "target": "self",
+      "inferred_mental_state": "Stability, Neutrality",
+      "relevance_to_desire": "Demonstrates the goal of 'Self_Regulation'."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_001",
+      "start_timestamp_seconds": 15,
+      "end_timestamp_seconds": 25,
+      "segment_description": "Speaker mimics a 'baiting' interaction using gestures and voice.",
+      "psychological_significance": "Clear example of simulated intention vs. actual intention (he is teaching, not actually fighting).",
+      "potential_qa_types": [
+        "intention_prediction",
+        "desire_identification"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "qa_seg_002",
+      "start_timestamp_seconds": 30,
+      "end_timestamp_seconds": 35,
+      "segment_description": "Speaker demonstrates being 'grounded'.",
+      "psychological_significance": "Shows physical embodiment of an abstract psychological state (neutrality).",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "transition_detection"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "speaker_audience",
+      "character_1_id": "speaker_black_suit",
+      "character_2_id": "audience_members",
+      "relationship_type": "instructor_students",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Speaker directs audience attention; audience provides passive validation (listening).",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 2,
+          "description": "Speaker corrects an audience member's answer."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 1,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video contains a distinct shift at 00:40 from educational content to promotional content, which significantly alters the motivational context.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

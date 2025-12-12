@@ -1,0 +1,397 @@
+{
+  "video_id": "1.5",
+  "video_path": "data\\Youtube_videos\\1.5.mp4",
+  "duration_seconds": 158,
+  "annotation_timestamp": "2025-12-08T19:57:05.820598",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Formal outdoor garden/courtyard of a large estate or manor house with paved walkways and flower beds.",
+    "social_context": "Group social activity transitioning into a high-stakes dyadic romantic ritual (proposal).",
+    "temporal_context": "Daytime, overcast sky.",
+    "emotional_atmosphere": "Initially casual and cheerful, shifting to high-intensity romantic euphoria.",
+    "salient_objects": [
+      "Camera (POV)",
+      "Wine glasses",
+      "Engagement ring",
+      "Shopping bags"
+    ],
+    "activity_type": "Staged photography session serving as a cover for a surprise proposal"
+  },
+  "characters": [
+    {
+      "character_id": "woman_white_jumpsuit",
+      "physical_description": "Adult female, blonde hair, wearing a white jumpsuit/two-piece outfit, holding a wine glass initially.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Target of surprise/Protagonist",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Relaxed, smiling, cooperative posture, posing for photos.",
+        "apparent_goal": "Participate in group photos and maintain social harmony.",
+        "behavioral_evidence": [
+          "Smiling at camera",
+          "Following photographer's instructions",
+          "Posing with friends"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 158,
+        "emotional_state": {
+          "primary_emotion": "Joy/Euphoria",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Overwhelmed, hands covering face, knees buckling, leaning toward partner.",
+        "apparent_goal": "Accept proposal and process intense emotion.",
+        "behavioral_evidence": [
+          "Crying",
+          "Nodding vigorously",
+          "Reaching for partner's hands",
+          "Buckling at knees"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "situational_awareness",
+          "psychological_basis": "Belief state regarding the true nature of the event",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 135,
+          "behavioral_evidence": [
+            "Initially follows photo instructions blindly",
+            "Turns around and freezes (moment of realization)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "man_white_shirt",
+      "physical_description": "Adult male, short hair, wearing white button-down shirt and beige trousers.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Proposer",
+      "initial_state": {
+        "timestamp_seconds": 110,
+        "emotional_state": {
+          "primary_emotion": "Excitement/Anxiety",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Stealthy approach, focused gaze, preparatory posture for kneeling.",
+        "apparent_goal": "Position himself for the proposal without being detected.",
+        "behavioral_evidence": [
+          "Walking quietly behind subject",
+          "Checking position with photographer",
+          "Kneeling down"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 158,
+        "emotional_state": {
+          "primary_emotion": "Joy/Relief",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Kneeling, holding hands of partner, smiling upward.",
+        "apparent_goal": "Receive answer to proposal.",
+        "behavioral_evidence": [
+          "Holding ring box",
+          "Smiling at partner's reaction",
+          "Maintaining eye contact"
+        ]
+      }
+    },
+    {
+      "character_id": "photographer_pov",
+      "physical_description": "Not visible (POV), male voice, holding Sony camera.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Orchestrator/Deceiver",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "N/A (POV), but voice is steady and directive.",
+        "apparent_goal": "Execute the surprise plan by managing the subjects.",
+        "behavioral_evidence": [
+          "Giving specific posing instructions",
+          "Directing the man when to enter",
+          "Maintaining the cover story"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 158,
+        "emotional_state": {
+          "primary_emotion": "Satisfaction",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Steady camera work capturing the moment.",
+        "apparent_goal": "Document the proposal.",
+        "behavioral_evidence": [
+          "Capturing the reaction shots",
+          "Remaining silent during the emotional peak"
+        ]
+      }
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_woman_white_jumpsuit_01",
+      "character_id": "woman_white_jumpsuit",
+      "desire_label": "Esteem_Social_Image_Maintenance",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 130,
+        "duration_seconds": 130
+      },
+      "reasoning_chain": "Subject believes she is participating in a social media photoshoot. She complies with instructions to pose, fix hair, and smile, indicating a desire to present a positive social image and cooperate with the group activity.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 45,
+          "behavior_type": "body_movement",
+          "description": "Adjusts hair and posture when camera is pointed at her."
+        },
+        {
+          "timestamp_seconds": 115,
+          "behavior_type": "compliance",
+          "description": "Turns around immediately upon photographer's request."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Affiliation_Maintenance",
+          "reasoning": "She may simply be bonding with friends rather than caring about the photo result.",
+          "why_not_primary": "The specific attention to posing and checking the camera suggests image-consciousness (Esteem) is the active driver."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_woman_white_jumpsuit_02",
+      "character_id": "woman_white_jumpsuit",
+      "desire_label": "Social_Pair_Bonding_Affirmation",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 135,
+        "end_seconds": 158,
+        "duration_seconds": 23
+      },
+      "reasoning_chain": "Upon realizing the proposal (Belief update), her behavior shifts from posing to intense emotional release and connection seeking. The buckling knees and crying indicate overwhelming emotion related to the relationship milestone.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 136,
+          "behavior_type": "facial_expression",
+          "description": "Hands cover mouth, eyes widen (surprise/joy)."
+        },
+        {
+          "timestamp_seconds": 145,
+          "behavior_type": "body_movement",
+          "description": "Knees buckle, physically lowering herself to be closer to the kneeling partner."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_man_white_shirt_01",
+      "character_id": "man_white_shirt",
+      "desire_label": "Social_Commitment_Initiation",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 110,
+        "end_seconds": 158,
+        "duration_seconds": 48
+      },
+      "reasoning_chain": "The subject executes a planned sequence: approach unseen, kneel, present ring. This indicates a committed intention to initiate a long-term pair bond.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 120,
+          "behavior_type": "body_movement",
+          "description": "Kneels on one knee (cultural symbol of proposal)."
+        },
+        {
+          "timestamp_seconds": 128,
+          "behavior_type": "object_manipulation",
+          "description": "Holds open ring box toward partner."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_woman_white_jumpsuit_01",
+      "character_id": "woman_white_jumpsuit",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 134,
+        "offset_timestamp_seconds": 138,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 134,
+        "description": "Turning around and seeing partner kneeling with a ring.",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Esteem_Social_Image_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Epistemic_Reality_Reorientation",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 135,
+          "marker_type": "postural_change",
+          "description": "Freezing mid-turn, then sudden loss of muscle tone (knees buckling)."
+        },
+        {
+          "timestamp_seconds": 135,
+          "marker_type": "facial_shift",
+          "description": "Smile drops into open-mouthed shock, hands fly to face."
+        }
+      ],
+      "visual_marker_of_change": "The exact moment she completes the turn, her hands immediately fly to her mouth and her posture collapses from a pose to a shock response.",
+      "psychological_interpretation": "A massive expectation violation (Belief revision) triggers an orienting response. The desire to pose is instantly replaced by the need to process the new reality (Epistemic) and then accept the social offer (Belonging)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 100,
+      "character_id": "woman_white_jumpsuit",
+      "behavior_category": "body_movement",
+      "behavior_description": "Walking, setting down items, posing with friends.",
+      "intensity": "moderate",
+      "target": "photographer_pov",
+      "inferred_mental_state": "Cooperative, socially engaged.",
+      "relevance_to_desire": "Establishes the baseline desire of social compliance and image maintenance."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 110,
+      "timestamp_end_seconds": 130,
+      "character_id": "man_white_shirt",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Entering frame from background, closing distance to woman_white_jumpsuit while she is turned away.",
+      "intensity": "moderate",
+      "target": "woman_white_jumpsuit",
+      "inferred_mental_state": "Anticipatory, focused.",
+      "relevance_to_desire": "Demonstrates the intention phase of the proposal desire."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 135,
+      "timestamp_end_seconds": 145,
+      "character_id": "woman_white_jumpsuit",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Knees buckling, likely crying (hands to face), rapid breathing.",
+      "intensity": "strong",
+      "target": "man_white_shirt",
+      "inferred_mental_state": "Overwhelmed, euphoric.",
+      "relevance_to_desire": "Physiological markers of intense emotional arousal confirming the high value of the desire fulfillment (proposal)."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_deception_setup",
+      "start_timestamp_seconds": 0,
+      "end_timestamp_seconds": 110,
+      "segment_description": "Photographer sets up the 'decoy' photoshoot with the women.",
+      "psychological_significance": "Illustrates the creation of a false belief state in the target.",
+      "potential_qa_types": [
+        "desire_identification",
+        "belief_inference"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_proposal_reveal",
+      "start_timestamp_seconds": 130,
+      "end_timestamp_seconds": 150,
+      "segment_description": "The target turns around, realizes the truth, and reacts.",
+      "psychological_significance": "Classic example of belief revision and emotional flooding.",
+      "potential_qa_types": [
+        "transition_detection",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "photographer_pov__woman_white_jumpsuit",
+      "character_1_id": "photographer_pov",
+      "character_2_id": "woman_white_jumpsuit",
+      "relationship_type": "stranger/authority_figure",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Photographer directs woman's behavior; woman complies to satisfy photographer's stated goal.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 115,
+          "description": "Photographer instructs woman to turn around, facilitating the surprise."
+        }
+      ]
+    },
+    {
+      "dyad_id": "man_white_shirt__woman_white_jumpsuit",
+      "character_1_id": "man_white_shirt",
+      "character_2_id": "woman_white_jumpsuit",
+      "relationship_type": "romantic_partners",
+      "interaction_quality": "mixed",
+      "mutual_influence": "Man's action triggers extreme emotional response in woman.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 135,
+          "description": "The reveal moment where their eyes meet and the dynamic shifts from solitary to dyadic."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 1,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The friends (woman_striped_dress, woman_floral_dress) are clearly accomplices (ToM: they hold a True Belief about the event, unlike the target). Their behavior (moving away, watching eagerly) supports the inference of a planned surprise.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

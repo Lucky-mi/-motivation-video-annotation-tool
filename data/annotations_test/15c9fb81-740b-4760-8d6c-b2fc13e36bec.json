@@ -1,0 +1,384 @@
+{
+  "video_id": "15c9fb81-740b-4760-8d6c-b2fc13e36bec",
+  "video_path": "data\\Youtube_videos\\15c9fb81-740b-4760-8d6c-b2fc13e36bec.mp4",
+  "duration_seconds": 31,
+  "annotation_timestamp": "2025-12-08T18:41:27.050070",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Sunny beach shoreline with moderate surf",
+    "social_context": "Cooperative dyadic activity (fishing partners)",
+    "temporal_context": "Daytime",
+    "emotional_atmosphere": "High arousal, shifting from tense/frustrated to triumphant/joyful",
+    "salient_objects": [
+      "fishing rods",
+      "large stingray",
+      "ocean surf"
+    ],
+    "activity_type": "resource_acquisition"
+  },
+  "characters": [
+    {
+      "character_id": "fisherman_neon_shorts",
+      "physical_description": "Adult male, grey long-sleeve shirt, neon green shorts, sunglasses, face gaiter, black socks",
+      "estimated_age_group": "adult",
+      "role_in_scene": "primary_actor",
+      "initial_state": {
+        "timestamp_seconds": 1,
+        "emotional_state": {
+          "primary_emotion": "Frustration",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Tense posture, leaning back against resistance, manipulating fishing rod with urgency",
+        "apparent_goal": "Retrieve stuck fishing line/catch",
+        "behavioral_evidence": [
+          "Verbalizing 'It's stuck'",
+          "Rod bent under tension",
+          "Looking around for assistance"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 30,
+        "emotional_state": {
+          "primary_emotion": "Joy/Pride",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Arms extended wide in victory pose, holding heavy catch for display",
+        "apparent_goal": "Celebrate and display the catch",
+        "behavioral_evidence": [
+          "Expansive 'V' gesture with arms",
+          "Loud vocalization 'Woo!'",
+          "Smiling/energetic speech"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "arousal_level",
+          "psychological_basis": "Circumplex Model of Affect",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 25,
+          "behavioral_evidence": [
+            "Transition from focused tension to explosive celebratory movement"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "dominance_control",
+          "psychological_basis": "BDI Model (Agency)",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 21,
+          "behavioral_evidence": [
+            "Initially unable to move object ('stuck'), eventually physically lifting and controlling the object"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "camera_operator",
+      "physical_description": "Only arms/hands visible, holding fishing rod, grey sleeve",
+      "estimated_age_group": "adult",
+      "role_in_scene": "helper/observer",
+      "initial_state": {
+        "timestamp_seconds": 8,
+        "emotional_state": {
+          "primary_emotion": "Interest/Focus",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Hands manipulating rod in coordination with partner",
+        "apparent_goal": "Assist partner in retrieving catch",
+        "behavioral_evidence": [
+          "Rod tip pointed toward partner's line",
+          "Verbal coordination 'Together, together'"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 22,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Reaching toward catch to secure it",
+        "apparent_goal": "Secure the catch safely",
+        "behavioral_evidence": [
+          "Hand reaching for stingray tail",
+          "Moving into surf"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "fisherman_neon_shorts",
+      "desire_label": "Physiological_Sustenance_Acquisition",
+      "maslow_level": "physiological",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 31,
+        "duration_seconds": 31
+      },
+      "reasoning_chain": "Subject encounters resistance (stuck line) -> Expresses fear of loss ('I don't want to lose him') -> Explicitly states motivation ('I want to eat him') -> This verbal declaration grounds the struggle in basic physiological need rather than pure sport, though sport is a factor.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 3,
+          "behavior_type": "verbal_statement",
+          "description": "Explicitly states 'I want to eat him'"
+        },
+        {
+          "timestamp_seconds": 26,
+          "behavior_type": "verbal_statement",
+          "description": "Exclaims 'We're eating stingray tonight!'"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Achievement_Pursuit",
+          "reasoning": "Fishing is often a sport; the struggle and the final display pose strongly suggest a desire for competence and recognition regardless of the intent to eat.",
+          "why_not_primary": "The subject explicitly verbalized the consumption intent twice, making the physiological label the most direct interpretation of his stated goal, though Esteem is a strong secondary driver."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "fisherman_neon_shorts",
+      "desire_label": "Social_Cooperation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 4,
+        "end_seconds": 18,
+        "duration_seconds": 14
+      },
+      "reasoning_chain": "Subject realizes individual effort is insufficient (Belief: 'It's stuck') -> Formulates plan to use partner's resources (Intention) -> Issues request for specific action (Behavior: 'Can you use your hook...').",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 5,
+          "behavior_type": "gesture",
+          "description": "Pointing/gesturing toward the water while looking at partner"
+        },
+        {
+          "timestamp_seconds": 6,
+          "behavior_type": "verbal_request",
+          "description": "Asks partner to hook the line and bring it in together"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "fisherman_neon_shorts",
+      "desire_label": "Esteem_Recognition_Seeking",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 25,
+        "end_seconds": 31,
+        "duration_seconds": 6
+      },
+      "reasoning_chain": "Goal achieved (catch landed) -> Subject immediately orients body toward camera/audience -> Adopts expansive posture -> Displays catch prominently. This behavior serves to validate competence and seek social approval.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 25,
+          "behavior_type": "posture_shift",
+          "description": "Arms thrown wide open in 'victory' pose"
+        },
+        {
+          "timestamp_seconds": 29,
+          "behavior_type": "object_manipulation",
+          "description": "Holding the stingray up vertically to display its size to the camera"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "fisherman_neon_shorts",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 19,
+        "offset_timestamp_seconds": 25,
+        "transition_duration_seconds": 6
+      },
+      "trigger_event": {
+        "timestamp_seconds": 19,
+        "description": "The stingray is successfully pulled from the water onto the sand",
+        "trigger_type": "goal_progress"
+      },
+      "desire_before": {
+        "label": "Esteem_Achievement_Pursuit",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Esteem_Recognition_Seeking",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 20,
+          "marker_type": "postural_change",
+          "description": "Shoulders drop, tension releases from arms"
+        },
+        {
+          "timestamp_seconds": 25,
+          "marker_type": "gesture",
+          "description": "Arms expand into open victory gesture"
+        }
+      ],
+      "visual_marker_of_change": "The moment the rod tension is released and the subject transitions from a pulling stance to a standing, celebratory stance.",
+      "psychological_interpretation": "The desire to overcome the obstacle (catch the fish) is satisfied, immediately transforming into a desire to validate the success through social display."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "fisherman_neon_shorts",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 2,
+        "offset_timestamp_seconds": 6,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 2,
+        "description": "Realization that the line is stuck on the bottom",
+        "trigger_type": "obstacle_encounter"
+      },
+      "desire_before": {
+        "label": "Esteem_Achievement_Pursuit",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Cooperation_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 4,
+          "marker_type": "gaze_redirect",
+          "description": "Turns head away from water toward partner"
+        }
+      ],
+      "visual_marker_of_change": "When the subject stops pulling exclusively and turns head/torso to address the partner.",
+      "psychological_interpretation": "The blockage of the primary desire (catch) triggers a secondary instrumental desire (get help) to overcome the obstacle."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 3,
+      "character_id": "fisherman_neon_shorts",
+      "behavior_category": "body_movement",
+      "behavior_description": "Leaning back, rod bent, grimacing",
+      "intensity": "strong",
+      "target": "stingray (unseen)",
+      "inferred_mental_state": "Frustration/Determination",
+      "relevance_to_desire": "Indicates high-effort pursuit of goal despite resistance"
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 25,
+      "timestamp_end_seconds": 27,
+      "character_id": "fisherman_neon_shorts",
+      "behavior_category": "gesture",
+      "behavior_description": "Arms wide open, chest out, chin up",
+      "intensity": "strong",
+      "target": "camera_operator",
+      "inferred_mental_state": "Pride/Joy",
+      "relevance_to_desire": "Classic dominance/victory display indicating satisfaction of esteem needs"
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_01",
+      "start_timestamp_seconds": 4,
+      "end_timestamp_seconds": 10,
+      "segment_description": "Fisherman asks for help and partner joins in",
+      "psychological_significance": "Demonstrates shift from individual to cooperative agency based on belief update (it's too heavy).",
+      "potential_qa_types": [
+        "desire_identification",
+        "intention_prediction"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "qa_seg_02",
+      "start_timestamp_seconds": 24,
+      "end_timestamp_seconds": 31,
+      "segment_description": "Celebration after the catch",
+      "psychological_significance": "Clear display of emotion transition from high-arousal negative (strain) to high-arousal positive (joy).",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "desire_satisfaction"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "fisherman_neon_shorts__camera_operator",
+      "character_1_id": "fisherman_neon_shorts",
+      "character_2_id": "camera_operator",
+      "relationship_type": "collaborators",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Synergistic - Character 1's request triggers Character 2's assistance; Character 2's assistance enables Character 1's goal achievement.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 6,
+          "description": "Explicit verbal request for help and subsequent joint action"
+        },
+        {
+          "timestamp_seconds": 9,
+          "description": "Synchronized pulling ('Together, together')"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The subject's verbal reports align perfectly with observable behavior, making inference high confidence. The 'eating' motivation is taken at face value due to repetition, grounding the activity in physiological needs despite the sport context.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

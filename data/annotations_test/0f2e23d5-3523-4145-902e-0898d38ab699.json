@@ -1,0 +1,327 @@
+{
+  "video_id": "0f2e23d5-3523-4145-902e-0898d38ab699",
+  "video_path": "data\\Youtube_videos\\0f2e23d5-3523-4145-902e-0898d38ab699.mp4",
+  "duration_seconds": 48.0,
+  "annotation_timestamp": "2025-12-08T13:17:26.018882",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Public roadway intersection with traffic lights; overcast weather; urban/suburban commercial area near a Walgreens.",
+    "social_context": "Dyadic interaction within a public space; likely an emergency or crisis situation involving vehicle occupants.",
+    "temporal_context": "Daytime.",
+    "emotional_atmosphere": "High tension, urgency, distress.",
+    "salient_objects": [
+      "Grey sedan",
+      "Open car doors",
+      "Pavement",
+      "Traffic lights"
+    ],
+    "activity_type": "Emergency response/Caregiving"
+  },
+  "characters": [
+    {
+      "character_id": "driver_grey_hoodie",
+      "physical_description": "Male, wearing grey hoodie, dark pants, black beanie/head covering.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Caregiver / Driver",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Rapid exit from vehicle, hurried gait, forward lean indicating urgency.",
+        "apparent_goal": "Retrieve the passenger who exited the vehicle.",
+        "behavioral_evidence": [
+          "Exits driver side immediately after car stops",
+          "Runs around back of car",
+          "Focus is entirely on the other individual"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 48.0,
+        "emotional_state": {
+          "primary_emotion": "Anxiety",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated in vehicle, closing door, preparing to resume driving.",
+        "apparent_goal": "Secure vehicle and depart.",
+        "behavioral_evidence": [
+          "Returns to driver seat",
+          "Closes door",
+          "Body orientation faces forward/dashboard"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "urgency_level",
+          "psychological_basis": "arousal",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "moderate",
+          "peak_moment_seconds": 10.0,
+          "behavioral_evidence": [
+            "Sprints to passenger initially",
+            "Movements slow down once passenger is back in seat"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "passenger_red_jacket",
+      "physical_description": "Female, wearing red jacket/top, dark pants, carrying a bag.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Care receiver / Incapacitated person",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Distress",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Unsteady gait, immediate collapse, lack of motor control.",
+        "apparent_goal": "Exit the vehicle (reason unclear).",
+        "behavioral_evidence": [
+          "Opens door in traffic",
+          "Steps out and immediately falls to ground",
+          "Limp body posture when lifted"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 35.0,
+        "emotional_state": {
+          "primary_emotion": "Unknown",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Seated passively in passenger seat.",
+        "apparent_goal": "Rest / Recovery.",
+        "behavioral_evidence": [
+          "Does not resist being placed in car",
+          "Remains seated once door is closed"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "motor_control",
+          "psychological_basis": "physiological_state",
+          "trajectory": "STABLE",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": 5.0,
+          "behavioral_evidence": [
+            "Collapse onto pavement",
+            "Inability to stand while being lifted",
+            "Being dragged/carried by driver"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "driver_motivation_01",
+      "character_id": "driver_grey_hoodie",
+      "desire_label": "Social_Caregiving_Provision",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 35.0,
+        "duration_seconds": 35.0
+      },
+      "reasoning_chain": "Driver observes passenger exit and collapse -> Belief formed that passenger is in danger/incapacitated -> Desire to protect/help activates -> Intention to physically retrieve passenger formed.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 2.0,
+          "behavior_type": "body_movement",
+          "description": "Rapid exit from vehicle while in traffic lane."
+        },
+        {
+          "timestamp_seconds": 15.0,
+          "behavior_type": "body_movement",
+          "description": "Physically lifting and carrying the limp passenger."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Safety_Legal_Consequence_Avoidance",
+          "reasoning": "Driver may be retrieving passenger to avoid police attention or legal trouble from leaving someone in the road.",
+          "why_not_primary": "The speed and physical manner of handling (lifting rather than shoving) suggests concern, though avoidance is a plausible secondary motivator."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "passenger_motivation_01",
+      "character_id": "passenger_red_jacket",
+      "desire_label": "Physiological_Relief_Seeking",
+      "maslow_level": "physiological",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 5.0,
+        "duration_seconds": 5.0
+      },
+      "reasoning_chain": "Passenger exits vehicle in active traffic -> Suggests urgent need to be outside (e.g., nausea, panic, heat) -> Immediate collapse suggests physiological failure.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 1.0,
+          "behavior_type": "body_movement",
+          "description": "Opening door and stepping out into an unsafe environment."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Safety_Escape_Attempt",
+          "reasoning": "Passenger may be trying to flee the driver.",
+          "why_not_primary": "Passenger shows no resistance when retrieved and put back in the car; body is limp rather than defensive."
+        }
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "driver_trans_01",
+      "character_id": "driver_grey_hoodie",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 30.0,
+        "offset_timestamp_seconds": 35.0,
+        "transition_duration_seconds": 5.0
+      },
+      "trigger_event": {
+        "timestamp_seconds": 30.0,
+        "description": "Passenger is successfully placed back into the seat.",
+        "trigger_type": "goal_progress"
+      },
+      "desire_before": {
+        "label": "Social_Caregiving_Provision",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Safety_Situation_Normalization",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 32.0,
+          "marker_type": "postural_change",
+          "description": "Stops interacting with passenger, stands upright, closes door."
+        },
+        {
+          "timestamp_seconds": 36.0,
+          "marker_type": "body_movement",
+          "description": "Walks calmly back to driver's side (contrast with initial running)."
+        }
+      ],
+      "visual_marker_of_change": "The moment the driver closes the passenger door and turns his body away from the passenger toward the driver's side.",
+      "psychological_interpretation": "The immediate goal (retrieval) was achieved, satisfying the caregiving desire. The focus shifted to the next logical step in the plan: securing the vehicle and self."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0.0,
+      "timestamp_end_seconds": 5.0,
+      "character_id": "passenger_red_jacket",
+      "behavior_category": "body_movement",
+      "behavior_description": "Exits car and collapses to knees/ground.",
+      "intensity": "strong",
+      "target": null,
+      "inferred_mental_state": "Physiological distress / Incapacitation",
+      "relevance_to_desire": "Indicates priority of physiological needs over safety (staying in car)."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 10.0,
+      "timestamp_end_seconds": 25.0,
+      "character_id": "driver_grey_hoodie",
+      "behavior_category": "body_movement",
+      "behavior_description": "Bends down, lifts passenger under arms, drags/carries her to car.",
+      "intensity": "strong",
+      "target": "passenger_red_jacket",
+      "inferred_mental_state": "Concern / Determination",
+      "relevance_to_desire": "Demonstrates commitment to the caregiving/retrieval intention despite physical effort required."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_collapse",
+      "start_timestamp_seconds": 0.0,
+      "end_timestamp_seconds": 8.0,
+      "segment_description": "Passenger exits and falls; Driver reacts.",
+      "psychological_significance": "Critical for distinguishing between 'escape attempt' and 'medical emergency' based on body language (limpness vs. running).",
+      "potential_qa_types": [
+        "desire_identification",
+        "intention_prediction"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_retrieval",
+      "start_timestamp_seconds": 10.0,
+      "end_timestamp_seconds": 30.0,
+      "segment_description": "Driver carries passenger back to car.",
+      "psychological_significance": "Shows interaction dynamics; lack of resistance confirms incapacitation or compliance.",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "relationship_inference"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "driver_passenger_dyad",
+      "character_1_id": "driver_grey_hoodie",
+      "character_2_id": "passenger_red_jacket",
+      "relationship_type": "associates_or_partners",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Passenger's state dictates Driver's actions completely. Driver provides physical support to Passenger.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 15.0,
+          "description": "Physical contact established to lift passenger."
+        },
+        {
+          "timestamp_seconds": 25.0,
+          "description": "Driver placing passenger into seat."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 1,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "Video resolution is low, making facial expressions impossible to read. Inference relies heavily on gross motor movements and proxemics. The 'escape vs. illness' ambiguity is resolved via the Parsimony Principle (lack of resistance = illness/intoxication).",
+    "quality_flags": {
+      "video_quality_issues": true,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": true
+    },
+    "prompt_version": "5.1"
+  }
+}

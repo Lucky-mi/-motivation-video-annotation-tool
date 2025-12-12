@@ -9,46 +9,13 @@ from .models import VideoAnnotation, KeyframeAnnotation
 from .models_questions import Question, QuestionSet, QuestionOption
 from .ai_providers.base_provider import BaseAIProvider
 
-class PromptLoader:
-    """Prompt模板加载器 - 支持热加载"""
-    def __init__(self, config_path: str = "backend/prompts/question_prompts.yaml"):
-        self.config_path = config_path
-        self.prompts = {}
-        self.load_prompts()
-
-    def load_prompts(self):
-        """加载prompt配置"""
-        path = Path(self.config_path)
-        if not path.exists():
-            # Try relative path if absolute fails
-            path = Path.cwd() / self.config_path
-            
-        if not path.exists():
-            print(f"Warning: Prompt file not found at {path}")
-            return
-
-        with open(path, 'r', encoding='utf-8') as f:
-            self.prompts = yaml.safe_load(f)
-
-    def reload(self):
-        """热加载 - 无需重启服务"""
-        self.load_prompts()
-
-    def get_prompt(self, prompt_key: str, **kwargs) -> str:
-        """获取并格式化prompt"""
-        prompt_config = self.prompts.get(prompt_key, {})
-        if isinstance(prompt_config, dict):
-            template = prompt_config.get("template", "")
-        else:
-            template = str(prompt_config)
-            
-        return template.format(**kwargs)
+from .prompt_loader import PromptLoader
 
 class QuestionGenerator:
     """问题生成器 - 完全解耦"""
     def __init__(self, ai_provider: BaseAIProvider, prompt_loader: PromptLoader = None):
         self.ai_provider = ai_provider
-        self.prompt_loader = prompt_loader or PromptLoader()
+        self.prompt_loader = prompt_loader or PromptLoader("backend/prompts/question_prompts.yaml")
 
     def generate_questions_for_video(
         self,

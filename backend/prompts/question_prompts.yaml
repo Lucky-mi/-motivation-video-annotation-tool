@@ -1,66 +1,278 @@
-# 问题生成Prompt模板
-# 可以随时修改,调用reload()即可生效
+# =============================================================================
+# Question Generation Prompts
+# Theory of Mind (ToM) Video Question-Answer Dataset Construction
+# Academic English Style - NeurIPS Grade
+# =============================================================================
+
+question_generation:
+  description: "Academic-grade question generation for ToM video comprehension assessment"
+  version: "2.0-academic"
 
 desire_inference:
+  description: "Desire/Motivation inference question generation based on video keyframes"
   template: |
-    你是一位专业的心理学研究者,需要基于视频关键帧生成关于desire(渴望)的单选题。
+    # Theory of Mind Question Generation: Desire/Motivation Inference
 
-    ## 关键帧信息
-    - 时间戳: {timestamp}
-    - 动作描述: {action_description}
-    - 视觉上下文: {visual_context}
+    You are a behavioral psychology research specialist constructing assessment items for Theory of Mind (ToM) video comprehension. Your task is to generate a multiple-choice question testing AI models' capacity for desire/motivation inference from visual behavioral cues.
 
-    ## 任务
-    生成一个单选题,测试AI模型对人物desire的推理能力。
-    问题类型: "在这个场景中,人物的desire(渴望)是什么?"
+    ## Keyframe Context
 
-    要求:
-    1. 生成1个正确答案和3个有迷惑性的干扰项
-    2. 干扰项要基于常见的推理错误
-    3. 提供每个选项的解释
-    4. 说明你的推理过程
+    - **Timestamp**: {timestamp}
+    - **Action Description**: {action_description}
+    - **Visual Context**: {visual_context}
 
-    ## 输出格式(JSON)
+    ## Task Specification
+
+    Generate a **single-choice question** assessing the ability to infer the character's desire/motivation state from observable behavior.
+
+    **Question Type**: "What is the character's desire/motivation in this scene?"
+
+    ## Construction Requirements
+
+    ### 1. Answer Options (4 total)
+
+    - **1 Correct Answer**: Grounded in observable behavioral evidence from the keyframe
+    - **3 Plausible Distractors**: Based on common Theory of Mind reasoning errors
+
+    ### 2. Distractor Design Principles
+
+    Distractors should exploit typical cognitive biases:
+    - **Surface-level interpretation**: Confusing overt action with underlying motivation
+    - **Belief-desire confusion**: Mistaking beliefs for desires
+    - **Affective mislabeling**: Misattributing emotional valence
+    - **Intention-outcome confusion**: Confusing intended goals with observed outcomes
+
+    ### 3. Academic Terminology
+
+    - Use **Snake_Case format** for desire labels: `Category_SpecificMotivation_Direction`
+    - Reference **Maslow's Hierarchy**: physiological, safety, belonging, esteem, self_actualization
+    - Examples: `Social_Affiliation_Seeking`, `Safety_Threat_Avoidance`, `Esteem_Recognition_Seeking`
+
+    ### 4. Explanatory Rationale
+
+    Provide brief justifications for each option explaining why it is correct or incorrect based on behavioral evidence.
+
+    ## Output Format (Strict JSON Schema)
+
+    Return ONLY valid JSON without markdown decorators:
+
+    ```json
     {{
-      "question_text": "在时间戳{timestamp},人物的desire是什么?",
+      "question_text": "At timestamp {timestamp}, what is the character's primary desire/motivation?",
       "options": [
-        {{"option_id": "A", "text": "...", "is_correct": true, "explanation": "..."}},
-        {{"option_id": "B", "text": "...", "is_correct": false, "explanation": "..."}},
-        {{"option_id": "C", "text": "...", "is_correct": false, "explanation": "..."}},
-        {{"option_id": "D", "text": "...", "is_correct": false, "explanation": "..."}}
+        {{
+          "option_id": "A",
+          "text": "Social_Affiliation_Seeking - attempting to establish rapport",
+          "is_correct": true,
+          "explanation": "Observable gaze-seeking behavior and approach movements indicate desire for social connection"
+        }},
+        {{
+          "option_id": "B",
+          "text": "Esteem_Recognition_Seeking - seeking validation",
+          "is_correct": false,
+          "explanation": "No evidence of status-display behaviors; movements are affiliative not competitive"
+        }},
+        {{
+          "option_id": "C",
+          "text": "Safety_Threat_Avoidance - escaping aversive situation",
+          "is_correct": false,
+          "explanation": "Approach rather than avoidance behavior observed; inconsistent with threat response"
+        }},
+        {{
+          "option_id": "D",
+          "text": "Epistemic_Information_Seeking - gathering environmental information",
+          "is_correct": false,
+          "explanation": "Gaze directed at person not environment; social focus evident"
+        }}
       ],
       "correct_option_id": "A",
-      "reasoning": "基于视觉线索和行为分析..."
+      "reasoning": "The character displays gaze-seeking (eye contact attempts), proxemic approach (reducing interpersonal distance), and affiliative body orientation (torso facing interlocutor). These behavioral cues collectively indicate Social_Affiliation_Seeking consistent with belongingness needs (Maslow's Hierarchy Level 3)."
     }}
+    ```
+
+    ## Quality Control Criteria
+
+    1. **Evidence-Based**: All options must reference observable behaviors
+    2. **Theoretical Grounding**: Cite relevant psychological frameworks (BDI, Maslow)
+    3. **Discriminative Validity**: Distractors should be plausible but definitively incorrect
+    4. **Academic Precision**: Use proper psychological terminology
+
+    Generate the question:
 
 desire_reasoning:
+  description: "Desire/Motivation reasoning process assessment question generation"
   template: |
-    你是一位专业的心理学研究者,需要基于视频关键帧生成关于desire推理过程的单选题。
+    # Theory of Mind Question Generation: Reasoning Process Assessment
 
-    ## 关键帧信息
-    - 时间戳: {timestamp}
-    - 动作描述: {action_description}
-    - 视觉上下文: {visual_context}
-    - 已知desire: {known_desire}
+    You are a behavioral psychology research specialist constructing assessment items for Theory of Mind (ToM) video comprehension. Your task is to generate a multiple-choice question testing AI models' understanding of the **reasoning process** underlying desire/motivation inferences.
 
-    ## 任务
-    生成一个单选题,测试AI模型对desire推理过程的理解。
-    问题类型: "为什么判断人物的desire是{known_desire}?"
+    ## Keyframe Context
 
-    要求:
-    1. 生成1个正确的推理依据和3个错误的推理
-    2. 测试对视觉线索、行为模式的理解
-    3. 提供每个选项的解释
+    - **Timestamp**: {timestamp}
+    - **Action Description**: {action_description}
+    - **Visual Context**: {visual_context}
+    - **Established Desire**: {known_desire}
 
-    ## 输出格式(JSON)
+    ## Task Specification
+
+    Generate a **single-choice question** assessing the ability to articulate the correct reasoning chain supporting the desire/motivation inference.
+
+    **Question Type**: "Why is the character's desire/motivation identified as {known_desire}?"
+
+    ## Construction Requirements
+
+    ### 1. Answer Options (4 total)
+
+    - **1 Correct Reasoning**: Cites appropriate behavioral cues and psychological principles
+    - **3 Flawed Reasoning Paths**: Represent common inferential errors
+
+    ### 2. Flawed Reasoning Categories
+
+    - **Insufficient Evidence**: Citing behaviors not actually present in the scene
+    - **Circular Reasoning**: Assuming the conclusion (desire) to justify the conclusion
+    - **Framework Misapplication**: Incorrectly applying psychological theories
+    - **Cue Misinterpretation**: Misreading behavioral signals (e.g., interpreting fear as anger)
+
+    ### 3. Theoretical References
+
+    Ground reasoning in:
+    - **Observable behavioral cues**: Facial expressions, gaze, posture, gestures
+    - **Psychological frameworks**: BDI Model, Maslow's Hierarchy, Emotion Theory
+    - **Inference principles**: Parsimony Principle, baseline comparison, context integration
+
+    ## Output Format (Strict JSON Schema)
+
+    Return ONLY valid JSON without markdown decorators:
+
+    ```json
     {{
-      "question_text": "为什么判断人物的desire是{known_desire}?",
+      "question_text": "Why is the character's desire/motivation identified as {known_desire}?",
       "options": [
-        {{"option_id": "A", "text": "...", "is_correct": true, "explanation": "..."}},
-        {{"option_id": "B", "text": "...", "is_correct": false, "explanation": "..."}},
-        {{"option_id": "C", "text": "...", "is_correct": false, "explanation": "..."}},
-        {{"option_id": "D", "text": "...", "is_correct": false, "explanation": "..."}}
+        {{
+          "option_id": "A",
+          "text": "Gaze aversion and postural withdrawal indicate avoidance motivation consistent with threat response",
+          "is_correct": true,
+          "explanation": "Correct - Behavioral cues (gaze aversion, backward lean) align with avoidance motivation; consistent with safety needs (Maslow Level 2)"
+        }},
+        {{
+          "option_id": "B",
+          "text": "The character is clearly afraid based on the situation context",
+          "is_correct": false,
+          "explanation": "Circular reasoning - Assumes fear without citing specific behavioral evidence; situation context alone is insufficient"
+        }},
+        {{
+          "option_id": "C",
+          "text": "Rapid eye movements indicate high cognitive processing load",
+          "is_correct": false,
+          "explanation": "Cue misinterpretation - Gaze aversion is directional avoidance, not cognitive load indicator"
+        }},
+        {{
+          "option_id": "D",
+          "text": "The character seeks social affiliation but faces rejection",
+          "is_correct": false,
+          "explanation": "Incorrect desire attribution - Withdrawal behaviors contradict affiliation-seeking; evidence points to avoidance not approach"
+        }}
       ],
       "correct_option_id": "A",
-      "reasoning": "..."
+      "reasoning": "The correct answer specifies observable behavioral markers (gaze aversion, postural withdrawal) and correctly maps them to avoidance motivation within the BDI framework and Maslow's safety needs category. Alternatives fail due to circular reasoning, behavioral misinterpretation, or incorrect desire categorization."
     }}
+    ```
+
+    ## Quality Control Criteria
+
+    1. **Methodological Rigor**: Correct answer must cite specific behavioral observations
+    2. **Theoretical Accuracy**: Psychological framework references must be appropriate
+    3. **Error Typology**: Distractors should represent realistic reasoning failures
+    4. **Pedagogical Value**: Question should teach proper ToM inference methodology
+
+    Generate the question:
+
+behavioral_sequence_analysis:
+  description: "Temporal behavior sequence analysis question generation"
+  template: |
+    # Theory of Mind Question Generation: Behavioral Sequence Analysis
+
+    You are a behavioral psychology research specialist constructing assessment items for Theory of Mind (ToM) video comprehension. Your task is to generate a multiple-choice question testing AI models' capacity to analyze **temporal behavioral sequences** and infer desire/motivation transitions.
+
+    ## Video Segment Context
+
+    - **Time Range**: {start_timestamp} - {end_timestamp}
+    - **Behavioral Sequence**: {sequence_description}
+    - **Character**: {character_id}
+
+    ## Task Specification
+
+    Generate a **single-choice question** assessing the ability to identify the **desire/motivation transition** occurring within the behavioral sequence.
+
+    **Question Type**: "What desire/motivation transition occurs in this sequence?"
+
+    ## Construction Requirements
+
+    ### 1. Answer Options (4 total)
+
+    - **1 Correct Transition**: Accurately characterizes the before-after desire states
+    - **3 Incorrect Transitions**: Plausible but inaccurate characterizations
+
+    ### 2. Transition Types (Reference)
+
+    Based on **Desire Dynamics Theory**:
+    - **Emergence**: New desire appears
+    - **Intensification**: Existing desire strengthens
+    - **Attenuation**: Existing desire weakens
+    - **Transformation**: One desire changes into another
+    - **Conflict**: Multiple incompatible desires create tension
+    - **Resolution**: Desire is satisfied or abandoned
+    - **Frustration**: Desire is blocked, causing affective response
+
+    ### 3. Temporal Precision
+
+    - Specify **trigger event** precipitating the transition
+    - Identify **behavioral markers** indicating the shift
+    - Note **onset timestamp** where change becomes observable
+
+    ## Output Format (Strict JSON Schema)
+
+    Return ONLY valid JSON without markdown decorators:
+
+    ```json
+    {{
+      "question_text": "What desire/motivation transition occurs between {start_timestamp} and {end_timestamp}?",
+      "options": [
+        {{
+          "option_id": "A",
+          "text": "Transformation: Social_Affiliation_Seeking → Safety_Threat_Avoidance (trigger: aggressive gesture at t=15.2s)",
+          "is_correct": true,
+          "explanation": "Observable shift from approach behaviors (t<15s) to withdrawal behaviors (t>15s) following aggressive hand gesture; consistent with threat-triggered motivational reorientation"
+        }},
+        {{
+          "option_id": "B",
+          "text": "Intensification: Safety_Threat_Avoidance becomes stronger throughout sequence",
+          "is_correct": false,
+          "explanation": "Incorrect - Initial behaviors (t<15s) show approach not avoidance; no evidence of pre-existing threat response"
+        }},
+        {{
+          "option_id": "C",
+          "text": "Conflict: Simultaneous Social_Affiliation and Safety_Threat motivations cause hesitation",
+          "is_correct": false,
+          "explanation": "Incorrect - Sequential not simultaneous pattern; clear temporal division at t=15s rather than ongoing conflict"
+        }},
+        {{
+          "option_id": "D",
+          "text": "Resolution: Social_Affiliation_Seeking satisfied through successful interaction",
+          "is_correct": false,
+          "explanation": "Incorrect - Interaction was interrupted by aggression; affiliation goal not achieved; withdrawal indicates frustration not resolution"
+        }}
+      ],
+      "correct_option_id": "A",
+      "reasoning": "The sequence demonstrates a clear transformation from affiliation-seeking (evidenced by gaze-seeking, approach movements) to threat-avoidance (evidenced by gaze aversion, backward postural shift) triggered by an aggressive gesture at t=15.2s. The temporal specificity and behavioral contrast support transformation over other transition types."
+    }}
+    ```
+
+    ## Quality Control Criteria
+
+    1. **Temporal Accuracy**: Precise timestamp references for key behavioral shifts
+    2. **Theoretical Grounding**: Correct application of Desire Dynamics framework
+    3. **Behavioral Evidence**: Specific observable cues cited for each state
+    4. **Transition Logic**: Plausible alternative transitions as distractors
+
+    Generate the question:

@@ -1,0 +1,493 @@
+{
+  "video_id": "1bc4bb4b-9cb9-49fe-85c7-89b56c97470d",
+  "video_path": "data\\Youtube_videos\\1bc4bb4b-9cb9-49fe-85c7-89b56c97470d.mp4",
+  "duration_seconds": 278,
+  "annotation_timestamp": "2025-12-08T20:24:46.820164",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Upscale restaurant bar area with warm lighting and decorative lights",
+    "social_context": "Blind date introduction scenario (First Dates)",
+    "temporal_context": "Evening",
+    "emotional_atmosphere": "Initially anticipatory/nervous, shifting to high-arousal shock and awkward amusement",
+    "salient_objects": [
+      "Wine glass",
+      "Bar counter",
+      "Decorative lights",
+      "Menu/Reservation book"
+    ],
+    "activity_type": "Social introduction/Dating"
+  },
+  "characters": [
+    {
+      "character_id": "woman_red_hair",
+      "physical_description": "Adult female, red hair, black top, wearing earrings",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Dater (waiting party)",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anxiety/Anticipation",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Scanning environment, fidgeting with hair, drinking water frequently",
+        "apparent_goal": "To meet a potential romantic partner",
+        "behavioral_evidence": [
+          "Darting eye movements scanning the room",
+          "Self-grooming (touching hair)",
+          "Sipping water while listening to bartender"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 278,
+        "emotional_state": {
+          "primary_emotion": "Surprise/Embarrassment",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Covering face with hands, fanning self, laughing nervously",
+        "apparent_goal": "To manage the social awkwardness of the coincidence",
+        "behavioral_evidence": [
+          "Repeatedly covering face",
+          "Using hand to fan face (cooling response)",
+          "Nervous laughter and exclamations ('This is mad')"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_composure",
+          "psychological_basis": "Self-regulation and impression management",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 315,
+          "behavioral_evidence": [
+            "Initially maintains polite conversation with bartender",
+            "Composure breaks completely upon recognizing the man (mouth open, covering face)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "physiological_arousal",
+          "psychological_basis": "Circumplex Model (Activation)",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 319,
+          "behavioral_evidence": [
+            "Visible flushing",
+            "Need to fan self",
+            "Rapid speech and exclamations"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "man_blue_jacket",
+      "physical_description": "Adult male, short dark hair, blue blazer, white shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Dater (arriving party)",
+      "initial_state": {
+        "timestamp_seconds": 201,
+        "emotional_state": {
+          "primary_emotion": "Confidence",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Upright posture, confident stride, smiling",
+        "apparent_goal": "To make a good first impression",
+        "behavioral_evidence": [
+          "Walking with chest out",
+          "Smiling at passersby",
+          "Adjusting jacket"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 278,
+        "emotional_state": {
+          "primary_emotion": "Amusement/Surprise",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Smiling broadly, leaning on bar, relaxed posture compared to woman",
+        "apparent_goal": "To navigate the shared history humorously",
+        "behavioral_evidence": [
+          "Laughing",
+          "Playful comments ('Stop it')",
+          "Maintaining eye contact"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "confidence_level",
+          "psychological_basis": "Esteem/Self-efficacy",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": null,
+          "behavioral_evidence": [
+            "Self-description in interview as 'groomed' and 'smelling well'",
+            "Maintains composure even after the shock of recognition"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "bartender_waistcoat",
+      "physical_description": "Adult male, dark hair, black waistcoat",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Facilitator/Observer",
+      "initial_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Interest",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Attentive listening, serving drinks",
+        "apparent_goal": "To facilitate the date and comfort the customer",
+        "behavioral_evidence": [
+          "Leaning in to listen",
+          "Nodding",
+          "Asking open-ended questions"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 278,
+        "emotional_state": {
+          "primary_emotion": "Surprise/Curiosity",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Wide eyes, looking between the two daters",
+        "apparent_goal": "To understand the unusual dynamic",
+        "behavioral_evidence": [
+          "Freezing while pouring/holding glass",
+          "Direct question: 'You've dated before?'"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_woman_001",
+      "character_id": "woman_red_hair",
+      "desire_label": "Social_Affiliation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 310,
+        "duration_seconds": 310
+      },
+      "reasoning_chain": "Subject is in a dating context, explicitly states desire for a 'companion' to share good times with. Behavior (grooming, waiting) aligns with preparation for social connection.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 123,
+          "behavior_type": "verbal_statement_backed_by_affect",
+          "description": "States 'I would like a companion' with soft facial expression and slight head tilt."
+        },
+        {
+          "timestamp_seconds": 101,
+          "behavior_type": "body_movement",
+          "description": "Nervous grooming (touching hair) indicating desire to present well."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_woman_002",
+      "character_id": "woman_red_hair",
+      "desire_label": "Epistemic_Reality_Verification",
+      "maslow_level": "safety",
+      "bdi_component": "belief",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 312,
+        "end_seconds": 325,
+        "duration_seconds": 13
+      },
+      "reasoning_chain": "Upon seeing the man, subject exhibits classic shock response (expectation violation). The desire shifts from affiliation to processing the immediate reality of the coincidence.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 312,
+          "behavior_type": "facial_expression",
+          "description": "Jaw drops, eyes widen, freezes momentarily."
+        },
+        {
+          "timestamp_seconds": 316,
+          "behavior_type": "verbal/gestural",
+          "description": "Says 'This is mad' while holding head, physically checking reality."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Safety_Threat_Assessment",
+          "reasoning": "Shock response can mimic threat assessment, but the subsequent laughter rules out genuine fear.",
+          "why_not_primary": "Valence becomes positive too quickly."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_woman_003",
+      "character_id": "woman_red_hair",
+      "desire_label": "Physiological_Thermoregulation_Seeking",
+      "maslow_level": "physiological",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 319,
+        "end_seconds": 340,
+        "duration_seconds": 21
+      },
+      "reasoning_chain": "The shock causes a physiological stress response (likely flushing/heat). Subject engages in behaviors to cool down.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 319,
+          "behavior_type": "gesture",
+          "description": "Vigorously fanning face with hand."
+        },
+        {
+          "timestamp_seconds": 330,
+          "behavior_type": "gesture",
+          "description": "Touching cool glass to lips/face."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Displacement_Activity",
+          "reasoning": "Fanning can be a performative gesture of 'being hot/flustered' rather than actual thermal need.",
+          "why_not_primary": "Physiological flushing is visible, suggesting genuine autonomic response."
+        }
+      ],
+      "confidence": "moderate"
+    },
+    {
+      "analysis_id": "analysis_man_001",
+      "character_id": "man_blue_jacket",
+      "desire_label": "Esteem_Competence_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 201,
+        "end_seconds": 305,
+        "duration_seconds": 104
+      },
+      "reasoning_chain": "Subject emphasizes grooming, smell, and holding himself well. He enters the venue with a deliberate, confident walk.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 221,
+          "behavior_type": "verbal_statement",
+          "description": "Explicitly states 'I hold myself well, I dress well'."
+        },
+        {
+          "timestamp_seconds": 234,
+          "behavior_type": "body_movement",
+          "description": "Adjusts jacket, walks with upright posture."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_woman_01",
+      "character_id": "woman_red_hair",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 311,
+        "offset_timestamp_seconds": 315,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 311,
+        "description": "Visual recognition of the date as a known past acquaintance",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Epistemic_Reality_Verification",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 311,
+          "marker_type": "facial_shift",
+          "description": "Transition from polite smile to open-mouthed shock."
+        },
+        {
+          "timestamp_seconds": 312,
+          "marker_type": "postural_change",
+          "description": "Sudden recoil/leaning back."
+        }
+      ],
+      "visual_marker_of_change": "The exact moment her eyes lock onto his face, her smile freezes, and her mouth opens in a 'O' shape.",
+      "psychological_interpretation": "A massive prediction error in the BDI framework. The belief 'I am meeting a stranger' is violated, triggering an orienting response and a need to update the world model."
+    },
+    {
+      "transition_id": "trans_woman_02",
+      "character_id": "woman_red_hair",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 425,
+        "offset_timestamp_seconds": 430,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 425,
+        "description": "Mutual acknowledgment of the situation and decision to proceed",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Connection_Reestablishment",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 427,
+          "marker_type": "facial_expression",
+          "description": "Laughter becomes genuine rather than nervous."
+        },
+        {
+          "timestamp_seconds": 430,
+          "marker_type": "body_movement",
+          "description": "Moves to sit down at the table, signaling commitment to the interaction."
+        }
+      ],
+      "visual_marker_of_change": "When she looks up, laughs, and physically moves from the standing bar position to the seated table position.",
+      "psychological_interpretation": "The cognitive dissonance is resolved (acceptance of the coincidence), and the intention shifts back to the social goal of the date."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 305,
+      "timestamp_end_seconds": 310,
+      "character_id": "man_blue_jacket",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Approaches the bar, stands close to the woman for the greeting.",
+      "intensity": "moderate",
+      "target": "woman_red_hair",
+      "inferred_mental_state": "Expectation of standard greeting",
+      "relevance_to_desire": "Indicates Social_Affiliation_Seeking (Approach behavior)"
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 312,
+      "timestamp_end_seconds": 315,
+      "character_id": "woman_red_hair",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Double-take, mouth open, eyes wide, hand moves to head.",
+      "intensity": "strong",
+      "target": "man_blue_jacket",
+      "inferred_mental_state": "Disbelief/Shock",
+      "relevance_to_desire": "Signals Epistemic_Reality_Verification (Processing unexpected stimuli)"
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 319,
+      "timestamp_end_seconds": 322,
+      "character_id": "woman_red_hair",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Fanning face with hand, rapid breathing.",
+      "intensity": "strong",
+      "target": null,
+      "inferred_mental_state": "Physiological Arousal/Heat",
+      "relevance_to_desire": "Signals Physiological_Thermoregulation_Seeking and anxiety regulation"
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_recognition",
+      "start_timestamp_seconds": 305,
+      "end_timestamp_seconds": 325,
+      "segment_description": "The moment the two daters meet and realize they already know each other.",
+      "psychological_significance": "Perfect example of 'Expectation Violation' in BDI framework. The shift from social script to genuine shock is clearly observable.",
+      "potential_qa_types": [
+        "desire_identification",
+        "transition_detection",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_bartender_realization",
+      "start_timestamp_seconds": 412,
+      "end_timestamp_seconds": 420,
+      "segment_description": "The bartender realizes the couple knows each other.",
+      "psychological_significance": "Demonstrates Theory of Mind (ToM) - the bartender infers the relationship status based on their abnormal interaction.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "social_context_inference"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "woman_red_hair__man_blue_jacket",
+      "character_1_id": "woman_red_hair",
+      "character_2_id": "man_blue_jacket",
+      "relationship_type": "Past acquaintances/Ex-daters",
+      "interaction_quality": "mixed",
+      "mutual_influence": "The man's presence causes high arousal and confusion in the woman. The woman's shock causes amusement and validation in the man.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 314,
+          "description": "The hug - initially formal, then realizing who it is."
+        },
+        {
+          "timestamp_seconds": 418,
+          "description": "Jointly confirming to the bartender that they have dated before."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video contains a clear 'reveal' moment. The primary psychological interest lies in the shift from scripted social behavior (First Date norms) to authentic reaction (Shock/Recognition).",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

@@ -13,6 +13,7 @@
 - ✅ **AI自动分析**: 使用Gemini VLM自动识别关键帧、动作、场景
 - ✅ **智能预标注**: AI推断显性动机和隐性渴望
 - ✅ **人机协同**: 人工审核、修改和确认AI标注
+- ⭐ **两阶段质量控制** (NEW): 智能预审机制自动筛选低质量视频，节省标注成本
 - ✅ **RESTful API**: 支持FastAPI后端，易于集成
 - ✅ **直观界面**: Streamlit前端，简单易用
 
@@ -190,10 +191,15 @@ video_anno/
 
 ## 📚 文档
 
+### 基础文档
 - [快速上手指南](QUICKSTART.md) - 5 分钟快速入门
 - [完整使用教程](README_USAGE.md) - 详细功能说明
 - [故障排除指南](TROUBLESHOOTING.md) - 常见问题解决
 - [部署说明](DEPLOYMENT_FIX.md) - 部署相关问题
+
+### 高级功能 (NEW)
+- ⭐ [两阶段标注流程指南](docs/ANNOTATION_PIPELINE_GUIDE.md) - 智能质量预审机制
+- 📝 [Prompt设计文档](backend/prompts/README.md) - 标注prompt模板说明
 
 ## ❓ 常见问题
 

@@ -1,0 +1,373 @@
+{
+  "video_id": "0618c62f-084a-4a5b-a91b-d9e33b816231",
+  "video_path": "data\\Youtube_videos\\0618c62f-084a-4a5b-a91b-d9e33b816231.mp4",
+  "duration_seconds": 88,
+  "annotation_timestamp": "2025-12-08T12:15:12.046414",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Dimly lit restaurant or dining room with candlelight and flowers in background",
+    "social_context": "dyadic conversation, intimate relationship reconciliation",
+    "temporal_context": "Evening/Night",
+    "emotional_atmosphere": "Somber, tense transitioning to relieved and affectionate",
+    "salient_objects": [
+      "wine glass",
+      "candles",
+      "dining table"
+    ],
+    "activity_type": "emotional negotiation"
+  },
+  "characters": [
+    {
+      "character_id": "older_woman_red_dress",
+      "physical_description": "Older adult female, short blonde hair, wearing a red dress/top, gold earrings",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "The listener/partner seeking reassurance",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Sadness",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Guarded posture, avoiding direct eye contact, using wine glass as a barrier/displacement object",
+        "apparent_goal": "To process emotional pain and evaluate the relationship's stability",
+        "behavioral_evidence": [
+          "Looking down at table",
+          "Sipping wine slowly while listening",
+          "Minimal facial movement"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 88,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Physically embracing the male character, eyes closed, muscles relaxed",
+        "apparent_goal": "To provide and receive physical comfort",
+        "behavioral_evidence": [
+          "Arms wrapped around male character",
+          "Head resting against his head",
+          "Eyes closed in embrace"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "emotional_guardedness",
+          "psychological_basis": "Safety_Threat_Avoidance",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 5,
+          "behavioral_evidence": [
+            "Initially uses wine glass to block face",
+            "Avoids eye contact",
+            "Eventually stands and initiates open embrace"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "older_man_grey_suit",
+      "physical_description": "Older adult male, grey hair, wearing a light grey suit jacket",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "The speaker/partner seeking forgiveness",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "moderate",
+          "original_emotion": "Anxiety"
+        },
+        "body_language_summary": "Leaning forward, earnest facial expression, focused gaze on partner",
+        "apparent_goal": "To explain himself and repair the relationship",
+        "behavioral_evidence": [
+          "Forward lean indicating engagement",
+          "Furrowed brow",
+          "Continuous speech directed at partner"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 88,
+        "emotional_state": {
+          "primary_emotion": "Relief",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Seated, accepting embrace, eyes closed, holding partner's arm",
+        "apparent_goal": "To accept affection and reassurance",
+        "behavioral_evidence": [
+          "Closes eyes deeply",
+          "Leans head into partner's chest",
+          "Hands clutching partner's arms"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "reassurance_seeking",
+          "psychological_basis": "Belonging_Affiliation_Maintenance",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 45,
+          "behavioral_evidence": [
+            "Intense staring at partner waiting for reaction",
+            "Verbal affirmation of love",
+            "Physical relaxation upon receiving the hug"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_woman_001",
+      "character_id": "older_woman_red_dress",
+      "desire_label": "Social_Intimacy_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 88,
+        "duration_seconds": 88
+      },
+      "reasoning_chain": "Subject initially displays signs of hurt (withdrawal) but remains in the interaction (maintenance). As the conversation progresses, she verbally acknowledges love ('I know') and then physically bridges the distance, indicating a desire to restore the bond rather than sever it.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 10,
+          "behavior_type": "facial_expression",
+          "description": "Sad but attentive listening, nodding slightly"
+        },
+        {
+          "timestamp_seconds": 110,
+          "behavior_type": "body_movement",
+          "description": "Standing up and moving into the personal space of the other character for a hug"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Termination",
+          "reasoning": "She may simply want the difficult conversation to end.",
+          "why_not_primary": "The tenderness of the final embrace suggests active desire for connection, not just cessation of conflict."
+        }
+      ],
+      "confidence": "high",
+      "original_label": "Belonging_Intimacy_Restoration"
+    },
+    {
+      "analysis_id": "desire_man_001",
+      "character_id": "older_man_grey_suit",
+      "desire_label": "Social_Conflict_Resolution",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 70,
+        "duration_seconds": 70
+      },
+      "reasoning_chain": "Subject is actively explaining past behavior and current feelings. His forward lean and intense gaze indicate a strong drive to repair a perceived breach in the relationship.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 5,
+          "behavior_type": "body_movement",
+          "description": "Leaning forward across table"
+        },
+        {
+          "timestamp_seconds": 45,
+          "behavior_type": "facial_expression",
+          "description": "Earnest, pleading expression while speaking"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high",
+      "original_label": "Belonging_Forgiveness_Seeking"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_woman_001",
+      "character_id": "older_woman_red_dress",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 70,
+        "offset_timestamp_seconds": 76,
+        "transition_duration_seconds": 6
+      },
+      "trigger_event": {
+        "timestamp_seconds": 68,
+        "description": "Mutual verbal affirmation of love",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Belonging_Reassurance_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Belonging_Affiliation_Consummation",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 70,
+          "marker_type": "postural_change",
+          "description": "Abruptly stands up from chair"
+        },
+        {
+          "timestamp_seconds": 76,
+          "marker_type": "proxemic_change",
+          "description": "Closes distance to embrace partner"
+        }
+      ],
+      "visual_marker_of_change": "The moment she pushes back from the table and stands up (01:10), shifting from passive listening to active physical reconnection.",
+      "psychological_interpretation": "The verbal confirmation of love satisfied the cognitive uncertainty (Belief), allowing the latent desire for intimacy to manifest as a physical Intention (the hug)."
+    },
+    {
+      "transition_id": "trans_man_001",
+      "character_id": "older_man_grey_suit",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 76,
+        "offset_timestamp_seconds": 80,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 76,
+        "description": "Partner initiating physical embrace",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Conflict_Resolution",
+        "intensity": "strong",
+        "maslow_level": "belonging",
+        "original_label": "Belonging_Forgiveness_Seeking"
+      },
+      "desire_after": {
+        "label": "Safety_Emotional_Comfort_Acceptance",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 78,
+          "marker_type": "facial_expression",
+          "description": "Eyes close, facial tension releases"
+        },
+        {
+          "timestamp_seconds": 79,
+          "marker_type": "body_movement",
+          "description": "Leans head against partner's torso"
+        }
+      ],
+      "visual_marker_of_change": "When his eyes close and he leans his head into her chest (01:18), signaling the cessation of the 'seeking' behavior and the start of 'accepting' comfort.",
+      "psychological_interpretation": "The partner's physical touch signaled the success of his forgiveness-seeking goal, allowing a transition to emotional safety and comfort."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 10,
+      "character_id": "older_woman_red_dress",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Drinking wine while looking down/away",
+      "intensity": "moderate",
+      "target": "self",
+      "inferred_mental_state": "Anxiety regulation / Cognitive processing",
+      "relevance_to_desire": "Indicates internal conflict or need for self-soothing (Safety/Physiological) before addressing the social need."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 40,
+      "timestamp_end_seconds": 50,
+      "character_id": "older_man_grey_suit",
+      "behavior_category": "eye_gaze",
+      "behavior_description": "Unwavering gaze directed at partner's face",
+      "intensity": "strong",
+      "target": "older_woman_red_dress",
+      "inferred_mental_state": "Desperation for connection/understanding",
+      "relevance_to_desire": "Strong evidence for Belonging_Affiliation_Seeking; monitoring for signs of acceptance or rejection."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 70,
+      "timestamp_end_seconds": 75,
+      "character_id": "older_woman_red_dress",
+      "behavior_category": "posture_shift",
+      "behavior_description": "Standing up decisively",
+      "intensity": "strong",
+      "target": "older_man_grey_suit",
+      "inferred_mental_state": "Decision made / Intention formation",
+      "relevance_to_desire": "Marks the shift from internal deliberation (Belief update) to external action (Intention execution)."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_reconciliation",
+      "start_timestamp_seconds": 65,
+      "end_timestamp_seconds": 85,
+      "segment_description": "The transition from verbal assurance to physical embrace.",
+      "psychological_significance": "Demonstrates the 'Resolution' phase of a desire cycle, where social uncertainty is resolved through physical proximity.",
+      "potential_qa_types": [
+        "transition_detection",
+        "intention_prediction",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "older_woman_red_dress__older_man_grey_suit",
+      "character_1_id": "older_woman_red_dress",
+      "character_2_id": "older_man_grey_suit",
+      "relationship_type": "long-term partners/spouses",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "High mutual regulation; the man's distress triggers the woman's comfort response, and the woman's acceptance resolves the man's anxiety.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 68,
+          "description": "Verbal exchange of 'I love you' / 'I know'"
+        },
+        {
+          "timestamp_seconds": 76,
+          "description": "Physical embrace"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene is low-light, but facial expressions and gross motor movements (hugging) are clear. The narrative arc is a classic reconciliation sequence.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1",
+    "labels_normalized": true,
+    "normalization_version": "1.0"
+  }
+}

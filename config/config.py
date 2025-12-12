@@ -24,7 +24,7 @@ class Config:
             # 默认配置
             default_config = {
                 'paths': {
-                    'videos': 'data/videos',
+                    'videos': 'data/Youtube_videos',
                     'keyframes': 'data/keyframes',
                     'annotations': 'data/annotations'
                 },

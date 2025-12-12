@@ -1,0 +1,342 @@
+{
+  "video_id": "129a612c-3ecb-4855-b060-b57bfa0a6a0b",
+  "video_path": "data\\Youtube_videos\\129a612c-3ecb-4855-b060-b57bfa0a6a0b.mp4",
+  "duration_seconds": 34.0,
+  "annotation_timestamp": "2025-12-08T16:57:53.394579",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Indoor bedroom/living space with posters (Japanese art, anime) on white walls.",
+    "social_context": "Simulated dyadic argument (skit performed by one actor playing two roles).",
+    "temporal_context": "Short-form comedic sketch.",
+    "emotional_atmosphere": "Hostile, mocking, high-energy conflict.",
+    "salient_objects": [
+      "Blue baseball cap (distinguishes roles)",
+      "Posters"
+    ],
+    "activity_type": "Intellectual debate/Argument"
+  },
+  "characters": [
+    {
+      "character_id": "person_no_hat",
+      "physical_description": "Male, beard, long dark hair, black t-shirt, no headwear.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The 'Atheist' persona (skeptic)",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Aggressive gesturing, loud vocal projection, leaning forward, furrowed brows.",
+        "apparent_goal": "To belittle the opposing viewpoint.",
+        "behavioral_evidence": [
+          "Rapid hand movements toward camera",
+          "Shouting 'You're dumb'",
+          "Wide eyes and intense facial tension"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 24.0,
+        "emotional_state": {
+          "primary_emotion": "Confusion/Embarrassment",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Eyes darting away, stammering, hesitation, biting lip.",
+        "apparent_goal": "To formulate a coherent answer (failing).",
+        "behavioral_evidence": [
+          "Gaze aversion (looking up and to the side)",
+          "Slowing of speech",
+          "Vocal fillers ('Uhh', 'mmm')"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "confidence_level",
+          "psychological_basis": "Self-efficacy / Esteem",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 5.0,
+          "behavioral_evidence": [
+            "Initially shouting insults with certainty",
+            "Later stammering and unable to complete sentence"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "person_blue_hat",
+      "physical_description": "Male, beard, long dark hair, black t-shirt, wearing blue baseball cap backwards.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The 'Religious' persona (believer)",
+      "initial_state": {
+        "timestamp_seconds": 14.0,
+        "emotional_state": {
+          "primary_emotion": "Anger/Challenge",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Confrontational head tilt, shouting.",
+        "apparent_goal": "To challenge the opponent's logic.",
+        "behavioral_evidence": [
+          "Loud questioning tone",
+          "Direct eye contact with camera"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 34.0,
+        "emotional_state": {
+          "primary_emotion": "Contempt/Triumph",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Mocking hand gestures, laughing tone, dismissive waves.",
+        "apparent_goal": "To ridicule the opponent's failed explanation.",
+        "behavioral_evidence": [
+          "Mocking facial expression",
+          "Dismissive hand wave",
+          "Sarcastic explanation of 'nothing exploded'"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "dominance_display",
+          "psychological_basis": "Social Hierarchy / Esteem",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 26.0,
+          "behavioral_evidence": [
+            "Transition from defensive questioning to offensive mockery",
+            "Interrupting and overriding the other persona"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "person_no_hat",
+      "desire_label": "Esteem_Intellectual_Dominance_Seeking",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 13.0,
+        "duration_seconds": 13.0
+      },
+      "reasoning_chain": "Subject uses insults ('You're dumb') and aggressive posturing to establish superiority over the interlocutor. This aligns with esteem needs regarding competence and status.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 1.0,
+          "behavior_type": "verbal_aggression",
+          "description": "Calling the other person 'dumb' repeatedly."
+        },
+        {
+          "timestamp_seconds": 2.0,
+          "behavior_type": "gesture",
+          "description": "Dismissive hand waving indicating the other is not worth listening to."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Group_Boundary_Enforcement",
+          "reasoning": "Could be signaling in-group loyalty to atheism rather than personal dominance.",
+          "why_not_primary": "The personal nature of the insults ('YOU are dumb') suggests an interpersonal dominance goal."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "person_no_hat",
+      "desire_label": "Epistemic_Coherence_Seeking",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 16.0,
+        "end_seconds": 24.0,
+        "duration_seconds": 8.0
+      },
+      "reasoning_chain": "When challenged, the subject attempts to explain their worldview. The hesitation and searching behavior indicate a desire to find a logical answer, which fails.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 17.0,
+          "behavior_type": "eye_gaze",
+          "description": "Eyes look up and to the left (searching/accessing cue)."
+        },
+        {
+          "timestamp_seconds": 20.0,
+          "behavior_type": "vocalization",
+          "description": "Stammering and pausing."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "person_blue_hat",
+      "desire_label": "Esteem_Vindication_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 25.0,
+        "end_seconds": 34.0,
+        "duration_seconds": 9.0
+      },
+      "reasoning_chain": "Subject reacts to the opponent's confusion with aggressive triumph, mocking the opponent's logic to validate their own position.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 26.0,
+          "behavior_type": "facial_expression",
+          "description": "Wide mouth shouting, aggressive smile/sneer."
+        },
+        {
+          "timestamp_seconds": 30.0,
+          "behavior_type": "gesture",
+          "description": "Mocking hand gestures mimicking an explosion."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "person_no_hat",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 16.0,
+        "offset_timestamp_seconds": 20.0,
+        "transition_duration_seconds": 4.0
+      },
+      "trigger_event": {
+        "timestamp_seconds": 15.0,
+        "description": "Opponent asks 'And what do you believe, huh?'",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Esteem_Intellectual_Dominance_Seeking",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 16.0,
+          "marker_type": "facial_shift",
+          "description": "Transition from aggressive glare to wide-eyed confusion."
+        },
+        {
+          "timestamp_seconds": 17.0,
+          "marker_type": "postural_change",
+          "description": "Shoulders drop slightly, head tilts in thought."
+        }
+      ],
+      "visual_marker_of_change": "The moment the eyes break contact with the camera/opponent and drift upward while the mouth opens slightly without speech.",
+      "psychological_interpretation": "The external challenge (question) violated the agent's expectation of dominance, triggering a search for information (Epistemic) which failed, leading to visible cognitive dissonance."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0.0,
+      "timestamp_end_seconds": 5.0,
+      "character_id": "person_no_hat",
+      "behavior_category": "gesture",
+      "behavior_description": "Rapid, chopping hand movements directed at camera.",
+      "intensity": "strong",
+      "target": "person_blue_hat (implied)",
+      "inferred_mental_state": "Certainty/Aggression",
+      "relevance_to_desire": "Indicates high arousal and desire to impose view."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 16.0,
+      "timestamp_end_seconds": 22.0,
+      "character_id": "person_no_hat",
+      "behavior_category": "eye_gaze",
+      "behavior_description": "Saccades moving away from target, looking up/left/right.",
+      "intensity": "moderate",
+      "target": "null",
+      "inferred_mental_state": "Cognitive Load/Uncertainty",
+      "relevance_to_desire": "Signals a shift from outputting information (speaking) to internal search (thinking), marking the desire transition."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_01",
+      "start_timestamp_seconds": 14.0,
+      "end_timestamp_seconds": 20.0,
+      "segment_description": "The 'Religious' character asks a question, causing the 'Atheist' character to falter.",
+      "psychological_significance": "Clear example of social challenge triggering a state change from confidence to uncertainty.",
+      "potential_qa_types": [
+        "transition_detection",
+        "desire_identification",
+        "causal_attribution"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "atheist_vs_religious_persona",
+      "character_1_id": "person_no_hat",
+      "character_2_id": "person_blue_hat",
+      "relationship_type": "adversaries",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Zero-sum status competition. When one displays confidence, the other attempts to undermine it. Person_blue_hat successfully inhibits person_no_hat's dominance display.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 15.0,
+          "description": "The question that shifts the power dynamic."
+        },
+        {
+          "timestamp_seconds": 25.0,
+          "description": "The aggressive rebuttal confirming the shift in status."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 1,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video features a single actor playing two distinct roles. Annotation treats these roles as separate psychological entities for the purpose of ToM analysis. The 'characters' are distinguished by the presence/absence of a blue hat.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1",
+    "labels_normalized": true,
+    "normalization_version": "1.0"
+  }
+}

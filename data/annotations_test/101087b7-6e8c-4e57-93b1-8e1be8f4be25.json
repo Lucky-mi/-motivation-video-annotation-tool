@@ -1,0 +1,324 @@
+{
+  "video_id": "101087b7-6e8c-4e57-93b1-8e1be8f4be25",
+  "video_path": "data\\Youtube_videos\\101087b7-6e8c-4e57-93b1-8e1be8f4be25.mp4",
+  "duration_seconds": 165,
+  "annotation_timestamp": "2025-12-08T15:46:10.561610",
+  "annotator": "AI_Model_5.0",
+  "scene_context": {
+    "physical_setting": "Camp Randall Stadium, football field and concrete access tunnel",
+    "social_context": "Public ceremony/event with thousands of spectators",
+    "temporal_context": "Daytime, during a break in a football game",
+    "emotional_atmosphere": "High anticipation transitioning to intense sentimental joy",
+    "salient_objects": [
+      "Jumbotron screen",
+      "Mascot costume",
+      "Microphone",
+      "Camouflage uniform"
+    ],
+    "activity_type": "Military homecoming surprise"
+  },
+  "characters": [
+    {
+      "character_id": "soldier_mother",
+      "physical_description": "Adult female, wearing US Army camouflage fatigues (OCP), hair in bun",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The surprise returnee",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anticipation/Anxiety",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Leaning against wall, arms crossed or fidgeting, fixed gaze on screen",
+        "apparent_goal": "Wait for the cue to reveal herself to her daughter",
+        "behavioral_evidence": [
+          "Leaning against concrete wall in tunnel",
+          "Watching the jumbotron screen intently",
+          "Minimal movement, suggesting waiting behavior"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 160,
+        "emotional_state": {
+          "primary_emotion": "Joy/Relief",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Embracing another person tightly, crying, smiling",
+        "apparent_goal": "Maintain physical contact with daughter",
+        "behavioral_evidence": [
+          "Tight embrace",
+          "Tears",
+          "Refusal to let go immediately"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "anticipatory_anxiety",
+          "psychological_basis": "Emotion_Regulation",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 45,
+          "behavioral_evidence": [
+            "Fidgeting in tunnel",
+            "Rigid posture while waiting",
+            "Release of tension upon running onto field"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "civilian_daughter",
+      "physical_description": "Adolescent female, long blonde hair, red Wisconsin cap and jacket",
+      "estimated_age_group": "adolescent",
+      "role_in_scene": "The surprise recipient",
+      "initial_state": {
+        "timestamp_seconds": 100,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Smiling, waving to crowd, standing next to mascot",
+        "apparent_goal": "Participate in the stadium event/ceremony",
+        "behavioral_evidence": [
+          "Waving to camera",
+          "Smiling at mascot",
+          "Compliance with announcer instructions"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 160,
+        "emotional_state": {
+          "primary_emotion": "Ecstasy/Overwhelmed",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Clinging to mother, burying face in shoulder",
+        "apparent_goal": "Reconnect with mother",
+        "behavioral_evidence": [
+          "Sprinting toward mother",
+          "Sobbing",
+          "Tight embrace"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "situational_awareness",
+          "psychological_basis": "Epistemic_State",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 119,
+          "behavioral_evidence": [
+            "Unaware of mother behind her",
+            "Turning around on cue",
+            "Sudden recognition shock"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "mother_reunion_drive",
+      "character_id": "soldier_mother",
+      "desire_label": "Social_Reunification_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 165,
+        "duration_seconds": 165
+      },
+      "reasoning_chain": "Subject is positioned in a waiting area (tunnel) -> Subject monitors the target (daughter) via screen -> Subject executes approach behavior immediately upon cue -> Subject engages in consummatory behavior (hugging) -> Indicates primary drive is social reconnection.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 36,
+          "behavior_type": "eye_gaze",
+          "description": "Fixated gaze on the screen showing her daughter."
+        },
+        {
+          "timestamp_seconds": 119,
+          "behavior_type": "body_movement",
+          "description": "Running toward the daughter the moment the reveal happens."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "daughter_social_compliance",
+      "character_id": "civilian_daughter",
+      "desire_label": "Esteem_Social_Participation",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 100,
+        "end_seconds": 118,
+        "duration_seconds": 18
+      },
+      "reasoning_chain": "Subject is center stage in a stadium -> Subject waves and smiles at crowd -> Subject follows instructions from announcer -> Behavior suggests motivation to perform social role of 'honored guest'.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 101,
+          "behavior_type": "gesture",
+          "description": "Waving to the crowd while standing next to the mascot."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Affiliation_Seeking",
+          "reasoning": "She is interacting with the mascot, suggesting a desire for fun/connection.",
+          "why_not_primary": "The context is a formal presentation to a crowd, making the performance aspect (Esteem) more dominant than the dyadic interaction with the mascot."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "daughter_realization",
+      "character_id": "civilian_daughter",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 118,
+        "offset_timestamp_seconds": 120,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 118,
+        "description": "Announcer says 'Turn around' and she sees her mother.",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Esteem_Social_Participation",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Attachment_Maintenance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 119,
+          "marker_type": "facial_shift",
+          "description": "Jaw drops, smile shifts from posed to genuine shock."
+        },
+        {
+          "timestamp_seconds": 120,
+          "marker_type": "body_movement",
+          "description": "Immediate sprint toward the mother, abandoning the mascot and the crowd interaction."
+        }
+      ],
+      "visual_marker_of_change": "The exact moment she completes the turn, freezes for a split second, and her hands fly up to her face/mouth.",
+      "psychological_interpretation": "Classic expectation violation leading to an immediate re-prioritization of needs. The 'Esteem' need (performing for the crowd) is instantly superseded by the 'Belonging' need (attachment figure), triggering approach behavior."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "tunnel_wait",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 46,
+      "character_id": "soldier_mother",
+      "behavior_category": "posture_shift",
+      "behavior_description": "Leaning against wall, shifting weight, crossing arms.",
+      "intensity": "moderate",
+      "target": null,
+      "inferred_mental_state": "Anxious anticipation",
+      "relevance_to_desire": "Indicates suppression of the urge to act until the correct time (Intention regulation)."
+    },
+    {
+      "sequence_id": "the_sprint",
+      "timestamp_start_seconds": 119,
+      "timestamp_end_seconds": 122,
+      "character_id": "civilian_daughter",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Rapidly closing distance between self and mother.",
+      "intensity": "strong",
+      "target": "soldier_mother",
+      "inferred_mental_state": "Overwhelming joy/shock",
+      "relevance_to_desire": "Clear manifestation of Social_Affiliation_Seeking (Approach behavior)."
+    },
+    {
+      "sequence_id": "the_embrace",
+      "timestamp_start_seconds": 122,
+      "timestamp_end_seconds": 140,
+      "character_id": "soldier_mother",
+      "behavior_category": "body_movement",
+      "behavior_description": "Lifting the daughter off the ground, rocking back and forth.",
+      "intensity": "strong",
+      "target": "civilian_daughter",
+      "inferred_mental_state": "Deep affection/Relief",
+      "relevance_to_desire": "Consummatory behavior satisfying the Social_Reunification desire."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "anticipation_vs_reaction",
+      "start_timestamp_seconds": 40,
+      "end_timestamp_seconds": 125,
+      "segment_description": "Contrast between the mother waiting in the tunnel and the daughter's reaction on the field.",
+      "psychological_significance": "Demonstrates the difference between 'Belief' (Mother knows she is there) and 'Ignorance' (Daughter does not know), and the resulting emotional dynamics upon belief alignment.",
+      "potential_qa_types": [
+        "desire_identification",
+        "transition_detection",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "mother_daughter_reunion",
+      "character_1_id": "soldier_mother",
+      "character_2_id": "civilian_daughter",
+      "relationship_type": "Mother-Daughter (Family)",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Positive feedback loop of emotion; the mother's presence triggers the daughter's joy, which reinforces the mother's relief.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 122,
+          "description": "Physical collision/hug."
+        },
+        {
+          "timestamp_seconds": 145,
+          "description": "Pulling back to look at each other's faces while still holding on."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 1,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video contains interview audio overlay which confirms the relationship and context (6-month deployment), supporting the high confidence in the 'Social_Reunification' label.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

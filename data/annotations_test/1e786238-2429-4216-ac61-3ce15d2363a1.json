@@ -1,0 +1,496 @@
+{
+  "video_id": "1e786238-2429-4216-ac61-3ce15d2363a1",
+  "video_path": "data\\Youtube_videos\\1e786238-2429-4216-ac61-3ce15d2363a1.mp4",
+  "duration_seconds": 180,
+  "annotation_timestamp": "2025-12-08T19:25:54.472248",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Outdoor field at night under a starry sky, transitioning into a surreal/visionary space",
+    "social_context": "Group observation event transitioning into an intense dyadic reconciliation",
+    "temporal_context": "Nighttime",
+    "emotional_atmosphere": "Awe-inspiring, mysterious, shifting to tense and deeply emotional/cathartic",
+    "salient_objects": [
+      "Glowing multicolored lights",
+      "Red light entity"
+    ],
+    "activity_type": "Spiritual observation and interpersonal reconciliation"
+  },
+  "characters": [
+    {
+      "character_id": "focal_male_protagonist",
+      "physical_description": "Adult male, Caucasian, short brown hair, wearing a button-down shirt over a t-shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The observer/experiencer",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Eyes closed, accepting touch, facial muscles relaxed",
+        "apparent_goal": "To receive comfort or sensory connection",
+        "behavioral_evidence": [
+          "Closes eyes as female character touches his face",
+          "Leans slightly into the touch",
+          "Slow breathing pattern"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 178,
+        "emotional_state": {
+          "primary_emotion": "Sadness/Relief (Catharsis)",
+          "valence": "mixed",
+          "arousal": "high"
+        },
+        "body_language_summary": "Embracing another male, sobbing, head buried in other's shoulder",
+        "apparent_goal": "To accept reconciliation and release emotional burden",
+        "behavioral_evidence": [
+          "Tight embrace",
+          "Visible sobbing/convulsing shoulders",
+          "Clinging to the other individual"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "anxiety_level",
+          "psychological_basis": "Circumplex Model (Arousal)",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": 110,
+          "behavioral_evidence": [
+            "Relaxed at 00:00",
+            "Furrowed brow and tense jaw at 00:58",
+            "Freezing behavior at 01:05",
+            "Release of tension into sobbing at 01:40"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "epistemic_certainty",
+          "psychological_basis": "Theory of Mind (Belief)",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 135,
+          "behavioral_evidence": [
+            "Asks 'What are those?' at 00:24 (uncertainty)",
+            "Stares with confusion at approaching light at 00:50",
+            "Recognition dawning on face at 01:35 when vision clarifies"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "female_guide_asian",
+      "physical_description": "Adult female, Asian descent, long dark hair, wearing blue top",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Guide/Comfort provider",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Joy/Love",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Touching focal male's face, soft smile, direct eye contact",
+        "apparent_goal": "To provide comfort and explanation",
+        "behavioral_evidence": [
+          "Gentle tactile contact",
+          "Duchenne smile",
+          "Soft vocal tone"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 125,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Standing calmly, observing the focal male",
+        "apparent_goal": "To facilitate the focal male's experience",
+        "behavioral_evidence": [
+          "Hands clasped",
+          "Patient posture",
+          "Benevolent facial expression"
+        ]
+      },
+      "attribute_dynamics": []
+    },
+    {
+      "character_id": "vision_older_male",
+      "physical_description": "Older adult male, bearded, wearing plaid shirt",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "The reconciler/father figure",
+      "initial_state": {
+        "timestamp_seconds": 135,
+        "emotional_state": {
+          "primary_emotion": "Sadness/Remorse",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Hesitant posture, pleading facial expression",
+        "apparent_goal": "To seek forgiveness",
+        "behavioral_evidence": [
+          "Furrowed brows",
+          "Voice cracking",
+          "Direct gaze seeking connection"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 178,
+        "emotional_state": {
+          "primary_emotion": "Relief/Love",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Embracing focal male tightly",
+        "apparent_goal": "To maintain social bond",
+        "behavioral_evidence": [
+          "Arms wrapped around focal male",
+          "Eyes closed in embrace",
+          "Head resting against focal male"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "focal_male_protagonist",
+      "desire_label": "Epistemic_Information_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 21,
+        "end_seconds": 48,
+        "duration_seconds": 27
+      },
+      "reasoning_chain": "The character encounters a novel, unexplained phenomenon (lights). His immediate reaction is to orient towards it and ask questions to his companions to build a belief model of what is happening.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 24,
+          "behavior_type": "verbal_inquiry",
+          "description": "Asks 'What are those?' while staring at the horizon."
+        },
+        {
+          "timestamp_seconds": 28,
+          "behavior_type": "eye_gaze",
+          "description": "Scans the horizon, then looks to companions for answers."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "focal_male_protagonist",
+      "desire_label": "Safety_Threat_Monitoring",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 49,
+        "end_seconds": 130,
+        "duration_seconds": 81
+      },
+      "reasoning_chain": "A specific red light separates from the group and approaches him directly. This violates his expectation of the lights being a distant background phenomenon. He exhibits freezing and vigilance behaviors associated with threat assessment.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 49,
+          "behavior_type": "facial_expression",
+          "description": "Brows furrow, eyes narrow slightly in focus."
+        },
+        {
+          "timestamp_seconds": 57,
+          "behavior_type": "body_movement",
+          "description": "Stands rigid, staring fixedly at the approaching object."
+        },
+        {
+          "timestamp_seconds": 110,
+          "behavior_type": "facial_expression",
+          "description": "Expression shifts to apprehension/fear as the light manifests into a human shape."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Epistemic_Uncertainty_Resolution",
+          "reasoning": "He may simply be trying to identify the object, but the level of tension suggests a safety concern takes precedence.",
+          "why_not_primary": "The physiological tension and freezing response indicate a defensive/wary state typical of safety needs."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "vision_older_male",
+      "desire_label": "Social_Reconciliation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 140,
+        "end_seconds": 170,
+        "duration_seconds": 30
+      },
+      "reasoning_chain": "The character appears and immediately initiates an apology. His posture is humble/submissive (not dominant), and his verbal content explicitly asks for forgiveness. He is seeking to repair a broken social bond.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 147,
+          "behavior_type": "verbal_statement",
+          "description": "Says 'I'm so sorry for everything.'"
+        },
+        {
+          "timestamp_seconds": 150,
+          "behavior_type": "facial_expression",
+          "description": "Eyes welling up, mouth downturned, looking directly at the protagonist."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_004",
+      "character_id": "focal_male_protagonist",
+      "desire_label": "Social_Forgiveness_Granting",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 160,
+        "end_seconds": 180,
+        "duration_seconds": 20
+      },
+      "reasoning_chain": "Upon hearing the apology, the protagonist overcomes his initial shock/pain. He verbally forgives and then physically seals the reconciliation with an embrace, indicating a desire to restore the relationship or release the grievance.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 165,
+          "behavior_type": "verbal_statement",
+          "description": "Says 'I forgive you.'"
+        },
+        {
+          "timestamp_seconds": 175,
+          "behavior_type": "body_movement",
+          "description": "Initiates/reciprocates a tight hug."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "focal_male_protagonist",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 48,
+        "offset_timestamp_seconds": 55,
+        "transition_duration_seconds": 7
+      },
+      "trigger_event": {
+        "timestamp_seconds": 48,
+        "description": "One specific light separates from the group and moves toward the characters.",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Epistemic_Information_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Safety_Threat_Monitoring",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 49,
+          "marker_type": "facial_shift",
+          "description": "Eyebrows lower and furrow."
+        },
+        {
+          "timestamp_seconds": 50,
+          "marker_type": "gaze_fixation",
+          "description": "Stops scanning the horizon and locks gaze on the single moving light."
+        }
+      ],
+      "visual_marker_of_change": "The moment his head stops turning and locks onto the single red light, accompanied by a cessation of casual conversation.",
+      "psychological_interpretation": "Shift from general curiosity to specific threat assessment due to an approaching stimulus violating the established pattern."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "focal_male_protagonist",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 160,
+        "offset_timestamp_seconds": 175,
+        "transition_duration_seconds": 15
+      },
+      "trigger_event": {
+        "timestamp_seconds": 150,
+        "description": "The older male (father figure) apologizes and expresses pride.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Safety_Threat_Monitoring",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 162,
+          "marker_type": "facial_shift",
+          "description": "Face softens, tears flow freely, mouth relaxes from tension."
+        },
+        {
+          "timestamp_seconds": 175,
+          "marker_type": "proxemic_change",
+          "description": "Closes the distance to embrace the other male."
+        }
+      ],
+      "visual_marker_of_change": "The moment his facial tension collapses into weeping and he steps forward to hug the older man.",
+      "psychological_interpretation": "The perceived threat is resolved and replaced by a fulfillment of belonging needs through the act of forgiveness."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 10,
+      "character_id": "focal_male_protagonist",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Eyes closed, slow breathing, receiving touch on face.",
+      "intensity": "moderate",
+      "target": "female_guide_asian",
+      "inferred_mental_state": "Trust, Sensory Absorption",
+      "relevance_to_desire": "Indicates satisfaction of safety or belonging needs (receiving care)."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 100,
+      "timestamp_end_seconds": 115,
+      "character_id": "focal_male_protagonist",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Intense staring, minimal blinking, mouth slightly open.",
+      "intensity": "strong",
+      "target": "vision_older_male",
+      "inferred_mental_state": "Shock, Recognition, Apprehension",
+      "relevance_to_desire": "Signals a high-stakes cognitive processing event, likely assessing safety or reality."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 170,
+      "timestamp_end_seconds": 180,
+      "character_id": "focal_male_protagonist",
+      "behavior_category": "body_movement",
+      "behavior_description": "Embracing, sobbing, leaning weight onto other person.",
+      "intensity": "strong",
+      "target": "vision_older_male",
+      "inferred_mental_state": "Emotional Release, Grief, Love",
+      "relevance_to_desire": "Consummatory behavior for Social_Reconciliation."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_001",
+      "start_timestamp_seconds": 48,
+      "end_timestamp_seconds": 60,
+      "segment_description": "The protagonist notices a specific light approaching him.",
+      "psychological_significance": "Clear example of 'Orienting Response' and shift from curiosity to vigilance.",
+      "potential_qa_types": [
+        "transition_detection",
+        "attention_tracking"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_002",
+      "start_timestamp_seconds": 140,
+      "end_timestamp_seconds": 180,
+      "segment_description": "Reconciliation conversation and embrace.",
+      "psychological_significance": "Complex display of mixed emotions (grief + relief) and high-level social need fulfillment.",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "desire_identification"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "protagonist_vs_guides",
+      "character_1_id": "focal_male_protagonist",
+      "character_2_id": "female_guide_asian",
+      "relationship_type": "Mentor-Mentee / Guide-Traveler",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The guide's calm demeanor and explanations help regulate the protagonist's confusion, though his anxiety spikes when the red light appears.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 5,
+          "description": "Intimate face-touching gesture establishing trust."
+        },
+        {
+          "timestamp_seconds": 55,
+          "description": "Protagonist asks guide for interpretation of the lights."
+        }
+      ]
+    },
+    {
+      "dyad_id": "protagonist_vs_father",
+      "character_1_id": "focal_male_protagonist",
+      "character_2_id": "vision_older_male",
+      "relationship_type": "Estranged Father-Son",
+      "interaction_quality": "mixed",
+      "mutual_influence": "The father's vulnerability and apology trigger a massive emotional release and shift in the protagonist from defensive to affiliative.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 145,
+          "description": "Father initiates apology."
+        },
+        {
+          "timestamp_seconds": 175,
+          "description": "Mutual embrace resolving the tension."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene contains supernatural elements (lights turning into people). The annotation focuses on the psychological reaction to these elements rather than the physics of them. The transition from fear to forgiveness is the central psychological arc.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

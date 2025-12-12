@@ -1,0 +1,390 @@
+{
+  "video_id": "037f51da-f0c4-466f-8e3f-862bb3139dec",
+  "video_path": "data\\Youtube_videos\\037f51da-f0c4-466f-8e3f-862bb3139dec.mp4",
+  "duration_seconds": 108,
+  "annotation_timestamp": "2025-12-07T22:48:00.250569",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Outdoor jungle campsite at night/dusk; fire pit area surrounded by foliage and camping equipment.",
+    "social_context": "Small group activity; one individual performing a task while others observe and critique.",
+    "temporal_context": "Evening/Night (implied by lighting and need for fire).",
+    "emotional_atmosphere": "Tense anticipation shifting to frustration, then high-arousal celebration.",
+    "salient_objects": [
+      "firewood",
+      "flint_striker",
+      "kindling",
+      "camping_lanterns"
+    ],
+    "activity_type": "survival_task_cooperation"
+  },
+  "characters": [
+    {
+      "character_id": "person_tattoos_red_pants",
+      "physical_description": "Male, short dark curly hair, tattoos on arms, wearing dark t-shirt and red trousers.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Task_Performer (Fire Starter)",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Confidence",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Kneeling, focused manipulation of tools, assertive posture.",
+        "apparent_goal": "Demonstrate survival skills by starting a fire.",
+        "behavioral_evidence": [
+          "Explicitly states 'Let me show you how to do a fire'",
+          "Lists past experience ('I've camped a lot')",
+          "Takes control of the flint and striker"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 108,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "high",
+          "original_emotion": "Joy/Relief"
+        },
+        "body_language_summary": "Standing, arms raised in victory, laughing.",
+        "apparent_goal": "Celebrate success and validate competence.",
+        "behavioral_evidence": [
+          "Shouting 'We're on!'",
+          "High-fiving other characters",
+          "Smiling broadly (Duchenne smile)"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "performance_anxiety",
+          "psychological_basis": "Esteem_Sensitivity",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": 45,
+          "behavioral_evidence": [
+            "Initial boasting (low anxiety)",
+            "Silence and intense focus when fire fails to start (increasing anxiety)",
+            "Defensive response to critique (peak anxiety)",
+            "Celebration upon success (release of anxiety)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "person_red_hair_black_jacket",
+      "physical_description": "Male, red hair, wearing black jacket and wide-brimmed hat.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Observer / Critic",
+      "initial_state": {
+        "timestamp_seconds": 20,
+        "emotional_state": {
+          "primary_emotion": "Skepticism",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing, observing, gesturing with hands to emphasize points.",
+        "apparent_goal": "Monitor the fire-starting process and correct errors.",
+        "behavioral_evidence": [
+          "Watches person_tattoos_red_pants closely",
+          "Verbalizes critique about blowing technique"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 108,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "moderate",
+          "original_emotion": "Amusement"
+        },
+        "body_language_summary": "Relaxed posture, joking.",
+        "apparent_goal": "Social bonding through humor.",
+        "behavioral_evidence": [
+          "Jokes about the steaks",
+          "Laughing with the group"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "frustration_tolerance",
+          "psychological_basis": "Emotional_Regulation",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 55,
+          "behavioral_evidence": [
+            "Becomes increasingly vocal about the technique",
+            "Mimics the 'blowing out a candle' motion aggressively",
+            "Relaxes immediately once fire starts"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "person_tattoos_red_pants",
+      "desire_label": "Esteem_Competence_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 100,
+        "duration_seconds": 100
+      },
+      "reasoning_chain": "Subject explicitly frames the task as a demonstration of skill ('Let me show you'). He persists despite initial failure. The primary drive appears to be proving his capability to the group rather than just the physiological need for heat.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 5,
+          "behavior_type": "verbal_statement",
+          "description": "Lists credentials ('I've camped a lot')."
+        },
+        {
+          "timestamp_seconds": 30,
+          "behavior_type": "persistence",
+          "description": "Continues striking flint despite lack of sparks and critique from observer."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Physiological_Sustenance_Preparation",
+          "reasoning": "The fire is needed to cook food (steaks mentioned at end).",
+          "why_not_primary": "The social dynamics and focus on *technique* and *expertise* overshadow the hunger drive in this specific clip."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "person_red_hair_black_jacket",
+      "desire_label": "Cognitive_Efficiency_Seeking",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 25,
+        "end_seconds": 90,
+        "duration_seconds": 65
+      },
+      "reasoning_chain": "Subject identifies a perceived error in the fire-starting method (blowing too hard/wrong way). His motivation is to correct the procedure to ensure success.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 50,
+          "behavior_type": "gesture",
+          "description": "Mimics blowing out a candle to illustrate the error."
+        },
+        {
+          "timestamp_seconds": 55,
+          "behavior_type": "verbal_instruction",
+          "description": "Repeatedly explains the physics of oxygen vs. CO2."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Dominance_Assertion",
+          "reasoning": "He may be critiquing to lower the status of the other male.",
+          "why_not_primary": "His critique is technically grounded (oxygen supply), suggesting a focus on the task outcome."
+        }
+      ],
+      "confidence": "moderate",
+      "original_label": "Cognitive_Process_Optimization"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "person_tattoos_red_pants",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 120,
+        "offset_timestamp_seconds": 125,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 120,
+        "description": "The tinder catches fire and produces a sustainable flame.",
+        "trigger_type": "goal_progress"
+      },
+      "desire_before": {
+        "label": "Esteem_Competence_Display",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Esteem_Competence_Validation",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 121,
+          "marker_type": "postural_change",
+          "description": "Rapid transition from kneeling/hunched to standing upright."
+        },
+        {
+          "timestamp_seconds": 122,
+          "marker_type": "vocalization",
+          "description": "Loud cheering/shouting."
+        }
+      ],
+      "visual_marker_of_change": "The moment the flame flares up, the subject throws his head back and raises his arms.",
+      "psychological_interpretation": "The tension of potential failure (threat to esteem) is released, resulting in high-arousal positive affect (joy/triumph)."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "person_tattoos_red_pants",
+      "transition_type": "conflict",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 40,
+        "offset_timestamp_seconds": 60,
+        "transition_duration_seconds": 20
+      },
+      "trigger_event": {
+        "timestamp_seconds": 40,
+        "description": "Fire fails to ignite while being critiqued by person_red_hair_black_jacket.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Esteem_Competence_Display",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Status_Defense",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 48,
+          "marker_type": "facial_expression",
+          "description": "Furrowed brow, avoiding eye contact with the critic."
+        },
+        {
+          "timestamp_seconds": 59,
+          "marker_type": "verbal_defense",
+          "description": "Tells the critic to stop talking."
+        }
+      ],
+      "visual_marker_of_change": "When he stops looking at the fire and briefly glances up with a tense jaw to address the critic.",
+      "psychological_interpretation": "The external critique creates a conflict between the desire to focus on the task and the need to defend against social devaluation."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 10,
+      "character_id": "person_tattoos_red_pants",
+      "behavior_category": "body_movement",
+      "behavior_description": "Kneeling, arranging wood, handling flint.",
+      "intensity": "moderate",
+      "target": "fire_pit",
+      "inferred_mental_state": "Focused intention, confidence.",
+      "relevance_to_desire": "Preparatory actions for competence display."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 45,
+      "timestamp_end_seconds": 55,
+      "character_id": "person_red_hair_black_jacket",
+      "behavior_category": "gesture",
+      "behavior_description": "Exaggerated blowing motion, pointing at the fire pit.",
+      "intensity": "strong",
+      "target": "person_tattoos_red_pants",
+      "inferred_mental_state": "Frustration, desire to correct.",
+      "relevance_to_desire": "Indicates a mismatch between his belief (how it should be done) and observation (how it is being done)."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 125,
+      "timestamp_end_seconds": 135,
+      "character_id": "person_tattoos_red_pants",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Embracing/high-fiving others.",
+      "intensity": "high",
+      "target": "group",
+      "inferred_mental_state": "Relief, social affiliation.",
+      "relevance_to_desire": "Marks the resolution of the esteem threat and return to social belonging."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_conflict",
+      "start_timestamp_seconds": 40,
+      "end_timestamp_seconds": 65,
+      "segment_description": "Criticism of the fire-starting technique leads to tension.",
+      "psychological_significance": "Demonstrates social friction arising from conflicting beliefs about task execution.",
+      "potential_qa_types": [
+        "desire_identification",
+        "emotion_recognition",
+        "social_dynamics_analysis"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_resolution",
+      "start_timestamp_seconds": 120,
+      "end_timestamp_seconds": 135,
+      "segment_description": "The fire starts and the group celebrates.",
+      "psychological_significance": "Clear transition from frustration to joy; validation of competence.",
+      "potential_qa_types": [
+        "transition_detection",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "tattoos_vs_redhair",
+      "character_1_id": "person_tattoos_red_pants",
+      "character_2_id": "person_red_hair_black_jacket",
+      "relationship_type": "collaborators",
+      "interaction_quality": "mixed",
+      "mutual_influence": "Person_red_hair's criticism increases person_tattoos' anxiety/frustration but potentially corrects the technique (or at least highlights the urgency).",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 50,
+          "description": "Red_hair mocks the blowing technique; Tattoos defends himself."
+        },
+        {
+          "timestamp_seconds": 130,
+          "description": "They celebrate together, resolving the tension."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene is heavily driven by social esteem dynamics overlaid on a physiological survival task. The 'blowing' debate is a proxy for competence.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": true,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1",
+    "labels_normalized": true,
+    "normalization_version": "1.0"
+  }
+}

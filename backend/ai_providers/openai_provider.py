@@ -16,7 +16,7 @@ except ImportError:
     OPENAI_AVAILABLE = False
 
 from .base_provider import BaseAIProvider, AIProviderFactory
-from .prompt_templates import PromptTemplates
+from .prompt_loader import PromptLoader
 
 
 class OpenAIProvider(BaseAIProvider):
@@ -33,6 +33,7 @@ class OpenAIProvider(BaseAIProvider):
         
         self.client = OpenAI(api_key=api_key)
         self.model_name = kwargs.get('model_name', 'gpt-4-vision-preview')
+        self.prompt_loader = PromptLoader("backend/prompts/video_analysis_prompts.yaml")
     
     def analyze_video_comprehensive(
         self,
@@ -119,7 +120,7 @@ class OpenAIProvider(BaseAIProvider):
     ) -> Dict:
         """分析base64编码的图片"""
         
-        prompt = PromptTemplates.get_single_frame_prompt(timestamp, context)
+        prompt = self.prompt_loader.get_prompt("single_frame.template", timestamp=timestamp, context=context)
         
         try:
             response = self.client.chat.completions.create(

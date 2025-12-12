@@ -1,0 +1,411 @@
+{
+  "video_id": "1195731b-f226-455e-87b8-8a40a6771b74",
+  "video_path": "data\\Youtube_videos\\1195731b-f226-455e-87b8-8a40a6771b74.mp4",
+  "duration_seconds": 52,
+  "annotation_timestamp": "2025-12-08T16:56:06.713927",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Public street, daytime, residential or semi-urban area with trees and traffic.",
+    "social_context": "Dyadic romantic interaction in a public space, interrupted briefly by a bystander.",
+    "temporal_context": "Daytime",
+    "emotional_atmosphere": "Initially tense and dismissive, shifting to chaotic/humorous, ending in sincere/romantic intensity.",
+    "salient_objects": [
+      "motorcycle",
+      "helmet",
+      "tree/foliage",
+      "bicycle (child's)",
+      "flower"
+    ],
+    "activity_type": "marriage_proposal"
+  },
+  "characters": [
+    {
+      "character_id": "male_motorcyclist",
+      "physical_description": "Adult male, wearing a multi-colored (maroon, green, blue) polo shirt, jeans, and a helmet (initially).",
+      "estimated_age_group": "adult",
+      "role_in_scene": "suitor / proposer",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Sitting on bike, casual posture, direct gaze, smiling.",
+        "apparent_goal": "Propose marriage casually.",
+        "behavioral_evidence": [
+          "Stops bike abruptly",
+          "Direct verbal address 'Listen!'",
+          "Casual facial expression while proposing"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 52,
+        "emotional_state": {
+          "primary_emotion": "Love/Adoration",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing close, intense eye contact, open posture, soft facial features.",
+        "apparent_goal": "Convince partner of sincerity.",
+        "behavioral_evidence": [
+          "Sustained eye contact",
+          "Softened vocal tone",
+          "Ignoring surroundings to focus solely on her"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "determination_level",
+          "psychological_basis": "Volition/Intention stability",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 23,
+          "behavioral_evidence": [
+            "Persisting after rejection",
+            "Climbing tree to get flower",
+            "Physically removing obstacle (kid)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "female_pedestrian",
+      "physical_description": "Adult female, wearing a light pink and white salwar kameez, carrying a shoulder bag.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "recipient / skeptic",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Annoyance",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Walking away, furrowed brows, looking askance, defensive gestures.",
+        "apparent_goal": "Avoid the interaction/scene.",
+        "behavioral_evidence": [
+          "Ignores initial call",
+          "Questions his method ('Is that how you propose?')",
+          "Attempts to walk away"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 52,
+        "emotional_state": {
+          "primary_emotion": "Surprise/Softening",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Stationary, direct eye contact, relaxed facial tension.",
+        "apparent_goal": "Listen to the explanation.",
+        "behavioral_evidence": [
+          "Stops walking",
+          "Maintains eye contact during his monologue",
+          "Ceases looking around at public"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_embarrassment",
+          "psychological_basis": "Social_Evaluation_Anxiety",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 38,
+          "behavioral_evidence": [
+            "Looking around at bystanders",
+            "Explicitly saying 'Stop the drama, so many people are around'"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_male_001",
+      "character_id": "male_motorcyclist",
+      "desire_label": "Belonging_Intimacy_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 52,
+        "duration_seconds": 52
+      },
+      "reasoning_chain": "Subject initiates interaction specifically to propose marriage -> Persists despite rejection -> Escalates effort by climbing tree for a flower -> Verbalizes desire to spend life together. This consistently points to a desire for long-term social connection and intimacy.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 3,
+          "behavior_type": "verbal_action",
+          "description": "Explicit proposal: 'Let's get married.'"
+        },
+        {
+          "timestamp_seconds": 43,
+          "behavior_type": "verbal_emotional_expression",
+          "description": "Statement: 'I can't see anything other than the life I want to spend with you.'"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Dominance_Display",
+          "reasoning": "He is assertive and refuses to take no for an answer, potentially seeking control.",
+          "why_not_primary": "His final demeanor is vulnerable and pleading rather than dominant; the aggression is directed at the distraction (kid), not the woman."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_female_001",
+      "character_id": "female_pedestrian",
+      "desire_label": "Esteem_Reputation_Maintenance",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 40,
+        "duration_seconds": 40
+      },
+      "reasoning_chain": "Subject rejects the proposal based on 'method' (unromantic) -> She scans the environment for onlookers -> She explicitly mentions 'people are around'. This indicates a primary motivation to avoid public embarrassment and maintain social decorum.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 10,
+          "behavior_type": "verbal_critique",
+          "description": "Criticizes lack of romance: 'You're so unromantic.'"
+        },
+        {
+          "timestamp_seconds": 38,
+          "behavior_type": "environmental_scanning",
+          "description": "Looks around at bystanders and says 'So many people around, can't you see?'"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Avoidance",
+          "reasoning": "She tries to walk away to end the interaction.",
+          "why_not_primary": "Her verbal engagement suggests she cares about *how* the interaction happens, not just ending it. She corrects him rather than just fleeing."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_002",
+      "character_id": "male_motorcyclist",
+      "desire_label": "Social_Interference_Removal",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 30,
+        "end_seconds": 35,
+        "duration_seconds": 5
+      },
+      "reasoning_chain": "A child on a bike enters the frame -> Male immediately physically redirects the child and verbally dismisses him ('Run along') -> Returns focus to female. This is a temporary goal to remove an obstacle to his primary desire.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 31,
+          "behavior_type": "body_movement",
+          "description": "Physically grabs the child's bicycle handle and pushes it away."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_01",
+      "character_id": "male_motorcyclist",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 16,
+        "offset_timestamp_seconds": 24,
+        "transition_duration_seconds": 8
+      },
+      "trigger_event": {
+        "timestamp_seconds": 10,
+        "description": "Female calls him 'unromantic' and rejects the casual proposal.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Belonging_Intimacy_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Belonging_Intimacy_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 16,
+          "marker_type": "postural_change",
+          "description": "Dismounts motorcycle rapidly."
+        },
+        {
+          "timestamp_seconds": 22,
+          "marker_type": "effortful_action",
+          "description": "Climbs/jumps to retrieve a flower (symbolic gesture)."
+        }
+      ],
+      "visual_marker_of_change": "The moment he swings his leg off the bike to pursue a more 'romantic' gesture.",
+      "psychological_interpretation": "The rejection of the 'method' (belief violation) led to a revision of the 'intention' (plan). He shifted from a low-effort verbal approach to a high-effort behavioral display to align with her expectations."
+    },
+    {
+      "transition_id": "trans_female_01",
+      "character_id": "female_pedestrian",
+      "transition_type": "attenuation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 40,
+        "offset_timestamp_seconds": 45,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 40,
+        "description": "Male delivers serious, vulnerable monologue about his love.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Esteem_Reputation_Maintenance",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Esteem_Reputation_Maintenance",
+        "intensity": "weak",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 42,
+          "marker_type": "gaze_stabilization",
+          "description": "Stops looking around at the public; locks eyes with him."
+        },
+        {
+          "timestamp_seconds": 45,
+          "marker_type": "facial_relaxation",
+          "description": "Furrowed brows relax, mouth closes."
+        }
+      ],
+      "visual_marker_of_change": "When her head stops turning to scan the environment and fixes on his face.",
+      "psychological_interpretation": "The male's display of vulnerability and sincerity (high arousal/positive valence) overrode her social anxiety (safety/esteem). Her attention shifted from the 'audience' (public) back to the 'dyad' (him)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 5,
+      "character_id": "male_motorcyclist",
+      "behavior_category": "verbal_action",
+      "behavior_description": "Proposes marriage casually while sitting on bike.",
+      "intensity": "moderate",
+      "target": "female_pedestrian",
+      "inferred_mental_state": "Belief that casual proposal is sufficient; Desire for commitment.",
+      "relevance_to_desire": "Establishes the primary goal."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 5,
+      "timestamp_end_seconds": 12,
+      "character_id": "female_pedestrian",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Frowns, looks incredulous, gestures dismissively.",
+      "intensity": "strong",
+      "target": "male_motorcyclist",
+      "inferred_mental_state": "Disbelief, violation of expectation (romantic norms).",
+      "relevance_to_desire": "Indicates conflict between his action and her desire for proper social protocol."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 30,
+      "timestamp_end_seconds": 35,
+      "character_id": "male_motorcyclist",
+      "behavior_category": "body_movement",
+      "behavior_description": "Shoves child on bicycle away abruptly.",
+      "intensity": "strong",
+      "target": "child_on_bike",
+      "inferred_mental_state": "Frustration with distraction; singular focus on the female.",
+      "relevance_to_desire": "Demonstrates the high priority of the affiliation goal over social niceties with others."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_01",
+      "start_timestamp_seconds": 5,
+      "end_timestamp_seconds": 15,
+      "segment_description": "Female rejects the proposal method.",
+      "psychological_significance": "Illustrates a mismatch in 'Beliefs' about social scripts (how a proposal should look).",
+      "potential_qa_types": [
+        "desire_identification",
+        "conflict_analysis"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "qa_seg_02",
+      "start_timestamp_seconds": 30,
+      "end_timestamp_seconds": 36,
+      "segment_description": "Male pushes kid away.",
+      "psychological_significance": "Shows goal prioritization and 'Interference Removal'.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "behavioral_interpretation"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "male_motorcyclist__female_pedestrian",
+      "character_1_id": "male_motorcyclist",
+      "character_2_id": "female_pedestrian",
+      "relationship_type": "romantic_partners (dating)",
+      "interaction_quality": "mixed",
+      "mutual_influence": "The female's rejection triggers the male to escalate his effort. The male's persistence and sincerity eventually reduce the female's resistance.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 5,
+          "description": "Rejection of proposal method."
+        },
+        {
+          "timestamp_seconds": 40,
+          "description": "Shift from conflict to serious emotional connection."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene relies heavily on cultural scripts regarding romance. The male's behavior (shoving the kid) is a key indicator of his tunnel vision/high arousal regarding the proposal.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1",
+    "labels_normalized": true,
+    "normalization_version": "1.0"
+  }
+}

@@ -15,7 +15,7 @@ except ImportError:
     GEMINI_AVAILABLE = False
 
 from .base_provider import BaseAIProvider, AIProviderFactory
-from .prompt_templates import PromptTemplates
+from .prompt_loader import PromptLoader
 
 
 class GeminiProvider(BaseAIProvider):
@@ -33,6 +33,7 @@ class GeminiProvider(BaseAIProvider):
         genai.configure(api_key=api_key)
         self.model_name = kwargs.get('model_name', 'gemini-2.0-flash-exp')
         self.model = genai.GenerativeModel(self.model_name)
+        self.prompt_loader = PromptLoader("backend/prompts/video_analysis_prompts.yaml")
 
     def analyze_video_comprehensive(
         self,
@@ -62,10 +63,8 @@ class GeminiProvider(BaseAIProvider):
             raise ValueError(f"视频处理失败: {video_file.state.name}")
 
         # 2. 生成分析提示词
-        prompt = PromptTemplates.get_comprehensive_prompt(
-            analyze_actions=analyze_actions,
-            analyze_motivations=analyze_motivations
-        )
+        # 2. 生成分析提示词
+        prompt = self.prompt_loader.get_prompt("comprehensive_video")
 
         # 3. 调用Gemini API
         start_time = time.time()
@@ -143,7 +142,8 @@ class GeminiProvider(BaseAIProvider):
         image_file = genai.upload_file(path=frame_path)
 
         # 生成提示词
-        prompt = PromptTemplates.get_single_frame_prompt(timestamp, context)
+        # 生成提示词
+        prompt = self.prompt_loader.get_prompt("single_frame.template", timestamp=timestamp, context=context)
 
         try:
             response = self.model.generate_content([image_file, prompt])

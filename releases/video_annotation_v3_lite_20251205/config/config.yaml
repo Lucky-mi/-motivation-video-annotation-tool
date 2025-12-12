@@ -1,0 +1,13 @@
+paths:
+  videos: 'data/videos'
+  keyframes: 'data/keyframes'
+  annotations: 'data/annotations_v3'
+
+extraction:
+  mode: 'uniform'
+  interval_seconds: 5.0
+  max_frames: 50
+
+api_keys:
+  gemini: null
+  openai: null

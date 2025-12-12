@@ -1,0 +1,373 @@
+{
+  "video_id": "1.12",
+  "video_path": "data\\Youtube_videos\\1.12.mp4",
+  "duration_seconds": 123,
+  "annotation_timestamp": "2025-12-08T14:20:46.476573",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Living room with green sofa, coffee table, and kitchen in background",
+    "social_context": "Dyadic interaction; test/preparation scenario",
+    "temporal_context": "One hour before a significant social event (family visit)",
+    "emotional_atmosphere": "Tense, shifting from focused to chaotic",
+    "salient_objects": [
+      "flashcards/photos",
+      "green pillow"
+    ],
+    "activity_type": "memorization_task"
+  },
+  "characters": [
+    {
+      "character_id": "male_maroon_shirt",
+      "physical_description": "Adult male, heavy set, maroon polo shirt, dark hair",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The learner / The partner being introduced",
+      "initial_state": {
+        "timestamp_seconds": 10,
+        "emotional_state": {
+          "primary_emotion": "Anxiety",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Sitting on edge of sofa, hands gesturing while speaking, attentive but tense",
+        "apparent_goal": "Memorize family member details",
+        "behavioral_evidence": [
+          "Reciting facts from cards",
+          "Looking at female_blue_shirt for validation"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 120,
+        "emotional_state": {
+          "primary_emotion": "Distress/Despair",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Face buried in pillow, body curled forward, screaming",
+        "apparent_goal": "Escape the situation / Block sensory input",
+        "behavioral_evidence": [
+          "Grabbing pillow",
+          "Hiding face",
+          "Vocalizing loud scream"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "cognitive_load",
+          "psychological_basis": "Cognitive Load Theory (Sweller)",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 120,
+          "behavioral_evidence": [
+            "Stuttering/hesitation",
+            "Verbal outburst listing numbers of relatives",
+            "Physical collapse into pillow"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "social_compliance",
+          "psychological_basis": "Maslow_Belonging",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 15,
+          "behavioral_evidence": [
+            "Initially tries to guess correctly",
+            "Eventually stops trying and argues logic",
+            "Finally disengages completely"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "female_blue_shirt",
+      "physical_description": "Adult female, long blonde hair, blue button-down shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The teacher / Family member",
+      "initial_state": {
+        "timestamp_seconds": 10,
+        "emotional_state": {
+          "primary_emotion": "Expectancy",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Holding cards up, leaning slightly towards male, monitoring his responses",
+        "apparent_goal": "Teach family hierarchy",
+        "behavioral_evidence": [
+          "Showing cards sequentially",
+          "Correcting male's mistakes immediately"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 120,
+        "emotional_state": {
+          "primary_emotion": "Confusion/Surprise",
+          "valence": "neutral",
+          "arousal": "high"
+        },
+        "body_language_summary": "Recoiling slightly from male's scream, holding cards up defensively",
+        "apparent_goal": "Continue the lesson",
+        "behavioral_evidence": [
+          "Presenting the next card despite his distress",
+          "Wide eyes reacting to the scream"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "empathy_accuracy",
+          "psychological_basis": "Theory of Mind",
+          "trajectory": "STABLE",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": null,
+          "behavioral_evidence": [
+            "Fails to recognize his cognitive overload",
+            "Interprets his frustration as need for reassurance rather than need for a break",
+            "Continues stimulus presentation immediately after he calms down"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001_male_overload",
+      "character_id": "male_maroon_shirt",
+      "desire_label": "Cognitive_Information_Processing_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 100,
+        "end_seconds": 123,
+        "duration_seconds": 23
+      },
+      "reasoning_chain": "Subject is presented with excessive data -> Expresses verbal disbelief at quantity -> Attempts to self-regulate -> Stimulus re-introduced -> Subject engages in physical blocking behavior (pillow). This indicates a desire to stop the flow of information.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 118,
+          "behavior_type": "verbal_outburst",
+          "description": "Lists the overwhelming number of relatives (14 aunts and uncles)"
+        },
+        {
+          "timestamp_seconds": 122,
+          "behavior_type": "body_movement",
+          "description": "Buries face in pillow to block visual/auditory input"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Expression",
+          "reasoning": "He could be expressing anger at her specifically, rather than the information load.",
+          "why_not_primary": "The behavior is defensive (hiding) rather than aggressive (attacking), suggesting avoidance of the stimulus rather than interpersonal conflict."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002_female_preparation",
+      "character_id": "female_blue_shirt",
+      "desire_label": "Social_Group_Integration_Facilitation",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 123,
+        "duration_seconds": 123
+      },
+      "reasoning_chain": "Subject persists in task despite partner's distress -> Verbalizes deadline ('family coming in one hour') -> Verbalizes motivation ('I just want them to like you'). This indicates a drive to ensure social acceptance.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 114,
+          "behavior_type": "verbal_statement",
+          "description": "'My family is coming in one hour.'"
+        },
+        {
+          "timestamp_seconds": 140,
+          "behavior_type": "verbal_statement",
+          "description": "'I just want them to like you.'"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001_male_breakdown",
+      "character_id": "male_maroon_shirt",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 105,
+        "offset_timestamp_seconds": 110,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 105,
+        "description": "Female shows photo of her father, a person the male already knows well.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Cooperation_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Epistemic_Redundancy_Rejection",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 106,
+          "marker_type": "facial_shift",
+          "description": "Eyebrows furrow, mouth opens in incredulity"
+        },
+        {
+          "timestamp_seconds": 107,
+          "marker_type": "gesture",
+          "description": "Throws hands up in exasperation"
+        }
+      ],
+      "visual_marker_of_change": "The moment he stops looking at the card and looks directly at her with widened eyes and raised hands.",
+      "psychological_interpretation": "Expectation Violation. The male expects new information. When presented with known information (the father) amidst a difficult task, his desire to cooperate is replaced by frustration at the inefficiency/absurdity of the task."
+    },
+    {
+      "transition_id": "trans_002_male_collapse",
+      "character_id": "male_maroon_shirt",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 156,
+        "offset_timestamp_seconds": 160,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 156,
+        "description": "Female presents 'Cousin John' immediately after a calm-down period.",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Emotional_Regulation_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Physiological_Stimulus_Termination",
+        "intensity": "strong",
+        "maslow_level": "physiological"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 157,
+          "marker_type": "vocalization",
+          "description": "Loud, prolonged scream"
+        },
+        {
+          "timestamp_seconds": 158,
+          "marker_type": "postural_change",
+          "description": "Rapid flexion of torso into the sofa pillow"
+        }
+      ],
+      "visual_marker_of_change": "The immediate snap from a neutral 'I'm okay' posture to a full-body scream and collapse.",
+      "psychological_interpretation": "The subject attempts to reset his emotional state (Desire: Regulation). The immediate re-introduction of the stressor causes a failure of regulation mechanisms, leading to a primitive avoidance response (Desire: Termination)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 145,
+      "timestamp_end_seconds": 150,
+      "character_id": "female_blue_shirt",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Touches male's hair/shoulder, leans in close, speaks softly.",
+      "intensity": "moderate",
+      "target": "male_maroon_shirt",
+      "inferred_mental_state": "Belief that the male needs emotional reassurance.",
+      "relevance_to_desire": "Indicates Social_Affiliation_Maintenance and Caregiving intention."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 148,
+      "timestamp_end_seconds": 152,
+      "character_id": "male_maroon_shirt",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Deep exhalation, lowering of shoulders, repetition of 'I'm okay'.",
+      "intensity": "moderate",
+      "target": "self",
+      "inferred_mental_state": "Attempting to lower arousal levels.",
+      "relevance_to_desire": "Physiological_Rest_Seeking / Emotional_Regulation."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_father_reveal",
+      "start_timestamp_seconds": 100,
+      "end_timestamp_seconds": 115,
+      "segment_description": "Female shows photo of father; Male reacts with 'I know who your father is!'",
+      "psychological_significance": "Demonstrates a mismatch in Beliefs (She thinks he needs to see it; He thinks it's redundant) leading to Frustration.",
+      "potential_qa_types": [
+        "belief_inference",
+        "emotion_trigger_identification"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_final_scream",
+      "start_timestamp_seconds": 150,
+      "end_timestamp_seconds": 165,
+      "segment_description": "Male calms down, then screams when shown another card.",
+      "psychological_significance": "Classic example of 'The straw that broke the camel's back' - transition from Regulation to Collapse.",
+      "potential_qa_types": [
+        "transition_detection",
+        "desire_prediction"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "male_female_couple",
+      "character_1_id": "male_maroon_shirt",
+      "character_2_id": "female_blue_shirt",
+      "relationship_type": "romantic_partners",
+      "interaction_quality": "mixed",
+      "mutual_influence": "Female increases Male's anxiety through pressure; Male's anxiety causes Female to oscillate between teaching and soothing.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 140,
+          "description": "She tries to soothe him ('I'm sorry honey') but fails to remove the stressor."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene is comedic/exaggerated, which makes behavioral cues (like the final scream) very distinct but potentially less subtle than naturalistic observation.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

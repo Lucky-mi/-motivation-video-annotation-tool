@@ -1,0 +1,427 @@
+{
+  "video_id": "1bfe92be-8310-41ed-b7e7-c169913d1102",
+  "video_path": "data\\Youtube_videos\\1bfe92be-8310-41ed-b7e7-c169913d1102.mp4",
+  "duration_seconds": 157,
+  "annotation_timestamp": "2025-12-08T20:26:41.806727",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Upscale restaurant dining room and kitchen pass area",
+    "social_context": "Dyadic conversation (blind date) transitioning to solitary dining",
+    "temporal_context": "Evening dinner service",
+    "emotional_atmosphere": "Tense, awkward, shifting from anticipation to discomfort to shock",
+    "salient_objects": [
+      "Red roses",
+      "Steak dinner",
+      "Bill/Card machine",
+      "Wine glasses"
+    ],
+    "activity_type": "Social rejection / Breakup"
+  },
+  "characters": [
+    {
+      "character_id": "bald_man_black_sweater",
+      "physical_description": "Bald male, black sweater, white collared shirt, beard",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The Rejector / Instigator",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anxiety",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Fidgeting with phone, avoiding direct eye contact initially, tense posture",
+        "apparent_goal": "End the social interaction immediately",
+        "behavioral_evidence": [
+          "Immediate apology upon sitting",
+          "Rapid speech pattern",
+          "Lack of settling into the chair comfortably"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 118,
+        "emotional_state": {
+          "primary_emotion": "Relief",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Walking briskly away, not looking back",
+        "apparent_goal": "Exit the premises",
+        "behavioral_evidence": [
+          "Fast walking pace toward exit",
+          "Physical separation from the table"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_discomfort",
+          "psychological_basis": "emotion_model",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 32,
+          "behavioral_evidence": [
+            "High tension while delivering the rejection",
+            "Relaxation visible after paying the bill",
+            "Complete release upon exiting the door"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "man_grey_blazer",
+      "physical_description": "Male with dark hair, grey blazer, white t-shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The Rejected / Diner",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Joy/Happiness",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Smiling, open posture, welcoming the other man back",
+        "apparent_goal": "Continue the date/meal",
+        "behavioral_evidence": [
+          "Broad smile",
+          "Direct eye contact",
+          "Relaxed shoulders"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 157,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Engaged in eating, focused on food, solitary posture",
+        "apparent_goal": "Finish the meal",
+        "behavioral_evidence": [
+          "Cutting steak",
+          "Eating with appetite",
+          "Conversing casually with waiter"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "resilience",
+          "psychological_basis": "maslow_hierarchy",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 153,
+          "behavioral_evidence": [
+            "Maintains composure during rejection",
+            "Refuses to leave without eating",
+            "Jokes with waiter about appetite"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "waiter_waistcoat",
+      "physical_description": "Male, brown waistcoat, tie",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Service Staff / Observer",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Neutral",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Professional service posture",
+        "apparent_goal": "Serve water/wine",
+        "behavioral_evidence": [
+          "Pouring water",
+          "Attending to table needs"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 150,
+        "emotional_state": {
+          "primary_emotion": "Surprise",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Leaning in, attentive listening",
+        "apparent_goal": "Understand the unusual social situation",
+        "behavioral_evidence": [
+          "Questioning the remaining diner",
+          "Looking back at the kitchen staff"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "bald_man_black_sweater",
+      "desire_label": "Social_Separation_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 118,
+        "duration_seconds": 118
+      },
+      "reasoning_chain": "Subject returns to table -> Immediately apologizes -> States lack of attraction -> Proposes cancelling food -> Pays bill early -> Leaves. The consistent sequence of behaviors indicates a pre-formed intention to terminate the interaction and remove himself from the environment.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 33,
+          "behavior_type": "verbal_statement",
+          "description": "Explicitly states 'I don't find you attractive' and 'I don't have that connection'."
+        },
+        {
+          "timestamp_seconds": 105,
+          "behavior_type": "transaction",
+          "description": "Pays bill immediately to facilitate exit."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Honesty_Maintenance",
+          "reasoning": "He may be driven by a moral value to be truthful rather than leading the date on.",
+          "why_not_primary": "The urgency to leave (cancelling main course) suggests avoidance of the situation is stronger than just the desire to be honest."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "man_grey_blazer",
+      "desire_label": "Esteem_Composure_Maintenance",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 30,
+        "end_seconds": 120,
+        "duration_seconds": 90
+      },
+      "reasoning_chain": "Subject receives harsh rejection -> Facial expression shows shock/hurt -> Subject does not argue, cry, or leave immediately -> Agrees to terms calmly. This indicates a desire to maintain dignity and social face despite the negative stimulus.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 45,
+          "behavior_type": "facial_expression",
+          "description": "Maintains a fixed, slightly strained smile while listening to rejection."
+        },
+        {
+          "timestamp_seconds": 52,
+          "behavior_type": "verbal_response",
+          "description": "Calmly says 'It's up to you' regarding cancelling the food."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "man_grey_blazer",
+      "desire_label": "Physiological_Sustenance_Seeking",
+      "maslow_level": "physiological",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 120,
+        "end_seconds": 157,
+        "duration_seconds": 37
+      },
+      "reasoning_chain": "Subject is left alone -> Waiter asks if he is leaving -> Subject stays -> Subject eats steak with apparent appetite. Parsimony Principle: The subject is hungry and prioritizes the food over the social awkwardness of eating alone after a rejection.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 221,
+          "behavior_type": "action",
+          "description": "Explicitly states 'I've got to have my dinner' and begins eating."
+        },
+        {
+          "timestamp_seconds": 226,
+          "behavior_type": "body_movement",
+          "description": "Cuts and eats steak efficiently."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Resilience_Display",
+          "reasoning": "Eating alone could be a performative act to show he is unbothered by the rejection.",
+          "why_not_primary": "The physiological need for food is the base level explanation and sufficient to explain the behavior without assuming complex social signaling."
+        }
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "man_grey_blazer",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 32,
+        "offset_timestamp_seconds": 40,
+        "transition_duration_seconds": 8
+      },
+      "trigger_event": {
+        "timestamp_seconds": 32,
+        "description": "Date partner states 'I don't find you attractive'",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Esteem_Composure_Maintenance",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 33,
+          "marker_type": "facial_shift",
+          "description": "Smile freezes, eyes widen slightly, blinking rate increases."
+        }
+      ],
+      "visual_marker_of_change": "The moment his smile becomes fixed and rigid rather than genuine, and he nods slowly while processing the rejection.",
+      "psychological_interpretation": "The blocking of the affiliation goal (rejection) triggers a shift to self-protection and esteem maintenance (saving face)."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "bald_man_black_sweater",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 110,
+        "offset_timestamp_seconds": 118,
+        "transition_duration_seconds": 8
+      },
+      "trigger_event": {
+        "timestamp_seconds": 108,
+        "description": "Payment of the bill",
+        "trigger_type": "goal_progress"
+      },
+      "desire_before": {
+        "label": "Social_Separation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Physiological_Escape_Execution",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 115,
+          "marker_type": "body_movement",
+          "description": "Stands up, turns back on table, walks away."
+        }
+      ],
+      "visual_marker_of_change": "The moment he physically turns his back on the table and begins walking toward the door.",
+      "psychological_interpretation": "The desire to separate is functionally achieved, transitioning into the motor execution of leaving."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 10,
+      "character_id": "bald_man_black_sweater",
+      "behavior_category": "body_movement",
+      "behavior_description": "Sitting down while avoiding settling in; keeps weight forward.",
+      "intensity": "moderate",
+      "target": "man_grey_blazer",
+      "inferred_mental_state": "Hesitation/Preparation",
+      "relevance_to_desire": "Indicates lack of commitment to staying; preparatory behavior for 'Social_Separation_Seeking'."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 142,
+      "timestamp_end_seconds": 150,
+      "character_id": "waiter_waistcoat",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Eyebrows raised, mouth slightly open, looking between kitchen staff and diner.",
+      "intensity": "moderate",
+      "target": "man_grey_blazer",
+      "inferred_mental_state": "Confusion/Surprise",
+      "relevance_to_desire": "Indicates violation of social script expectations (ToM belief violation)."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_rejection",
+      "start_timestamp_seconds": 30,
+      "end_timestamp_seconds": 50,
+      "segment_description": "The moment of explicit rejection.",
+      "psychological_significance": "Clear example of goal blocking (frustration) and the immediate behavioral regulation required to maintain social norms.",
+      "potential_qa_types": [
+        "desire_identification",
+        "emotion_recognition",
+        "reaction_analysis"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_eating_alone",
+      "start_timestamp_seconds": 200,
+      "end_timestamp_seconds": 230,
+      "segment_description": "The rejected man decides to eat his steak alone.",
+      "psychological_significance": "Interesting interplay between social needs (belonging) and physiological needs (hunger), showing prioritization of the latter when the former fails.",
+      "potential_qa_types": [
+        "motivation_inference",
+        "maslow_hierarchy_application"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "bald_man__grey_blazer",
+      "character_1_id": "bald_man_black_sweater",
+      "character_2_id": "man_grey_blazer",
+      "relationship_type": "strangers (blind date)",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Bald man's desire for separation directly blocks Grey Blazer's desire for affiliation. Grey Blazer's acceptance of the rejection facilitates Bald Man's exit.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 33,
+          "description": "Rejection statement breaks the social contract."
+        },
+        {
+          "timestamp_seconds": 55,
+          "description": "Mutual agreement to cancel one main course but not the other creates asymmetry."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene provides explicit verbal confirmation of internal states ('I don't find you attractive', 'I've got to have my dinner'), making inference highly reliable. The primary psychological interest is the rejected man's resilience and return to physiological needs.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

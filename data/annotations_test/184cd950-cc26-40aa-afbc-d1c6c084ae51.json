@@ -1,0 +1,454 @@
+{
+  "video_id": "184cd950-cc26-40aa-afbc-d1c6c084ae51",
+  "video_path": "data\\Youtube_videos\\184cd950-cc26-40aa-afbc-d1c6c084ae51.mp4",
+  "duration_seconds": 106,
+  "annotation_timestamp": "2025-12-08T19:00:47.362769",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Hotel hallway with patterned carpet and multiple room doors",
+    "social_context": "Interpersonal conflict/altercation",
+    "temporal_context": "Indeterminate time, likely night given artificial lighting",
+    "emotional_atmosphere": "Hostile, chaotic, high-arousal",
+    "salient_objects": [
+      "room_doors",
+      "wall_handrails"
+    ],
+    "activity_type": "physical_altercation"
+  },
+  "characters": [
+    {
+      "character_id": "person_shirtless_male",
+      "physical_description": "Adult male, shirtless, wearing jeans and sneakers, visible tattoos",
+      "estimated_age_group": "adult",
+      "role_in_scene": "conflict_participant",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Being pulled, resisting, trying to maintain balance while moving away",
+        "apparent_goal": "Disengage from physical contact",
+        "behavioral_evidence": [
+          "Pulling arm away from person_blue_top",
+          "Walking backwards/away from the other person"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 106,
+        "emotional_state": {
+          "primary_emotion": "Agitation",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing near door, pacing slightly, facing mediator",
+        "apparent_goal": "Wait or enter room while venting",
+        "behavioral_evidence": [
+          "Stationary stance",
+          "Gesturing with hands while talking to person_white_tank"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "aggression_level",
+          "psychological_basis": "emotion_model",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "moderate",
+          "final_level": "moderate",
+          "peak_moment_seconds": 48,
+          "behavioral_evidence": [
+            "Initially tries to walk away",
+            "Turns back and postures aggressively with chest out at 0:48",
+            "De-escalates slightly when person_white_tank intervenes"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "person_blue_top",
+      "physical_description": "Female, blue tank top, dark shorts/pants",
+      "estimated_age_group": "adult",
+      "role_in_scene": "aggressor",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Rage",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Lunging, pulling, striking",
+        "apparent_goal": "Physically engage and dominate person_shirtless_male",
+        "behavioral_evidence": [
+          "Grabbing person_shirtless_male's arm",
+          "Lunging forward",
+          "Rapid, aggressive movements"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 106,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Off-camera/obscured but audible aggression continues",
+        "apparent_goal": "Continue confrontation",
+        "behavioral_evidence": [
+          "Continued shouting (auditory context supporting inferred state)"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "impulse_control",
+          "psychological_basis": "bdi_framework",
+          "trajectory": "STABLE",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": null,
+          "behavioral_evidence": [
+            "Immediate physical escalation",
+            "Pursuit behavior",
+            "Lack of hesitation"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "person_white_tank",
+      "physical_description": "Female, white tank top, jeans, hair in bun",
+      "estimated_age_group": "adult",
+      "role_in_scene": "mediator",
+      "initial_state": {
+        "timestamp_seconds": 119,
+        "emotional_state": {
+          "primary_emotion": "Concern",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Walking into frame, open palms",
+        "apparent_goal": "De-escalate situation",
+        "behavioral_evidence": [
+          "Positioning body between conflict parties",
+          "Palms facing out/down"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 140,
+        "emotional_state": {
+          "primary_emotion": "Determination",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing firm, blocking path",
+        "apparent_goal": "Maintain separation",
+        "behavioral_evidence": [
+          "Maintains position",
+          "Direct gaze at person_shirtless_male"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "person_shirtless_male",
+      "desire_label": "Social_Conflict_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 15,
+        "end_seconds": 40,
+        "duration_seconds": 25
+      },
+      "reasoning_chain": "Subject breaks physical contact -> Turns back to aggressor -> Walks rapidly down hallway away from threat -> This sequence indicates a desire to create distance and avoid further physical altercation.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 18,
+          "behavior_type": "body_movement",
+          "description": "Rapid walking away from the camera/aggressor"
+        },
+        {
+          "timestamp_seconds": 20,
+          "behavior_type": "body_orientation",
+          "description": "Back turned completely to the other party"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Physiological_Rest_Seeking",
+          "reasoning": "He is walking toward a room, possibly to sleep.",
+          "why_not_primary": "The context of the fight and his agitated body language suggests the primary drive is escaping the conflict, not just resting."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "person_shirtless_male",
+      "desire_label": "Esteem_Dominance_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 45,
+        "end_seconds": 55,
+        "duration_seconds": 10
+      },
+      "reasoning_chain": "Subject stops retreat -> Turns to face aggressor -> Adopts wide stance with arms out (posturing) -> This behavior serves no safety function (actually increases risk) but serves to assert status and refuse submission.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 48,
+          "behavior_type": "posture_shift",
+          "description": "Chest puffed out, arms held wide from body (classic dominance display)"
+        },
+        {
+          "timestamp_seconds": 49,
+          "behavior_type": "body_orientation",
+          "description": "Turning fully to face the threat rather than entering the room"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Communication_Seeking",
+          "reasoning": "He is shouting back to communicate a point.",
+          "why_not_primary": "The physical posturing is aggressive and performative, indicating a status/esteem drive rather than pure information exchange."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "person_white_tank",
+      "desire_label": "Safety_Harm_Prevention",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 119,
+        "end_seconds": 140,
+        "duration_seconds": 21
+      },
+      "reasoning_chain": "Subject enters chaotic scene -> Places self physically between combatants -> Uses 'calm down' gestures -> Indicates goal of preventing physical injury or escalation.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 132,
+          "behavior_type": "gesture",
+          "description": "Open palms facing person_shirtless_male, pushing motion downwards (calming signal)"
+        },
+        {
+          "timestamp_seconds": 135,
+          "behavior_type": "proxemic_change",
+          "description": "Blocking the line of sight/path between the male and the camera/aggressor"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "person_shirtless_male",
+      "transition_type": "conflict",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 42,
+        "offset_timestamp_seconds": 48,
+        "transition_duration_seconds": 6
+      },
+      "trigger_event": {
+        "timestamp_seconds": 42,
+        "description": "Continued verbal provocation from down the hall (inferred from reaction)",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Conflict_Avoidance",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Esteem_Dominance_Display",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 44,
+          "marker_type": "postural_change",
+          "description": "Stops walking away, hesitation step"
+        },
+        {
+          "timestamp_seconds": 46,
+          "marker_type": "body_orientation",
+          "description": "Rapid turn of 180 degrees to face origin of conflict"
+        }
+      ],
+      "visual_marker_of_change": "The moment he stops his forward momentum toward the door, pivots aggressively, and throws his arms out to the side.",
+      "psychological_interpretation": "The subject's desire for safety (avoidance) was overridden by a desire for esteem/respect when the provocation continued, leading to a 'fight' response replacing the 'flight' response."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "person_shirtless_male",
+      "transition_type": "attenuation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 130,
+        "offset_timestamp_seconds": 135,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 130,
+        "description": "Intervention by person_white_tank",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Esteem_Dominance_Display",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Compliance_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 132,
+          "marker_type": "postural_change",
+          "description": "Arms drop to sides, aggressive posturing ceases"
+        }
+      ],
+      "visual_marker_of_change": "When his arms lower from the wide stance and he begins engaging in conversation with the mediator rather than shouting past her.",
+      "psychological_interpretation": "The introduction of a third party (mediator) shifted the dynamic from direct confrontation to social negotiation, attenuating the aggressive display."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 10,
+      "character_id": "person_blue_top",
+      "behavior_category": "body_movement",
+      "behavior_description": "Physically grappling, pulling, and striking person_shirtless_male",
+      "intensity": "strong",
+      "target": "person_shirtless_male",
+      "inferred_mental_state": "High arousal anger/aggression",
+      "relevance_to_desire": "Direct evidence of Social_Aggression_Expression"
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 48,
+      "timestamp_end_seconds": 52,
+      "character_id": "person_shirtless_male",
+      "behavior_category": "posture_shift",
+      "behavior_description": "Arms extended wide, chest expanded, chin up",
+      "intensity": "strong",
+      "target": "person_blue_top",
+      "inferred_mental_state": "Defiance/Dominance",
+      "relevance_to_desire": "Classic non-verbal marker for Esteem_Dominance_Display"
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 132,
+      "timestamp_end_seconds": 138,
+      "character_id": "person_white_tank",
+      "behavior_category": "gesture",
+      "behavior_description": "Bilateral palm-down gestures moving vertically",
+      "intensity": "moderate",
+      "target": "person_shirtless_male",
+      "inferred_mental_state": "Desire to calm the target",
+      "relevance_to_desire": "Indicates Safety_Harm_Prevention and Social_Regulation"
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_01",
+      "start_timestamp_seconds": 40,
+      "end_timestamp_seconds": 55,
+      "segment_description": "The male subject stops retreating and turns to posture aggressively.",
+      "psychological_significance": "Clear example of desire transition from Avoidance (Safety) to Approach/Conflict (Esteem).",
+      "potential_qa_types": [
+        "transition_detection",
+        "desire_identification",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "qa_seg_02",
+      "start_timestamp_seconds": 120,
+      "end_timestamp_seconds": 140,
+      "segment_description": "Mediator intervenes between the two parties.",
+      "psychological_significance": "Illustrates social regulation of emotion and desire attenuation through third-party intervention.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "social_dynamics_analysis"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "male_vs_blue_top",
+      "character_1_id": "person_shirtless_male",
+      "character_2_id": "person_blue_top",
+      "relationship_type": "adversaries",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Escalatory loop: aggression from blue_top triggers defensive aggression/posturing from male.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 5,
+          "description": "Physical struggle"
+        },
+        {
+          "timestamp_seconds": 48,
+          "description": "Distanced verbal/postural confrontation"
+        }
+      ]
+    },
+    {
+      "dyad_id": "male_vs_white_tank",
+      "character_1_id": "person_shirtless_male",
+      "character_2_id": "person_white_tank",
+      "relationship_type": "acquaintances",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Damping effect: white_tank's presence reduces male's physical aggression.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 132,
+          "description": "Calming gestures accepted by male"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "moderate",
+    "annotation_notes": "Video quality is low with significant camera shake. Audio context implies a domestic or relationship dispute, but annotation focuses strictly on observable behavior. The middle section (0:55-1:15) is highly obscured/chaotic.",
+    "quality_flags": {
+      "video_quality_issues": true,
+      "occlusion_present": true,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

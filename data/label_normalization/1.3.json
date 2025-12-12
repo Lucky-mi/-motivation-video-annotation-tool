@@ -1,0 +1,360 @@
+{
+  "video_id": "1.3",
+  "video_path": "data\\Youtube_videos\\1.3.mp4",
+  "duration_seconds": 59,
+  "annotation_timestamp": "2025-12-08T14:45:04.412116",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Indoor room with large leaded-glass windows, likely a library or drawing room in a historical/period setting.",
+    "social_context": "Dyadic interaction; semi-private conversation involving reading aloud.",
+    "temporal_context": "Daytime (natural light visible through window).",
+    "emotional_atmosphere": "Initially playful and intellectual, shifting to intense, charged, and romantically suggestive.",
+    "salient_objects": [
+      "The book (Natural History)",
+      "The window"
+    ],
+    "activity_type": "Social flirtation disguised as intellectual discourse"
+  },
+  "characters": [
+    {
+      "character_id": "person_patterned_vest",
+      "physical_description": "Young adult male, dark hair, wearing a period-style patterned vest and white shirt.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The reader/instigator",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "moderate",
+          "original_emotion": "Amusement"
+        },
+        "body_language_summary": "Standing, holding book, relaxed posture, slight smirk.",
+        "apparent_goal": "To engage the female character in conversation using the book as a prop.",
+        "behavioral_evidence": [
+          "Smiling while holding the book",
+          "Playful tone of voice when describing the book as 'disturbing'"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Anticipation",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Intense direct eye contact, stillness, focused attention on the female's reaction.",
+        "apparent_goal": "To gauge the female's reaction to the suggestive text.",
+        "behavioral_evidence": [
+          "Sustained gaze directly at the female character",
+          "Deliberate pause after the final word 'ecstasy'"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "interpersonal_boldness",
+          "psychological_basis": "Social_Signaling",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 50,
+          "behavioral_evidence": [
+            "Starts with casual reading",
+            "Progresses to reading a mating description while maintaining eye contact"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "person_pink_dress",
+      "physical_description": "Young adult female, dark hair up, wearing a light pink patterned period dress.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The listener/observer",
+      "initial_state": {
+        "timestamp_seconds": 4,
+        "emotional_state": {
+          "primary_emotion": "Curiosity",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Standing still, polite facial expression, attentive gaze.",
+        "apparent_goal": "To understand why the book is considered 'disturbing'.",
+        "behavioral_evidence": [
+          "Tilts head slightly",
+          "Asks 'Disturbing?' with a neutral/inquisitive tone"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Arousal/Fascination",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Breathless appearance, slightly parted lips, unblinking gaze fixed on the male.",
+        "apparent_goal": "To maintain the connection/moment.",
+        "behavioral_evidence": [
+          "Rapid, shallow breathing visible in chest",
+          "Dilated attention focused solely on the male"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "emotional_receptivity",
+          "psychological_basis": "Social_Affiliation",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 44,
+          "behavioral_evidence": [
+            "Initially skeptical/polite",
+            "Becomes entranced, prompting him with 'Yes?' to continue"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_male_001",
+      "character_id": "person_patterned_vest",
+      "desire_label": "Social_Intimacy_Initiation",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 59,
+        "duration_seconds": 59
+      },
+      "reasoning_chain": "The character selects a specific passage about animal mating behavior -> He reads it with deliberate emphasis -> He shifts gaze from book to the female during key phrases -> This indicates the book is a vehicle for establishing romantic/sexual subtext.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 34,
+          "behavior_type": "eye_gaze",
+          "description": "Looks up from book directly at her while saying 'great dying fall'."
+        },
+        {
+          "timestamp_seconds": 50,
+          "behavior_type": "vocal_prosody",
+          "description": "Lowers voice and slows tempo on the word 'ecstasy'."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Epistemic_Knowledge_Sharing",
+          "reasoning": "He could simply be sharing an interesting natural history fact.",
+          "why_not_primary": "The specific selection of a mating passage and the intense, prolonged eye contact suggest a social/romantic motive overrides pure information sharing."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_female_001",
+      "character_id": "person_pink_dress",
+      "desire_label": "Social_Connection_Maintenance",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 30,
+        "end_seconds": 59,
+        "duration_seconds": 29
+      },
+      "reasoning_chain": "She listens to the description of mating -> Instead of withdrawing or showing discomfort (social avoidance), she leans in and prompts him to continue -> Indicates desire to maintain the interaction and the building tension.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 44,
+          "behavior_type": "verbal_prompt",
+          "description": "Whispers 'Yes?' when he pauses, encouraging him to finish the thought."
+        },
+        {
+          "timestamp_seconds": 38,
+          "behavior_type": "facial_expression",
+          "description": "Maintains intense eye contact without breaking gaze."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Epistemic_Curiosity_Satisfaction",
+          "reasoning": "She wants to know how the story about the birds ends.",
+          "why_not_primary": "Her physiological markers (breathlessness, soft focus) indicate emotional arousal rather than intellectual curiosity."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_01",
+      "character_id": "person_patterned_vest",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 22,
+        "offset_timestamp_seconds": 34,
+        "transition_duration_seconds": 12
+      },
+      "trigger_event": {
+        "timestamp_seconds": 22,
+        "description": "The text shifts from flying behavior to mating behavior ('one leaps onto the back of another').",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Social_Playfulness_Expression",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Seduction_Pursuit",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 24,
+          "marker_type": "tone_shift",
+          "description": "Voice drops in pitch and becomes more serious/rhythmic."
+        },
+        {
+          "timestamp_seconds": 34,
+          "marker_type": "gaze_redirect",
+          "description": "Stops looking at the book entirely to look at the female."
+        }
+      ],
+      "visual_marker_of_change": "The moment he looks up from the book at 'great dying fall', locking eyes with her.",
+      "psychological_interpretation": "The character utilizes the text to transition from a casual social interaction to an explicit display of romantic intent (BDI: Intention formation)."
+    },
+    {
+      "transition_id": "trans_female_01",
+      "character_id": "person_pink_dress",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 35,
+        "offset_timestamp_seconds": 44,
+        "transition_duration_seconds": 9
+      },
+      "trigger_event": {
+        "timestamp_seconds": 34,
+        "description": "Male character makes direct eye contact while describing a 'dying fall'.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Politeness_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Intimacy_Reciprocation",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 44,
+          "marker_type": "verbal_response",
+          "description": "Soft, breathless 'Yes?'"
+        }
+      ],
+      "visual_marker_of_change": "When her expression shifts from polite listening to a fixed, slightly open-mouthed stare.",
+      "psychological_interpretation": "The ambiguity of the situation resolves into a shared moment of intimacy; her desire shifts from social convention to active participation in the flirtation."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 10,
+      "character_id": "person_patterned_vest",
+      "behavior_category": "gesture",
+      "behavior_description": "Holds book, gestures with free hand, smiles playfully.",
+      "intensity": "moderate",
+      "target": "person_pink_dress",
+      "inferred_mental_state": "Playful, teasing.",
+      "relevance_to_desire": "Establishes a safe, humorous context before introducing heavier subtext."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 34,
+      "timestamp_end_seconds": 40,
+      "character_id": "person_patterned_vest",
+      "behavior_category": "eye_gaze",
+      "behavior_description": "Looks up from book, maintains unbroken eye contact while reciting.",
+      "intensity": "strong",
+      "target": "person_pink_dress",
+      "inferred_mental_state": "Intentional, checking for reciprocity.",
+      "relevance_to_desire": "Signals that the words apply to the present company, not just the birds."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 44,
+      "timestamp_end_seconds": 46,
+      "character_id": "person_pink_dress",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Micro-expression of anticipation, slight parting of lips.",
+      "intensity": "subtle",
+      "target": "person_patterned_vest",
+      "inferred_mental_state": "Captivated, waiting.",
+      "relevance_to_desire": "Indicates successful reception of the social signal; willingness to proceed."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_01",
+      "start_timestamp_seconds": 30,
+      "end_timestamp_seconds": 50,
+      "segment_description": "The reading shifts to mating behavior and the interaction becomes intensely personal.",
+      "psychological_significance": "Demonstrates how external objects (books) are used to mediate social desires (flirtation) and how non-verbal cues (gaze) override verbal content.",
+      "potential_qa_types": [
+        "desire_identification",
+        "transition_detection",
+        "subtext_analysis"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "person_patterned_vest__person_pink_dress",
+      "character_1_id": "person_patterned_vest",
+      "character_2_id": "person_pink_dress",
+      "relationship_type": "potential_romantic_partners",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Positive feedback loop: His boldness increases her engagement, which in turn encourages his boldness.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 44,
+          "description": "The 'Yes?' prompt serves as permission for him to deliver the final, most suggestive line."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene relies heavily on subtext. The literal desire (reading) is secondary to the social desire (seduction/connection).",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1",
+    "labels_normalized": true,
+    "normalization_version": "1.0"
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "video_id": "195182a4-716c-4a8d-b5a4-137513c438e1",
+  "video_path": "data\\Youtube_videos\\195182a4-716c-4a8d-b5a4-137513c438e1.mp4",
+  "duration_seconds": 60,
+  "annotation_timestamp": "2025-12-08T20:18:09.836902",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Montage of various settings: casual indoor room, recording studio, concert stage, and formal press conference seating.",
+    "social_context": "Dyadic interaction within a larger group context (likely band members). High-visibility public or semi-public environments.",
+    "temporal_context": "Various times; compilation of distinct events.",
+    "emotional_atmosphere": "Ranges from playful and relaxed to tense and fatigued.",
+    "salient_objects": [
+      "Microphones",
+      "Water bottles",
+      "Stage costumes",
+      "Casual streetwear"
+    ],
+    "activity_type": "Social_Bonding_and_Professional_Obligation"
+  },
+  "characters": [
+    {
+      "character_id": "person_red_cap",
+      "physical_description": "Young adult male, often wearing caps (red baseball cap, blue cap), purple hoodie, or formal black suit. Dyed hair (blonde/light brown).",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The observer/initiator of contact",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Interest",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Relaxed posture, leaning back, head turned toward person_yellow_shirt.",
+        "apparent_goal": "Monitoring partner's reaction.",
+        "behavioral_evidence": [
+          "Head orientation turned 45 degrees toward peer",
+          "Sustained gaze"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 55,
+        "emotional_state": {
+          "primary_emotion": "Concern",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Seated formally, hand reaching out to touch peer's torso, gaze directed at peer.",
+        "apparent_goal": "Providing comfort or checking status.",
+        "behavioral_evidence": [
+          "Tactile contact initiated",
+          "Focused gaze on peer's torso/face"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_monitoring",
+          "psychological_basis": "tom_framework",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 45,
+          "behavioral_evidence": [
+            "Consistent gaze checking across different scenes",
+            "Orienting body toward peer"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "person_yellow_shirt",
+      "physical_description": "Young adult male, wearing yellow sweatshirt, white t-shirt, or formal black suit. Dark hair.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The recipient of attention",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Joy/Happiness",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Smiling, engaging in conversation, relaxed.",
+        "apparent_goal": "Social engagement.",
+        "behavioral_evidence": [
+          "Duchenne smile",
+          "Direct eye contact"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 55,
+        "emotional_state": {
+          "primary_emotion": "Fatigue/Anxiety",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Slumped shoulders, head down, fidgeting with hands/clothing.",
+        "apparent_goal": "Self-regulation or rest.",
+        "behavioral_evidence": [
+          "Downcast gaze",
+          "Reduced motor activity",
+          "Acceptance of touch"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "arousal_level",
+          "psychological_basis": "emotion_model",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": null,
+          "behavioral_evidence": [
+            "Transition from active smiling/talking to passive sitting and staring down"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001_affiliation",
+      "character_id": "person_red_cap",
+      "desire_label": "Social_Affiliation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 30,
+        "duration_seconds": 30
+      },
+      "reasoning_chain": "Subject consistently orients body and gaze toward person_yellow_shirt across multiple contexts. This indicates a desire for connection and shared attention.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 2,
+          "behavior_type": "eye_gaze",
+          "description": "Direct gaze at partner's face while partner speaks."
+        },
+        {
+          "timestamp_seconds": 28,
+          "behavior_type": "proxemic_change",
+          "description": "Standing shoulder-to-shoulder on stage, leaning slightly in."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conformity_Maintenance",
+          "reasoning": "They are in a group setting (band); behavior could be adhering to group choreography or expectations.",
+          "why_not_primary": "The gaze is often specific and dyadic rather than general scanning, suggesting personal affiliation."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002_comfort",
+      "character_id": "person_red_cap",
+      "desire_label": "Social_Support_Provision",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 40,
+        "end_seconds": 55,
+        "duration_seconds": 15
+      },
+      "reasoning_chain": "In the formal suit scene, person_yellow_shirt appears distressed (looking down). person_red_cap notices this (belief update) and initiates touch (intention) to soothe (desire).",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 44,
+          "behavior_type": "gesture",
+          "description": "Hand reaches out to touch person_yellow_shirt's chest/stomach area gently."
+        },
+        {
+          "timestamp_seconds": 45,
+          "behavior_type": "facial_expression",
+          "description": "Face is neutral but gaze is fixed on the other person, monitoring for reaction."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Norm_Correction",
+          "reasoning": "He might be fixing the other person's clothing.",
+          "why_not_primary": "The touch is lingering and the other person does not adjust clothing, suggesting an emotional rather than functional purpose."
+        }
+      ],
+      "confidence": "moderate"
+    },
+    {
+      "analysis_id": "desire_003_regulation",
+      "character_id": "person_yellow_shirt",
+      "desire_label": "Emotional_Regulation_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 39,
+        "end_seconds": 55,
+        "duration_seconds": 16
+      },
+      "reasoning_chain": "Subject displays signs of withdrawal and low arousal in a high-pressure environment (press conference). This suggests a desire to reduce sensory input or manage internal state.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 40,
+          "behavior_type": "body_movement",
+          "description": "Looking down at lap, avoiding eye contact with cameras/audience."
+        },
+        {
+          "timestamp_seconds": 42,
+          "behavior_type": "posture_shift",
+          "description": "Slumped shoulders, minimal movement."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Physiological_Rest_Seeking",
+          "reasoning": "Subject may simply be physically tired.",
+          "why_not_primary": "The context is a press event where alertness is expected; withdrawal suggests emotional/psychological load."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001_red_cap",
+      "character_id": "person_red_cap",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 42,
+        "offset_timestamp_seconds": 45,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 41,
+        "description": "person_yellow_shirt looks down and stops engaging with the environment.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Environmental_Monitoring",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Support_Provision",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 42,
+          "marker_type": "gaze_redirect",
+          "description": "Gaze shifts from audience/front to person_yellow_shirt."
+        },
+        {
+          "timestamp_seconds": 44,
+          "marker_type": "gesture",
+          "description": "Hand moves to touch person_yellow_shirt."
+        }
+      ],
+      "visual_marker_of_change": "The moment person_red_cap turns his head specifically to look at person_yellow_shirt's downcast face and subsequently lifts his hand.",
+      "psychological_interpretation": "Shift from general environmental awareness to specific dyadic caretaking triggered by partner's distress signal."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 5,
+      "character_id": "person_red_cap",
+      "behavior_category": "eye_gaze",
+      "behavior_description": "Side-eye glance toward person_yellow_shirt followed by a quick look away.",
+      "intensity": "subtle",
+      "target": "person_yellow_shirt",
+      "inferred_mental_state": "Checking partner's reaction while maintaining plausible deniability.",
+      "relevance_to_desire": "Indicates Social_Affiliation_Seeking mixed with Social_Norm_Adherence (avoiding staring)."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 43,
+      "timestamp_end_seconds": 48,
+      "character_id": "person_red_cap",
+      "behavior_category": "gesture",
+      "behavior_description": "Touching the stomach/chest area of person_yellow_shirt.",
+      "intensity": "moderate",
+      "target": "person_yellow_shirt",
+      "inferred_mental_state": "Concern/Support.",
+      "relevance_to_desire": "Direct evidence of Social_Support_Provision."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_press_conference",
+      "start_timestamp_seconds": 39,
+      "end_timestamp_seconds": 55,
+      "segment_description": "Two characters in suits. One looks distressed/tired, the other notices and offers a comforting touch.",
+      "psychological_significance": "Clear example of non-verbal communication of distress and subsequent caretaking behavior (ToM in action).",
+      "potential_qa_types": [
+        "desire_identification",
+        "emotion_recognition",
+        "interaction_analysis"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "red_cap__yellow_shirt",
+      "character_1_id": "person_red_cap",
+      "character_2_id": "person_yellow_shirt",
+      "relationship_type": "close_collaborators/intimates",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "High. person_red_cap modulates behavior based on person_yellow_shirt's emotional state (e.g., offering comfort when the other is down).",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 44,
+          "description": "Comforting touch during formal event."
+        },
+        {
+          "timestamp_seconds": 28,
+          "description": "Proximity seeking on stage."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 1,
+    "overall_annotation_confidence": "moderate",
+    "annotation_notes": "Video is a fan-made compilation ('shipping' content) which may bias the selection of clips to emphasize romantic tension. The final image (kiss) appears to be a manipulation/edit and was excluded from behavioral analysis as it does not represent genuine video data. Analysis focused on the raw behavioral cues in the preceding clips.",
+    "quality_flags": {
+      "video_quality_issues": true,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": true
+    },
+    "prompt_version": "5.1"
+  }
+}

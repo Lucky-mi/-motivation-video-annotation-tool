@@ -1,0 +1,432 @@
+{
+  "video_id": "1.11",
+  "video_path": "data\\Youtube_videos\\1.11.mp4",
+  "duration_seconds": 32,
+  "annotation_timestamp": "2025-12-08T14:15:22.906209",
+  "annotator": "AI_Model_5.0",
+  "scene_context": {
+    "physical_setting": "Hospital maternity ward room; visible bassinet, medical curtain, fan, sink",
+    "social_context": "Family gathering; siblings meeting a new family member for the first time",
+    "temporal_context": "Post-birth event",
+    "emotional_atmosphere": "Highly charged, joyful, overwhelming, tender",
+    "salient_objects": [
+      "newborn_bassinet",
+      "blue_curtain",
+      "medical_equipment"
+    ],
+    "activity_type": "Social_Introduction"
+  },
+  "characters": [
+    {
+      "character_id": "older_brother_plaid",
+      "physical_description": "Male child, approx 8-10 years old, wearing light plaid shirt",
+      "estimated_age_group": "child",
+      "role_in_scene": "Sibling / Observer",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Peeking around curtain, rapid movement, wide eyes",
+        "apparent_goal": "To see the newborn",
+        "behavioral_evidence": [
+          "Peeking head around blue curtain",
+          "Wide smile",
+          "Rapid entry into room"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 13,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Hands clasped over mouth, crying, leaning toward bassinet",
+        "apparent_goal": "To process emotional overwhelm and connect with newborn",
+        "behavioral_evidence": [
+          "Tears visible",
+          "Hands covering mouth (shock/awe gesture)",
+          "Leaning torso toward bassinet"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "emotional_arousal",
+          "psychological_basis": "Circumplex Model of Affect",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 6,
+          "behavioral_evidence": [
+            "Transition from smiling to crying",
+            "Hands clasping face",
+            "Reddening of face"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "younger_brother_plaid",
+      "physical_description": "Male child, approx 4-6 years old, wearing grey/blue plaid shirt",
+      "estimated_age_group": "child",
+      "role_in_scene": "Sibling / Observer",
+      "initial_state": {
+        "timestamp_seconds": 9,
+        "emotional_state": {
+          "primary_emotion": "Curiosity",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Approaching bassinet, smiling",
+        "apparent_goal": "To inspect the baby",
+        "behavioral_evidence": [
+          "Walking directly to bassinet",
+          "Gaze fixed on newborn"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 31,
+        "emotional_state": {
+          "primary_emotion": "Overwhelm",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Rubbing eyes, looking away then back",
+        "apparent_goal": "Self-soothing or fatigue management",
+        "behavioral_evidence": [
+          "Rubbing eye with fist",
+          "Slower movements"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "curiosity",
+          "psychological_basis": "Epistemic Motivation",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "moderate",
+          "peak_moment_seconds": 22,
+          "behavioral_evidence": [
+            "Intense staring at 00:22",
+            "Disengagement/eye rubbing at 00:30"
+          ],
+          "confidence": "moderate"
+        }
+      ]
+    },
+    {
+      "character_id": "father_figure",
+      "physical_description": "Adult male, black t-shirt with text 'We Hooked the Best Dad'",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Facilitator / Parent",
+      "initial_state": {
+        "timestamp_seconds": 14,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Standing near bassinet, gesturing",
+        "apparent_goal": "To facilitate the introduction",
+        "behavioral_evidence": [
+          "Pointing at baby",
+          "Orienting body toward children"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 20,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Observing interaction",
+        "apparent_goal": "Supervision",
+        "behavioral_evidence": [
+          "Stable posture",
+          "Gaze monitoring"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_older_brother_1",
+      "character_id": "older_brother_plaid",
+      "desire_label": "Social_Affiliation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 13,
+        "duration_seconds": 13
+      },
+      "reasoning_chain": "Subject enters with high anticipation -> Encounters target (newborn) -> Displays intense emotional release (tears, shock) consistent with deep social bonding -> Maintains proximity -> Inference: Desire is to establish/feel connection with the new family member.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 2,
+          "behavior_type": "body_movement",
+          "description": "Rapid approach to the bassinet"
+        },
+        {
+          "timestamp_seconds": 5,
+          "behavior_type": "facial_expression",
+          "description": "Hands covering mouth, eyes tearing up (reaction to fulfilling desire for contact)"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Epistemic_Novelty_Processing",
+          "reasoning": "The reaction could be shock at the novelty of the situation.",
+          "why_not_primary": "The emotional valence is clearly affectionate (tears of joy) rather than just cognitive surprise."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_younger_brother_1",
+      "character_id": "younger_brother_plaid",
+      "desire_label": "Epistemic_Information_Seeking",
+      "maslow_level": "self_actualization",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 9,
+        "end_seconds": 25,
+        "duration_seconds": 16
+      },
+      "reasoning_chain": "Subject approaches bassinet -> Leans body weight onto bassinet to get closer -> Fixates gaze on the infant -> Mouth opens slightly (awe/interest) -> Inference: Primary motivation is to observe and understand the new entity.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 12,
+          "behavior_type": "proxemic_change",
+          "description": "Closes distance to bassinet immediately upon entry"
+        },
+        {
+          "timestamp_seconds": 22,
+          "behavior_type": "eye_gaze",
+          "description": "Unbroken gaze directed at the infant inside the bassinet"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_father",
+      "character_id": "father_figure",
+      "desire_label": "Social_Facilitation_Performance",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 14,
+        "end_seconds": 20,
+        "duration_seconds": 6
+      },
+      "reasoning_chain": "Subject is present but not central -> Uses deictic gesture (pointing) to direct attention of the child with headphones -> Inference: Goal is to guide the children's interaction with the baby.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 18,
+          "behavior_type": "gesture",
+          "description": "Pointing hand toward the baby while looking at the child"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_older_brother_1",
+      "character_id": "older_brother_plaid",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 2,
+        "offset_timestamp_seconds": 6,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 2,
+        "description": "Visual confirmation of the baby in the bassinet",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 3,
+          "marker_type": "gesture",
+          "description": "Hands fly up to cover mouth"
+        },
+        {
+          "timestamp_seconds": 5,
+          "marker_type": "facial_shift",
+          "description": "Breakdown into happy tears"
+        }
+      ],
+      "visual_marker_of_change": "The moment the hands clasp over the mouth and the facial expression shifts from a smile to an overwhelmed grimace/cry.",
+      "psychological_interpretation": "The realization of the goal (seeing the brother) triggered an intense emotional release, intensifying the desire for connection and resulting in a 'moved' state."
+    },
+    {
+      "transition_id": "trans_younger_brother_1",
+      "character_id": "younger_brother_plaid",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 28,
+        "offset_timestamp_seconds": 31,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 28,
+        "description": "Prolonged observation or internal processing",
+        "trigger_type": "internal_state_change"
+      },
+      "desire_before": {
+        "label": "Epistemic_Information_Seeking",
+        "intensity": "strong",
+        "maslow_level": "self_actualization"
+      },
+      "desire_after": {
+        "label": "Physiological_Rest_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "physiological"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 30,
+          "marker_type": "gesture",
+          "description": "Rubbing eyes with fist"
+        },
+        {
+          "timestamp_seconds": 31,
+          "marker_type": "eye_gaze",
+          "description": "Looking away from the bassinet"
+        }
+      ],
+      "visual_marker_of_change": "When the child stops leaning intently and raises a fist to rub his eye.",
+      "psychological_interpretation": "Shift from active curiosity to a lower-level physiological need (fatigue) or a self-soothing displacement activity due to emotional intensity."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 3,
+      "character_id": "older_brother_plaid",
+      "behavior_category": "body_movement",
+      "behavior_description": "Peeks around curtain then fully enters room",
+      "intensity": "moderate",
+      "target": "newborn_bassinet",
+      "inferred_mental_state": "Anticipation",
+      "relevance_to_desire": "Approach behavior indicates desire to see target"
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 4,
+      "timestamp_end_seconds": 8,
+      "character_id": "older_brother_plaid",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Crying, mouth open, hands covering face",
+      "intensity": "strong",
+      "target": "newborn_bassinet",
+      "inferred_mental_state": "Overwhelming Joy",
+      "relevance_to_desire": "Emotional intensity confirms high value of the social bond"
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 21,
+      "timestamp_end_seconds": 25,
+      "character_id": "younger_brother_plaid",
+      "behavior_category": "posture_shift",
+      "behavior_description": "Leaning elbows on bassinet edge, chin in hands",
+      "intensity": "moderate",
+      "target": "newborn_bassinet",
+      "inferred_mental_state": "Fascination",
+      "relevance_to_desire": "Sustained attention indicates epistemic interest"
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_1",
+      "start_timestamp_seconds": 0,
+      "end_timestamp_seconds": 8,
+      "segment_description": "Older brother enters and reacts emotionally to seeing the baby.",
+      "psychological_significance": "Clear example of high-arousal positive affect and social bonding desire.",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "desire_identification",
+        "reaction_analysis"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "qa_seg_2",
+      "start_timestamp_seconds": 28,
+      "end_timestamp_seconds": 32,
+      "segment_description": "Younger brother rubs his eye after staring at the baby.",
+      "psychological_significance": "Ambiguous behavior: could be fatigue (physiological) or emotional regulation (displacement). Good for testing parsimony.",
+      "potential_qa_types": [
+        "behavioral_interpretation",
+        "ambiguity_resolution"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "older_brother_plaid__newborn",
+      "character_1_id": "older_brother_plaid",
+      "character_2_id": "newborn_bassinet",
+      "relationship_type": "siblings",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "One-way: The presence of the newborn triggers intense emotional release in the brother.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 5,
+          "description": "Brother cries upon seeing newborn"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The third child (with headphones) was present but passive; annotation focused on the two active siblings. The 'newborn' is treated as an object/target of desire rather than an active character due to lack of visible behavior.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": true,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

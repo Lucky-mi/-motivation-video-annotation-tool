@@ -1,0 +1,462 @@
+{
+  "video_id": "0b365dc3-93ee-433e-90c8-6c383fff5c1d",
+  "video_path": "data\\Youtube_videos\\0b365dc3-93ee-433e-90c8-6c383fff5c1d.mp4",
+  "duration_seconds": 270,
+  "annotation_timestamp": "2025-12-08T13:11:32.286511",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Various domestic interior settings (living room, bedroom, bathroom, balcony)",
+    "social_context": "dyadic marital interactions and small group social gatherings",
+    "temporal_context": "A series of distinct vignettes occurring over several weeks/months",
+    "emotional_atmosphere": "Comedic tension, awkwardness, fluctuating between affection and conflict",
+    "salient_objects": [
+      "birthday cake",
+      "balloons",
+      "toothbrush",
+      "juice glass",
+      "smartphone",
+      "laptop"
+    ],
+    "activity_type": "social_navigation"
+  },
+  "characters": [
+    {
+      "character_id": "man_protagonist",
+      "physical_description": "Adult male, dark hair, wearing various casual shirts (blue button-down, grey t-shirt, red long-sleeve)",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Husband/Partner navigating social blunders",
+      "initial_state": {
+        "timestamp_seconds": 4,
+        "emotional_state": {
+          "primary_emotion": "Surprise",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Open posture, wide eyes, smiling, stepping forward into room",
+        "apparent_goal": "To respond appropriately to a surprise celebration",
+        "behavioral_evidence": [
+          "Wide smile upon entering room",
+          "Exclaiming 'Wow'",
+          "Looking around at decorations"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 420,
+        "emotional_state": {
+          "primary_emotion": "Embarrassment",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Sitting next to wife, waving at camera, forced smile",
+        "apparent_goal": "To conclude the video segment/break the fourth wall",
+        "behavioral_evidence": [
+          "Waving hand",
+          "Smiling directly at camera lens"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_anxiety",
+          "psychological_basis": "Safety_Threat_Avoidance",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 150,
+          "behavioral_evidence": [
+            "Repeated stuttering when caught in lies",
+            "Darting eyes when friend exposes his dislike for trekking",
+            "Freezing behavior when wife checks his phone"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "authenticity",
+          "psychological_basis": "Esteem_Competence_Display",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": null,
+          "behavioral_evidence": [
+            "Pretending to remember anniversary",
+            "Pretending to like trekking",
+            "Lying about work meeting to go to Lonavala"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "woman_protagonist",
+      "physical_description": "Adult female, dark hair, wearing various outfits (white dress, grey t-shirt, yellow top)",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Wife/Partner initiating interactions",
+      "initial_state": {
+        "timestamp_seconds": 2,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Arms open in welcoming gesture, wide smile, energetic movement",
+        "apparent_goal": "To surprise her husband",
+        "behavioral_evidence": [
+          "Jumping out",
+          "Shouting 'Surprise'",
+          "Gesturing towards decorations"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 420,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "moderate",
+          "original_emotion": "Joy/Happiness"
+        },
+        "body_language_summary": "Sitting, smiling, giving thumbs up",
+        "apparent_goal": "To conclude the video segment",
+        "behavioral_evidence": [
+          "Thumbs up gesture",
+          "Smiling at camera"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "trust_in_partner",
+          "psychological_basis": "Belonging_Social_Connection",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 402,
+          "behavioral_evidence": [
+            "Initial excitement to gift the trek",
+            "Confusion when friend reveals husband hates trekking",
+            "Suspicion regarding phone password",
+            "Realization of betrayal regarding the Lonavala trip"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "man_friend_long_hair",
+      "physical_description": "Adult male, long hair tied back, black t-shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Friend/Disruptor",
+      "initial_state": {
+        "timestamp_seconds": 114,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Leaning against balcony railing, holding drink",
+        "apparent_goal": "Socializing",
+        "behavioral_evidence": [
+          "Relaxed posture",
+          "Casual observation of the couple"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 207,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "moderate",
+          "original_emotion": "Amusement"
+        },
+        "body_language_summary": "Laughing, drinking",
+        "apparent_goal": "Mocking the protagonist",
+        "behavioral_evidence": [
+          "Laughing while walking away",
+          "Drinking from glass"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001_man_trekking",
+      "character_id": "man_protagonist",
+      "desire_label": "Social_Conflict_Avoidance",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 120,
+        "end_seconds": 145,
+        "duration_seconds": 25
+      },
+      "reasoning_chain": "The man receives a gift he dislikes (trekking). Instead of expressing his true preference (dislike), he feigns excitement. This behavior prioritizes maintaining the positive emotional atmosphere and avoiding disappointing his wife over honest self-expression.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 128,
+          "behavior_type": "facial_expression",
+          "description": "Forced smile and exaggerated nod when hearing '5 day trek'"
+        },
+        {
+          "timestamp_seconds": 135,
+          "behavior_type": "verbal_tone",
+          "description": "High-pitched, strained 'Yay' response"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Affiliation_Maintenance",
+          "reasoning": "He wants to maintain the bond with his wife by accepting her gesture.",
+          "why_not_primary": "The presence of fear/anxiety micro-expressions suggests avoidance of negative outcome (conflict) is the stronger driver than seeking connection."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002_woman_password",
+      "character_id": "woman_protagonist",
+      "desire_label": "Epistemic_Information_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 222,
+        "end_seconds": 230,
+        "duration_seconds": 8
+      },
+      "reasoning_chain": "The woman actively attempts to unlock the phone. Her goal is to access information (photos). When the password fails, her confusion indicates a violation of belief (that she knows the password).",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 225,
+          "behavior_type": "body_movement",
+          "description": "Typing on phone screen repeatedly"
+        },
+        {
+          "timestamp_seconds": 228,
+          "behavior_type": "facial_expression",
+          "description": "Furrowed brows and frowning at screen"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Trust_Verification",
+          "reasoning": "She might be checking if he changed the password to hide something.",
+          "why_not_primary": "Her initial demeanor is casual; suspicion only arises after the password fails."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003_man_lonavala",
+      "character_id": "man_protagonist",
+      "desire_label": "Social_Autonomy_Seeking",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 355,
+        "end_seconds": 400,
+        "duration_seconds": 45
+      },
+      "reasoning_chain": "The man is planning a trip with friends ('the boys') while excluding his wife. He uses deception (pretending it's work) to secure this time away. This indicates a desire for independence or social bonding outside the marriage.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 356,
+          "behavior_type": "verbal_content",
+          "description": "Whispering 'Lonavala scene is on boys' into headphones"
+        },
+        {
+          "timestamp_seconds": 398,
+          "behavior_type": "facial_expression",
+          "description": "Look of panic when realized he is audible to his wife"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001_man_trekking_exposure",
+      "character_id": "man_protagonist",
+      "transition_type": "conflict",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 147,
+        "offset_timestamp_seconds": 155,
+        "transition_duration_seconds": 8
+      },
+      "trigger_event": {
+        "timestamp_seconds": 147,
+        "description": "Friend says 'Trekking is so vanilla... who goes for treks?'",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Conflict_Avoidance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Safety_Reputation_Management",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 149,
+          "marker_type": "facial_shift",
+          "description": "Eyes widen, head snaps toward the friend"
+        },
+        {
+          "timestamp_seconds": 150,
+          "marker_type": "gesture",
+          "description": "Rapid hand waving/shushing motion toward the friend"
+        }
+      ],
+      "visual_marker_of_change": "The moment the man's fake smile drops and he frantically gestures at his friend to stop talking.",
+      "psychological_interpretation": "The man's strategy of deception (pretending to like trekking) is threatened by the friend's truth-telling. His motivation shifts from maintaining the lie to the wife to actively suppressing the friend's testimony to save face."
+    },
+    {
+      "transition_id": "trans_002_woman_anniversary_realization",
+      "character_id": "woman_protagonist",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 30,
+        "offset_timestamp_seconds": 35,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 29,
+        "description": "Man hugs her thinking it's their anniversary; she reveals it's his mom's birthday.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Esteem_Respect_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 32,
+          "marker_type": "postural_change",
+          "description": "Pushes man away, creates physical distance"
+        },
+        {
+          "timestamp_seconds": 34,
+          "marker_type": "facial_expression",
+          "description": "Expression shifts from affectionate to disbelief/annoyance"
+        }
+      ],
+      "visual_marker_of_change": "The moment she physically breaks the hug and steps back, looking him in the eye with a stern expression.",
+      "psychological_interpretation": "Her desire for romantic connection is blocked by his lack of awareness (forgetting the actual occasion). This triggers a shift to demanding acknowledgment of his error."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001_bathroom_argument",
+      "timestamp_start_seconds": 41,
+      "timestamp_end_seconds": 110,
+      "character_id": "man_protagonist",
+      "behavior_category": "body_movement",
+      "behavior_description": "Aggressive brushing of teeth, talking with foam in mouth, looking in mirror",
+      "intensity": "moderate",
+      "target": "self/reflection",
+      "inferred_mental_state": "Frustration/Resentment",
+      "relevance_to_desire": "Indicates a desire to vent grievances (Social_Expression_Seeking) regarding his father."
+    },
+    {
+      "sequence_id": "seq_002_bathroom_argument_woman",
+      "timestamp_start_seconds": 108,
+      "timestamp_end_seconds": 112,
+      "character_id": "woman_protagonist",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Rapid shift from agreement to shock/anger",
+      "intensity": "strong",
+      "target": "man_protagonist",
+      "inferred_mental_state": "Defensiveness",
+      "relevance_to_desire": "Shows shift from Social_Empathy_Expression to Social_Kin_Protection when she realizes he is criticizing her father."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_trekking_lie",
+      "start_timestamp_seconds": 114,
+      "end_timestamp_seconds": 207,
+      "segment_description": "Woman gifts a trek, man pretends to like it, friend exposes the lie.",
+      "psychological_significance": "Classic example of conflicting beliefs (Woman believes X, Man knows Y) and conflicting desires (Man wants to avoid conflict vs. Man hates activity).",
+      "potential_qa_types": [
+        "desire_identification",
+        "belief_inference",
+        "social_deception_detection"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_lonavala_reveal",
+      "start_timestamp_seconds": 336,
+      "end_timestamp_seconds": 410,
+      "segment_description": "Man on call planning trip, woman thinks he is working, truth comes out.",
+      "psychological_significance": "Demonstrates information asymmetry and the collapse of a deception strategy.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "man_protagonist__woman_protagonist",
+      "character_1_id": "man_protagonist",
+      "character_2_id": "woman_protagonist",
+      "relationship_type": "Spouses",
+      "interaction_quality": "mixed",
+      "mutual_influence": "The woman's high expectations frequently trigger the man's avoidance/deception behaviors. The man's deception subsequently triggers the woman's suspicion and frustration.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 30,
+          "description": "Misunderstanding the occasion (Anniversary vs Mom's Birthday)"
+        },
+        {
+          "timestamp_seconds": 150,
+          "description": "Man signaling friend to shut up while wife watches"
+        },
+        {
+          "timestamp_seconds": 400,
+          "description": "Man caught planning trip without her"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video consists of distinct skits. Character IDs are maintained across skits as they represent the same couple archetype. The primary psychological theme is the friction between social performance (lying to please) and authentic desire.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1",
+    "labels_normalized": true,
+    "normalization_version": "1.0"
+  }
+}

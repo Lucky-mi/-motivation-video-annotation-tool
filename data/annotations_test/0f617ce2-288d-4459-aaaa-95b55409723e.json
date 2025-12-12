@@ -1,0 +1,454 @@
+{
+  "video_id": "0f617ce2-288d-4459-aaaa-95b55409723e",
+  "video_path": "data\\Youtube_videos\\0f617ce2-288d-4459-aaaa-95b55409723e.mp4",
+  "duration_seconds": 297,
+  "annotation_timestamp": "2025-12-08T13:23:08.477788",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Outdoor restaurant patio with wooden structures and greenery",
+    "social_context": "Public dining turning into a staged social performance (flash mob)",
+    "temporal_context": "Daytime",
+    "emotional_atmosphere": "Initially confused/awkward, transitioning to celebratory and romantic",
+    "salient_objects": [
+      "smartphone",
+      "water bottle",
+      "red roses",
+      "engagement ring"
+    ],
+    "activity_type": "marriage_proposal"
+  },
+  "characters": [
+    {
+      "character_id": "focal_woman",
+      "physical_description": "Adult female, long curly hair, black sleeveless top, patterned pants",
+      "estimated_age_group": "adult",
+      "role_in_scene": "proposal_recipient",
+      "initial_state": {
+        "timestamp_seconds": 10,
+        "emotional_state": {
+          "primary_emotion": "Boredom/Annoyance",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Slumped posture, chin resting on hand, gaze directed at smartphone, avoiding eye contact with environment",
+        "apparent_goal": "To disengage from the surrounding disturbance",
+        "behavioral_evidence": [
+          "Leaning head on hand (00:16)",
+          "Scrolling on phone while waiters dance (00:25)",
+          "Furrowed brow and lack of orientation toward the commotion"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 430,
+        "emotional_state": {
+          "primary_emotion": "Joy/Ecstasy",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Standing, embracing partner, smiling broadly (Duchenne), open posture",
+        "apparent_goal": "To accept the proposal and reciprocate affection",
+        "behavioral_evidence": [
+          "Hands covering mouth in surprise (03:32)",
+          "Nodding and smiling (03:50)",
+          "Tight embrace (04:05)"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "situational_awareness",
+          "psychological_basis": "Epistemic_State",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 115,
+          "behavioral_evidence": [
+            "Initially ignores dancers (00:30)",
+            "Sudden orientation and recognition when partner joins dance (01:15)"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "affective_valence",
+          "psychological_basis": "Circumplex_Model",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 345,
+          "behavioral_evidence": [
+            "Frown and withdrawal (00:18)",
+            "Transition to laughter (01:40)",
+            "Crying tears of joy (03:45)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "proposing_man",
+      "physical_description": "Adult male, dark suit, beard",
+      "estimated_age_group": "adult",
+      "role_in_scene": "proposer/performer",
+      "initial_state": {
+        "timestamp_seconds": 5,
+        "emotional_state": {
+          "primary_emotion": "Anticipation/Anxiety",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Sitting stiffly, checking surroundings, preparing to move",
+        "apparent_goal": "To initiate the performance plan",
+        "behavioral_evidence": [
+          "Glancing at waiters (00:05)",
+          "Standing up abruptly to join dancers (00:33)"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 430,
+        "emotional_state": {
+          "primary_emotion": "Relief/Joy",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Relaxed embrace, smiling, kissing partner",
+        "apparent_goal": "To celebrate the acceptance",
+        "behavioral_evidence": [
+          "Kneeling posture (03:45)",
+          "Embracing focal_woman (04:05)"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "performance_anxiety",
+          "psychological_basis": "Emotion_Regulation",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 30,
+          "behavioral_evidence": [
+            "Stiff posture before standing",
+            "Fluid movement once dancing begins",
+            "Relaxed smile after acceptance"
+          ],
+          "confidence": "moderate"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_001",
+      "character_id": "focal_woman",
+      "desire_label": "Social_Stimulus_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 100,
+        "duration_seconds": 100
+      },
+      "reasoning_chain": "Subject perceives the flash mob as an external disturbance -> Displays withdrawal cues (phone usage, hand blocking view) -> Desire is to avoid the social disruption and maintain personal space.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 16,
+          "behavior_type": "body_movement",
+          "description": "Leans chin on hand, looking down at table/phone, physically closing off from the environment."
+        },
+        {
+          "timestamp_seconds": 47,
+          "behavior_type": "eye_gaze",
+          "description": "Fixated on smartphone screen despite loud music and movement nearby."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Physiological_Rest_Seeking",
+          "reasoning": "She looks tired/fatigued, which could explain the lack of engagement.",
+          "why_not_primary": "The active use of the phone suggests cognitive engagement elsewhere, rather than pure physiological rest."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_002",
+      "character_id": "focal_woman",
+      "desire_label": "Epistemic_Uncertainty_Resolution",
+      "maslow_level": "safety",
+      "bdi_component": "belief",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 101,
+        "end_seconds": 130,
+        "duration_seconds": 29
+      },
+      "reasoning_chain": "Subject notices partner is missing/dancing -> Expectation violation occurs -> Orienting response triggered to update belief state about the situation.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 115,
+          "behavior_type": "facial_expression",
+          "description": "Head lifts, eyes widen, mouth opens slightly (surprise micro-expression)."
+        },
+        {
+          "timestamp_seconds": 118,
+          "behavior_type": "body_movement",
+          "description": "Turns body fully toward the performance."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_003",
+      "character_id": "proposing_man",
+      "desire_label": "Esteem_Competence_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 33,
+        "end_seconds": 320,
+        "duration_seconds": 287
+      },
+      "reasoning_chain": "Subject engages in choreographed dance -> Seeks to demonstrate effort and skill to the target -> Precursor to the proposal.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 128,
+          "behavior_type": "body_movement",
+          "description": "Executing synchronized dance moves with the group."
+        },
+        {
+          "timestamp_seconds": 142,
+          "behavior_type": "body_movement",
+          "description": "Lifting a female dancer (display of strength/skill)."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_004",
+      "character_id": "focal_woman",
+      "desire_label": "Social_Intimacy_Acceptance",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 330,
+        "end_seconds": 450,
+        "duration_seconds": 120
+      },
+      "reasoning_chain": "Subject recognizes the roses and the context -> Emotional valence shifts to high positive -> Engages in approach behavior (standing, hugging) to fulfill belonging needs.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 332,
+          "behavior_type": "facial_expression",
+          "description": "Hands to face, wide smile, tears."
+        },
+        {
+          "timestamp_seconds": 355,
+          "behavior_type": "body_movement",
+          "description": "Extending hand to receive the ring."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "focal_woman",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 110,
+        "offset_timestamp_seconds": 120,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 115,
+        "description": "The proposing_man becomes visible as a central participant in the dance.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Stimulus_Avoidance",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Maintenance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 115,
+          "marker_type": "facial_shift",
+          "description": "Transition from neutral/annoyed expression to surprise and recognition."
+        },
+        {
+          "timestamp_seconds": 116,
+          "marker_type": "postural_change",
+          "description": "Stops leaning on hand, sits upright."
+        }
+      ],
+      "visual_marker_of_change": "The exact moment she lifts her head from the phone, sees the man dancing, and her mouth opens in a smile of recognition.",
+      "psychological_interpretation": "A radical update in Belief state (from 'random noise' to 'meaningful signal') triggers a shift from Avoidance to Approach motivation."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "focal_woman",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 330,
+        "offset_timestamp_seconds": 340,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 331,
+        "description": "proposing_man appears with a bouquet of red roses.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Intimacy_Acceptance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 332,
+          "marker_type": "gesture",
+          "description": "Both hands cover the mouth (shock/joy)."
+        },
+        {
+          "timestamp_seconds": 335,
+          "marker_type": "postural_change",
+          "description": "Standing up to meet the partner."
+        }
+      ],
+      "visual_marker_of_change": "The moment the roses are revealed, her hands fly to her face, indicating an emotional peak and recognition of the proposal intent.",
+      "psychological_interpretation": "The explicit cultural symbol (roses) confirms the Intention of the partner, shifting the woman's state to high-arousal belonging fulfillment."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 15,
+      "timestamp_end_seconds": 45,
+      "character_id": "focal_woman",
+      "behavior_category": "body_movement",
+      "behavior_description": "Chin resting on palm, eyes averted to phone screen, minimal reaction to surrounding noise.",
+      "intensity": "moderate",
+      "target": "smartphone",
+      "inferred_mental_state": "Disinterest / Social Withdrawal",
+      "relevance_to_desire": "Indicates a desire to avoid the current social environment (Safety/Comfort)."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 140,
+      "timestamp_end_seconds": 160,
+      "character_id": "focal_woman",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Duchenne smile, laughing, clapping hands.",
+      "intensity": "strong",
+      "target": "proposing_man",
+      "inferred_mental_state": "Joy / Amusement",
+      "relevance_to_desire": "Signals acceptance of the social display and transition to Belonging needs."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 345,
+      "timestamp_end_seconds": 360,
+      "character_id": "proposing_man",
+      "behavior_category": "body_movement",
+      "behavior_description": "Kneeling on one knee, presenting ring box.",
+      "intensity": "strong",
+      "target": "focal_woman",
+      "inferred_mental_state": "Vulnerability / Commitment",
+      "relevance_to_desire": "The definitive behavioral marker of Social_Commitment_Solicitation."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_001",
+      "start_timestamp_seconds": 100,
+      "end_timestamp_seconds": 125,
+      "segment_description": "The woman realizes her partner is part of the flash mob.",
+      "psychological_significance": "Clear example of Belief revision leading to emotional state change (ToM).",
+      "potential_qa_types": [
+        "transition_detection",
+        "emotion_recognition",
+        "belief_inference"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_002",
+      "start_timestamp_seconds": 10,
+      "end_timestamp_seconds": 50,
+      "segment_description": "The woman ignores the flash mob while the man prepares to join.",
+      "psychological_significance": "Demonstrates contrasting mental states (Ignorance vs. Intent) in a dyad.",
+      "potential_qa_types": [
+        "desire_identification",
+        "attention_tracking"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "focal_woman__proposing_man",
+      "character_1_id": "focal_woman",
+      "character_2_id": "proposing_man",
+      "relationship_type": "romantic_partners",
+      "interaction_quality": "mixed",
+      "mutual_influence": "Initially disconnected (woman unaware, man hiding intent), transitioning to high mutual focus and emotional synchrony.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 33,
+          "description": "Man leaves table while woman ignores him."
+        },
+        {
+          "timestamp_seconds": 115,
+          "description": "Visual reconnection when woman sees man dancing."
+        },
+        {
+          "timestamp_seconds": 400,
+          "description": "Physical reunion (hug/kiss) after proposal."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video clearly depicts a 'surprise' scenario, making the ToM distinction between the woman's knowledge state (ignorant) and the man's knowledge state (knowledgeable) very distinct in the first half.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

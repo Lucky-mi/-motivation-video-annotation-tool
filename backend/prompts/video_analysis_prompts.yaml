@@ -1,0 +1,198 @@
+# =============================================================================
+# ⚠️ DEPRECATED - DO NOT USE FOR NEW DEVELOPMENT
+# =============================================================================
+# This file is maintained for backward compatibility only.
+# For new projects, use: backend/prompts/annotation_prompts.yaml
+#
+# Migration Guide:
+# - Replace "comprehensive_video" with "annotation_v5" from annotation_prompts.yaml
+# - Academic English, NeurIPS-grade quality
+# - Full Theory of Mind framework integration
+#
+# Legacy prompts below (Chinese, non-academic style):
+# =============================================================================
+
+comprehensive_video:
+  description: "综合视频分析 - 识别关键时刻和深层动机"
+  template: |
+    你是一位专业的视频内容分析专家,擅长识别人物的深层动机(motivation)和心理渴望(desire)。
+
+    ## 任务说明
+    请仔细观看这个视频,完成以下分析:
+
+    ### 第一步: 识别关键时刻 (What Happened)
+    - 找出视频中的5-15个关键时刻
+    - 记录时间戳和可观察的事件
+    - 描述动作、场景、物体、角色
+
+    ### 第二步: 深度动机分析 (Why It Happened)
+    对每个关键时刻,分析:
+    1. **显性动机 (Explicit Motivation)**: 
+       - 人物表面上表现出的行为动机
+       - 基于直接可观察的行为和语言
+       - 例如: "想要完成工作任务"
+
+    2. **隐性渴望 (Implicit Desire)**:
+       - 人物内心真正的深层需求
+       - 可能与表面行为不一致
+       - 需要结合微表情、肢体语言、情境推断
+       - 例如: "渴望被认可,害怕失败带来的羞耻感"
+
+    3. **渴望分类** (基于马斯洛需求层次):
+       - physiological: 生理需求 (饥饿、疲劳、舒适)
+       - safety: 安全需求 (避险、稳定、保护)
+       - belonging: 归属需求 (爱、友谊、归属感)
+       - esteem: 尊重需求 (认可、成就、地位)
+       - self_actualization: 自我实现 (成长、创造、意义)
+
+    4. **隐性程度评分** (1-5):
+       - 1: 非常显性,行为直接反映动机
+       - 2: 较显性,稍作推断即可理解
+       - 3: 中等,需要结合上下文
+       - 4: 较隐性,需要深度心理分析
+       - 5: 非常隐性,需要专业解读
+
+    5. **视觉线索**:
+       - 支持你推断的具体画面细节
+       - 例如: ["皱眉", "避免眼神接触", "紧握拳头"]
+
+    ### 第三步: 识别动机转变
+    找出视频中motivation发生显著变化的时刻:
+    - 转变的触发事件
+    - 转变前后的动机/渴望对比
+    - 转变的强度 (1-5)
+
+    ## 输出格式
+    请严格按照以下JSON格式输出,不要包含任何其他文字:
+
+    ```json
+    {{
+      "key_moments": [
+        {{
+          "timestamp": "00:15",
+          "timestamp_seconds": 15,
+          
+          "action_description": "人物A打开冰箱,拿出水瓶,犹豫片刻后放回",
+          "visual_context": "深夜厨房,只有冰箱灯光,人物表情疲惫",
+          "objects": ["冰箱", "水瓶"],
+          "characters": ["人物A"],
+          "scene": "厨房",
+          
+          "explicit_motivation": "口渴想喝水",
+          "implicit_desire": "试图通过物理行为转移注意力,逃避内心焦虑",
+          "desire_category": "safety",
+          "motivation_type": "intrinsic",
+          "implicit_level": 4,
+          "reasoning": "虽然表面是喝水,但犹豫和放回的动作暗示这不是真正的需求。深夜独自在厨房、疲惫的表情、以及无目的的行为模式,都指向一种焦虑状态下的转移行为",
+          "visual_cues": ["疲惫的眼神", "犹豫的动作", "最终放弃", "深夜环境"],
+          
+          "confidence": 0.85
+        }}
+      ],
+      
+      "transitions": [
+        {{
+          "from_timestamp": 10,
+          "to_timestamp": 25,
+          "trigger_event": "接到催促电话",
+          "motivation_before": "专注工作,追求完成任务的成就感",
+          "motivation_after": "焦虑不安,产生逃避心理",
+          "desire_before": "获得认可和职业成就",
+          "desire_after": "寻求安全感,避免批评和压力",
+          "transition_type": "external_trigger",
+          "intensity": 4
+        }}
+      ],
+      
+      "overall_narrative": "人物从初期的目标导向(专注工作以获取成就感)逐渐转变为情绪驱动(焦虑逃避),最后通过某种自我调节行为恢复平衡。整个过程展现了从外在动机向内在需求(安全感)的转变",
+      
+      "suggested_keyframe_timestamps": [5, 15, 30, 45, 60]
+    }}
+    ```
+
+    ## 关键原则
+    1. **What要客观**: 基于视觉证据,不加主观臆测
+    2. **Why要深入**: 不满足于表面解释,挖掘深层心理
+    3. **evidence-based**: 每个推断都要有视觉线索支持
+    4. **区分显性与隐性**: 这是最核心的任务
+    5. **关注微表情和肢体语言**: 这些是隐性动机的关键线索
+
+    开始分析:
+
+single_frame:
+  description: "单帧画面分析 - 分析特定时间点的What和Why"
+  parameters:
+    - timestamp
+    - context
+  template: |
+    分析这一帧画面 (时间点: {timestamp}s)
+    {context}
+
+    ## 任务
+    请分析这一帧的What和Why:
+
+    ### What (客观描述)
+    - action_description: 具体发生了什么
+    - visual_context: 视觉场景
+    - objects: 画面中的物体
+    - characters: 画面中的角色
+    - scene: 场景类型
+
+    ### Why (动机分析)
+    - explicit_motivation: 显性动机
+    - implicit_desire: 隐性渴望
+    - desire_category: physiological/safety/belonging/esteem/self_actualization/other
+    - motivation_type: intrinsic/extrinsic/mixed
+    - implicit_level: 1-5 (隐性程度)
+    - reasoning: 你的推理依据
+    - visual_cues: 支持推断的视觉线索列表
+
+    ## 输出格式
+    只输出JSON,不要其他文字:
+
+    ```json
+    {{{{
+      "action_description": "...",
+      "visual_context": "...",
+      "objects": ["..."],
+      "characters": ["..."],
+      "scene": "...",
+      
+      "explicit_motivation": "...",
+      "implicit_desire": "...",
+      "desire_category": "...",
+      "motivation_type": "...",
+      "implicit_level": 3,
+      "reasoning": "...",
+      "visual_cues": ["..."],
+      
+      "confidence": 0.8
+    }}}}
+    ```
+
+    开始分析:
+
+theme_extraction:
+  description: "主题提取 - 基于标注数据提取视频核心主题用于文件命名"
+  parameters:
+    - annotation_data
+  template: |
+    基于以下视频标注数据,提取视频的核心主题,用于文件命名:
+
+    标注数据:
+    {annotation_data}
+
+    请生成:
+    1. 一个简洁的主题关键词 (2-5个字)
+    2. 一个描述性的文件名 (不超过50个字符,不包含特殊字符)
+
+    输出JSON格式:
+    ```json
+    {{{{
+      "theme_keyword": "焦虑与逃避",
+      "suggested_filename": "职场焦虑_深夜独处_motivation转变",
+      "explanation": "视频主要展现了职场压力下的焦虑心理和逃避行为"
+    }}}}
+    ```
+
+    只输出JSON:

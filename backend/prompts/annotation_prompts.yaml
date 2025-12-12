@@ -1,0 +1,1020 @@
+# =============================================================================
+# Video Annotation Prompt Templates
+# Theory of Mind (ToM) Annotation for Desire/Motivation Analysis
+# Version 5.1 - Academic English Style with Quality Pre-screening
+# =============================================================================
+# CHANGELOG from v5.0:
+# - Added quality_assessment for pre-screening videos before full annotation
+# - Implements two-stage annotation pipeline: quality check → full annotation
+# - Reduces cost by filtering unsuitable videos early
+# - Provides rejection logging for upstream optimization
+# CHANGELOG from v4.0:
+# - Removed fixed label vocabulary; model now infers labels from knowledge base
+# - Added "Parsimony Principle" to prevent over-interpretation
+# - Enhanced visual_marker_of_change for keyframe extraction
+# - Strengthened non-verbal behavioral cues throughout
+# - Added edge case handling guidelines
+# - Improved inter-annotator consistency guidelines
+# =============================================================================
+
+# =============================================================================
+# QUALITY PRE-SCREENING (Stage 1 of 2-Stage Annotation Pipeline)
+# =============================================================================
+# Before investing in full annotation, assess video suitability.
+# This reduces annotation costs and maintains dataset quality.
+
+quality_assessment:
+  description: "Video Quality Pre-screening for Theory of Mind Annotation Suitability"
+  version: "1.0"
+  purpose: "Evaluate whether a video is suitable for ToM research annotation before costly full annotation"
+
+  template: |
+    # Video Quality Assessment for Theory of Mind Annotation
+
+    You are a research quality control specialist. Before committing to full Theory of Mind annotation, assess whether this video is suitable for ToM research.
+
+    ## Assessment Criteria
+
+    Evaluate the video across four dimensions. A video must meet minimum thresholds in ALL criteria to be suitable.
+
+    ### 1. Observable Behavior (0-100 points)
+
+    **Required for suitability (threshold: ≥60)**
+    - ✓ **Clear human subjects** with visible faces or bodies
+    - ✓ **Dynamic behavior**: Actions, gestures, facial expressions, or body language changes
+    - ✓ **Sufficient resolution**: Behavioral details are discernible
+
+    **Automatic rejection if:**
+    - ✗ No human subjects present (pure landscape, objects-only, text screens)
+    - ✗ Humans present but completely static (freeze frames, portraits)
+    - ✗ Extreme wide shots where facial expressions are invisible
+    - ✗ Heavy occlusion throughout (faces/bodies consistently blocked)
+
+    **Scoring guide:**
+    - 90-100: Multiple humans with clear facial expressions and body language
+    - 70-89: Clear behavioral signals but some limitations (e.g., single subject, partial occlusion)
+    - 60-69: Minimal but sufficient behavioral cues (distant shots, brief appearances)
+    - 0-59: Insufficient behavioral observability → REJECT
+
+    ---
+
+    ### 2. Psychological Inference Value (0-100 points)
+
+    **Required for suitability (threshold: ≥55)**
+    - ✓ **Inferable mental states**: Emotions, desires, intentions, or beliefs can be reasonably inferred
+    - ✓ **Temporal dynamics**: Mental states change or develop over time (not just static)
+    - ✓ **ToM relevance**: Content involves social interaction, decision-making, or goal-directed behavior
+
+    **Automatic rejection if:**
+    - ✗ Pure mechanical actions without psychological significance (e.g., assembly line work with no variation)
+    - ✗ No discernible goals, emotions, or intentions (random movements, aimless wandering)
+    - ✗ Content is purely informational/instructional without human psychological elements
+
+    **Scoring guide:**
+    - 90-100: Rich psychological content (emotional transitions, social conflicts, desire changes)
+    - 70-89: Clear psychological elements (goal-directed behavior, emotional responses)
+    - 55-69: Basic psychological inference possible (simple desires, basic emotions)
+    - 0-54: No meaningful psychological content → REJECT
+
+    ---
+
+    ### 3. Annotation Feasibility (0-100 points)
+
+    **Required for suitability (threshold: ≥50)**
+    - ✓ **Adequate video quality**: Not excessively blurry, dark, or overexposed
+    - ✓ **Appropriate duration**: 3-300 seconds (too short lacks context, too long is inefficient)
+    - ✓ **Stable footage**: Minimal motion blur, reasonable frame rate
+    - ✓ **Sufficient context**: Scene and situation are comprehensible
+
+    **Automatic rejection if:**
+    - ✗ Video quality makes behavioral observation impossible (extreme blur, darkness, corruption)
+    - ✗ Duration < 2 seconds (insufficient for temporal analysis)
+    - ✗ Extreme chaos preventing coherent analysis (e.g., rapid cuts, strobe effects)
+
+    **Scoring guide:**
+    - 90-100: High-quality footage, ideal duration (10-120s), clear context
+    - 70-89: Good quality with minor issues (slight blur, suboptimal duration)
+    - 50-69: Acceptable with notable limitations (low resolution, brief duration, unclear context)
+    - 0-49: Technical quality prevents reliable annotation → REJECT
+
+    ---
+
+    ### 4. Research Ethics & Appropriateness (0-100 points)
+
+    **Required for suitability (threshold: ≥70)**
+    - ✓ **Ethical content**: No extreme violence, graphic injury, sexual content, or exploitation
+    - ✓ **Research appropriate**: Suitable for inclusion in academic datasets
+    - ✓ **Respectful**: Does not mock, demean, or objectify subjects
+
+    **Automatic rejection if:**
+    - ✗ Graphic violence or injury (blood, assault, torture)
+    - ✗ Sexual or exploitative content
+    - ✗ Content that violates research ethics (covert recordings in private settings, children in distress)
+    - ✗ Hate speech or dehumanizing content
+
+    **Scoring guide:**
+    - 90-100: Fully appropriate for academic research
+    - 70-89: Appropriate with minor considerations (mild conflict, emotional distress within normal bounds)
+    - 0-69: Ethical concerns present → REJECT
+
+    ---
+
+    ## Overall Decision Logic
+
+    **PROCEED_FULL_ANNOTATION** if:
+    - Observable Behavior ≥ 60 AND
+    - Psychological Value ≥ 55 AND
+    - Annotation Feasibility ≥ 50 AND
+    - Research Ethics ≥ 70 AND
+    - Overall Score ≥ 65
+
+    **BORDERLINE_MANUAL_REVIEW** if:
+    - Overall Score 55-64 OR
+    - Any single criterion is within 5 points of threshold
+
+    **REJECT_LOW_QUALITY** if:
+    - Any criterion fails threshold OR
+    - Overall Score < 55
+
+    **REJECT_INAPPROPRIATE** if:
+    - Research Ethics < 70 (regardless of other scores)
+
+    ---
+
+    ## Output Format
+
+    Return ONLY valid JSON without markdown decorators:
+
+    ```json
+    {
+      "is_suitable": true,
+      "overall_score": 78,
+      "criteria_scores": {
+        "observable_behavior": 85,
+        "psychological_value": 75,
+        "annotation_feasibility": 80,
+        "research_ethics": 95
+      },
+      "threshold_analysis": {
+        "observable_behavior_pass": true,
+        "psychological_value_pass": true,
+        "annotation_feasibility_pass": true,
+        "research_ethics_pass": true
+      },
+      "rejection_reasons": [],
+      "suitability_highlights": [
+        "Clear facial expressions and body language from two subjects",
+        "Emotional transition from neutral to frustrated observable",
+        "Good video quality with stable camera"
+      ],
+      "brief_content_summary": "Two individuals engage in a discussion that becomes increasingly tense, with one subject showing signs of frustration through facial expressions and gestures.",
+      "estimated_annotation_value": "high",
+      "recommended_action": "PROCEED_FULL_ANNOTATION",
+      "reviewer_notes": "Strong candidate for ToM annotation; clear desire transition from cooperative to defensive."
+    }
+    ```
+
+    **Field Definitions:**
+
+    - `is_suitable`: Boolean - Final decision (true = proceed with annotation)
+    - `overall_score`: Number 0-100 - Weighted average (Observable:35%, Psychological:35%, Feasibility:20%, Ethics:10%)
+    - `criteria_scores`: Object - Individual scores for each criterion
+    - `threshold_analysis`: Object - Boolean pass/fail for each threshold
+    - `rejection_reasons`: Array - If rejected, specific reasons (empty if suitable)
+    - `suitability_highlights`: Array - If suitable, key positive factors (empty if rejected)
+    - `brief_content_summary`: String - 1-3 sentences describing video content
+    - `estimated_annotation_value`: Enum - "high" | "medium" | "low" (expected research value)
+    - `recommended_action`: Enum - One of the four actions defined above
+    - `reviewer_notes`: String - Additional context for human reviewers (if needed)
+
+    ---
+
+    ## Examples
+
+    **Example 1: High-Quality Suitable Video**
+    ```json
+    {
+      "is_suitable": true,
+      "overall_score": 87,
+      "criteria_scores": {
+        "observable_behavior": 92,
+        "psychological_value": 88,
+        "annotation_feasibility": 85,
+        "research_ethics": 95
+      },
+      "threshold_analysis": {
+        "observable_behavior_pass": true,
+        "psychological_value_pass": true,
+        "annotation_feasibility_pass": true,
+        "research_ethics_pass": true
+      },
+      "rejection_reasons": [],
+      "suitability_highlights": [
+        "Multiple subjects with clearly visible facial expressions",
+        "Complex social interaction with desire conflict and resolution",
+        "Excellent video quality and appropriate duration (45 seconds)"
+      ],
+      "brief_content_summary": "Three colleagues discuss a project deadline, with visible tension escalating then resolving through compromise. Clear shifts in body language and emotional states.",
+      "estimated_annotation_value": "high",
+      "recommended_action": "PROCEED_FULL_ANNOTATION",
+      "reviewer_notes": "Excellent example of desire transformation (affiliation → safety avoidance → collaborative problem-solving)"
+    }
+    ```
+
+    **Example 2: Rejected - No Human Subjects**
+    ```json
+    {
+      "is_suitable": false,
+      "overall_score": 28,
+      "criteria_scores": {
+        "observable_behavior": 10,
+        "psychological_value": 15,
+        "annotation_feasibility": 70,
+        "research_ethics": 95
+      },
+      "threshold_analysis": {
+        "observable_behavior_pass": false,
+        "psychological_value_pass": false,
+        "annotation_feasibility_pass": true,
+        "research_ethics_pass": true
+      },
+      "rejection_reasons": [
+        "No human subjects present in the video",
+        "Content is pure landscape footage without behavioral elements",
+        "No psychological states to infer"
+      ],
+      "suitability_highlights": [],
+      "brief_content_summary": "Aerial drone footage of mountain ranges and forests with no human presence.",
+      "estimated_annotation_value": "low",
+      "recommended_action": "REJECT_LOW_QUALITY",
+      "reviewer_notes": "Unsuitable for ToM annotation - consider filtering search queries to exclude landscape/nature videos"
+    }
+    ```
+
+    **Example 3: Borderline - Manual Review Needed**
+    ```json
+    {
+      "is_suitable": false,
+      "overall_score": 61,
+      "criteria_scores": {
+        "observable_behavior": 62,
+        "psychological_value": 58,
+        "annotation_feasibility": 68,
+        "research_ethics": 90
+      },
+      "threshold_analysis": {
+        "observable_behavior_pass": true,
+        "psychological_value_pass": true,
+        "annotation_feasibility_pass": true,
+        "research_ethics_pass": true
+      },
+      "rejection_reasons": [],
+      "suitability_highlights": [
+        "Subject visible but distant",
+        "Some goal-directed behavior observable",
+        "Brief duration but coherent"
+      ],
+      "brief_content_summary": "Person walks across a plaza, pauses to check phone, then continues walking. Limited facial detail due to distance.",
+      "estimated_annotation_value": "medium",
+      "recommended_action": "BORDERLINE_MANUAL_REVIEW",
+      "reviewer_notes": "Marginal case - simple desire states (navigation, information-seeking) but limited psychological depth. Consider for basic-level questions only."
+    }
+    ```
+
+    ---
+
+    ## Assessment Instructions
+
+    1. Watch the video carefully, paying attention to:
+       - Human subjects and their behaviors
+       - Psychological cues (expressions, gestures, interactions)
+       - Video quality and technical factors
+       - Content appropriateness
+
+    2. Score each criterion independently using the rubrics provided
+
+    3. Calculate overall score: (Observable×0.35 + Psychological×0.35 + Feasibility×0.20 + Ethics×0.10)
+
+    4. Apply decision logic to determine recommended action
+
+    5. If rejecting, provide specific, actionable rejection reasons
+
+    6. If accepting, highlight specific features that make it valuable
+
+    7. Return ONLY the JSON output, no additional text
+
+    Begin assessment:
+
+# =============================================================================
+# PSYCHOLOGICAL KNOWLEDGE BASE
+# =============================================================================
+# This knowledge base provides theoretical grounding for inference.
+# The model should REASON from these principles to generate appropriate labels,
+# NOT simply select from a predefined list.
+
+knowledge_base:
+  description: "Psychological Knowledge Base for Desire/Motivation Inference"
+  usage_instruction: |
+    This knowledge base serves as a REASONING FOUNDATION, not a lookup table.
+    When annotating, the model should:
+    1. Observe behavioral evidence in the video
+    2. Map observations to relevant theoretical constructs below
+    3. INFER appropriate desire/motivation labels using academic terminology
+    4. Generate labels that are specific enough to be meaningful, yet general enough to enable cross-video comparison
+  
+  # ---------------------------------------------------------------------------
+  # BDI Model (Bratman, 1987)
+  # ---------------------------------------------------------------------------
+  bdi_framework:
+    name: "Belief-Desire-Intention Model"
+    reference: "Bratman, M.E. (1987). Intention, Plans, and Practical Reason. Harvard University Press."
+    theoretical_importance: |
+      The BDI model posits that human behavior can be explained through three interconnected mental states.
+      For video annotation, we focus on OBSERVABLE BEHAVIORAL CUES that indicate these states,
+      rather than verbal reports or self-descriptions.
+    components:
+      belief:
+        definition: "The agent's informational state about the world, including representations of self, others, and environmental conditions"
+        key_principle: "Beliefs are inferred from expectation violations and orienting responses"
+        observable_cues:
+          - "Reactions indicating surprise or confusion (suggesting mismatch between belief and reality)"
+          - "Double-takes or re-examination of stimuli"
+          - "Behavioral patterns consistent with a particular world-model"
+          - "Orienting responses when expectations are violated"
+          - "Hesitation before action (indicating belief uncertainty)"
+        NOT_observable_from:
+          - "Verbal statements (audio content should not be primary evidence)"
+      
+      desire:
+        definition: "The motivational state representing goals, objectives, or situations the agent wishes to achieve or avoid"
+        key_principle: "Desires manifest through approach/avoidance behaviors and resource allocation"
+        categories:
+          intrinsic: "Desires arising from internal values, curiosity, or personal satisfaction"
+          extrinsic: "Desires driven by external rewards, recognition, or social contingencies"
+          avoidance: "Desires to prevent negative outcomes or escape aversive situations"
+        observable_cues:
+          - "Goal-directed behavior sequences"
+          - "Approach vs. avoidance movements"
+          - "Expressed preferences through choices and selections"
+          - "Emotional responses to goal achievement or frustration"
+          - "Resource allocation (time, effort, attention)"
+          - "Persistence despite obstacles"
+          - "Displacement activities when goals are blocked"
+      
+      intention:
+        definition: "The deliberative state representing committed plans or action sequences to fulfill desires"
+        key_principle: "Intentions are revealed through preparatory actions and commitment signals"
+        observable_cues:
+          - "Preparatory movements (gathering tools, assuming ready postures)"
+          - "Gaze direction toward action targets"
+          - "Body orientation signaling upcoming movement direction"
+          - "Resistance to distraction once committed"
+          - "Sequential goal-directed behaviors"
+        NOT_observable_from:
+          - "Explicit verbal commitments (focus on motor preparation instead)"
+
+  # ---------------------------------------------------------------------------
+  # Maslow's Hierarchy of Needs (Maslow, 1943, 1954)
+  # ---------------------------------------------------------------------------
+  maslow_hierarchy:
+    name: "Hierarchy of Needs"
+    reference: "Maslow, A.H. (1943). A Theory of Human Motivation. Psychological Review, 50(4), 370-396."
+    theoretical_importance: |
+      Maslow's hierarchy provides a PRIORITIZATION FRAMEWORK for desire inference.
+      Lower-level needs typically take precedence over higher-level needs.
+      Use this hierarchy to guide the Parsimony Principle in labeling.
+    levels:
+      physiological:
+        priority: 1
+        description: "Basic survival needs: hunger, thirst, thermoregulation, rest, pain avoidance"
+        behavioral_indicators:
+          - "Seeking food, water, or rest"
+          - "Shivering, sweating, or thermal comfort-seeking"
+          - "Fatigue signals (yawning, drooping posture)"
+          - "Pain-related protective movements"
+          - "Prioritizing physical needs over social engagement"
+        example_labels: "Physiological_Thermoregulation_Seeking, Physiological_Rest_Seeking"
+      
+      safety:
+        priority: 2
+        description: "Security, stability, protection from physical or psychological harm"
+        behavioral_indicators:
+          - "Vigilance and environmental scanning"
+          - "Avoidance of perceived threats"
+          - "Seeking proximity to safe locations or individuals"
+          - "Defensive postures (guarding, flinching)"
+          - "Risk-averse decision patterns"
+          - "Startle responses and recovery"
+        example_labels: "Safety_Threat_Avoidance, Safety_Environmental_Monitoring"
+      
+      belonging:
+        priority: 3
+        description: "Love, friendship, social connection, group membership, intimacy"
+        behavioral_indicators:
+          - "Seeking physical or visual proximity to others"
+          - "Affiliative behaviors (smiling, nodding, mirroring)"
+          - "Distress upon social exclusion or separation"
+          - "Conformity to group behavioral norms"
+          - "Gaze-seeking and eye contact patterns"
+          - "Touch-seeking or acceptance"
+        example_labels: "Social_Affiliation_Seeking, Social_Inclusion_Maintenance"
+      
+      esteem:
+        priority: 4
+        description: "Recognition, respect, achievement, competence, status"
+        behavioral_indicators:
+          - "Display behaviors showcasing competence"
+          - "Competitive actions and comparisons"
+          - "Seeking attention or acknowledgment"
+          - "Sensitivity to evaluation (checking others' reactions)"
+          - "Postural expansion after success"
+          - "Deflation or withdrawal after failure/criticism"
+        example_labels: "Esteem_Recognition_Seeking, Esteem_Competence_Display"
+      
+      self_actualization:
+        priority: 5
+        description: "Personal growth, creativity, realizing potential, meaning-making"
+        behavioral_indicators:
+          - "Pursuit of challenging goals beyond necessity"
+          - "Creative or exploratory behaviors"
+          - "Values-driven decisions (choosing harder but meaningful paths)"
+          - "Flow states (absorbed engagement)"
+          - "Helping others develop"
+        example_labels: "Growth_Mastery_Pursuit, Growth_Creative_Expression"
+
+  # ---------------------------------------------------------------------------
+  # Theory of Mind Framework (Wellman, 2014; Apperly & Butterfill, 2009)
+  # ---------------------------------------------------------------------------
+  tom_framework:
+    name: "Theory of Mind Components"
+    references:
+      - "Wellman, H.M. (2014). Making Minds: How Theory of Mind Develops. Oxford University Press."
+      - "Apperly, I.A., & Butterfill, S.A. (2009). Do humans have two systems to track beliefs and belief-like states? Psychological Review, 116(4), 953-970."
+    theoretical_importance: |
+      ToM involves attributing mental states to others based on observable behavior.
+      The two-systems view distinguishes implicit (automatic) from explicit (deliberate) ToM.
+      Video annotation primarily captures evidence for EXPLICIT mental state attribution.
+    mental_state_categories:
+      cognitive_states:
+        - type: "Belief"
+          description: "What the person thinks is true about the world"
+          inference_basis: "Expectation violations, surprise reactions"
+        - type: "Knowledge"
+          description: "What the person actually knows vs. is ignorant of"
+          inference_basis: "Search behaviors, information-seeking"
+        - type: "Intention"
+          description: "What the person plans to do next"
+          inference_basis: "Preparatory movements, gaze toward goals"
+        - type: "Attention"
+          description: "What the person is focused on"
+          inference_basis: "Gaze direction, head orientation, body facing"
+      
+      affective_states:
+        - type: "Emotion"
+          description: "Current emotional state"
+          inference_basis: "Facial expressions, body tension, movement quality"
+        - type: "Desire"
+          description: "What the person wants"
+          inference_basis: "Approach/avoidance, persistence, choice behavior"
+        - type: "Preference"
+          description: "What the person likes or dislikes"
+          inference_basis: "Selection patterns, affective responses to stimuli"
+        - type: "Mood"
+          description: "Longer-term affective state"
+          inference_basis: "Baseline activity level, general demeanor"
+
+  # ---------------------------------------------------------------------------
+  # Circumplex Model of Affect (Russell, 1980)
+  # ---------------------------------------------------------------------------
+  emotion_model:
+    name: "Circumplex Model of Affect"
+    reference: "Russell, J.A. (1980). A circumplex model of affect. Journal of Personality and Social Psychology, 39(6), 1161-1178."
+    theoretical_importance: |
+      Emotions can be mapped onto two dimensions: valence (pleasant-unpleasant) and 
+      arousal (high activation-low activation). This provides a systematic framework
+      for describing emotional states observed in video.
+    dimensions:
+      valence:
+        range: "Positive (pleasant) to Negative (unpleasant)"
+        behavioral_markers:
+          positive: ["Approach movements", "Relaxed posture", "Genuine smiles (Duchenne)"]
+          negative: ["Withdrawal", "Tension", "Furrowed brow", "Protective postures"]
+      arousal:
+        range: "High activation to Low activation"
+        behavioral_markers:
+          high: ["Rapid movements", "Increased gesturing", "Widened eyes", "Alert posture"]
+          low: ["Slow movements", "Minimal gesturing", "Drooping posture", "Reduced responsiveness"]
+    
+    canonical_emotions:
+      - name: "Joy/Happiness"
+        valence: "positive"
+        arousal: "moderate-high"
+        behavioral_cues: ["Duchenne smile", "Relaxed open posture", "Energetic movements", "Approach behaviors"]
+      - name: "Contentment"
+        valence: "positive"
+        arousal: "low"
+        behavioral_cues: ["Soft smile", "Relaxed muscles", "Slow movements", "Settled posture"]
+      - name: "Excitement"
+        valence: "positive"
+        arousal: "high"
+        behavioral_cues: ["Wide eyes", "Rapid movements", "Expansive gestures", "Leaning forward"]
+      - name: "Sadness"
+        valence: "negative"
+        arousal: "low"
+        behavioral_cues: ["Downcast gaze", "Slumped posture", "Reduced movement", "Withdrawal"]
+      - name: "Anger"
+        valence: "negative"
+        arousal: "high"
+        behavioral_cues: ["Furrowed brows", "Tense muscles", "Aggressive gestures", "Forward lean", "Clenched fists"]
+      - name: "Fear"
+        valence: "negative"
+        arousal: "high"
+        behavioral_cues: ["Widened eyes", "Freezing", "Flight preparation", "Protective postures", "Startle response"]
+      - name: "Surprise"
+        valence: "neutral/variable"
+        arousal: "high"
+        behavioral_cues: ["Raised eyebrows", "Open mouth", "Orienting response", "Momentary freezing"]
+      - name: "Disgust"
+        valence: "negative"
+        arousal: "moderate"
+        behavioral_cues: ["Nose wrinkling", "Upper lip raise", "Head turning away", "Distancing"]
+
+  # ---------------------------------------------------------------------------
+  # Desire Transition Dynamics
+  # ---------------------------------------------------------------------------
+  desire_dynamics:
+    name: "Desire State Transition Patterns"
+    description: |
+      Desires are not static; they evolve through interactions with the environment
+      and internal states. Annotators should identify TRANSITION POINTS where
+      desire states undergo qualitative or quantitative change.
+    transition_types:
+      emergence:
+        definition: "A new desire appears due to external stimulus or internal reflection"
+        typical_triggers: ["Novel stimulus appearance", "Need state activation", "Social cue"]
+        behavioral_markers: ["Orienting toward new target", "Shift in attention focus", "New approach behavior"]
+      
+      intensification:
+        definition: "An existing desire becomes stronger"
+        typical_triggers: ["Goal proximity", "Obstacle encounter", "Social reinforcement"]
+        behavioral_markers: ["Increased effort", "Greater persistence", "Heightened emotional expression"]
+      
+      attenuation:
+        definition: "An existing desire weakens"
+        typical_triggers: ["Partial satisfaction", "Fatigue", "Competing desire activation"]
+        behavioral_markers: ["Reduced effort", "Attention drift", "Decreased emotional intensity"]
+      
+      transformation:
+        definition: "One desire changes qualitatively into another"
+        typical_triggers: ["Goal substitution", "Reframing of situation", "New information"]
+        behavioral_markers: ["Shift in target", "Change in approach strategy", "New behavioral repertoire"]
+      
+      conflict:
+        definition: "Multiple competing desires create behavioral tension"
+        typical_triggers: ["Incompatible goals", "Approach-avoidance situations"]
+        behavioral_markers: ["Hesitation", "Vacillation", "Mixed emotional signals", "Displacement activities"]
+      
+      resolution:
+        definition: "A desire is satisfied or deliberately abandoned"
+        typical_triggers: ["Goal achievement", "Strategic withdrawal", "Acceptance"]
+        behavioral_markers: ["Relaxation", "Attention release", "Consummatory behavior", "Disengagement"]
+      
+      frustration:
+        definition: "A desire is blocked, leading to emotional and behavioral response"
+        typical_triggers: ["Insurmountable obstacle", "Goal inaccessibility", "Expectation violation"]
+        behavioral_markers: ["Agitation", "Repeated failed attempts", "Emotional outburst", "Withdrawal"]
+
+# =============================================================================
+# ANNOTATION PROMPT (English Academic Style)
+# =============================================================================
+
+annotation_v5:
+  description: "Theory of Mind Video Annotation - Academic English with Open-ended Label Inference"
+  version: "5.0"
+  
+  template: |
+    # Theory of Mind (ToM) Video Annotation Task
+    
+    You are a behavioral psychology research specialist conducting Theory of Mind annotation for video-based desire/motivation analysis. Your task is to identify, label, and analyze desire/motivation states and their temporal dynamics in observed individuals.
+    
+    ## Theoretical Framework
+    
+    You have access to a **Psychological Knowledge Base** (provided above) containing:
+    
+    1. **BDI Model (Bratman, 1987)**: Beliefs, Desires, and Intentions as interconnected mental states
+    2. **Maslow's Hierarchy (1943)**: Need levels from physiological to self-actualization
+    3. **Theory of Mind Framework (Wellman, 2014; Apperly & Butterfill, 2009)**: Mental state attribution
+    4. **Circumplex Model of Affect (Russell, 1980)**: Emotion characterization via valence and arousal
+    5. **Desire Dynamics**: Transition types including emergence, intensification, attenuation, etc.
+    
+    Use these frameworks to **REASON** about observed behaviors and **INFER** appropriate labels. Do NOT simply match observations to predefined categories—engage in genuine psychological inference.
+    
+    ---
+    
+    ## Critical Instructions
+    
+    ### 1. Character Identification (NO NAMES)
+    
+    Do NOT use proper names, even if visible or audible. Identify individuals by:
+    - **Physical features**: "individual wearing blue shirt", "person with glasses", "child with red backpack"
+    - **Role in scene**: "the speaker", "the listener", "the customer"
+    - **Relative position**: "person on the left", "individual in foreground"
+    - **Distinguishing action**: "the person who entered first"
+    
+    Maintain consistent identifiers throughout the annotation (e.g., if you call someone "person_blue_shirt", use this ID consistently).
+    
+    ### 2. Desire/Motivation Labeling (Strict Academic Vocabulary)
+    
+    **DO NOT** use casual sentences like "he wants to escape" or "she is hungry."
+    
+    **MUST** use scientific Noun Phrases in **Snake_Case** format.
+    
+    **Label Construction Pattern**: `Category_SpecificMotivation_Direction`
+    
+    Where:
+    - **Category**: Derived from Maslow's hierarchy or psychological domain (e.g., Physiological, Safety, Social, Esteem, Cognitive, Epistemic)
+    - **SpecificMotivation**: The particular need or goal (e.g., Thermoregulation, Affiliation, Recognition, Information)
+    - **Direction** (optional): Seeking, Avoidance, Maintenance
+    
+    **Examples of VALID labels** (for format reference only—generate your own based on observation):
+    - `Physiological_Thermoregulation_Seeking` (not "cold" or "wants warmth")
+    - `Physiological_Hydration_Seeking` (not "thirsty")
+    - `Safety_Threat_Avoidance` (not "scared")
+    - `Social_Affiliation_Seeking` (not "lonely")
+    - `Social_Conflict_Avoidance` (not "doesn't want to fight")
+    - `Esteem_Recognition_Seeking` (not "wants praise")
+    - `Esteem_Competence_Display` (not "showing off")
+    - `Epistemic_Information_Seeking` (not "curious")
+    - `Epistemic_Uncertainty_Resolution` (not "confused")
+    - `Cognitive_Task_Completion` (not "wants to finish")
+    
+    **If no existing term fits**, create a new label following the `Category_Motivation_Direction` pattern with appropriate psychological terminology.
+    
+    ### 3. Parsimony Principle (Occam's Razor)
+    
+    When analyzing desires, **prioritize lower-level explanations** (Maslow's base) over complex social/existential interpretations unless clear evidence supports higher-level attribution.
+    
+    **Examples**:
+    - Person shivering → `Physiological_Thermoregulation_Seeking` (NOT "Existential_Dread_Expression")
+    - Person yawning → `Physiological_Rest_Seeking` (NOT "Social_Disengagement_Signaling" unless other evidence)
+    - Person eating quickly → `Physiological_Hunger_Satisfaction` (NOT necessarily "Esteem_Efficiency_Display")
+    
+    Only attribute higher-level motivations when:
+    - Physiological needs are clearly met
+    - Behavioral evidence specifically supports social/esteem/growth interpretations
+    - Context makes lower-level explanations implausible
+    
+    ### 4. Transition Detection (Precise Temporal Boundaries)
+    
+    For each desire transition:
+    - Record **onset_timestamp**: The FIRST frame/moment where change becomes detectable
+    - Record **offset_timestamp**: When the new state stabilizes
+    - Identify the **trigger_event**: What precipitated the change
+    - Describe the **visual_marker_of_change**: The EXACT observable moment (e.g., "The moment eyebrows furrowed", "When hand reached toward door")
+    
+    ### 5. Evidence-Based Reasoning (Non-Verbal Focus)
+    
+    **Every inference must be grounded in observable behavioral evidence.**
+    
+    **Prioritize**:
+    - Facial expressions (micro and macro)
+    - Body posture and postural shifts
+    - Gesture patterns
+    - Gaze direction and eye movements
+    - Proxemic behavior (interpersonal distance)
+    - Movement quality (speed, fluidity, tension)
+    - Physiological indicators (visible sweating, shivering, flushing)
+    
+    **De-prioritize or Ignore**:
+    - Speech content (unless no other evidence available)
+    - Text or written information in scene
+    - Background audio
+    
+    When evidence is ambiguous, acknowledge uncertainty explicitly in the `confidence` field and provide `alternative_interpretations`.
+    
+    ### 6. Attribute Dynamics Tracking
+    
+    For each character, track how psychological attributes change over time:
+    - Specify direction: `INCREASING`, `DECREASING`, `STABLE`, or `FLUCTUATING`
+    - Provide initial and final levels: `high`, `moderate`, `low`, or `unknown`
+    - Ground each assessment in specific behavioral evidence
+    
+    ---
+    
+    ## Edge Case Handling
+    
+    ### No Visible Desire Change
+    If no clear desire transition is detected throughout the video:
+    - Set `desire_transitions` to an empty array `[]`
+    - Note in `annotation_metadata.annotation_notes`: "No significant desire state transitions detected; stable motivational state throughout."
+    
+    ### Ambiguous Motivation
+    When multiple interpretations are equally plausible:
+    - Select the most parsimonious (lowest Maslow level) as primary
+    - List alternatives in `alternative_interpretations` with reasoning
+    - Set `confidence` to `low` or `moderate`
+    
+    ### Group Behavior
+    When collective behavior is present:
+    - Annotate individual desires separately
+    - If group-level motivation is evident, create a composite character entry (e.g., "group_protesters")
+    - Note interaction effects in `annotation_metadata.annotation_notes`
+    
+    ### Occluded or Partial Visibility
+    When a character is partially visible or temporarily occluded:
+    - Annotate only what is directly observable
+    - Use `unknown` for levels that cannot be assessed
+    - Note visibility limitations in behavioral evidence descriptions
+    
+    ---
+    
+    ## Output Format
+    
+    Provide your annotation in the following JSON structure. Ensure syntactic validity and completeness.
+    
+    ```json
+    {
+      "video_id": "<string: unique video identifier>",
+      "video_path": "<string: file path>",
+      "duration_seconds": <number: total video duration>,
+      "annotation_timestamp": "<string: ISO 8601 datetime of annotation>",
+      "annotator": "<string: 'AI_Model_[version]'>",
+      
+      "scene_context": {
+        "physical_setting": "<string: location/environment description>",
+        "social_context": "<string: type of social situation - e.g., 'dyadic conversation', 'group activity', 'solitary task'>",
+        "temporal_context": "<string: if discernible - time of day, duration of depicted event>",
+        "emotional_atmosphere": "<string: overall affective tone of the scene>",
+        "salient_objects": ["<string: objects relevant to understanding motivations>"],
+        "activity_type": "<string: primary activity category - e.g., 'negotiation', 'caregiving', 'competition'>"
+      },
+      
+      "characters": [
+        {
+          "character_id": "<string: descriptive ID, e.g., 'person_blue_shirt'>",
+          "physical_description": "<string: observable appearance features>",
+          "estimated_age_group": "<enum: 'child' | 'adolescent' | 'adult' | 'older_adult' | 'unknown'>",
+          "role_in_scene": "<string: functional role description>",
+          
+          "initial_state": {
+            "timestamp_seconds": <number: reference time>,
+            "emotional_state": {
+              "primary_emotion": "<string: inferred from Circumplex model>",
+              "valence": "<enum: 'positive' | 'negative' | 'neutral'>",
+              "arousal": "<enum: 'high' | 'moderate' | 'low'>"
+            },
+            "body_language_summary": "<string: postural and gestural description>",
+            "apparent_goal": "<string: inferred immediate objective>",
+            "behavioral_evidence": ["<string: specific observations supporting this assessment>"]
+          },
+          
+          "final_state": {
+            "timestamp_seconds": <number: reference time>,
+            "emotional_state": {
+              "primary_emotion": "<string>",
+              "valence": "<enum: 'positive' | 'negative' | 'neutral'>",
+              "arousal": "<enum: 'high' | 'moderate' | 'low'>"
+            },
+            "body_language_summary": "<string>",
+            "apparent_goal": "<string>",
+            "behavioral_evidence": ["<string>"]
+          },
+          
+          "attribute_dynamics": [
+            {
+              "attribute_name": "<string: psychological attribute, e.g., 'anxiety_level', 'engagement_level', 'trust_toward_other'>",
+              "psychological_basis": "<string: reference to knowledge base concept>",
+              "trajectory": "<enum: 'INCREASING' | 'DECREASING' | 'STABLE' | 'FLUCTUATING'>",
+              "initial_level": "<enum: 'high' | 'moderate' | 'low' | 'unknown'>",
+              "final_level": "<enum: 'high' | 'moderate' | 'low' | 'unknown'>",
+              "peak_moment_seconds": <number or null: timestamp of maximum intensity if applicable>,
+              "behavioral_evidence": ["<string: specific observable behaviors>"],
+              "confidence": "<enum: 'high' | 'moderate' | 'low'>"
+            }
+          ]
+        }
+      ],
+      
+      "desire_motivation_analysis": [
+        {
+          "analysis_id": "<string: unique identifier>",
+          "character_id": "<string: reference to character>",
+          "desire_label": "<string: Snake_Case label following Category_Motivation_Direction pattern>",
+          "maslow_level": "<enum: 'physiological' | 'safety' | 'belonging' | 'esteem' | 'self_actualization'>",
+          "bdi_component": "<enum: 'belief' | 'desire' | 'intention'>",
+          "desire_type": "<enum: 'intrinsic' | 'extrinsic' | 'avoidance'>",
+          "intensity": "<enum: 'strong' | 'moderate' | 'weak'>",
+          "temporal_scope": {
+            "start_seconds": <number>,
+            "end_seconds": <number>,
+            "duration_seconds": <number>
+          },
+          "reasoning_chain": "<string: step-by-step inference from observation to label>",
+          "supporting_evidence": [
+            {
+              "timestamp_seconds": <number>,
+              "behavior_type": "<string: e.g., 'facial_expression', 'body_movement'>",
+              "description": "<string: specific observable behavior>"
+            }
+          ],
+          "alternative_interpretations": [
+            {
+              "alternative_label": "<string>",
+              "reasoning": "<string: why this interpretation is also plausible>",
+              "why_not_primary": "<string: why the primary label was preferred>"
+            }
+          ],
+          "confidence": "<enum: 'high' | 'moderate' | 'low'>"
+        }
+      ],
+      
+      "desire_transitions": [
+        {
+          "transition_id": "<string: unique identifier>",
+          "character_id": "<string: affected character>",
+          "transition_type": "<enum: 'emergence' | 'intensification' | 'attenuation' | 'transformation' | 'conflict' | 'resolution' | 'frustration'>",
+          
+          "temporal_boundaries": {
+            "onset_timestamp_seconds": <number: first detectable moment of change>,
+            "offset_timestamp_seconds": <number: when new state stabilizes>,
+            "transition_duration_seconds": <number>
+          },
+          
+          "trigger_event": {
+            "timestamp_seconds": <number>,
+            "description": "<string: what precipitated the transition>",
+            "trigger_type": "<enum: 'external_stimulus' | 'social_interaction' | 'internal_state_change' | 'goal_progress' | 'obstacle_encounter' | 'unknown'>"
+          },
+          
+          "desire_before": {
+            "label": "<string: Snake_Case desire label>",
+            "intensity": "<enum: 'strong' | 'moderate' | 'weak'>",
+            "maslow_level": "<string>"
+          },
+          
+          "desire_after": {
+            "label": "<string: Snake_Case desire label>",
+            "intensity": "<enum: 'strong' | 'moderate' | 'weak'>",
+            "maslow_level": "<string>"
+          },
+          
+          "behavioral_markers": [
+            {
+              "timestamp_seconds": <number>,
+              "marker_type": "<string: e.g., 'facial_shift', 'postural_change', 'gaze_redirect'>",
+              "description": "<string>"
+            }
+          ],
+          
+          "visual_marker_of_change": "<string: The EXACT moment/frame description where the shift becomes visible - e.g., 'The moment the eyebrows furrowed and gaze dropped', 'When shoulders visibly relaxed and smile emerged'>",
+          
+          "psychological_interpretation": "<string: theoretical explanation grounded in knowledge base>"
+        }
+      ],
+      
+      "behavioral_sequence": [
+        {
+          "sequence_id": "<string>",
+          "timestamp_start_seconds": <number>,
+          "timestamp_end_seconds": <number>,
+          "character_id": "<string>",
+          "behavior_category": "<enum: 'facial_expression' | 'body_movement' | 'eye_gaze' | 'gesture' | 'posture_shift' | 'proxemic_change' | 'physiological_indicator'>",
+          "behavior_description": "<string: detailed description>",
+          "intensity": "<enum: 'strong' | 'moderate' | 'weak' | 'subtle'>",
+          "target": "<string or null: if directed at another character or object>",
+          "inferred_mental_state": "<string: what this behavior suggests>",
+          "relevance_to_desire": "<string: how this behavior relates to desire/motivation inference>"
+        }
+      ],
+      
+      "key_segments_for_qa": [
+        {
+          "segment_id": "<string>",
+          "start_timestamp_seconds": <number>,
+          "end_timestamp_seconds": <number>,
+          "segment_description": "<string: what happens>",
+          "psychological_significance": "<string: why important for ToM>",
+          "potential_qa_types": ["<string: e.g., 'desire_identification', 'transition_detection', 'emotion_recognition', 'intention_prediction'>"],
+          "difficulty_level": "<enum: 'easy' | 'medium' | 'hard'>",
+          "recommended_for_qa": <boolean>
+        }
+      ],
+      
+      "inter_character_dynamics": [
+        {
+          "dyad_id": "<string: e.g., 'person_blue_shirt__person_glasses'>",
+          "character_1_id": "<string>",
+          "character_2_id": "<string>",
+          "relationship_type": "<string: inferred relationship - e.g., 'strangers', 'acquaintances', 'collaborators', 'adversaries'>",
+          "interaction_quality": "<enum: 'cooperative' | 'competitive' | 'neutral' | 'conflictual' | 'mixed'>",
+          "mutual_influence": "<string: how they affect each other's desire states>",
+          "key_interaction_moments": [
+            {
+              "timestamp_seconds": <number>,
+              "description": "<string>"
+            }
+          ]
+        }
+      ],
+      
+      "annotation_metadata": {
+        "model_used": "<string: AI model identifier and version>",
+        "annotation_version": "5.0",
+        "frameworks_applied": ["BDI", "Maslow", "ToM", "Circumplex", "Desire_Dynamics"],
+        "total_characters_annotated": <number>,
+        "total_transitions_detected": <number>,
+        "overall_annotation_confidence": "<enum: 'high' | 'moderate' | 'low'>",
+        "annotation_notes": "<string: additional observations, limitations, or caveats>",
+        "quality_flags": {
+          "video_quality_issues": <boolean>,
+          "occlusion_present": <boolean>,
+          "multiple_simultaneous_events": <boolean>,
+          "ambiguous_behaviors": <boolean>
+        }
+      }
+    }
+    ```
+    
+    ---
+    
+    ## Final Reminders
+    
+    1. **Syntactic Validity**: Ensure JSON is complete and parseable
+    2. **Consistent IDs**: Use the same character_id throughout all sections
+    3. **Precise Timestamps**: Provide accurate temporal references in seconds
+    4. **Evidence Grounding**: Every inference must cite observable behavior
+    5. **Theoretical Integration**: Reference knowledge base concepts in reasoning
+    6. **Parsimony**: Prefer simpler explanations unless evidence demands complexity
+    7. **Uncertainty Acknowledgment**: Use confidence levels and alternatives honestly
+    8. **QA Utility**: Identify segments valuable for downstream question-answering tasks
+    
+    Begin your annotation:
+
+# =============================================================================
+# ANNOTATION GUIDELINES FOR INTER-ANNOTATOR CONSISTENCY
+# =============================================================================
+# These guidelines should be provided to human reviewers for quality assessment
+
+consistency_guidelines:
+  description: "Guidelines for ensuring annotation consistency across annotators and sessions"
+  
+  principles:
+    - name: "Behavioral Primacy"
+      rule: "Always cite specific observable behaviors before making inferences"
+    
+    - name: "Timestamp Precision"
+      rule: "Timestamps should mark the ONSET of behavioral change, not the peak"
+    
+    - name: "Intensity Calibration"
+      rule: |
+        - 'strong': Behavior is immediately obvious to any observer
+        - 'moderate': Behavior is noticeable upon focused attention
+        - 'weak': Behavior is subtle and requires careful observation
+    
+    - name: "Confidence Calibration"
+      rule: |
+        - 'high': Single clear interpretation supported by multiple behavioral cues
+
+# =============================================================================
+# LEGACY PROMPTS (Kept for Backward Compatibility)
+# =============================================================================
+
+annotation_v3:
+  description: "V3标注 - 属性动态 + 开放式心理推断 (Legacy)"
+  template: |
+    你是一位心理学研究专家，需要对视频进行Theory of Mind（心智理论）标注。
+    
+    # 标注任务
+    
+    ## 1. 场景描述
+    - 地点和环境
+    - 社交情境
+    - 氛围
+    - 关键物品
+    
+    ## 2. 人物描述
+    为每个主要人物创建描述（使用特征描述，不要使用人名）：
+    - 外观特征
+    - 初始状态和最终状态
+    - 在互动中的角色
+    - **属性变化**（重要！）：
+      * 识别可观察的属性（如：愤怒程度、焦虑水平、信任度、警惕性、自信心等）
+      * 说明变化方向：上升/下降/保持/波动
+      * 提供具体的行为证据（表情、动作、语气、肢体语言）
+    
+    ## 3. 行为序列
+    按时间顺序记录关键行为：
+    - 表情变化
+    - 肢体动作
+    - 眼神交流
+    - 语气和对话
+    - 身体距离变化
+    
+    ## 4. Desire/Motivation推断
+    基于心理学知识库进行推断：
+    - 使用BDI模型分析信念、欲望、意图
+    - 参考马斯洛需求层次确定desire类别
+    - 标注属性的上升/下降/其他变化
+    - 识别desire转变的时间点（起始和结束时间戳）
+    
+    请严格按照VideoAnnotationV3的JSON Schema输出结果。

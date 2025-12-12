@@ -1,0 +1,464 @@
+{
+  "video_id": "05b87f40-d313-4d42-8bdf-53d02e3fd656",
+  "video_path": "data\\Youtube_videos\\05b87f40-d313-4d42-8bdf-53d02e3fd656.mp4",
+  "duration_seconds": 260,
+  "annotation_timestamp": "2025-12-08T12:13:06.652298",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Dimly lit, rustic kitchen and dining area with a large island and dining table.",
+    "social_context": "High-stakes family conflict; multi-party interaction involving a patriarch and adult children.",
+    "temporal_context": "Nighttime; likely following a significant event or arrival.",
+    "emotional_atmosphere": "Volatile, hostile, high-tension, shifting from verbal aggression to physical violence.",
+    "salient_objects": [
+      "Beer bottle (held by man in black shirt)",
+      "Food plates",
+      "Cane (near older man)"
+    ],
+    "activity_type": "Interpersonal conflict/Argument"
+  },
+  "characters": [
+    {
+      "character_id": "older_man_beard",
+      "physical_description": "Older white male, white beard, wearing a dark sweater/cardigan.",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "Patriarch/Aggressor",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated, rigid posture, intense gaze directed at others, minimal movement until provocation.",
+        "apparent_goal": "Assert authority and express disappointment/rage.",
+        "behavioral_evidence": [
+          "Fixed glare",
+          "Low, growling vocal tone",
+          "Accusatory pointing"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 260,
+        "emotional_state": {
+          "primary_emotion": "Contempt",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Dominant posture, eating casually after outburst to signal dismissal.",
+        "apparent_goal": "Demonstrate total dominance and lack of remorse.",
+        "behavioral_evidence": [
+          "Resumes eating apple",
+          "Dismissive hand wave",
+          "Verbal insults ('You are a nobody')"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "aggression_level",
+          "psychological_basis": "emotion_model",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 109,
+          "behavioral_evidence": [
+            "Verbal berating",
+            "Physical strike (slap)",
+            "Shouting"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "man_leather_jacket",
+      "physical_description": "Adult male, dark hair, wearing a brown leather jacket and jeans.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Disruptor/Provocateur",
+      "initial_state": {
+        "timestamp_seconds": 30,
+        "emotional_state": {
+          "primary_emotion": "Excitement (Manic)",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Expansive gestures, rapid movements, entering room singing, erratic pacing.",
+        "apparent_goal": "Disrupt the social order and mock the gravity of the situation.",
+        "behavioral_evidence": [
+          "Singing 'Family Therapy'",
+          "Jazz hands gesture",
+          "Ignoring social cues of tension"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 260,
+        "emotional_state": {
+          "primary_emotion": "Contempt",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Leaning against counter, drinking beer, smirk masking tension.",
+        "apparent_goal": "Maintain facade of indifference.",
+        "behavioral_evidence": [
+          "Mocking laughter",
+          "Defensive posture against counter",
+          "Taunting verbal content"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "inhibition_control",
+          "psychological_basis": "bdi_framework",
+          "trajectory": "STABLE",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": null,
+          "behavioral_evidence": [
+            "Singing loudly in tense room",
+            "Insulting father directly",
+            "Erratic movement"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "man_black_shirt",
+      "physical_description": "Adult male, slicked back dark hair, black button-down shirt.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Observer/Victim",
+      "initial_state": {
+        "timestamp_seconds": 40,
+        "emotional_state": {
+          "primary_emotion": "Amusement (Nervous)",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated, relaxed but watching intently, drinking, making sarcastic comments.",
+        "apparent_goal": "Deflect tension through humor.",
+        "behavioral_evidence": [
+          "Smirking",
+          "Sarcastic quips",
+          "Casual drinking posture"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 260,
+        "emotional_state": {
+          "primary_emotion": "Fear/Shock",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Frozen posture, touching face, avoiding eye contact, silenced.",
+        "apparent_goal": "Avoid further harm/remain invisible.",
+        "behavioral_evidence": [
+          "Hand to mouth",
+          "Wide eyes",
+          "Total cessation of speech"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "perceived_safety",
+          "psychological_basis": "maslow_hierarchy",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 109,
+          "behavioral_evidence": [
+            "Relaxed seating initially",
+            "Physical recoil after slap",
+            "Subsequent silence"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_001",
+      "character_id": "older_man_beard",
+      "desire_label": "Esteem_Dominance_Assertion",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 260,
+        "duration_seconds": 260
+      },
+      "reasoning_chain": "Subject perceives loss of control due to children's behavior (betrayal, mockery). This violates his self-concept as the authority figure. He escalates from verbal reprimand to physical violence to re-establish hierarchy.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 109,
+          "behavior_type": "body_movement",
+          "description": "Backhand slap directed at man_black_shirt immediately following a joke."
+        },
+        {
+          "timestamp_seconds": 300,
+          "behavior_type": "verbal_tone",
+          "description": "Calling his son a 'nobody' and daughter a 'coward'."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Safety_Control_Maintenance",
+          "reasoning": "He may feel his empire/safety is threatened by their incompetence, driving the aggression.",
+          "why_not_primary": "The behavior is performative and focuses on humiliation (esteem) rather than practical safety measures."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_002",
+      "character_id": "man_black_shirt",
+      "desire_label": "Social_Tension_Reduction",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 40,
+        "end_seconds": 108,
+        "duration_seconds": 68
+      },
+      "reasoning_chain": "Subject uses humor ('Give him a high five') to bridge the gap between the angry father and the manic brother. This is a deflection strategy to lower the room's emotional temperature.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 105,
+          "behavior_type": "verbal_content",
+          "description": "Joking suggestion to 'give him a high five'."
+        },
+        {
+          "timestamp_seconds": 106,
+          "behavior_type": "facial_expression",
+          "description": "Nervous smile while looking between parties."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_003",
+      "character_id": "man_leather_jacket",
+      "desire_label": "Esteem_Superiority_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 30,
+        "end_seconds": 260,
+        "duration_seconds": 230
+      },
+      "reasoning_chain": "Subject enters with high energy, mocking the context ('Family Therapy'). He refuses to engage with the anger, instead positioning himself above it through mockery and manic detachment.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 35,
+          "behavior_type": "gesture",
+          "description": "Jazz hands and singing."
+        },
+        {
+          "timestamp_seconds": 330,
+          "behavior_type": "facial_expression",
+          "description": "Smirking while being insulted."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Physiological_Stimulation_Seeking",
+          "reasoning": "Behavior is consistent with substance intoxication.",
+          "why_not_primary": "While likely intoxicated, the specific target of his behavior (the father) indicates a psychological motive of rebellion/superiority."
+        }
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "man_black_shirt",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 109,
+        "offset_timestamp_seconds": 112,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 109,
+        "description": "older_man_beard physically strikes him in the face.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Tension_Reduction",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Safety_Physical_Protection",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 109,
+          "marker_type": "physiological_reaction",
+          "description": "Head snaps back, hand immediately covers mouth."
+        },
+        {
+          "timestamp_seconds": 110,
+          "marker_type": "postural_change",
+          "description": "Freezing behavior, shrinking into chair."
+        }
+      ],
+      "visual_marker_of_change": "The moment his head recoils from the slap and his expression shifts from a smirk to shock.",
+      "psychological_interpretation": "Immediate regression from higher-level social maneuvering (Esteem/Belonging) to basic Safety needs due to physical assault. The 'Freeze' response indicates high threat perception."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "older_man_beard",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 100,
+        "offset_timestamp_seconds": 109,
+        "transition_duration_seconds": 9
+      },
+      "trigger_event": {
+        "timestamp_seconds": 105,
+        "description": "man_black_shirt makes a joke about high-fiving.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Esteem_Authority_Maintenance",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Esteem_Dominance_Assertion",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 108,
+          "marker_type": "facial_shift",
+          "description": "Jaw tightens, eyes narrow."
+        },
+        {
+          "timestamp_seconds": 109,
+          "marker_type": "body_movement",
+          "description": "Rapid, violent arm extension (slap)."
+        }
+      ],
+      "visual_marker_of_change": "The sudden shift from verbal arguing to physical action.",
+      "psychological_interpretation": "The joke is perceived as a challenge to authority. The desire to maintain authority intensifies into a desire to physically punish the transgression to re-establish the hierarchy."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 30,
+      "timestamp_end_seconds": 40,
+      "character_id": "man_leather_jacket",
+      "behavior_category": "body_movement",
+      "behavior_description": "Enters room with arms raised, singing loudly.",
+      "intensity": "strong",
+      "target": "older_man_beard",
+      "inferred_mental_state": "Manic defiance",
+      "relevance_to_desire": "Establishes lack of fear/respect for the patriarch's anger."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 109,
+      "timestamp_end_seconds": 110,
+      "character_id": "older_man_beard",
+      "behavior_category": "body_movement",
+      "behavior_description": "Backhand slap to the face of seated man.",
+      "intensity": "strong",
+      "target": "man_black_shirt",
+      "inferred_mental_state": "Rage/Punitive intent",
+      "relevance_to_desire": "Definitive action to satisfy desire for dominance."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 111,
+      "timestamp_end_seconds": 120,
+      "character_id": "man_black_shirt",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Total stillness, hand covering mouth, wide eyes.",
+      "intensity": "strong",
+      "target": null,
+      "inferred_mental_state": "Shock/Fear",
+      "relevance_to_desire": "Indicates shift to safety prioritization."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_slap",
+      "start_timestamp_seconds": 100,
+      "end_timestamp_seconds": 120,
+      "segment_description": "The escalation of argument leading to the physical slap.",
+      "psychological_significance": "Clear demonstration of Maslow level regression (Safety needs triggered) and aggressive dominance display.",
+      "potential_qa_types": [
+        "transition_detection",
+        "emotion_recognition",
+        "desire_identification"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "older_man_beard__man_black_shirt",
+      "character_1_id": "older_man_beard",
+      "character_2_id": "man_black_shirt",
+      "relationship_type": "Father/Son (Dominant/Submissive)",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "older_man_beard suppresses man_black_shirt's agency through fear; man_black_shirt attempts to manage older_man_beard's mood through humor (failed).",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 109,
+          "description": "Physical strike silencing the subordinate."
+        }
+      ]
+    },
+    {
+      "dyad_id": "older_man_beard__man_leather_jacket",
+      "character_1_id": "older_man_beard",
+      "character_2_id": "man_leather_jacket",
+      "relationship_type": "Adversaries",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "man_leather_jacket's mockery fuels older_man_beard's rage; older_man_beard's rage fuels man_leather_jacket's manic defiance.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 330,
+          "description": "Verbal standoff where older_man_beard calls him a 'nobody' and man_leather_jacket laughs."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "Timestamps are relative to the provided clip context. The scene contains high-intensity psychological dynamics suitable for testing transition detection.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

@@ -24,7 +24,8 @@ from backend.batch_processor import batch_processor, TaskStatus
 from backend.user_manager import user_manager
 from config.config import config
 from backend.models_questions import *
-from backend.question_generator import QuestionGenerator, PromptLoader
+from backend.question_generator import QuestionGenerator
+from backend.prompt_loader import PromptLoader
 from fastapi import Query
 from backend.downloader import VideoDownloader
 from backend.content_filter import ContentFilter

@@ -1,0 +1,520 @@
+{
+  "video_id": "063dbf8c-9bf6-453a-954c-062dcb0fa658",
+  "video_path": "data\\Youtube_videos\\063dbf8c-9bf6-453a-954c-062dcb0fa658.mp4",
+  "duration_seconds": 63,
+  "annotation_timestamp": "2025-12-08T12:18:45.929135",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Montage of various engineering environments (construction site, electronics lab, electrical lab, workshop, computer lab)",
+    "social_context": "solitary task / monologue addressing an unseen audience (breaking the fourth wall)",
+    "temporal_context": "Short comedic vignettes",
+    "emotional_atmosphere": "Comedic frustration, exasperation, and resignation",
+    "salient_objects": [
+      "iron rod",
+      "ceiling fan",
+      "circuit board",
+      "wires",
+      "resume/papers"
+    ],
+    "activity_type": "professional_complaint"
+  },
+  "characters": [
+    {
+      "character_id": "civil_engineer",
+      "physical_description": "Male, blue polo shirt, holding an iron rod, construction background",
+      "estimated_age_group": "adult",
+      "role_in_scene": "supervisor",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Aggressive posturing, waving iron rod, furrowed brows",
+        "apparent_goal": "Correcting construction errors",
+        "behavioral_evidence": [
+          "Waving stick aggressively",
+          "Shouting at off-screen workers",
+          "Pointing at specific locations"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 12,
+        "emotional_state": {
+          "primary_emotion": "Disgust",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Throwing hand down in dismissal, turning away",
+        "apparent_goal": "Venting futility of education",
+        "behavioral_evidence": [
+          "Dismissive hand wave",
+          "Resigned facial expression"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "frustration_level",
+          "psychological_basis": "desire_dynamics",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 5,
+          "behavioral_evidence": [
+            "Continuous shouting",
+            "Rapid hand gestures"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "ece_engineer",
+      "physical_description": "Male, pink polo shirt, electronics lab background",
+      "estimated_age_group": "adult",
+      "role_in_scene": "student/technician",
+      "initial_state": {
+        "timestamp_seconds": 13,
+        "emotional_state": {
+          "primary_emotion": "Confusion",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Scratching head, looking upward, hesitant posture",
+        "apparent_goal": "Fixing a ceiling fan",
+        "behavioral_evidence": [
+          "Hand on head (uncertainty)",
+          "Gaze directed at ceiling"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 22,
+        "emotional_state": {
+          "primary_emotion": "Embarrassment",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Sheepish smile, defensive hand gestures",
+        "apparent_goal": "Avoiding immediate responsibility",
+        "behavioral_evidence": [
+          "Nervous smile",
+          "Backing away/deflecting"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "competence_confidence",
+          "psychological_basis": "self_efficacy",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 15,
+          "behavioral_evidence": [
+            "Admitting to missing the lab (implied by gesture)",
+            "Inability to perform task"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "eee_engineer",
+      "physical_description": "Male, patterned shirt (pandas), electrical lab background",
+      "estimated_age_group": "adult",
+      "role_in_scene": "student",
+      "initial_state": {
+        "timestamp_seconds": 23,
+        "emotional_state": {
+          "primary_emotion": "Uncertainty",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Pointing at equipment, calculating gestures",
+        "apparent_goal": "Connecting circuit wires",
+        "behavioral_evidence": [
+          "Pointing finger at different ports",
+          "Furrowed brow"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 37,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Shrugging, careless hand wave, relaxed posture",
+        "apparent_goal": "Completing task with minimal effort",
+        "behavioral_evidence": [
+          "'Whatever' gesture",
+          "Smiling dismissal of risk"
+        ]
+      },
+      "attribute_dynamics": []
+    },
+    {
+      "character_id": "mechanical_engineer",
+      "physical_description": "Male, patterned shirt (pop art), workshop background",
+      "estimated_age_group": "adult",
+      "role_in_scene": "student",
+      "initial_state": {
+        "timestamp_seconds": 38,
+        "emotional_state": {
+          "primary_emotion": "Hope",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Looking around eagerly, scanning environment",
+        "apparent_goal": "Finding female classmates",
+        "behavioral_evidence": [
+          "Scanning head movements",
+          "Adjusting hair"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 47,
+        "emotional_state": {
+          "primary_emotion": "Sadness",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Sighing, shoulders slumping, resigned nod",
+        "apparent_goal": "Accepting social isolation",
+        "behavioral_evidence": [
+          "Deep sigh",
+          "Dropping gaze"
+        ]
+      },
+      "attribute_dynamics": []
+    },
+    {
+      "character_id": "cse_engineer",
+      "physical_description": "Male, orange striped shirt, glasses, computer lab",
+      "estimated_age_group": "adult",
+      "role_in_scene": "professional",
+      "initial_state": {
+        "timestamp_seconds": 48,
+        "emotional_state": {
+          "primary_emotion": "Surprise",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Holding papers, wide eyes, open mouth",
+        "apparent_goal": "Reviewing candidates/situation",
+        "behavioral_evidence": [
+          "Staring at paper",
+          "Sudden head jerk"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 63,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Throwing hands up, aggressive pointing, storming off",
+        "apparent_goal": "Protesting unfair competition",
+        "behavioral_evidence": [
+          "Throwing paper",
+          "Walking away abruptly"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "civil_desire_01",
+      "character_id": "civil_engineer",
+      "desire_label": "Social_Norm_Compliance",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 12,
+        "duration_seconds": 12
+      },
+      "reasoning_chain": "Subject is shouting at workers -> Waving stick indicates authority -> Frustration stems from workers not following orders (belief violation) -> Desire is for compliance and competence.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 2,
+          "behavior_type": "body_movement",
+          "description": "Aggressive waving of iron rod while pointing at construction elements"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Competence_Display",
+          "reasoning": "He might be shouting to prove he knows better than the workers.",
+          "why_not_primary": "The focus is on the workers' errors (compliance) rather than his own skill demonstration."
+        }
+      ],
+      "confidence": "high",
+      "original_label": "Social_Compliance_Seeking"
+    },
+    {
+      "analysis_id": "ece_desire_01",
+      "character_id": "ece_engineer",
+      "desire_label": "Esteem_Competence_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 13,
+        "end_seconds": 22,
+        "duration_seconds": 9
+      },
+      "reasoning_chain": "Subject cannot perform task (fix fan) -> Scratches head (confusion) -> Makes excuses/defers task -> Motivation is to save face despite lack of knowledge.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 15,
+          "behavior_type": "gesture",
+          "description": "Scratching head and looking away sheepishly"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high",
+      "original_label": "Esteem_Competence_Preservation"
+    },
+    {
+      "analysis_id": "eee_desire_01",
+      "character_id": "eee_engineer",
+      "desire_label": "Cognitive_Efficiency_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 23,
+        "end_seconds": 37,
+        "duration_seconds": 14
+      },
+      "reasoning_chain": "Subject is confused by color coding -> Decides to plug wires randomly -> Shrugs off consequences -> Motivation is to finish the task with least cognitive load.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 30,
+          "behavior_type": "gesture",
+          "description": "Dismissive hand wave indicating 'good enough'"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Cognitive_Task_Completion",
+          "reasoning": "He just wants to finish.",
+          "why_not_primary": "The specific behavior of guessing and shrugging emphasizes the 'minimization of effort' over the 'completion' itself."
+        }
+      ],
+      "confidence": "high",
+      "original_label": "Cognitive_Effort_Minimization"
+    },
+    {
+      "analysis_id": "mech_desire_01",
+      "character_id": "mechanical_engineer",
+      "desire_label": "Social_Affiliation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 38,
+        "end_seconds": 47,
+        "duration_seconds": 9
+      },
+      "reasoning_chain": "Subject scans room eagerly -> Expression drops to disappointment -> Context implies looking for gender diversity/romance in mechanical dept -> Desire is social connection.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 40,
+          "behavior_type": "eye_gaze",
+          "description": "Scanning the room left to right with hopeful expression"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "cse_desire_01",
+      "character_id": "cse_engineer",
+      "desire_label": "Safety_Resource_Protection",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 48,
+        "end_seconds": 63,
+        "duration_seconds": 15
+      },
+      "reasoning_chain": "Subject realizes other engineers are taking IT jobs -> Reacts with anger/shock -> Throws papers -> Motivation is protecting his domain/job security from encroachment.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 55,
+          "behavior_type": "gesture",
+          "description": "Aggressively gesturing towards imaginary 'others' entering his field"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Status_Maintenance",
+          "reasoning": "He feels his specialized degree is being devalued.",
+          "why_not_primary": "The context of 'jobs' usually maps to Safety (resources) first in Maslow, though Esteem is a close second."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_civil_01",
+      "character_id": "civil_engineer",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 8,
+        "offset_timestamp_seconds": 11,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 8,
+        "description": "Realization that workers are not listening/competent",
+        "trigger_type": "obstacle_encounter"
+      },
+      "desire_before": {
+        "label": "Social_Norm_Compliance",
+        "intensity": "strong",
+        "maslow_level": "esteem",
+        "original_label": "Social_Compliance_Seeking"
+      },
+      "desire_after": {
+        "label": "Esteem_Vindication_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 10,
+          "marker_type": "postural_change",
+          "description": "Shoulders drop, hand waves dismissively (giving up on the immediate correction)"
+        }
+      ],
+      "visual_marker_of_change": "The moment the aggressive pointing turns into a dismissive throw of the hand",
+      "psychological_interpretation": "Transition from active attempt to control (Compliance) to passive complaint about the situation (Vindication/Venting) due to perceived futility."
+    },
+    {
+      "transition_id": "trans_mech_01",
+      "character_id": "mechanical_engineer",
+      "transition_type": "attenuation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 43,
+        "offset_timestamp_seconds": 46,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 43,
+        "description": "Visual confirmation that no women are present",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Isolation_Acceptance",
+        "intensity": "weak",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 44,
+          "marker_type": "facial_shift",
+          "description": "Smile fades, corners of mouth drop"
+        }
+      ],
+      "visual_marker_of_change": "The moment the hopeful smile fades into a frown and he sighs",
+      "psychological_interpretation": "Desire for affiliation is blocked by reality, leading to resignation (attenuation of the active search)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_eee_01",
+      "timestamp_start_seconds": 25,
+      "timestamp_end_seconds": 35,
+      "character_id": "eee_engineer",
+      "behavior_category": "gesture",
+      "behavior_description": "Alternating pointing between red and blue pins, then shrugging",
+      "intensity": "moderate",
+      "target": "circuit_board",
+      "inferred_mental_state": "Cognitive confusion followed by decision to guess",
+      "relevance_to_desire": "Indicates shift from accuracy-seeking to effort-minimization"
+    },
+    {
+      "sequence_id": "seq_cse_01",
+      "timestamp_start_seconds": 50,
+      "timestamp_end_seconds": 60,
+      "character_id": "cse_engineer",
+      "behavior_category": "body_movement",
+      "behavior_description": "Reading paper, eyes widening, then throwing hands up in exasperation",
+      "intensity": "strong",
+      "target": "imaginary_competitors",
+      "inferred_mental_state": "Shock at unfairness",
+      "relevance_to_desire": "Demonstrates threat to Safety/Job Security"
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_mech_disappointment",
+      "start_timestamp_seconds": 38,
+      "end_timestamp_seconds": 47,
+      "segment_description": "Mechanical engineer looks for girls, finds none, and becomes sad.",
+      "psychological_significance": "Clear example of desire (affiliation) being blocked by environment, leading to emotional shift.",
+      "potential_qa_types": [
+        "desire_identification",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_eee_carelessness",
+      "start_timestamp_seconds": 23,
+      "end_timestamp_seconds": 37,
+      "segment_description": "EEE engineer confused by wiring, decides to just guess.",
+      "psychological_significance": "Illustrates 'satisficing' behavior where accuracy is traded for task completion (effort minimization).",
+      "potential_qa_types": [
+        "intention_prediction",
+        "belief_inference"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 5,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video is a skit featuring one actor playing 5 distinct archetypes. They are treated as separate characters for the purpose of desire analysis. The behavior is exaggerated for comedic effect.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1",
+    "labels_normalized": true,
+    "normalization_version": "1.0"
+  }
+}

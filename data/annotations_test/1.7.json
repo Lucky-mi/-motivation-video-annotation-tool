@@ -1,0 +1,404 @@
+{
+  "video_id": "1.7",
+  "video_path": "data\\Youtube_videos\\1.7.mp4",
+  "duration_seconds": 56,
+  "annotation_timestamp": "2025-12-08T13:47:44.825605",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Various locations: Bedroom, Dining Room, Hallway, NYC Street",
+    "social_context": "Dyadic relationship between a wealthy young woman and her housekeeper/confidante",
+    "temporal_context": "Montage of events spanning several months/seasons",
+    "emotional_atmosphere": "Oscillates between tense, humorous, and affectionate",
+    "salient_objects": [
+      "Gift box",
+      "Newspaper",
+      "Corkboard",
+      "Laptop",
+      "Taxi"
+    ],
+    "activity_type": "caregiving_and_companionship"
+  },
+  "characters": [
+    {
+      "character_id": "maid_uniform_female",
+      "physical_description": "Adult female, dark hair pulled back, wearing black and white maid uniform or coat",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Caretaker / Confidante",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Leaning forward, handing object, attentive gaze",
+        "apparent_goal": "To please the recipient of the gift",
+        "behavioral_evidence": [
+          "Smiling while handing box",
+          "Watching other character's face closely"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 55,
+        "emotional_state": {
+          "primary_emotion": "Surprise",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Mouth open in shock/joy, looking at other character",
+        "apparent_goal": "Following instructions/reacting to urgency",
+        "behavioral_evidence": [
+          "Jaw drop",
+          "Widened eyes"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "protective_instinct",
+          "psychological_basis": "Caregiving system / Social bonding",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 20,
+          "behavioral_evidence": [
+            "Suggesting feeding ducks to comfort",
+            "Warning about 'God watching'",
+            "Facilitating surprise guest"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "brunette_young_female",
+      "physical_description": "Young adult female, long brown hair, fashionable clothing",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Employer / Charge",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Sitting, opening gift, relaxed posture",
+        "apparent_goal": "Receiving gift",
+        "behavioral_evidence": [
+          "Smiles at gift",
+          "Says 'Thank you'"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 55,
+        "emotional_state": {
+          "primary_emotion": "Determination",
+          "valence": "neutral",
+          "arousal": "high"
+        },
+        "body_language_summary": "Walking briskly, gesturing for taxi, commanding tone",
+        "apparent_goal": "Meeting a deadline",
+        "behavioral_evidence": [
+          "Rapid movement",
+          "Urgent vocal tone",
+          "Directing other character"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_dominance",
+          "psychological_basis": "Esteem needs / Hierarchy",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 40,
+          "behavioral_evidence": [
+            "Commands maid to get coats",
+            "Dismisses maid's suggestion about ducks",
+            "Orders maid into taxi"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "maid_uniform_female",
+      "desire_label": "Social_Affiliation_Maintenance",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "duration_seconds": 5
+      },
+      "reasoning_chain": "Character gives gift -> Watches for reaction -> Smiles when thanks are given -> Indicates desire to strengthen social bond through reciprocity.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 1,
+          "behavior_type": "facial_expression",
+          "description": "Expectant smile while handing over box"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "brunette_young_female",
+      "desire_label": "Esteem_Status_Differentiation",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 10,
+        "end_seconds": 15,
+        "duration_seconds": 5
+      },
+      "reasoning_chain": "Verbalizes desire to be with people 'more like me' -> Looks at newspaper image of peer -> Implies desire to separate self from current company or situation based on status/identity.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 12,
+          "behavior_type": "verbal_and_gaze",
+          "description": "Looking at newspaper while articulating social preference"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Inclusion_Seeking",
+          "reasoning": "She may simply be lonely and wanting specific peer connection rather than status differentiation.",
+          "why_not_primary": "The phrasing 'less like...' implies exclusion/differentiation."
+        }
+      ],
+      "confidence": "moderate"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "maid_uniform_female",
+      "desire_label": "Social_Norm_Enforcement",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 19,
+        "end_seconds": 21,
+        "duration_seconds": 2
+      },
+      "reasoning_chain": "Points to board -> Invokes 'God' -> Warning tone -> Attempts to regulate other's behavior through moral/supernatural surveillance authority.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 20,
+          "behavior_type": "gesture",
+          "description": "Stern pointing finger and direct eye contact"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_004",
+      "character_id": "brunette_young_female",
+      "desire_label": "Cognitive_Efficiency_Maximization",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 52,
+        "end_seconds": 56,
+        "duration_seconds": 4
+      },
+      "reasoning_chain": "Urgent tone -> Checks environment (traffic) -> Commands other to hurry -> Focus is on achieving a goal (deadline) with minimal delay.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 53,
+          "behavior_type": "body_movement",
+          "description": "Rapid walking and urgent gesturing"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "brunette_young_female",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 22,
+        "offset_timestamp_seconds": 28,
+        "transition_duration_seconds": 6
+      },
+      "trigger_event": {
+        "timestamp_seconds": 26,
+        "description": "Appearance of the surprise guest (blonde woman)",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Acceptance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 22,
+          "marker_type": "facial_expression",
+          "description": "Furrowed brow, mouth open in agitation"
+        },
+        {
+          "timestamp_seconds": 27,
+          "marker_type": "facial_expression",
+          "description": "Broad smile, relaxation of facial tension"
+        }
+      ],
+      "visual_marker_of_change": "The moment her eyes shift from the maid to the guest, and her expression transforms from angry confusion to delighted recognition.",
+      "psychological_interpretation": "The character's anxiety/confusion (Safety need) regarding the maid's behavior is instantly resolved and replaced by joy (Belonging need) upon realizing the maid orchestrated a positive social surprise."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "maid_uniform_female",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 46,
+        "offset_timestamp_seconds": 50,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 46,
+        "description": "Discussion of her own wedding plans",
+        "trigger_type": "internal_state_change"
+      },
+      "desire_before": {
+        "label": "Social_Support_Provision",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Belonging_Intimacy_Seeking",
+        "intensity": "high",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 49,
+          "marker_type": "facial_expression",
+          "description": "Beaming smile, eyes lighting up while looking at partner"
+        }
+      ],
+      "visual_marker_of_change": "Shift from professional demeanor to personal joy when mentioning 'Mr. Chuck is throwing us... wedding'.",
+      "psychological_interpretation": "Shift from her professional role (caring for employer) to expressing her own personal fulfillment and romantic belonging."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 22,
+      "timestamp_end_seconds": 24,
+      "character_id": "brunette_young_female",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Eyebrows squeezed together, head tilted forward, intense stare",
+      "intensity": "strong",
+      "target": "maid_uniform_female",
+      "inferred_mental_state": "Confusion / Frustration",
+      "relevance_to_desire": "Indicates a blocked desire for understanding (Epistemic) or control (Safety)."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 23,
+      "timestamp_end_seconds": 25,
+      "character_id": "maid_uniform_female",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Wide eyes, feigned blank look, slight suppression of smile",
+      "intensity": "moderate",
+      "target": "brunette_young_female",
+      "inferred_mental_state": "Deception / Anticipation",
+      "relevance_to_desire": "Suggests she is withholding information to facilitate a positive surprise (Social_Surprise_Facilitation)."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_001",
+      "start_timestamp_seconds": 22,
+      "end_timestamp_seconds": 29,
+      "segment_description": "The 'Surprise Guest' reveal scene.",
+      "psychological_significance": "Demonstrates a rapid emotional transition based on new information (ToM: False Belief resolution). The maid knows something the brunette doesn't.",
+      "potential_qa_types": [
+        "desire_transition_detection",
+        "emotion_recognition",
+        "belief_inference"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "qa_seg_002",
+      "start_timestamp_seconds": 29,
+      "end_timestamp_seconds": 35,
+      "segment_description": "Maid suggests feeding ducks; Brunette reluctantly agrees.",
+      "psychological_significance": "Shows conflict between Maid's desire to comfort (treating her like a child) and Brunette's desire for autonomy/maturity, resolved by Brunette's concession.",
+      "potential_qa_types": [
+        "interpersonal_dynamics",
+        "conflict_resolution"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "maid_brunette_dyad",
+      "character_1_id": "maid_uniform_female",
+      "character_2_id": "brunette_young_female",
+      "relationship_type": "long_term_caregiver_charge",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The maid regulates the brunette's emotional state (soothing, warning, surprising); the brunette relies on the maid for practical and emotional support while maintaining a facade of authority.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 20,
+          "description": "Maid exerts moral authority over Brunette."
+        },
+        {
+          "timestamp_seconds": 28,
+          "description": "Shared joy over the surprise guest."
+        },
+        {
+          "timestamp_seconds": 53,
+          "description": "Brunette directs Maid, re-establishing employer-employee dynamic."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video is a montage, meaning temporal continuity is broken between scenes. Desire states are analyzed per scene snippet. The relationship is complex, blending familial intimacy with employment hierarchy.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

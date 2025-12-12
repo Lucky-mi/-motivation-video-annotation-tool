@@ -1,0 +1,356 @@
+{
+  "video_id": "1.14",
+  "video_path": "data\\Youtube_videos\\1.14.mp4",
+  "duration_seconds": 66,
+  "annotation_timestamp": "2025-12-08T14:28:35.832838",
+  "annotator": "AI_Model_5.0",
+  "scene_context": {
+    "physical_setting": "Indoor living room or home office; bookshelves in background, dim lighting, intimate setting.",
+    "social_context": "dyadic conversation",
+    "temporal_context": "Evening (suggested by lighting)",
+    "emotional_atmosphere": "Tense, heavy, conflictual but controlled",
+    "salient_objects": [
+      "couch",
+      "armchair"
+    ],
+    "activity_type": "relationship negotiation/conflict resolution"
+  },
+  "characters": [
+    {
+      "character_id": "female_black_sleeveless",
+      "physical_description": "Adult female, dark hair tied back, wearing black sleeveless top, seated in armchair.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The petitioner/communicator seeking change",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "moderate",
+          "original_emotion": "Frustration"
+        },
+        "body_language_summary": "Leaning forward, intense eye contact, using illustrative hand gestures to emphasize points.",
+        "apparent_goal": "To convince the partner to verbalize a specific sentiment.",
+        "behavioral_evidence": [
+          "Furrowed brow",
+          "Direct gaze",
+          "Repetitive hand gestures indicating 'giving' or 'offering'"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 66,
+        "emotional_state": {
+          "primary_emotion": "Despair/Resignation",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Maintains position but facial expression tightens as partner refuses.",
+        "apparent_goal": "To process the refusal of her request.",
+        "behavioral_evidence": [
+          "Staring intensely at partner",
+          "Mouth slightly open in disbelief/reaction to his refusal"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "insistence_level",
+          "psychological_basis": "desire_dynamics",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 49,
+          "behavioral_evidence": [
+            "Escalation from asking 'just say it again' to pleading 'bear that insult'."
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "male_white_shirt",
+      "physical_description": "Adult male, beard, wearing white button-down shirt, reclining on a couch.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The resistor/listener defending his position",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Annoyance",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Reclining, relaxed but defensive posture, minimal gesturing.",
+        "apparent_goal": "To dismiss the necessity of the partner's request.",
+        "behavioral_evidence": [
+          "Leaning back away from partner",
+          "Casual hand wave dismissing the topic"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 66,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "moderate",
+          "original_emotion": "Anger/Determination"
+        },
+        "body_language_summary": "Sitting up slightly more, firm gestures, shaking head.",
+        "apparent_goal": "To set a hard boundary against the request.",
+        "behavioral_evidence": [
+          "Firm head shake",
+          "Direct eye contact while delivering ultimatum",
+          "Hand gestures indicating negation"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "defensiveness",
+          "psychological_basis": "defense_mechanisms",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 45,
+          "behavioral_evidence": [
+            "Rubbing eyes (blocking)",
+            "Looking away",
+            "Verbalizing 'that's insulting'"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_female_001",
+      "character_id": "female_black_sleeveless",
+      "desire_label": "Social_Emotional_Validation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 66,
+        "duration_seconds": 66
+      },
+      "reasoning_chain": "The subject repeatedly asks the partner to say specific words ('I can try harder'). She explicitly states that the effort of saying it matters more than the fact (00:16). This indicates a need for emotional validation and reassurance within the relationship.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 7,
+          "behavior_type": "verbal_command_and_gesture",
+          "description": "She says 'Just say it again' while gesturing with open hands, indicating a plea for a specific social transaction."
+        },
+        {
+          "timestamp_seconds": 36,
+          "behavior_type": "self_disclosure",
+          "description": "She explains 'What triggers me is when you talk to me in this way,' linking the request to her emotional safety."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Control_Exertion",
+          "reasoning": "She is dictating exactly what he should say, which could be interpreted as a desire to control his behavior rather than seek connection.",
+          "why_not_primary": "Her tone and facial expressions (furrowed brow, pleading tone) suggest distress and a need for reassurance (Belonging) rather than dominance (Esteem/Power)."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_001",
+      "character_id": "male_white_shirt",
+      "desire_label": "Esteem_Autonomy_Assertion",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 45,
+        "end_seconds": 66,
+        "duration_seconds": 21
+      },
+      "reasoning_chain": "Initially, he argues logically. However, at 00:45, he labels her request 'insulting.' This shifts the motivation from logical debate to protecting his self-concept (Esteem). He refuses to comply because doing so would imply he lacks the quality she is asking for.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 45,
+          "behavior_type": "verbal_refusal",
+          "description": "He states 'Yeah, that's insulting' and physically recoils slightly."
+        },
+        {
+          "timestamp_seconds": 53,
+          "behavior_type": "ultimatum_delivery",
+          "description": "He states 'I won't do it and I don't want it,' prioritizing his autonomy over the relationship benefit she promises."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Avoidance",
+          "reasoning": "He might be refusing simply to end the conversation.",
+          "why_not_primary": "His refusal is confrontational ('I'd rather have nothing'), which prolongs conflict rather than avoiding it. The driver is dignity/esteem, not peace."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_001",
+      "character_id": "male_white_shirt",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 26,
+        "offset_timestamp_seconds": 45,
+        "transition_duration_seconds": 19
+      },
+      "trigger_event": {
+        "timestamp_seconds": 25,
+        "description": "Female provides the specific script: 'I can try harder...'",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Cognitive_Dissonance_Reduction",
+        "intensity": "moderate",
+        "maslow_level": "cognitive"
+      },
+      "desire_after": {
+        "label": "Esteem_Competence_Defense",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 26,
+          "marker_type": "blocking_mechanism",
+          "description": "He rubs his eyes vigorously with his fingers, signaling fatigue or frustration with the input."
+        },
+        {
+          "timestamp_seconds": 28,
+          "marker_type": "gaze_aversion",
+          "description": "He looks away from her, breaking the connection."
+        }
+      ],
+      "visual_marker_of_change": "The moment he rubs his eyes at 00:26, signaling he is no longer just listening but actively struggling with/rejecting the input.",
+      "psychological_interpretation": "The female's suggestion that he needs to 'try harder' violates his belief that he is already successful (stated at 00:14). This triggers a defensive response to protect his self-esteem."
+    },
+    {
+      "transition_id": "trans_female_001",
+      "character_id": "female_black_sleeveless",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 45,
+        "offset_timestamp_seconds": 50,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 45,
+        "description": "Male calls her request 'insulting'.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Behavioral_Modification_Attempt",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Conflict_Resolution",
+        "intensity": "strong",
+        "maslow_level": "belonging",
+        "original_label": "Social_Relationship_Salvage"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 49,
+          "marker_type": "gesture_intensification",
+          "description": "She leans in and uses a chopping hand motion to emphasize 'Bear that insult'."
+        }
+      ],
+      "visual_marker_of_change": "At 00:49, her eyebrows raise and she leans forward aggressively to counter his objection.",
+      "psychological_interpretation": "When he claims insult, she realizes the barrier is his ego. She intensifies her request, framing the 'insult' as a necessary sacrifice for the relationship (Maslow: Belonging > Esteem)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 26,
+      "timestamp_end_seconds": 30,
+      "character_id": "male_white_shirt",
+      "behavior_category": "gesture",
+      "behavior_description": "Rubbing eyes with thumb and forefinger while looking down/away.",
+      "intensity": "moderate",
+      "target": "self",
+      "inferred_mental_state": "Cognitive overload / Frustration",
+      "relevance_to_desire": "Indicates the onset of resistance and the psychological cost of the interaction (Safety/Comfort seeking)."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 49,
+      "timestamp_end_seconds": 52,
+      "character_id": "female_black_sleeveless",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Intense stare, slight frown, rapid speech.",
+      "intensity": "strong",
+      "target": "male_white_shirt",
+      "inferred_mental_state": "Urgency / Desperation",
+      "relevance_to_desire": "Shows the high value she places on the outcome (Belonging), willing to challenge his feeling of insult."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_001",
+      "start_timestamp_seconds": 44,
+      "end_timestamp_seconds": 55,
+      "segment_description": "The male character defines the request as 'insulting' and the female asks him to 'bear that insult'.",
+      "psychological_significance": "High-value segment for analyzing conflict between Maslow levels: Female prioritizes Belonging (relationship), Male prioritizes Esteem (dignity).",
+      "potential_qa_types": [
+        "desire_identification",
+        "conflict_analysis",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "female_black_sleeveless__male_white_shirt",
+      "character_1_id": "female_black_sleeveless",
+      "character_2_id": "male_white_shirt",
+      "relationship_type": "intimate_partners",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Negative feedback loop: Her pursuit of validation triggers his defense of competence; his defense of competence triggers her feeling of invalidation.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 16,
+          "description": "She rejects his logic ('That's not the same thing'), forcing him to re-engage."
+        },
+        {
+          "timestamp_seconds": 53,
+          "description": "He rejects her compromise ('I won't do it'), effectively blocking her desire fulfillment."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene is dialogue-heavy, but physical cues (eye rubbing, leaning, gestures) strongly corroborate the verbal content regarding internal states.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1",
+    "labels_normalized": true,
+    "normalization_version": "1.0"
+  }
+}

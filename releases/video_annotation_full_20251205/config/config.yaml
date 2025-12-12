@@ -1,0 +1,14 @@
+# config/config.yaml
+paths:
+  videos: data/videos
+  keyframes: data/keyframes
+  annotations: data/annotations
+
+extraction:
+  mode: uniform  # 'uniform' 或 'gemini'
+  interval_seconds: 5.0
+  max_frames: 50
+
+api_keys:
+  gemini: GEMINI_API_KEY # 或者直接填写你的API key
+  openai: null

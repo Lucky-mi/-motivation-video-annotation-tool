@@ -1,0 +1,473 @@
+{
+  "video_id": "0591eea8-5ef6-4cf1-b3db-d81077a37055",
+  "video_path": "data\\Youtube_videos\\0591eea8-5ef6-4cf1-b3db-d81077a37055.mp4",
+  "duration_seconds": 60,
+  "annotation_timestamp": "2025-12-08T12:07:02.865803",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Bedroom, dimly lit, double bed, night/evening setting",
+    "social_context": "Dyadic intimate relationship (couple) turning into triadic family interaction",
+    "temporal_context": "Night time (implied by sleeping partner)",
+    "emotional_atmosphere": "Tense and eerie (simulated) transitioning to chaotic/humorous",
+    "salient_objects": [
+      "grey_blanket",
+      "pillow",
+      "broom"
+    ],
+    "activity_type": "social_prank"
+  },
+  "characters": [
+    {
+      "character_id": "female_prankster",
+      "physical_description": "Adult female, long dark hair, wearing grey hoodie/blanket covering head",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Instigator/Prankster",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Hunched over under blanket, rocking rhythmically, concealing face",
+        "apparent_goal": "To deceive partner into believing she is possessed",
+        "behavioral_evidence": [
+          "Covering self completely with blanket",
+          "Adopting monotone vocal quality",
+          "Rhythmic rocking motion"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Joy/Happiness",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Collapsing onto bed, hysterical laughter",
+        "apparent_goal": "Reveling in the success of the prank",
+        "behavioral_evidence": [
+          "Uncontrolled laughter",
+          "Breaking character",
+          "Relaxed posture after jump scare"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "self_control",
+          "psychological_basis": "Executive function/Inhibition",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 7,
+          "behavioral_evidence": [
+            "Visibly suppresses a smile/laugh at 00:07",
+            "Maintains deadpan delivery despite partner's reaction",
+            "Releases control completely at end"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "male_victim",
+      "physical_description": "Adult male, beard, white t-shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Target/Victim",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Lying down, eyes closed, sleeping posture",
+        "apparent_goal": "Sleep",
+        "behavioral_evidence": [
+          "Immobile",
+          "Eyes closed",
+          "Under covers"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Recoiling, jumping back, defensive posture",
+        "apparent_goal": "Escape immediate threat",
+        "behavioral_evidence": [
+          "Sudden backward movement",
+          "Audible scream",
+          "Defensive hand raising"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "perceived_safety",
+          "psychological_basis": "Maslow_Safety_Needs",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 56,
+          "behavioral_evidence": [
+            "Initially sleeping (safe)",
+            "Grabs pillow for defense (threat detected)",
+            "Flees room (unsafe)",
+            "Returns with weapon/backup (attempting to restore safety)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "older_male_helper",
+      "physical_description": "Older adult male, grey hair, grey sweater",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "Protector/Investigator",
+      "initial_state": {
+        "timestamp_seconds": 45,
+        "emotional_state": {
+          "primary_emotion": "Concern",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Walking cautiously, holding broom as weapon",
+        "apparent_goal": "Investigate potential threat",
+        "behavioral_evidence": [
+          "Holding improvised weapon (broom)",
+          "Cautious approach to bed",
+          "Following male_victim"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Jumping back, startle response",
+        "apparent_goal": "Avoidance",
+        "behavioral_evidence": [
+          "Physical recoil",
+          "Startle reflex"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_female_01",
+      "character_id": "female_prankster",
+      "desire_label": "Social_Play_Engagement",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 60,
+        "duration_seconds": 60
+      },
+      "reasoning_chain": "Subject initiates a deceptive scenario using lyrics to simulate possession -> Monitors partner's reaction -> Adjusts behavior (feigning sleep) to lure targets closer -> Executes final scare -> Laughs. This sequence indicates a playful, social motivation rather than genuine distress or malice.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 7,
+          "behavior_type": "facial_expression",
+          "description": "Suppressed smile/laugh while hiding under blanket"
+        },
+        {
+          "timestamp_seconds": 39,
+          "behavior_type": "body_movement",
+          "description": "Quickly lies down to feign sleep when partner leaves, preparing for next phase"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Competence_Display",
+          "reasoning": "She may be motivated by the desire to perform the acting challenge well for the camera/audience.",
+          "why_not_primary": "The interaction with the partner and the joy derived from his reaction suggests social play is the dominant driver over pure performance competence."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_01",
+      "character_id": "male_victim",
+      "desire_label": "Epistemic_Uncertainty_Resolution",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 13,
+        "end_seconds": 20,
+        "duration_seconds": 7
+      },
+      "reasoning_chain": "Subject wakes up -> Observes anomaly (partner chanting) -> Asks 'Babe?' repeatedly -> Seeks to understand if this is a joke or medical issue.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 16,
+          "behavior_type": "verbal/facial",
+          "description": "Furrowed brow, questioning tone 'Babe?'"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_02",
+      "character_id": "male_victim",
+      "desire_label": "Safety_Threat_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 21,
+        "end_seconds": 40,
+        "duration_seconds": 19
+      },
+      "reasoning_chain": "Partner's behavior escalates (screaming/lunging) -> Subject interprets this as immediate danger -> Jumps out of bed -> Grabs pillow as shield -> Flees room. The shift from confusion to flight indicates safety needs taking priority.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 28,
+          "behavior_type": "body_movement",
+          "description": "Rapidly jumps out of bed away from partner"
+        },
+        {
+          "timestamp_seconds": 31,
+          "behavior_type": "object_interaction",
+          "description": "Grabs pillow and holds it between self and partner (defensive barrier)"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_03",
+      "character_id": "male_victim",
+      "desire_label": "Social_Support_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 40,
+        "end_seconds": 45,
+        "duration_seconds": 5
+      },
+      "reasoning_chain": "Subject leaves the room -> Returns immediately with another adult male -> This indicates a strategy to manage the threat through social coalition rather than solitary confrontation.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 45,
+          "behavior_type": "proxemic_change",
+          "description": "Re-enters room leading the older male"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_01",
+      "character_id": "male_victim",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 27,
+        "offset_timestamp_seconds": 29,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 27,
+        "description": "Female lunges and screams 'If you go I am going too'",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Safety_Threat_Avoidance",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 28,
+          "marker_type": "postural_change",
+          "description": "Transition from lying down/leaning back to rapid standing/flight"
+        }
+      ],
+      "visual_marker_of_change": "The moment he physically recoils and scrambles off the mattress.",
+      "psychological_interpretation": "Shift from cognitive evaluation (System 2) to rapid fight-or-flight response (System 1) due to sudden proximity of threat."
+    },
+    {
+      "transition_id": "trans_female_01",
+      "character_id": "female_prankster",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 38,
+        "offset_timestamp_seconds": 40,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 38,
+        "description": "Male victim leaves the room",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Play_Engagement",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Play_Engagement",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 39,
+          "marker_type": "postural_change",
+          "description": "Sitting up laughing -> Quickly lying down flat"
+        }
+      ],
+      "visual_marker_of_change": "The moment she stops laughing and throws herself back onto the pillow to appear unconscious.",
+      "psychological_interpretation": "Strategic adjustment of the prank. The desire (play) remains the same, but the tactic shifts from 'active possession' to 'unconscious aftermath' to lure the victim back."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 12,
+      "character_id": "female_prankster",
+      "behavior_category": "body_movement",
+      "behavior_description": "Rhythmic rocking while covered in blanket",
+      "intensity": "moderate",
+      "target": null,
+      "inferred_mental_state": "Simulating abnormal psychological state",
+      "relevance_to_desire": "Establishes the premise of the prank"
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 31,
+      "timestamp_end_seconds": 35,
+      "character_id": "male_victim",
+      "behavior_category": "object_interaction",
+      "behavior_description": "Clutching pillow to chest while backing away",
+      "intensity": "strong",
+      "target": "female_prankster",
+      "inferred_mental_state": "Defensiveness/Fear",
+      "relevance_to_desire": "Evidence of Safety_Threat_Avoidance"
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 52,
+      "timestamp_end_seconds": 55,
+      "character_id": "male_victim",
+      "behavior_category": "object_interaction",
+      "behavior_description": "Using broom handle to prod the female's leg from a distance",
+      "intensity": "moderate",
+      "target": "female_prankster",
+      "inferred_mental_state": "Cautious investigation",
+      "relevance_to_desire": "Conflict between Safety_Threat_Avoidance and Epistemic_Information_Seeking"
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_fear_reaction",
+      "start_timestamp_seconds": 25,
+      "end_timestamp_seconds": 35,
+      "segment_description": "Male victim reacts to the 'possession' escalation by jumping out of bed and grabbing a pillow.",
+      "psychological_significance": "Clear demonstration of the fight-or-flight response and safety-seeking behavior in a domestic setting.",
+      "potential_qa_types": [
+        "desire_identification",
+        "emotion_recognition",
+        "reaction_analysis"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_strategy_shift",
+      "start_timestamp_seconds": 38,
+      "end_timestamp_seconds": 42,
+      "segment_description": "Female prankster switches from active scaring to feigning sleep when the victim leaves.",
+      "psychological_significance": "Shows Theory of Mind (anticipating victim will return) and strategic behavioral adjustment.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "strategy_analysis"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "female_prankster__male_victim",
+      "character_1_id": "female_prankster",
+      "character_2_id": "male_victim",
+      "relationship_type": "romantic_partners",
+      "interaction_quality": "mixed",
+      "mutual_influence": "Female manipulates Male's emotional state for humor; Male's fear reaction reinforces Female's behavior.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 27,
+          "description": "Female lunges, Male jumps (Action-Reaction)"
+        },
+        {
+          "timestamp_seconds": 56,
+          "description": "Female sits up, Male screams (Climax)"
+        }
+      ]
+    },
+    {
+      "dyad_id": "male_victim__older_male_helper",
+      "character_1_id": "male_victim",
+      "character_2_id": "older_male_helper",
+      "relationship_type": "family_members",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Shared vigilance; they reinforce each other's caution.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 45,
+          "description": "Entering room together in formation"
+        },
+        {
+          "timestamp_seconds": 52,
+          "description": "Male victim directs older male's attention to the bed"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scenario is a staged prank. While the female's behavior is performative, the male's reactions appear genuine (startle response, pupil dilation implied by wide eyes, defensive posturing). Annotation treats the male's fear as a genuine psychological state within the context of the deception.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": true,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

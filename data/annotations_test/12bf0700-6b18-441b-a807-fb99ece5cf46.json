@@ -1,0 +1,418 @@
+{
+  "video_id": "12bf0700-6b18-441b-a807-fb99ece5cf46",
+  "video_path": "data\\Youtube_videos\\12bf0700-6b18-441b-a807-fb99ece5cf46.mp4",
+  "duration_seconds": 240,
+  "annotation_timestamp": "2025-12-08T17:27:37.300164",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Fast casual restaurant interior (bar area) followed by a corporate office setting",
+    "social_context": "Workplace conflict resolution followed by a benevolent authority intervention",
+    "temporal_context": "Daytime; sequence spans a confrontation event and a subsequent debriefing meeting",
+    "emotional_atmosphere": "Initially high-tension/hostile, transitioning to emotional release/relief, ending in gratitude/joy",
+    "salient_objects": [
+      "cash/money",
+      "tissue/napkin",
+      "ATM machine",
+      "office chair"
+    ],
+    "activity_type": "personnel_management"
+  },
+  "characters": [
+    {
+      "character_id": "adult_male_protagonist",
+      "physical_description": "Adult male, brown hair, wearing black t-shirt with logo (Scene 1), later wearing suit jacket (Scene 2)",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Authority figure / Undercover boss",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Aggressive posture, pointing fingers, invading personal space of antagonist, loud vocal projection",
+        "apparent_goal": "Defend the female employee and assert dominance over the manager",
+        "behavioral_evidence": [
+          "Forceful finger pointing at male_striped_shirt (00:11)",
+          "Rapid, sharp hand gestures",
+          "Maintains intense eye contact with antagonist",
+          "Physically positions himself between the manager and the employee"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 239,
+        "emotional_state": {
+          "primary_emotion": "Joy/Benevolence",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Open posture, smiling (Duchenne), leaning back in chair, offering hugs",
+        "apparent_goal": "Provide restitution and improve the employee's life",
+        "behavioral_evidence": [
+          "Smiling broadly while listening",
+          "Relaxed seated posture in office chair",
+          "Engaging in a warm embrace (03:45)"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "dominance_display",
+          "psychological_basis": "Esteem_Status_Defense",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 29,
+          "behavioral_evidence": [
+            "Yelling 'You can't treat people like this!'",
+            "Dismissing the manager with hand waves"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "empathy_expression",
+          "psychological_basis": "Social_Affiliation_Seeking",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 139,
+          "behavioral_evidence": [
+            "Voice softens significantly",
+            "Initiates hug (01:39)",
+            "Verbal reassurance 'It's gonna be okay'"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "adult_female_employee",
+      "physical_description": "Adult female, blonde hair, black work uniform (Scene 1), black cardigan (Scene 2)",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Victim / Employee / Beneficiary",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Sadness/Distress",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Hand covering mouth/face, slumped shoulders, avoiding eye contact, leaning on counter",
+        "apparent_goal": "Avoid further conflict and escape the situation",
+        "behavioral_evidence": [
+          "Hand over mouth (00:04)",
+          "Looking away from the confrontation",
+          "Head propped on hand (00:03)"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 239,
+        "emotional_state": {
+          "primary_emotion": "Relief/Joy",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Smiling, making eye contact, relaxed shoulders, nodding",
+        "apparent_goal": "Accept support and connect socially",
+        "behavioral_evidence": [
+          "Genuine smile (03:36)",
+          "Engaging in hug",
+          "Laughing through tears"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "psychological_safety",
+          "psychological_basis": "Maslow_Safety_Needs",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 240,
+          "behavioral_evidence": [
+            "Transition from defensive posture (hand on face) to open posture",
+            "Reduction in crying/sobbing"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001_protagonist",
+      "character_id": "adult_male_protagonist",
+      "desire_label": "Social_Group_Norm_Enforcement",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 40,
+        "duration_seconds": 40
+      },
+      "reasoning_chain": "Subject observes violation of social contract (mistreatment of employee) -> Experiences anger -> Engages in confrontational behavior to re-establish norms and punish violator.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 9,
+          "behavior_type": "gesture",
+          "description": "Aggressive pointing at the manager while verbalizing demands for apology."
+        },
+        {
+          "timestamp_seconds": 29,
+          "behavior_type": "body_movement",
+          "description": "Physically ejecting the manager from the space ('Get out')."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Dominance_Display",
+          "reasoning": "He may be motivated primarily by asserting his own power rather than protecting the employee.",
+          "why_not_primary": "His subsequent behavior (comforting the employee, offering money) suggests altruism/protection was the primary driver, not just ego."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002_employee",
+      "character_id": "adult_female_employee",
+      "desire_label": "Safety_Stress_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 40,
+        "duration_seconds": 40
+      },
+      "reasoning_chain": "Subject is in a high-conflict environment -> Displays physiological signs of distress (crying, hiding face) -> Verbalizes desire to leave employment ('I'm ready to quit').",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 39,
+          "behavior_type": "verbal_and_posture",
+          "description": "States 'I'm ready to quit' while looking down, indicating a desire to flee the aversive stimulus."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003_protagonist",
+      "character_id": "adult_male_protagonist",
+      "desire_label": "Social_Altruism_Enactment",
+      "maslow_level": "self_actualization",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 41,
+        "end_seconds": 240,
+        "duration_seconds": 199
+      },
+      "reasoning_chain": "Threat (manager) is removed -> Subject orients immediately to victim -> Offers resources (money, job security) -> Validates victim's emotions.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 42,
+          "behavior_type": "verbal_commitment",
+          "description": "States 'I'm going to triple your salary'."
+        },
+        {
+          "timestamp_seconds": 210,
+          "behavior_type": "resource_provision",
+          "description": "Physically handing cash/card to the employee at the ATM."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001_protagonist",
+      "character_id": "adult_male_protagonist",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 35,
+        "offset_timestamp_seconds": 45,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 39,
+        "description": "Employee states she is ready to quit.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Group_Norm_Enforcement",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Care_Provision",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 41,
+          "marker_type": "postural_change",
+          "description": "Turns body completely away from the door (where manager left) to face the employee directly."
+        },
+        {
+          "timestamp_seconds": 42,
+          "marker_type": "tone_shift",
+          "description": "Voice drops from shouting volume to conversational/reassuring volume."
+        }
+      ],
+      "visual_marker_of_change": "The moment he stops pointing at the door, turns 90 degrees to the employee, and leans in on the counter.",
+      "psychological_interpretation": "The removal of the antagonist allows the protagonist to shift from a defensive/aggressive state (protecting the group norm) to a nurturing state (protecting the individual victim)."
+    },
+    {
+      "transition_id": "trans_002_employee",
+      "character_id": "adult_female_employee",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 135,
+        "offset_timestamp_seconds": 145,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 138,
+        "description": "Protagonist offers a hug and reassurance.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Acceptance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 139,
+          "marker_type": "proxemic_change",
+          "description": "Leans into the embrace rather than pulling away."
+        },
+        {
+          "timestamp_seconds": 142,
+          "marker_type": "facial_expression",
+          "description": "Crying shifts from distress (grimace) to relief (sobbing into shoulder)."
+        }
+      ],
+      "visual_marker_of_change": "When she accepts the hug, wrapping her arms around him and resting her head on his shoulder.",
+      "psychological_interpretation": "The validation from the authority figure resolves the immediate threat and uncertainty, allowing the subject to fulfill the need for belonging and comfort."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 30,
+      "character_id": "adult_male_protagonist",
+      "behavior_category": "gesture",
+      "behavior_description": "Repeated aggressive pointing, chopping hand motions",
+      "intensity": "strong",
+      "target": "male_striped_shirt",
+      "inferred_mental_state": "Anger/Indignation",
+      "relevance_to_desire": "Indicates active enforcement of boundaries (Social_Group_Norm_Enforcement)."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 125,
+      "timestamp_end_seconds": 128,
+      "character_id": "adult_female_employee",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Hand on forehead, eyes closed, deep exhale",
+      "intensity": "moderate",
+      "target": "self",
+      "inferred_mental_state": "Overwhelm/Exhaustion",
+      "relevance_to_desire": "Suggests a desire for Physiological_Rest_Seeking or Safety_Psychological_Protection."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 208,
+      "timestamp_end_seconds": 212,
+      "character_id": "adult_male_protagonist",
+      "behavior_category": "body_movement",
+      "behavior_description": "Inserting cash/card into ATM slot and handing it to employee",
+      "intensity": "moderate",
+      "target": "adult_female_employee",
+      "inferred_mental_state": "Generosity/Support",
+      "relevance_to_desire": "Concrete action fulfilling Social_Altruism_Enactment."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_confrontation",
+      "start_timestamp_seconds": 0,
+      "end_timestamp_seconds": 40,
+      "segment_description": "Protagonist confronts manager while employee watches in distress.",
+      "psychological_significance": "High-arousal conflict showing conflicting desires: Dominance/Justice (Protagonist) vs. Defense (Manager) vs. Avoidance (Employee).",
+      "potential_qa_types": [
+        "desire_identification",
+        "emotion_recognition",
+        "conflict_analysis"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_transition_to_comfort",
+      "start_timestamp_seconds": 130,
+      "end_timestamp_seconds": 150,
+      "segment_description": "Protagonist comforts the crying employee at the bar.",
+      "psychological_significance": "Clear transition from professional distance to social intimacy/care (Maslow level shift from Safety to Belonging).",
+      "potential_qa_types": [
+        "transition_detection",
+        "empathy_assessment"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "protagonist_employee",
+      "character_1_id": "adult_male_protagonist",
+      "character_2_id": "adult_female_employee",
+      "relationship_type": "Employer/Employee (Protector/Protected)",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Protagonist's display of power and benevolence directly reduces Employee's anxiety and shifts her desire from avoidance to affiliation.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 41,
+          "description": "Protagonist turns to Employee to offer a raise immediately after firing the manager."
+        },
+        {
+          "timestamp_seconds": 139,
+          "description": "Physical embrace signaling safety and acceptance."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video contains a third character (manager/antagonist) who acts as a catalyst for the desires of the two main subjects but is not fully annotated for desire dynamics due to his early exit from the scene.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "video_id": "16d3dbe4-6456-4ba7-bd7c-26097d0f4735",
+  "video_path": "data\\Youtube_videos\\16d3dbe4-6456-4ba7-bd7c-26097d0f4735.mp4",
+  "duration_seconds": 253,
+  "annotation_timestamp": "2025-12-08T18:52:30.711464",
+  "annotator": "AI_Model_v5",
+  "scene_context": {
+    "physical_setting": "Montage of various locations: formal stages, backstage areas, rehearsal studios, and interview sets",
+    "social_context": "Dyadic interactions within a larger group context; primarily focusing on close interpersonal bonding",
+    "temporal_context": "Compilation of events spanning an indeterminate period",
+    "emotional_atmosphere": "Affectionate, playful, supportive, and occasionally intimate",
+    "salient_objects": [
+      "microphones",
+      "stage costumes",
+      "beverage cup",
+      "tennis rackets"
+    ],
+    "activity_type": "social_bonding"
+  },
+  "characters": [
+    {
+      "character_id": "person_broad_shoulders",
+      "physical_description": "Adult male, broad shoulders, often wearing white or pink, frequently changes hair color (brown, reddish-purple)",
+      "estimated_age_group": "adult",
+      "role_in_scene": "recipient of affection/play",
+      "initial_state": {
+        "timestamp_seconds": 3,
+        "emotional_state": {
+          "primary_emotion": "Boredom/Disengagement",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Seated, looking around aimlessly, neutral facial expression",
+        "apparent_goal": "Waiting/Enduring event",
+        "behavioral_evidence": [
+          "Wandering gaze",
+          "Slack facial muscles",
+          "Lack of focus on specific target"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 225,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Relaxed posture, leaning into other person, holding hands",
+        "apparent_goal": "Maintaining physical connection",
+        "behavioral_evidence": [
+          "Physical leaning",
+          "Grasping other's hand",
+          "Soft facial expression"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_receptivity",
+          "psychological_basis": "belonging",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 156,
+          "behavioral_evidence": [
+            "Initially stands passively",
+            "Later actively grabs partner's hand (02:27)",
+            "Leans into hugs"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "person_dark_hair",
+      "physical_description": "Adult male, dark hair (sometimes lighter), often initiates physical contact",
+      "estimated_age_group": "adult",
+      "role_in_scene": "initiator of affection/play",
+      "initial_state": {
+        "timestamp_seconds": 3,
+        "emotional_state": {
+          "primary_emotion": "Alertness",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated, observing environment, glancing at partner",
+        "apparent_goal": "Monitoring environment/partner",
+        "behavioral_evidence": [
+          "Sharp head movements",
+          "Direct gaze"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 338,
+        "emotional_state": {
+          "primary_emotion": "Interest/Focus",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Holding object for partner, staring intensely at partner's face",
+        "apparent_goal": "Social engagement/Care provision",
+        "behavioral_evidence": [
+          "Fixed gaze on partner",
+          "Service act (holding drink)",
+          "Proximity maintenance"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "attention_fixation",
+          "psychological_basis": "tom_framework",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 339,
+          "behavioral_evidence": [
+            "Consistently tracks person_broad_shoulders with gaze across multiple scenes",
+            "Unbroken stare during drink sharing"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "person_dark_hair",
+      "desire_label": "Social_Proximity_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 44,
+        "end_seconds": 60,
+        "duration_seconds": 16
+      },
+      "reasoning_chain": "Subject initiates physical touch (hand holding) -> Smiles upon contact -> Maintains close physical distance -> Indicates desire for affiliation and connection.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 47,
+          "behavior_type": "body_movement",
+          "description": "Reaches out to touch person_broad_shoulders' hand/wrist"
+        },
+        {
+          "timestamp_seconds": 55,
+          "behavior_type": "facial_expression",
+          "description": "Duchenne smile emerges after contact is established"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Status_Display",
+          "reasoning": "Could be performing closeness for an audience/cameras.",
+          "why_not_primary": "The micro-expressions (genuine smiling) and consistency across non-stage contexts suggest intrinsic motivation."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "person_broad_shoulders",
+      "desire_label": "Safety_Anxiety_Reduction",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 111,
+        "end_seconds": 118,
+        "duration_seconds": 7
+      },
+      "reasoning_chain": "Subject displays displacement activities (fidgeting with hands) and downward gaze -> Partner provides physical touch (arm around shoulder) -> Subject accepts touch and looks up -> Suggests motivation to reduce social anxiety or discomfort.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 113,
+          "behavior_type": "body_movement",
+          "description": "Fidgeting/wringing hands together"
+        },
+        {
+          "timestamp_seconds": 114,
+          "behavior_type": "posture_shift",
+          "description": "Shoulders hunched slightly forward"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "moderate"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "person_dark_hair",
+      "desire_label": "Social_Play_Engagement",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 154,
+        "end_seconds": 160,
+        "duration_seconds": 6
+      },
+      "reasoning_chain": "Subject physically lifts partner -> Spins partner around -> Both display high arousal positive affect (laughing) -> Indicates intention to engage in rough-and-tumble social play.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 155,
+          "behavior_type": "body_movement",
+          "description": "Lifting partner off the ground"
+        },
+        {
+          "timestamp_seconds": 157,
+          "behavior_type": "facial_expression",
+          "description": "Open-mouth laughter"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Physiological_Exercise_Pursuit",
+          "reasoning": "Physical exertion is involved.",
+          "why_not_primary": "Social context and shared laughter clearly frame this as interactional play rather than solitary exercise."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "person_broad_shoulders",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 226,
+        "offset_timestamp_seconds": 228,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 226,
+        "description": "person_dark_hair has arm draped around shoulders",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Connection_Passive_Acceptance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Connection_Reciprocation",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 227,
+          "marker_type": "gesture",
+          "description": "Hand actively grasps person_dark_hair's wrist/hand"
+        }
+      ],
+      "visual_marker_of_change": "The moment the hand moves from a resting position to actively gripping the other person's arm.",
+      "psychological_interpretation": "Shift from passive receipt of affection to active maintenance of the bond, indicating a synchronization of desire states between the dyad."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "person_broad_shoulders",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 243,
+        "offset_timestamp_seconds": 246,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 243,
+        "description": "Sudden back-hug from person_dark_hair",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Cognitive_Task_Focus",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Acceptance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 244,
+          "marker_type": "facial_shift",
+          "description": "Expression shifts from surprise (mouth open) to smiling"
+        }
+      ],
+      "visual_marker_of_change": "The transition from the startle response (shoulders up, mouth open) to a relaxed smile.",
+      "psychological_interpretation": "Initial surprise (orienting response) resolves into positive affect, indicating the interruption was appraised as non-threatening and desirable."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 338,
+      "timestamp_end_seconds": 345,
+      "character_id": "person_dark_hair",
+      "behavior_category": "eye_gaze",
+      "behavior_description": "Unwavering gaze directed at person_broad_shoulders' face while holding a drink for him",
+      "intensity": "strong",
+      "target": "person_broad_shoulders",
+      "inferred_mental_state": "Intense focus/Admiration",
+      "relevance_to_desire": "Indicates Social_Attention_Fixation; prioritizing visual connection over the functional task of holding the drink."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_001",
+      "start_timestamp_seconds": 222,
+      "end_timestamp_seconds": 230,
+      "segment_description": "Seated interaction where one character actively grabs the other's hand.",
+      "psychological_significance": "Clear example of desire reciprocation and non-verbal communication of intimacy.",
+      "potential_qa_types": [
+        "desire_identification",
+        "transition_detection"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "qa_seg_002",
+      "start_timestamp_seconds": 111,
+      "end_timestamp_seconds": 120,
+      "segment_description": "Group scene where one character comforts another who is fidgeting.",
+      "psychological_significance": "Demonstrates emotion regulation support within a dyad.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "person_broad_shoulders__person_dark_hair",
+      "character_1_id": "person_broad_shoulders",
+      "character_2_id": "person_dark_hair",
+      "relationship_type": "close_intimates/collaborators",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "High; person_dark_hair often regulates person_broad_shoulders' emotional state through touch; person_broad_shoulders provides target for person_dark_hair's attention.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 45,
+          "description": "Mutual smiling after touch"
+        },
+        {
+          "timestamp_seconds": 155,
+          "description": "Playful lifting/spinning"
+        },
+        {
+          "timestamp_seconds": 227,
+          "description": "Hand holding reciprocation"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "Video is a montage/compilation. Temporal continuity does not exist between clips. Annotation treats the characters' behaviors as a cumulative dataset of their dynamic rather than a linear narrative.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": true,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}

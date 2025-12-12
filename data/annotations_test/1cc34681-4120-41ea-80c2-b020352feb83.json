@@ -1,0 +1,434 @@
+{
+  "video_id": "1cc34681-4120-41ea-80c2-b020352feb83",
+  "video_path": "data\\Youtube_videos\\1cc34681-4120-41ea-80c2-b020352feb83.mp4",
+  "duration_seconds": 230,
+  "annotation_timestamp": "2025-12-08T20:29:27.502138",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Urban bus shelter with glass panels, wet pavement indicating rain",
+    "social_context": "Group of strangers waiting for public transport, evolved into a heated public conflict",
+    "temporal_context": "Daytime, likely rush hour or busy period given the number of people",
+    "emotional_atmosphere": "Hostile, tense, volatile, with undercurrents of absurdity/amusement for bystanders",
+    "salient_objects": [
+      "Red bench",
+      "Shopping bags",
+      "Bus schedule display"
+    ],
+    "activity_type": "Verbal confrontation/Public disturbance"
+  },
+  "characters": [
+    {
+      "character_id": "older_woman_purple_jacket",
+      "physical_description": "Older female, purple jacket, dark trousers, sitting on red bench, holding white shopping bag",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "Instigator/Aggressor",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger/Contempt",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Seated but leaning forward aggressively, repetitive pointing gestures, sustained intense gaze at opponents",
+        "apparent_goal": "To dominate the conversation and assert intellectual superiority",
+        "behavioral_evidence": [
+          "Pointing finger directly at standing man",
+          "Loud vocal projection",
+          "Refusal to break eye contact",
+          "Dismissive hand waves"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 230,
+        "emotional_state": {
+          "primary_emotion": "Anger/Defensiveness",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Still seated, orientation shifted slightly to track the man walking away, maintaining verbal barrage",
+        "apparent_goal": "To have the last word and demean the departing man's status",
+        "behavioral_evidence": [
+          "Shouting after the man as he walks away",
+          "Rigid posture",
+          "Continued pointing"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "dominance_seeking",
+          "psychological_basis": "Esteem_Competence_Display",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 48,
+          "behavioral_evidence": [
+            "Explicitly stating 'I'm a lot brighter than you lot'",
+            "Interrupting others repeatedly",
+            "Using imperative gestures (pointing, waving away)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "older_man_black_leather",
+      "physical_description": "Older male, black leather jacket, cap, glasses, holding green bag",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "Primary Respondent/Target",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Annoyance/Disbelief",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing, facing the woman, shifting weight, gesturing with free hand",
+        "apparent_goal": "To refute the woman's claims",
+        "behavioral_evidence": [
+          "Shaking head",
+          "Gesturing towards the woman while speaking",
+          "Furrowed brow"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 230,
+        "emotional_state": {
+          "primary_emotion": "Frustration/Resignation",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Walking away from the shelter, turning back briefly, then orienting toward bus schedule",
+        "apparent_goal": "To disengage from the conflict",
+        "behavioral_evidence": [
+          "Physical locomotion away from the aggressor",
+          "Checking the timetable (displacement/termination activity)",
+          "Breaking eye contact"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_engagement",
+          "psychological_basis": "Social_Affiliation_Seeking",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 110,
+          "behavioral_evidence": [
+            "Initially engages in debate",
+            "Attempts to leave multiple times but is pulled back by insults",
+            "Finally walks away to the timetable"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "woman_red_fleece",
+      "physical_description": "Female, red fleece jacket, glasses, dark hair, holding white bag",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Observer/Commentator",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Amusement/Surprise",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing, arms crossed or holding bag, smiling/laughing, looking between combatants",
+        "apparent_goal": "To observe the spectacle and share amusement with others",
+        "behavioral_evidence": [
+          "Broad smiling",
+          "Laughing out loud",
+          "Looking at other bystanders for social referencing"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 230,
+        "emotional_state": {
+          "primary_emotion": "Amusement",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Relaxed standing posture, observing the man walk away",
+        "apparent_goal": "To monitor the situation outcome",
+        "behavioral_evidence": [
+          "Watching the man leave",
+          "Maintained smile"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_woman_purple_01",
+      "character_id": "older_woman_purple_jacket",
+      "desire_label": "Esteem_Competence_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 230,
+        "duration_seconds": 230
+      },
+      "reasoning_chain": "The subject repeatedly asserts her intelligence ('I'm a bit brighter than you lot') and knowledge (history, geography, politics). This indicates a strong desire to be recognized as competent and superior to the group, likely compensating for a perceived lack of status or the social setting.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 5,
+          "behavior_type": "verbal_assertion_and_gesture",
+          "description": "States 'I'm a lot brighter' while pointing emphatically at the group."
+        },
+        {
+          "timestamp_seconds": 45,
+          "behavior_type": "posture_dominance",
+          "description": "Leans forward, invading the personal space of the standing men visually and vocally."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Seeking",
+          "reasoning": "She may simply desire the stimulation of conflict regardless of the topic.",
+          "why_not_primary": "The specific content of her insults focuses on intelligence and knowledge, suggesting Esteem is the root driver."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_man_black_leather_01",
+      "character_id": "older_man_black_leather",
+      "desire_label": "Esteem_Respect_Maintenance",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 100,
+        "end_seconds": 180,
+        "duration_seconds": 80
+      },
+      "reasoning_chain": "When the woman insults him, he counters by mentioning he 'served for this country.' This is a defensive move to establish his worth and demand respect in the face of her degradation.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 115,
+          "behavior_type": "verbal_defense",
+          "description": "States 'I served for this country' with a serious tone and direct eye contact."
+        },
+        {
+          "timestamp_seconds": 118,
+          "behavior_type": "posture_stiffening",
+          "description": "Straightens back and stands taller when delivering this line."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_man_black_leather_02",
+      "character_id": "older_man_black_leather",
+      "desire_label": "Social_Conflict_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 180,
+        "end_seconds": 230,
+        "duration_seconds": 50
+      },
+      "reasoning_chain": "After his attempt to gain respect fails (she mocks his service), he realizes the interaction is futile. He physically withdraws to satisfy the desire to avoid further psychological stress.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 185,
+          "behavior_type": "locomotion",
+          "description": "Turns back on the woman and walks several meters away."
+        },
+        {
+          "timestamp_seconds": 190,
+          "behavior_type": "attention_shift",
+          "description": "Focuses gaze on the bus timetable, deliberately ignoring her continued shouting."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_man_black_leather_01",
+      "character_id": "older_man_black_leather",
+      "transition_type": "conflict",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 35,
+        "offset_timestamp_seconds": 45,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 37,
+        "description": "Woman tells him to 'keep his mouth shut'",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Truth_Correction",
+        "intensity": "moderate",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Conflict_Avoidance",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 38,
+          "marker_type": "gesture",
+          "description": "Waves hand dismissively ('Oh, rubbish')."
+        },
+        {
+          "timestamp_seconds": 40,
+          "marker_type": "body_orientation",
+          "description": "Turns body away from her towards the street."
+        }
+      ],
+      "visual_marker_of_change": "The moment he waves his hand dismissively and pivots his feet away from the bench.",
+      "psychological_interpretation": "The subject experiences a conflict between wanting to correct the woman's statements (Esteem) and realizing the futility of the argument, leading to a desire to disengage (Safety/Avoidance)."
+    },
+    {
+      "transition_id": "trans_man_black_leather_02",
+      "character_id": "older_man_black_leather",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 110,
+        "offset_timestamp_seconds": 120,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 108,
+        "description": "Woman insults his intelligence/character again",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Conflict_Avoidance",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Esteem_Respect_Maintenance",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 112,
+          "marker_type": "body_orientation",
+          "description": "Stops walking away, turns back fully to face her."
+        },
+        {
+          "timestamp_seconds": 115,
+          "marker_type": "gesture",
+          "description": "Points at chest while stating 'I served for this country'."
+        }
+      ],
+      "visual_marker_of_change": "The moment he halts his departure, pivots 180 degrees back to the woman, and stiffens his posture to deliver his defense.",
+      "psychological_interpretation": "The desire to avoid conflict is overridden by a sudden intensification of the desire to defend his ego/status after a specific insult, causing him to re-engage."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 10,
+      "character_id": "older_woman_purple_jacket",
+      "behavior_category": "gesture",
+      "behavior_description": "Pointing finger repeatedly at the standing group while leaning forward.",
+      "intensity": "strong",
+      "target": "older_man_black_leather",
+      "inferred_mental_state": "Aggression/Dominance",
+      "relevance_to_desire": "Indicates Esteem_Dominance_Assertion; physical manifestation of the desire to control the interaction."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 120,
+      "timestamp_end_seconds": 125,
+      "character_id": "woman_red_fleece",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Laughing with mouth open, looking at older_man_grey_hair.",
+      "intensity": "moderate",
+      "target": "older_man_grey_hair",
+      "inferred_mental_state": "Amusement/Shared Disbelief",
+      "relevance_to_desire": "Indicates Social_Affiliation_Seeking; bonding over the absurdity of the situation."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_service_claim",
+      "start_timestamp_seconds": 110,
+      "end_timestamp_seconds": 130,
+      "segment_description": "Older man claims he served the country; woman mocks him asking if he served in the kitchen.",
+      "psychological_significance": "Clear example of Esteem needs clashing. Man seeks respect via status (veteran); Woman attacks that specific status to maintain dominance.",
+      "potential_qa_types": [
+        "desire_identification",
+        "transition_detection",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_final_disengagement",
+      "start_timestamp_seconds": 180,
+      "end_timestamp_seconds": 200,
+      "segment_description": "Older man finally walks away to check the bus schedule.",
+      "psychological_significance": "Demonstrates resolution of an approach-avoidance conflict where avoidance (Safety) finally wins over confrontation (Esteem).",
+      "potential_qa_types": [
+        "intention_prediction",
+        "desire_identification"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "woman_purple__man_black",
+      "character_1_id": "older_woman_purple_jacket",
+      "character_2_id": "older_man_black_leather",
+      "relationship_type": "strangers",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Cyclical escalation. The woman's insults trigger the man's defense mechanisms, which in turn provides her with more material to attack, sustaining the conflict loop until he physically breaks it.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 40,
+          "description": "Man tries to dismiss her; she escalates volume."
+        },
+        {
+          "timestamp_seconds": 115,
+          "description": "Man plays 'veteran card'; Woman trumps it with mockery."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video depicts a high-conflict scenario. The primary subject (woman in purple) exhibits behavior consistent with high Esteem needs (dominance) potentially masking other insecurities, but strictly behavioral analysis points to Competence Display and Dominance Assertion. The respondent (man in black) shows classic approach-avoidance conflict behavior.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  }
+}
