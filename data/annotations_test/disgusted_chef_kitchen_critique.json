@@ -1,0 +1,481 @@
+{
+  "video_id": "1.4",
+  "video_path": "data\\Youtube_videos\\1.4.mp4",
+  "duration_seconds": 42,
+  "annotation_timestamp": "2025-12-08T14:47:39.277752",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Professional restaurant kitchen and dining pass area",
+    "social_context": "High-stakes professional critique / hierarchy enforcement",
+    "temporal_context": "Dinner service or challenge evaluation",
+    "emotional_atmosphere": "Tense, hostile, disgusted, shameful",
+    "salient_objects": [
+      "napkin",
+      "plate of food",
+      "fork"
+    ],
+    "activity_type": "culinary_evaluation"
+  },
+  "characters": [
+    {
+      "character_id": "chef_blond_male",
+      "physical_description": "Adult male, blond hair, white chef jacket",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Head Chef / Authority Figure",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Disgust",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Hand covering mouth, gagging reflex, hunched posture",
+        "apparent_goal": "Expel noxious substance",
+        "behavioral_evidence": [
+          "Audible gagging sound",
+          "Hand immediately covers mouth",
+          "Spitting food into napkin"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 41,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing tall, commanding gestures, observing others",
+        "apparent_goal": "Enforce lesson through public shaming",
+        "behavioral_evidence": [
+          "Directing other staff to eat",
+          "Watching reactions of subordinates"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "dominance_display",
+          "psychological_basis": "maslow_hierarchy_esteem",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 28,
+          "behavioral_evidence": [
+            "Interrogating subordinate",
+            "Ordering others to consume bad food",
+            "Refusing to throw food away despite request"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "chef_female_brunette",
+      "physical_description": "Adult female, dark hair pulled back, blue shirt, hoop earrings",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Subordinate Chef / Critique Subject",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Stiff posture, wide eyes, minimal movement",
+        "apparent_goal": "Endure critique",
+        "behavioral_evidence": [
+          "Fixed gaze on authority figure",
+          "Defensive facial expression"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 41,
+        "emotional_state": {
+          "primary_emotion": "Shame",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Hand covering mouth, averted gaze",
+        "apparent_goal": "Disappear / Avoid scrutiny",
+        "behavioral_evidence": [
+          "Hand covers mouth in shock/embarrassment",
+          "Eyes wide watching colleagues vomit"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "psychological_distress",
+          "psychological_basis": "circumplex_model",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 36,
+          "behavioral_evidence": [
+            "Defensive verbal responses initially",
+            "Transition to silence and shock as others vomit"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "chef_large_male",
+      "physical_description": "Large adult male, black shirt, short dark hair",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Subordinate Chef / Witness",
+      "initial_state": {
+        "timestamp_seconds": 28,
+        "emotional_state": {
+          "primary_emotion": "Apprehension",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Hesitant approach",
+        "apparent_goal": "Comply with order",
+        "behavioral_evidence": [
+          "Takes food despite seeing previous reaction"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 32,
+        "emotional_state": {
+          "primary_emotion": "Disgust",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Gagging, grimacing",
+        "apparent_goal": "Recover from nausea",
+        "behavioral_evidence": [
+          "Immediate facial contortion",
+          "Verbal expression of regret"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "chef_blond_male",
+      "desire_label": "Physiological_Noxious_Stimulus_Avoidance",
+      "maslow_level": "physiological",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "duration_seconds": 6
+      },
+      "reasoning_chain": "Subject tastes food -> Immediate gag reflex observed -> Spits food into napkin -> Physiological rejection of stimulus takes precedence over social decorum.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 0,
+          "behavior_type": "physiological_indicator",
+          "description": "Gag reflex/retching sound"
+        },
+        {
+          "timestamp_seconds": 5,
+          "behavior_type": "body_movement",
+          "description": "Spitting food into napkin and wiping mouth vigorously"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "chef_female_brunette",
+      "desire_label": "Esteem_Criticism_Deflection",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 7,
+        "end_seconds": 18,
+        "duration_seconds": 11
+      },
+      "reasoning_chain": "Subject is questioned about tasting -> Admits failure but immediately offers justification ('didn't have enough time') -> Attempts to reframe the failure as a preference issue ('sorry you don't like it') rather than an objective failure.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 14,
+          "behavior_type": "verbal_act",
+          "description": "Says 'I didn't have enough time'"
+        },
+        {
+          "timestamp_seconds": 15,
+          "behavior_type": "facial_expression",
+          "description": "Defensive brow furrow, maintaining eye contact"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Mitigation",
+          "reasoning": "She may be trying to de-escalate the anger of the boss by apologizing, even if the apology minimizes the issue.",
+          "why_not_primary": "Her specific choice of words ('don't like it') suggests an attempt to protect her competence (esteem) by framing the issue as subjective."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "chef_blond_male",
+      "desire_label": "Esteem_Professional_Standard_Enforcement",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 19,
+        "end_seconds": 42,
+        "duration_seconds": 23
+      },
+      "reasoning_chain": "Subject rejects the 'preference' frame ('Don't like it? It's inedible') -> Refuses to simply discard the food -> Forces others to taste it to establish objective consensus on the failure -> Uses social pressure to reinforce the standard.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 22,
+          "behavior_type": "gesture",
+          "description": "Finger wagging 'No' when asked to throw it out"
+        },
+        {
+          "timestamp_seconds": 28,
+          "behavior_type": "body_movement",
+          "description": "Calling other chefs over to taste"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Dominance_Display",
+          "reasoning": "The behavior of forcing others to eat bad food is a display of power and control over the group.",
+          "why_not_primary": "While dominance is displayed, the context is professional critique. The primary goal appears to be proving the 'inedible' quality of the food (epistemic/esteem) rather than just being cruel."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_004",
+      "character_id": "chef_large_male",
+      "desire_label": "Social_Authority_Compliance",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 28,
+        "end_seconds": 30,
+        "duration_seconds": 2
+      },
+      "reasoning_chain": "Subject observes boss gagging -> Boss orders him to eat -> Subject eats despite clear evidence of noxious stimulus -> Social hierarchy pressure overrides physiological safety instinct.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 29,
+          "behavior_type": "body_movement",
+          "description": "Takes bite of food immediately upon request"
+        },
+        {
+          "timestamp_seconds": 29,
+          "behavior_type": "verbal_act",
+          "description": "Says 'Yes sir'"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "chef_blond_male",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 6,
+        "offset_timestamp_seconds": 8,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 6,
+        "description": "Recovery from gag reflex",
+        "trigger_type": "internal_state_change"
+      },
+      "desire_before": {
+        "label": "Physiological_Noxious_Stimulus_Avoidance",
+        "intensity": "strong",
+        "maslow_level": "physiological"
+      },
+      "desire_after": {
+        "label": "Epistemic_Information_Seeking",
+        "intensity": "strong",
+        "maslow_level": "cognitive"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 7,
+          "marker_type": "gaze_redirect",
+          "description": "Eyes shift from napkin/floor directly to the female chef"
+        },
+        {
+          "timestamp_seconds": 7,
+          "marker_type": "verbal_act",
+          "description": "Asks 'Are you crazy? Have you tasted that?'"
+        }
+      ],
+      "visual_marker_of_change": "The moment he wipes his mouth, straightens his posture, and locks eyes with the female chef.",
+      "psychological_interpretation": "Shift from immediate physiological survival response (gagging) to cognitive inquiry about the agent responsible for the threat."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "chef_female_brunette",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 22,
+        "offset_timestamp_seconds": 25,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 22,
+        "description": "Chef blond male refuses to throw food out ('No')",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Safety_Situation_Exit",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Shame_Endurance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 23,
+          "marker_type": "facial_shift",
+          "description": "Mouth opens slightly, eyes widen in realization that the ordeal is not over"
+        }
+      ],
+      "visual_marker_of_change": "When she suggests 'throw it out' and he points a finger saying 'No', her face drops from hopeful resolution to dread.",
+      "psychological_interpretation": "Her desire to resolve the situation (throw it out) is blocked by the authority figure, forcing a transition to enduring the ensuing social punishment."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 6,
+      "character_id": "chef_blond_male",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Gagging, coughing, spitting into napkin",
+      "intensity": "strong",
+      "target": "food_item",
+      "inferred_mental_state": "Physical revulsion",
+      "relevance_to_desire": "Direct evidence of Physiological_Noxious_Stimulus_Avoidance"
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 15,
+      "timestamp_end_seconds": 18,
+      "character_id": "chef_female_brunette",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Slight head tilt, furrowed brow, maintaining eye contact while apologizing",
+      "intensity": "moderate",
+      "target": "chef_blond_male",
+      "inferred_mental_state": "Defensiveness / Cognitive dissonance",
+      "relevance_to_desire": "Indicates Esteem_Criticism_Deflection; attempting to minimize the error"
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 36,
+      "timestamp_end_seconds": 39,
+      "character_id": "chef_female_brunette",
+      "behavior_category": "gesture",
+      "behavior_description": "Hand covers mouth, eyes darting between vomiting colleagues",
+      "intensity": "strong",
+      "target": "group_interaction",
+      "inferred_mental_state": "Horror / Vicarious embarrassment",
+      "relevance_to_desire": "Indicates Social_Shame_Endurance; the physical covering of the mouth mirrors the others' nausea but serves as a shame shield."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_001",
+      "start_timestamp_seconds": 19,
+      "end_timestamp_seconds": 24,
+      "segment_description": "Argument about 'liking' vs 'inedible'",
+      "psychological_significance": "Demonstrates a conflict in belief/framing. Female chef frames it as subjective preference (minimizing blame); Male chef frames it as objective failure (maximizing blame).",
+      "potential_qa_types": [
+        "belief_inference",
+        "conflict_analysis"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_002",
+      "start_timestamp_seconds": 28,
+      "end_timestamp_seconds": 35,
+      "segment_description": "Subordinate chefs forced to eat bad food",
+      "psychological_significance": "High-value segment for analyzing Social Authority vs Physiological Safety. The subordinates suppress survival instincts to comply with social hierarchy.",
+      "potential_qa_types": [
+        "desire_conflict",
+        "social_dynamics"
+      ],
+      "difficulty_level": "hard",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "chef_blond_male__chef_female_brunette",
+      "character_1_id": "chef_blond_male",
+      "character_2_id": "chef_female_brunette",
+      "relationship_type": "Superior/Subordinate",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Chef_blond_male actively blocks chef_female_brunette's attempts to exit the situation, forcing her into a state of shame.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 22,
+          "description": "He refuses her request to throw the food out."
+        }
+      ]
+    },
+    {
+      "dyad_id": "chef_blond_male__chef_large_male",
+      "character_1_id": "chef_blond_male",
+      "character_2_id": "chef_large_male",
+      "relationship_type": "Superior/Subordinate",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "Chef_blond_male exerts total control; chef_large_male suppresses self-preservation to comply.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 29,
+          "description": "Command to eat and immediate compliance."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video contains strong physiological cues (vomiting/gagging) which serve as ground truth for 'Physiological_Noxious_Stimulus_Avoidance'. The social dynamics are clear due to the rigid kitchen hierarchy.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "1.4.json",
+  "generated_filename": "disgusted_chef_kitchen_critique.json"
+}

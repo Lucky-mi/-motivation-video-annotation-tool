@@ -1,0 +1,433 @@
+{
+  "video_id": "02d961a4-8c7f-42ee-984c-94fbbb2cb36b",
+  "video_path": "data\\Youtube_videos\\02d961a4-8c7f-42ee-984c-94fbbb2cb36b.mp4",
+  "duration_seconds": 226,
+  "annotation_timestamp": "2025-12-07T22:41:56.292340",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Domestic interior: Bedroom, hallway, and home office of a suburban house.",
+    "social_context": "Dyadic marital conflict (interrupted briefly by child)",
+    "temporal_context": "Daytime",
+    "emotional_atmosphere": "High tension, hostile, distressed",
+    "salient_objects": [
+      "Financial papers/files",
+      "Keyboard (instrument)",
+      "Doorway (threshold)"
+    ],
+    "activity_type": "Interpersonal conflict/Negotiation"
+  },
+  "characters": [
+    {
+      "character_id": "adult_female_blonde",
+      "physical_description": "Adult female, blonde wavy hair, light blue button-down shirt.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The confronter/interrogator",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Upright posture, direct gaze, pursuing the male character.",
+        "apparent_goal": "To extract truthful information regarding finances.",
+        "behavioral_evidence": [
+          "Direct eye contact",
+          "Following the male into the room",
+          "Rapid questioning"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 226,
+        "emotional_state": {
+          "primary_emotion": "Sadness/Resignation",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Shoulders slumped, turning away, walking out of room.",
+        "apparent_goal": "To withdraw from social obligation (the party).",
+        "behavioral_evidence": [
+          "Walking away",
+          "Tone drop",
+          "Request to cancel event"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "trust_toward_partner",
+          "psychological_basis": "Interpersonal Trust",
+          "trajectory": "DECREASING",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": 128,
+          "behavioral_evidence": [
+            "Accusations of lying",
+            "Facial expression of disbelief",
+            "Verbalizing 'You don't like me'"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "adult_male_green_shirt",
+      "physical_description": "Adult male, dark hair, green plaid shirt.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The avoider/defendant",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Fear/Anxiety",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated behind desk (barrier), avoiding eye contact, defensive hand gestures.",
+        "apparent_goal": "To minimize the conflict and hide the extent of financial trouble.",
+        "behavioral_evidence": [
+          "Looking down at papers",
+          "Stuttering/hesitation",
+          "Physical distance"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 226,
+        "emotional_state": {
+          "primary_emotion": "Anger/Stubbornness",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing ground, rigid posture, shouting after the female.",
+        "apparent_goal": "To assert control over the upcoming social event (party).",
+        "behavioral_evidence": [
+          "Refusal to cancel",
+          "Citing financial deposits",
+          "Loud vocal projection"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "defensiveness",
+          "psychological_basis": "Defense Mechanisms",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 105,
+          "behavioral_evidence": [
+            "Justifying lying as protection",
+            "Counter-attacking with 'Simon and Garfunkel' analogy"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "child_female",
+      "physical_description": "Young girl, light dress, sitting at keyboard.",
+      "estimated_age_group": "child",
+      "role_in_scene": "Bystander/Environmental stressor",
+      "initial_state": {
+        "timestamp_seconds": 130,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Focused on instrument, ignoring surroundings.",
+        "apparent_goal": "To play music.",
+        "behavioral_evidence": [
+          "Engaged with keyboard",
+          "Not looking at camera or parents"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 142,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Continuing to play.",
+        "apparent_goal": "To play music.",
+        "behavioral_evidence": [
+          "Continued playing"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_001",
+      "character_id": "adult_female_blonde",
+      "desire_label": "Epistemic_Information_Extraction",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 50,
+        "duration_seconds": 50
+      },
+      "reasoning_chain": "Subject initiates interaction with questions about 'numbers' and 'record company'. Her persistence despite vague answers indicates a strong desire to resolve epistemic uncertainty regarding their financial safety.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 16,
+          "behavior_type": "facial_expression",
+          "description": "Intense staring, eyebrows raised in demand for answer."
+        },
+        {
+          "timestamp_seconds": 21,
+          "behavior_type": "body_movement",
+          "description": "Blocking the doorway/standing over the seated male."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Dominance_Assertion",
+          "reasoning": "She may be seeking to establish control rather than just information.",
+          "why_not_primary": "The content of the questions is specific to financial survival (Maslow Safety), making information seeking the more parsimonious root cause."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_002",
+      "character_id": "adult_male_green_shirt",
+      "desire_label": "Social_Conflict_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 100,
+        "duration_seconds": 100
+      },
+      "reasoning_chain": "Subject uses minimization ('not great', 'trickled in') and physical barriers (desk) to create distance. He explicitly states he doesn't want a 'nasty fight', indicating a desire to escape the aversive social interaction.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 25,
+          "behavior_type": "gesture",
+          "description": "Hand wave dismissing the topic."
+        },
+        {
+          "timestamp_seconds": 27,
+          "behavior_type": "verbal/posture",
+          "description": "Leaning back in chair, asking to talk 'the way the therapist told us'."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_003",
+      "character_id": "adult_male_green_shirt",
+      "desire_label": "Esteem_Status_Defense",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 220,
+        "end_seconds": 250,
+        "duration_seconds": 30
+      },
+      "reasoning_chain": "When the female compares him to 'Garfunkel' (perceived as the lesser partner), his arousal spikes. He launches into a defense of his autonomy and value, indicating a shift from safety (avoiding fight) to esteem (defending his worth).",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 241,
+          "behavior_type": "facial_expression",
+          "description": "Mouth open, shouting, leaning forward aggressively."
+        },
+        {
+          "timestamp_seconds": 245,
+          "behavior_type": "gesture",
+          "description": "Pointing finger to emphasize his point about 'Simon controlling him'."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "adult_female_blonde",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 206,
+        "offset_timestamp_seconds": 215,
+        "transition_duration_seconds": 9
+      },
+      "trigger_event": {
+        "timestamp_seconds": 205,
+        "description": "Male admits to giving daughter antibiotics without telling her.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Information_Extraction",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Relationship_Evaluation",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 206,
+          "marker_type": "facial_shift",
+          "description": "Expression shifts from anger/shock to confusion and sadness."
+        },
+        {
+          "timestamp_seconds": 208,
+          "marker_type": "postural_change",
+          "description": "Shoulders drop, head tilts, voice becomes quieter."
+        }
+      ],
+      "visual_marker_of_change": "The moment she stops gesturing aggressively, stares blankly, and asks 'What are we even doing?'",
+      "psychological_interpretation": "The accumulation of lies overwhelms the specific inquiry about finances, triggering a higher-level existential evaluation of the relationship (Belonging needs)."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "adult_female_blonde",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 330,
+        "offset_timestamp_seconds": 335,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 328,
+        "description": "Realization of the emotional disconnect.",
+        "trigger_type": "internal_state_change"
+      },
+      "desire_before": {
+        "label": "Social_Relationship_Evaluation",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Performance_Avoidance",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 332,
+          "marker_type": "gaze_redirect",
+          "description": "Looks away from partner toward the door."
+        },
+        {
+          "timestamp_seconds": 333,
+          "marker_type": "locomotion",
+          "description": "Turns and walks out of the room."
+        }
+      ],
+      "visual_marker_of_change": "The moment she turns her back and says 'I don't want to have a party here.'",
+      "psychological_interpretation": "Emotional exhaustion leads to a desire to avoid the social performance required by the upcoming party (Avoidance motivation)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 105,
+      "timestamp_end_seconds": 115,
+      "character_id": "adult_male_green_shirt",
+      "behavior_category": "body_movement",
+      "behavior_description": "Rapid hand gestures, widening eyes, leaning forward while explaining why he lies.",
+      "intensity": "strong",
+      "target": "adult_female_blonde",
+      "inferred_mental_state": "Defensive justification",
+      "relevance_to_desire": "Indicates a shift from passive avoidance to active defense of his behavior (Esteem/Safety)."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 336,
+      "timestamp_end_seconds": 342,
+      "character_id": "adult_male_green_shirt",
+      "behavior_category": "posture_shift",
+      "behavior_description": "Stands in doorway, rigid posture, blocking the view to the outside, shouting about deposits.",
+      "intensity": "moderate",
+      "target": "adult_female_blonde",
+      "inferred_mental_state": "Stubbornness/Sunk Cost Fallacy",
+      "relevance_to_desire": "Suggests 'Safety_Resource_Preservation' (money spent) is overriding 'Social_Affiliation_Maintenance' (comforting wife)."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_001",
+      "start_timestamp_seconds": 230,
+      "end_timestamp_seconds": 260,
+      "segment_description": "The 'Simon and Garfunkel' argument.",
+      "psychological_significance": "Demonstrates a complex projection of self-esteem issues onto a pop culture analogy. The male character reveals deep-seated insecurity about his status in the relationship.",
+      "potential_qa_types": [
+        "desire_identification",
+        "emotion_recognition",
+        "metaphor_interpretation"
+      ],
+      "difficulty_level": "hard",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_002",
+      "start_timestamp_seconds": 330,
+      "end_timestamp_seconds": 345,
+      "segment_description": "The party cancellation request.",
+      "psychological_significance": "Shows a clear conflict of desires: Female wants emotional relief (cancel), Male wants resource preservation (don't lose deposit).",
+      "potential_qa_types": [
+        "conflict_analysis",
+        "intention_prediction"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "adult_female_blonde__adult_male_green_shirt",
+      "character_1_id": "adult_female_blonde",
+      "character_2_id": "adult_male_green_shirt",
+      "relationship_type": "Spouses/Long-term partners",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Negative feedback loop: Female's pursuit/interrogation triggers Male's avoidance/lying, which triggers further interrogation.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 56,
+          "description": "Female calls Male a 'lying shitbag', causing Male to break the 'therapy rules' frame."
+        },
+        {
+          "timestamp_seconds": 250,
+          "description": "Male claims Female turns him into 'Garfunkel', explicitly blaming her for his lack of agency."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The child character serves as a background element; their lack of reaction to the parents' shouting suggests habituation to conflict.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "02d961a4-8c7f-42ee-984c-94fbbb2cb36b.json",
+  "generated_filename": "marital_conflict_financial_papers.json"
+}

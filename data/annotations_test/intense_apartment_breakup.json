@@ -1,0 +1,424 @@
+{
+  "video_id": "1.1",
+  "video_path": "data\\Youtube_videos\\1.1.mp4",
+  "duration_seconds": 60,
+  "annotation_timestamp": "2025-12-08T14:11:15.751055",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Indoor apartment setting; visible living room with artwork (Brooklyn Bridge), shelving, and door entrance.",
+    "social_context": "Dyadic romantic conflict; high-stakes relationship termination conversation.",
+    "temporal_context": "Evening or night (artificial lighting). Note: A continuity shift occurs at 00:42 where the male character's clothing changes, implying a time jump or montage of the argument.",
+    "emotional_atmosphere": "High tension, distress, desperation, and conflict.",
+    "salient_objects": [
+      "Door (symbolizing exit/separation)",
+      "Male's hand (used for restraint/connection)"
+    ],
+    "activity_type": "Relationship dissolution/negotiation"
+  },
+  "characters": [
+    {
+      "character_id": "female_black_tank_top",
+      "physical_description": "Young adult female, brown hair tied back, wearing black tank top and blue shorts.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The initiator of the breakup; the aggrieved party.",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Defensive posture, furrowed brows, attempting to exit through door, turning away from interlocutor.",
+        "apparent_goal": "To terminate the interaction and the relationship.",
+        "behavioral_evidence": [
+          "Hand on doorknob attempting to open it",
+          "Turning back to face male with furrowed brow",
+          "Verbal declaration 'I wanna break up'"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Sadness/Distress",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Crying, passive posture while being hugged, reduced resistance but no active reciprocation.",
+        "apparent_goal": "Processing emotional overwhelm; cessation of active fighting.",
+        "behavioral_evidence": [
+          "Tears streaming down face",
+          "Arms at sides while being hugged",
+          "Facial expression of pain/grief"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "trust_toward_partner",
+          "psychological_basis": "Belief (BDI)",
+          "trajectory": "STABLE",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": null,
+          "behavioral_evidence": [
+            "Explicit statement 'You broke my trust'",
+            "Rejection of his explanations as 'excuses'"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "emotional_arousal",
+          "psychological_basis": "Circumplex Model",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "high",
+          "final_level": "moderate",
+          "peak_moment_seconds": 30,
+          "behavioral_evidence": [
+            "Starts with angry confrontation",
+            "Peaks when shouting 'You broke my trust'",
+            "Transitions to crying/sobbing (sadness) by end"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "male_blue_shirt",
+      "physical_description": "Young adult male, dark curly hair, tall. Initially wears plain dark blue t-shirt; changes to blue graphic 'Air Jordan' tee at 00:42.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The accused; the partner attempting to prevent the breakup.",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Fear/Anxiety",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Blocking path, pleading facial expression, open palms (begging gesture).",
+        "apparent_goal": "To initiate conversation and prevent her departure.",
+        "behavioral_evidence": [
+          "Standing in front of door",
+          "Pleading tone and eyebrows raised in 'worry' configuration"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Desperation/Affection",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Physically clinging, tight embrace, burying face in her neck.",
+        "apparent_goal": "To physically re-establish the bond and deny the separation.",
+        "behavioral_evidence": [
+          "Wrapping arms around female",
+          "Closing eyes while hugging",
+          "Verbal reassurance of love"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "dominance_display",
+          "psychological_basis": "Maslow (Esteem/Control)",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 41,
+          "behavioral_evidence": [
+            "Initially pleading (low dominance)",
+            "Asserts 'You can't just decide on your own' (moderate)",
+            "Yells 'That's bullsh*t' (high dominance)",
+            "Physically restrains via hug (high dominance/control)"
+          ],
+          "confidence": "moderate"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_female_001",
+      "character_id": "female_black_tank_top",
+      "desire_label": "Social_Relationship_Termination",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 45,
+        "duration_seconds": 45
+      },
+      "reasoning_chain": "Subject expresses explicit intent to 'break up' -> Rejects partner's attempts to negotiate -> Cites 'broken trust' (Safety/Security violation) -> Motivation is to remove self from unsafe emotional environment.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 6,
+          "behavior_type": "verbal_and_facial",
+          "description": "States 'I wanna break up' with direct eye contact and firm tone."
+        },
+        {
+          "timestamp_seconds": 9,
+          "behavior_type": "verbal_assertion",
+          "description": "States 'I'm not asking for your permission' (Autonomy assertion)."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Respect_Restoration",
+          "reasoning": "The breakup could be a performative act to regain self-respect after infidelity, rather than a genuine desire to leave.",
+          "why_not_primary": "The persistence and emotional distress suggest a genuine reaction to the safety violation (trust) rather than just ego maintenance."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_001",
+      "character_id": "male_blue_shirt",
+      "desire_label": "Social_Relationship_Maintenance",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 60,
+        "duration_seconds": 60
+      },
+      "reasoning_chain": "Subject blocks exit -> Refuses to accept breakup ('I don't') -> Minimizes conflict ('Let's work this out') -> Seeks physical proximity. All actions serve to maintain the social unit.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 8,
+          "behavior_type": "verbal_refusal",
+          "description": "Immediately counters 'I wanna break up' with 'I don't'."
+        },
+        {
+          "timestamp_seconds": 35,
+          "behavior_type": "physical_contact",
+          "description": "Grabs female's wrist/hand to prevent withdrawal."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_002",
+      "character_id": "male_blue_shirt",
+      "desire_label": "Epistemic_Exoneration_Seeking",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 20,
+        "end_seconds": 30,
+        "duration_seconds": 10
+      },
+      "reasoning_chain": "Subject claims he wasn't given a 'chance to explain' -> Attempts to reframe the narrative -> Desire is to clear his name/reputation within the dyad.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 22,
+          "behavior_type": "verbal_defense",
+          "description": "States 'You don't even give me the chance to explain.'"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "moderate"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_001",
+      "character_id": "male_blue_shirt",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 35,
+        "offset_timestamp_seconds": 48,
+        "transition_duration_seconds": 13
+      },
+      "trigger_event": {
+        "timestamp_seconds": 38,
+        "description": "Female states 'I don't love you anymore'.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Negotiation_Attempt",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Proximity_Enforcement",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 35,
+          "marker_type": "proxemic_change",
+          "description": "Grabs her hand."
+        },
+        {
+          "timestamp_seconds": 41,
+          "marker_type": "emotional_outburst",
+          "description": "Yells 'That's bullsh*t!' (Anger/Denial)."
+        },
+        {
+          "timestamp_seconds": 48,
+          "marker_type": "physical_contact",
+          "description": "Initiates tight, non-consensual hug."
+        }
+      ],
+      "visual_marker_of_change": "The moment he physically grabs her wrist at 00:35, shifting from verbal pleading to physical intervention.",
+      "psychological_interpretation": "The verbal rejection ('I don't love you') triggers a panic response (Attachment Panic), causing the subject to escalate from negotiation to physical proximity seeking to regulate his own anxiety and force connection."
+    },
+    {
+      "transition_id": "trans_female_001",
+      "character_id": "female_black_tank_top",
+      "transition_type": "attenuation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 45,
+        "offset_timestamp_seconds": 55,
+        "transition_duration_seconds": 10
+      },
+      "trigger_event": {
+        "timestamp_seconds": 48,
+        "description": "Male initiates tight hug and professes love.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Separation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Separation_Seeking",
+        "intensity": "weak",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 48,
+          "marker_type": "postural_change",
+          "description": "Stops trying to walk away."
+        },
+        {
+          "timestamp_seconds": 55,
+          "marker_type": "facial_expression",
+          "description": "Expression shifts from anger to overwhelming sadness (crying)."
+        }
+      ],
+      "visual_marker_of_change": "When her arms drop to her sides and she ceases active resistance against the hug.",
+      "psychological_interpretation": "The subject's active desire to leave is attenuated by the physical restraint and emotional overwhelm, shifting into a state of 'learned helplessness' or emotional flooding."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 5,
+      "character_id": "male_blue_shirt",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Intercepts female at the door, blocking exit path.",
+      "intensity": "moderate",
+      "target": "female_black_tank_top",
+      "inferred_mental_state": "Anxiety regarding partner's departure.",
+      "relevance_to_desire": "Indicates desire to maintain interaction/prevent separation."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 15,
+      "timestamp_end_seconds": 18,
+      "character_id": "female_black_tank_top",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Pursed lips, direct glare, head tilt while delivering accusation.",
+      "intensity": "strong",
+      "target": "male_blue_shirt",
+      "inferred_mental_state": "Contempt/Anger regarding betrayal.",
+      "relevance_to_desire": "Justifies the desire for separation (Safety/Trust violation)."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 41,
+      "timestamp_end_seconds": 43,
+      "character_id": "male_blue_shirt",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Sudden shift to anger, furrowed brows, shouting 'That's bullsh*t'.",
+      "intensity": "strong",
+      "target": "female_black_tank_top",
+      "inferred_mental_state": "Defensive rage/Denial.",
+      "relevance_to_desire": "Rejection of the partner's stated reality (that she doesn't love him) to protect Ego/Belonging."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_trust_break",
+      "start_timestamp_seconds": 14,
+      "end_timestamp_seconds": 18,
+      "segment_description": "Female reveals the reason for breakup (cheating).",
+      "psychological_significance": "Crucial for understanding the 'Belief' component of the female's BDI state (Belief: Partner is untrustworthy).",
+      "potential_qa_types": [
+        "desire_identification",
+        "belief_inference"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_hug_conflict",
+      "start_timestamp_seconds": 45,
+      "end_timestamp_seconds": 55,
+      "segment_description": "Male hugs female while she cries; he professes love after being rejected.",
+      "psychological_significance": "Complex interaction showing conflicting desires (Approach vs. Withdrawal) and the use of physical touch to override verbal rejection.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "emotion_recognition",
+        "interpersonal_dynamics"
+      ],
+      "difficulty_level": "hard",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "female_tank_male_blue",
+      "character_1_id": "female_black_tank_top",
+      "character_2_id": "male_blue_shirt",
+      "relationship_type": "romantic_partners (in crisis)",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Pursuer-Distancer dynamic. The more the female attempts to withdraw (Safety seeking), the more the male attempts to encroach/cling (Belonging seeking), creating a feedback loop of escalation.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 13,
+          "description": "Male attempts to define the relationship ('works with us two'), Female asserts individual autonomy ('can't decide on your own')."
+        },
+        {
+          "timestamp_seconds": 48,
+          "description": "Physical embrace where Male imposes intimacy and Female passively accepts it while displaying distress."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "A continuity error or time jump occurs at 00:42 where the male character's shirt changes from plain blue to a graphic tee. The psychological analysis treats the sequence as a continuous emotional arc despite this visual discontinuity. The female's lack of physical reciprocation during the final hug is a critical indicator of unresolved conflict despite the male's 'resolution' behavior.",
+    "quality_flags": {
+      "video_quality_issues": true,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "1.1.json",
+  "generated_filename": "intense_apartment_breakup.json"
+}

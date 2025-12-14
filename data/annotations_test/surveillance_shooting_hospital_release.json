@@ -1,0 +1,380 @@
+{
+  "video_id": "20c67ba8-9775-41d1-aee9-f6ba6c9edc9a",
+  "video_path": "data\\Youtube_videos\\20c67ba8-9775-41d1-aee9-f6ba6c9edc9a.mp4",
+  "duration_seconds": 143,
+  "annotation_timestamp": "2025-12-08T19:37:03.316090",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Montage: Nighttime street surveillance, daytime hospital exterior, nighttime street interview",
+    "social_context": "Varied: Solitary transit (victim), ceremonial release (officer), media interview (landlord)",
+    "temporal_context": "Post-event reporting covering a 24-hour period",
+    "emotional_atmosphere": "Ranges from sudden violence/shock to somber reflection and celebratory relief",
+    "salient_objects": [
+      "muzzle_flash",
+      "wheelchair",
+      "microphones",
+      "police_tape"
+    ],
+    "activity_type": "crime_reporting"
+  },
+  "characters": [
+    {
+      "character_id": "surveillance_victim",
+      "physical_description": "Figure in dark clothing, indistinct features due to low-res infrared footage",
+      "estimated_age_group": "adult",
+      "role_in_scene": "victim",
+      "initial_state": {
+        "timestamp_seconds": 4.0,
+        "emotional_state": {
+          "primary_emotion": "Neutral",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Steady gait, purposeful walking toward building entrance",
+        "apparent_goal": "Enter residence",
+        "behavioral_evidence": [
+          "Walking in straight line toward doorway",
+          "Normal pace"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 16.0,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Collapsing to ground, loss of motor control",
+        "apparent_goal": "Survival/Cessation of movement",
+        "behavioral_evidence": [
+          "Sudden drop to pavement following light flash",
+          "Cessation of forward motion"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "physical_agency",
+          "psychological_basis": "physiological_integrity",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 15.0,
+          "behavioral_evidence": [
+            "Transition from walking to collapsing"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "injured_officer",
+      "physical_description": "Adult male, beard, police jacket, seated in wheelchair",
+      "estimated_age_group": "adult",
+      "role_in_scene": "survivor/hero",
+      "initial_state": {
+        "timestamp_seconds": 56.0,
+        "emotional_state": {
+          "primary_emotion": "Relief",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Seated, waving hand, slight smile, making eye contact with crowd",
+        "apparent_goal": "Acknowledge support",
+        "behavioral_evidence": [
+          "Waving to clapping colleagues",
+          "Relaxed facial muscles despite injury context"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 103.0,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Still seated, receiving applause",
+        "apparent_goal": "Exit facility",
+        "behavioral_evidence": [
+          "Continued engagement with crowd"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_connectedness",
+          "psychological_basis": "belonging_needs",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 59.0,
+          "behavioral_evidence": [
+            "Reciprocal waving",
+            "Eye contact with group"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "interviewed_landlord",
+      "physical_description": "Older adult male, glasses, cap, jacket",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "witness/stakeholder",
+      "initial_state": {
+        "timestamp_seconds": 142.0,
+        "emotional_state": {
+          "primary_emotion": "Sadness",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Head slightly bowed, furrowed brow, slow speech",
+        "apparent_goal": "Explain context",
+        "behavioral_evidence": [
+          "Looking down",
+          "Shaking head slightly"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 153.0,
+        "emotional_state": {
+          "primary_emotion": "Confusion",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Gaze directed at interviewer, explanatory gestures",
+        "apparent_goal": "Convey shock",
+        "behavioral_evidence": [
+          "Verbalizing lack of knowledge about killer's presence"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "cognitive_dissonance",
+          "psychological_basis": "belief_reality_mismatch",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 145.0,
+          "behavioral_evidence": [
+            "Description of shock",
+            "Inability to reconcile events"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_victim_01",
+      "character_id": "surveillance_victim",
+      "desire_label": "Safety_Shelter_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 14.0,
+        "duration_seconds": 14.0
+      },
+      "reasoning_chain": "Subject is walking directly from a vehicle toward a residential doorway at night. This indicates a routine intention to enter a safe territory.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 5.0,
+          "behavior_type": "body_movement",
+          "description": "Direct, unhesitating path toward the building entrance."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_officer_01",
+      "character_id": "injured_officer",
+      "desire_label": "Esteem_Recognition_Acceptance",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 56.0,
+        "end_seconds": 103.0,
+        "duration_seconds": 47.0
+      },
+      "reasoning_chain": "The officer is the focal point of a 'clap-out' ceremony. He waves and smiles, accepting the group's validation. He is not seeking safety or food; he is engaging in a ritual of status and respect.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 59.0,
+          "behavior_type": "gesture",
+          "description": "Waving hand to the crowd while being wheeled out."
+        },
+        {
+          "timestamp_seconds": 101.0,
+          "behavior_type": "facial_expression",
+          "description": "Modest smile and nodding to colleagues."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Affiliation_Maintenance",
+          "reasoning": "He may simply be maintaining bonds with his 'tribe' (police) rather than seeking esteem.",
+          "why_not_primary": "The ceremonial nature (applause, formation) elevates this to Esteem/Recognition rather than simple belonging."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_landlord_01",
+      "character_id": "interviewed_landlord",
+      "desire_label": "Epistemic_Sense_Making",
+      "maslow_level": "safety",
+      "bdi_component": "belief",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 142.0,
+        "end_seconds": 153.0,
+        "duration_seconds": 11.0
+      },
+      "reasoning_chain": "The subject is discussing a tragedy. His facial expressions (furrowed brow) and head shaking indicate a struggle to integrate the violent event into his worldview/belief system.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 143.0,
+          "behavior_type": "facial_expression",
+          "description": "Furrowed brow and pained expression while listening/speaking."
+        },
+        {
+          "timestamp_seconds": 145.0,
+          "behavior_type": "body_movement",
+          "description": "Head shake indicating negation or disbelief."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Grief_Expression",
+          "reasoning": "He is mourning the loss of a tenant/friend.",
+          "why_not_primary": "The specific focus of his speech and demeanor suggests cognitive processing of the shock ('in shock', 'didn't know') over pure emotional release."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_victim_01",
+      "character_id": "surveillance_victim",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 14.0,
+        "offset_timestamp_seconds": 16.0,
+        "transition_duration_seconds": 2.0
+      },
+      "trigger_event": {
+        "timestamp_seconds": 14.0,
+        "description": "Muzzle flash/Gunshot impact",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Safety_Shelter_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Physiological_Survival_Defense",
+        "intensity": "strong",
+        "maslow_level": "physiological"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 15.0,
+          "marker_type": "postural_change",
+          "description": "Total loss of postural tone, collapse to ground."
+        }
+      ],
+      "visual_marker_of_change": "The moment the figure crumples immediately following the flash of light.",
+      "psychological_interpretation": "The goal of entering the home is violently interrupted (frustrated) by physical trauma, forcing a regression to basic physiological survival mechanisms (or total system failure)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_officer_release",
+      "timestamp_start_seconds": 56.0,
+      "timestamp_end_seconds": 65.0,
+      "character_id": "injured_officer",
+      "behavior_category": "gesture",
+      "behavior_description": "Raises right hand in a wave, scans the crowd from left to right.",
+      "intensity": "moderate",
+      "target": "crowd_of_officers",
+      "inferred_mental_state": "Gratitude and recognition of support.",
+      "relevance_to_desire": "Indicates satisfaction of Esteem and Belonging needs; confirms positive reception of the social environment."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_surveillance",
+      "start_timestamp_seconds": 0.0,
+      "end_timestamp_seconds": 20.0,
+      "segment_description": "Surveillance footage of the shooting.",
+      "psychological_significance": "Demonstrates a sudden, violent interruption of routine goal-directed behavior.",
+      "potential_qa_types": [
+        "transition_detection",
+        "intention_prediction"
+      ],
+      "difficulty_level": "hard",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_officer_release",
+      "start_timestamp_seconds": 56.0,
+      "end_timestamp_seconds": 103.0,
+      "segment_description": "Injured officer leaving hospital to applause.",
+      "psychological_significance": "Clear display of Esteem and Belonging needs being met; contrast to the violence of the first segment.",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "desire_identification"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "officer_crowd",
+      "character_1_id": "injured_officer",
+      "character_2_id": "crowd_officers",
+      "relationship_type": "colleagues",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The crowd provides validation (applause), the officer provides acknowledgment (waving), reinforcing group cohesion.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 57.0,
+          "description": "Simultaneous applause and waving."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 1,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "Surveillance footage is low quality, limiting micro-expression analysis for the victim. Analysis relies heavily on gross motor movement for the victim and facial expressions for the officer and landlord.",
+    "quality_flags": {
+      "video_quality_issues": true,
+      "occlusion_present": true,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "20c67ba8-9775-41d1-aee9-f6ba6c9edc9a.json",
+  "generated_filename": "surveillance_shooting_hospital_release.json"
+}

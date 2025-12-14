@@ -1,0 +1,423 @@
+{
+  "video_id": "1.15",
+  "video_path": "data\\Youtube_videos\\1.15.mp4",
+  "duration_seconds": 60,
+  "annotation_timestamp": "2025-12-08T14:33:26.459932",
+  "annotator": "AI_Model_5.0",
+  "scene_context": {
+    "physical_setting": "Courtroom interior; wood-paneled bench, microphone stand, spectator seating in background",
+    "social_context": "dyadic conversation within a formal judicial proceeding",
+    "temporal_context": "Daytime business hours",
+    "emotional_atmosphere": "Initially tense and formal, shifting to empathetic and poignant",
+    "salient_objects": [
+      "microphone",
+      "judicial bench",
+      "court documents"
+    ],
+    "activity_type": "judicial_hearing"
+  },
+  "characters": [
+    {
+      "character_id": "elderly_defendant",
+      "physical_description": "Elderly male (90s), white hair, wearing black jacket over white collared shirt, holding microphone",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "defendant",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Tense posture, gripping microphone tightly, furrowed brow, attentive gaze toward authority figure",
+        "apparent_goal": "To explain his actions and mitigate legal consequences",
+        "behavioral_evidence": [
+          "Furrowed brow while listening to charges",
+          "Tight grip on the microphone",
+          "Immediate verbal defense regarding driving speed"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Relief",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Tearing up, nodding, slight smile, relaxed shoulders",
+        "apparent_goal": "To accept the judgment and express gratitude",
+        "behavioral_evidence": [
+          "Visible tears/glassy eyes",
+          "Nodding in agreement with the judge",
+          "Verbal expression of thanks"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "anxiety_level",
+          "psychological_basis": "arousal",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 5,
+          "behavioral_evidence": [
+            "Initial defensive speech pattern",
+            "Visible relaxation after judge's praise"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "emotional_vulnerability",
+          "psychological_basis": "affective_states",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 51,
+          "behavioral_evidence": [
+            "Voice cracking when mentioning son",
+            "Tearing up when receiving praise"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "presiding_judge",
+      "physical_description": "Older male, wearing glasses and suit/robes, seated behind elevated bench",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "judge",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Neutrality",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Formal posture, reading from documents, direct gaze",
+        "apparent_goal": "To adjudicate the traffic violation",
+        "behavioral_evidence": [
+          "Reading charges from paper",
+          "Neutral tone of voice"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Compassion",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Leaning forward, gesturing benevolently, smiling",
+        "apparent_goal": "To validate the defendant's character and dismiss the case",
+        "behavioral_evidence": [
+          "Hand gestures emphasizing praise",
+          "Warm facial expression",
+          "Dismissive hand wave regarding the penalty"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "empathy_level",
+          "psychological_basis": "tom_framework",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 35,
+          "behavioral_evidence": [
+            "Shift from procedural questions to personal validation",
+            "Change in tone from formal to gentle"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_001",
+      "character_id": "elderly_defendant",
+      "desire_label": "Safety_Legal_Defense_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 12,
+        "duration_seconds": 12
+      },
+      "reasoning_chain": "Defendant is charged -> Safety needs (avoiding punishment) are threatened -> He immediately offers a rebuttal ('I don't drive that fast') to protect himself.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 5,
+          "behavior_type": "verbal_defense",
+          "description": "Rapidly responding 'I don't drive that fast judge' immediately after the charge."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Reputation_Maintenance",
+          "reasoning": "He may be more concerned with being seen as a responsible driver than the fine itself.",
+          "why_not_primary": "In a legal setting, the immediate threat is the penalty (Safety), making it the more parsimonious explanation."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_002",
+      "character_id": "elderly_defendant",
+      "desire_label": "Belonging_Caregiving_Provision",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 13,
+        "end_seconds": 34,
+        "duration_seconds": 21
+      },
+      "reasoning_chain": "Defendant explains the context of his driving -> The drive was solely to aid his sick son -> This reveals his primary motivation for being on the road was caregiving.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 14,
+          "behavior_type": "verbal_explanation",
+          "description": "Explaining he was going to 'blood work for my boy'."
+        },
+        {
+          "timestamp_seconds": 31,
+          "behavior_type": "facial_expression",
+          "description": "Sadness/distress visible when mentioning son's cancer."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_003",
+      "character_id": "presiding_judge",
+      "desire_label": "Epistemic_Context_Acquisition",
+      "maslow_level": "self_actualization",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 18,
+        "end_seconds": 30,
+        "duration_seconds": 12
+      },
+      "reasoning_chain": "Judge hears about the son -> Judge pauses proceedings to ask specific questions ('How old is your son?') -> Indicates a desire to understand the full situation before ruling.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 18,
+          "behavior_type": "inquiry",
+          "description": "Asking 'How old is your son?' with a focused gaze."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_004",
+      "character_id": "presiding_judge",
+      "desire_label": "Esteem_Moral_Validation_Provision",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 35,
+        "end_seconds": 60,
+        "duration_seconds": 25
+      },
+      "reasoning_chain": "Judge processes the caregiving narrative -> Judge shifts from legal arbiter to moral supporter -> Explicitly praises the man's character ('You are a good man').",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 35,
+          "behavior_type": "gesture",
+          "description": "Pointing finger benevolently while stating 'You are a good man'."
+        },
+        {
+          "timestamp_seconds": 56,
+          "behavior_type": "judicial_action",
+          "description": "Dismissing the case ('Case is dismissed')."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "elderly_defendant",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 35,
+        "offset_timestamp_seconds": 40,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 35,
+        "description": "Judge states 'You are a good man'",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Safety_Legal_Defense_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Esteem_Validation_Acceptance",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 36,
+          "marker_type": "facial_shift",
+          "description": "Eyes welling up with tears, mouth quivering"
+        },
+        {
+          "timestamp_seconds": 38,
+          "marker_type": "postural_change",
+          "description": "Shoulders drop, slight nod"
+        }
+      ],
+      "visual_marker_of_change": "The moment the defendant's eyes fill with tears and his defensive frown softens into an emotional expression of gratitude immediately following the judge's compliment.",
+      "psychological_interpretation": "The external validation from an authority figure resolved the safety threat (legal trouble) and simultaneously satisfied a higher-level esteem need, causing an emotional release."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "presiding_judge",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 13,
+        "offset_timestamp_seconds": 18,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 13,
+        "description": "Defendant mentions taking handicapped son for blood work",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Cognitive_Judicial_Evaluation",
+        "intensity": "moderate",
+        "maslow_level": "cognitive"
+      },
+      "desire_after": {
+        "label": "Social_Empathy_Expression",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 17,
+          "marker_type": "facial_shift",
+          "description": "Face softens, eyebrows raise slightly in interest/concern"
+        }
+      ],
+      "visual_marker_of_change": "When the judge stops reading/looking down and fixes a softer, inquisitive gaze on the defendant.",
+      "psychological_interpretation": "New information (defendant's altruistic motive) triggered a shift from procedural adherence to empathetic engagement."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 5,
+      "character_id": "elderly_defendant",
+      "behavior_category": "body_movement",
+      "behavior_description": "Holding microphone close to mouth, slight forward lean",
+      "intensity": "moderate",
+      "target": "presiding_judge",
+      "inferred_mental_state": "Anxiety/Readiness to defend",
+      "relevance_to_desire": "Indicates active engagement in Safety_Legal_Defense_Seeking"
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 30,
+      "timestamp_end_seconds": 34,
+      "character_id": "elderly_defendant",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Eyes downcast then looking up, slight grimace",
+      "intensity": "moderate",
+      "target": "presiding_judge",
+      "inferred_mental_state": "Sadness/Resignation",
+      "relevance_to_desire": "Reflects the emotional weight of Belonging_Caregiving_Provision (burden of son's illness)"
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 35,
+      "timestamp_end_seconds": 45,
+      "character_id": "presiding_judge",
+      "behavior_category": "gesture",
+      "behavior_description": "Rhythmic hand pointing, open palm gestures",
+      "intensity": "strong",
+      "target": "elderly_defendant",
+      "inferred_mental_state": "Admiration/Conviction",
+      "relevance_to_desire": "Signals the active delivery of Esteem_Moral_Validation_Provision"
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_001",
+      "start_timestamp_seconds": 34,
+      "end_timestamp_seconds": 45,
+      "segment_description": "Judge praises the defendant; defendant reacts emotionally.",
+      "psychological_significance": "Clear example of social validation triggering an emotional release (relief/gratitude). Demonstrates inter-character affect regulation.",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "transition_detection",
+        "social_interaction_analysis"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "defendant_judge_dyad",
+      "character_1_id": "elderly_defendant",
+      "character_2_id": "presiding_judge",
+      "relationship_type": "strangers (legal authority vs subject)",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The defendant's vulnerability elicits empathy from the judge; the judge's validation elicits relief and gratitude from the defendant.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 18,
+          "description": "Judge asks about son's age, signaling a shift to personal interest."
+        },
+        {
+          "timestamp_seconds": 35,
+          "description": "Judge affirms 'You are a good man', altering the emotional trajectory of the interaction."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video contains clear audio and visual cues. The emotional shift is distinct and well-supported by both verbal context and non-verbal behavior.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "1.15.json",
+  "generated_filename": "elderly_defendant_courtroom_hearing.json"
+}

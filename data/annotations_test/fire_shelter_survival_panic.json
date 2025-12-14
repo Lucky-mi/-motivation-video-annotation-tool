@@ -1,0 +1,416 @@
+{
+  "video_id": "1-19",
+  "video_path": "data\\Youtube_videos\\1-19.mp4",
+  "duration_seconds": 51.0,
+  "annotation_timestamp": "2025-12-08T13:59:22.577171",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Inside a fire shelter/reflective tent, extremely confined space, orange ambient lighting indicating external fire",
+    "social_context": "Dyadic interaction under extreme survival threat",
+    "temporal_context": "Immediate crisis; short-lived event",
+    "emotional_atmosphere": "High arousal, panic, intimacy mixed with existential dread",
+    "salient_objects": [
+      "Reflective fire shelter material",
+      "Uniform/Badge on male character"
+    ],
+    "activity_type": "Survival/Sheltering"
+  },
+  "characters": [
+    {
+      "character_id": "male_uniform",
+      "physical_description": "Adult male, short hair, wearing a dark uniform with a badge/patch on the shoulder",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Protector/Confessor",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Supine position, rapid breathing, eyes darting, sweating",
+        "apparent_goal": "Ensure the shelter functions correctly",
+        "behavioral_evidence": [
+          "Rapid recitation of technical specifications",
+          "Wide eyes looking upward at the shelter material"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 51.0,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Turning head towards female, slight smile despite chaos",
+        "apparent_goal": "Confirming romantic reciprocity",
+        "behavioral_evidence": [
+          "Persistent questioning about feelings despite the noise",
+          "Smiling when interpreting her refusal as a 'yes'"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "emotional_vulnerability",
+          "psychological_basis": "Social_Penetration_Theory",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 40.0,
+          "behavioral_evidence": [
+            "Shift from technical jargon to 'I want to tell you something'",
+            "Explicit admission 'Of course I still love you'"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "female_dark_hair",
+      "physical_description": "Adult female, dark hair pulled back, lying next to male",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Companion/Skeptic",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Fear",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Clinging to arm, furrowed brows, looking at male for answers",
+        "apparent_goal": "Seeking reassurance of survival",
+        "behavioral_evidence": [
+          "Question: 'Is this going to work?'",
+          "Intense gaze directed at male's face"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 51.0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Turning away, grimacing, shouting over noise",
+        "apparent_goal": "Ending the emotional conversation/Bracing for impact",
+        "behavioral_evidence": [
+          "Shouting 'You are infuriating!'",
+          "Physical recoil/flinch at loud noise"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "denial_of_mortality",
+          "psychological_basis": "Defense_Mechanisms",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 24.0,
+          "behavioral_evidence": [
+            "Interrupting the 'goodbye' speech",
+            "Explicitly stating 'I don't want to cry right now'"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_male_01",
+      "character_id": "male_uniform",
+      "desire_label": "Safety_Threat_Management",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 18.0,
+        "duration_seconds": 18.0
+      },
+      "reasoning_chain": "Male recites technical specs of the shelter -> This is a cognitive coping strategy to manage fear -> Goal is to reassure self and partner of safety.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 8.0,
+          "behavior_type": "verbal_behavior",
+          "description": "Rapid-fire listing of shelter capabilities ('reflect radiant heat', 'protect against convective heat')"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_02",
+      "character_id": "male_uniform",
+      "desire_label": "Social_Intimacy_Expression",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 19.0,
+        "end_seconds": 51.0,
+        "duration_seconds": 32.0
+      },
+      "reasoning_chain": "Loud rumbling indicates imminent danger -> Male perceives potential death -> Shifts focus from survival (which is out of his control) to emotional closure -> Attempts to confess love.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 22.0,
+          "behavior_type": "verbal_initiation",
+          "description": "Tone shift to serious/somber: 'I want to tell you something'"
+        },
+        {
+          "timestamp_seconds": 40.0,
+          "behavior_type": "facial_expression",
+          "description": "Direct eye contact and earnest expression while saying 'Of course I still love you'"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esteem_Legacy_Establishment",
+          "reasoning": "He wants to be remembered as loving/honest in his final moments.",
+          "why_not_primary": "The interaction is dyadic and focused on the relationship, fitting 'Belonging' better than 'Esteem'."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_female_01",
+      "character_id": "female_dark_hair",
+      "desire_label": "Safety_Survival_Assurance_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 18.0,
+        "duration_seconds": 18.0
+      },
+      "reasoning_chain": "She asks if the shelter will work -> She interrupts his technical explanation to demand a simple 'Yes' -> Indicates a need for certainty and safety over technical detail.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 15.0,
+          "behavior_type": "verbal_interruption",
+          "description": "Interrupts with 'Yes is the answer that I'm looking for.'"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_female_02",
+      "character_id": "female_dark_hair",
+      "desire_label": "Emotional_Vulnerability_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 23.0,
+        "end_seconds": 51.0,
+        "duration_seconds": 28.0
+      },
+      "reasoning_chain": "Male attempts emotional confession -> Female recognizes this as a 'deathbed' behavior -> She actively blocks it ('No, no') to maintain composure and deny the finality of the situation.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 24.0,
+          "behavior_type": "body_movement",
+          "description": "Shaking head vigorously, putting hand near his mouth to stop him."
+        },
+        {
+          "timestamp_seconds": 29.0,
+          "behavior_type": "verbal_statement",
+          "description": "Explicitly states: 'I don't want to cry right now.'"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Maintenance",
+          "reasoning": "She seems annoyed by him and calls him arrogant.",
+          "why_not_primary": "Her statement 'because you think we're gonna die' reveals the root cause is fear of the situation, not just annoyance with him."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_01",
+      "character_id": "male_uniform",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 19.0,
+        "offset_timestamp_seconds": 22.0,
+        "transition_duration_seconds": 3.0
+      },
+      "trigger_event": {
+        "timestamp_seconds": 19.0,
+        "description": "Loud rumbling sound indicating fire intensification",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Safety_Threat_Management",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Intimacy_Expression",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 20.0,
+          "marker_type": "gaze_redirect",
+          "description": "Eyes shift from ceiling/shelter to female's face."
+        },
+        {
+          "timestamp_seconds": 21.0,
+          "marker_type": "vocal_tone_shift",
+          "description": "Voice drops from frantic/technical to lower, serious tone."
+        }
+      ],
+      "visual_marker_of_change": "The moment the rumbling occurs, he stops reciting technical specs, swallows, and turns his head fully to face her.",
+      "psychological_interpretation": "Mortality Salience effect: Awareness of imminent death triggers a shift from survival behaviors (which seem futile) to relational closure."
+    },
+    {
+      "transition_id": "trans_female_01",
+      "character_id": "female_dark_hair",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 23.0,
+        "offset_timestamp_seconds": 25.0,
+        "transition_duration_seconds": 2.0
+      },
+      "trigger_event": {
+        "timestamp_seconds": 22.0,
+        "description": "Male says 'I want to tell you something' in a serious tone",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Safety_Survival_Assurance_Seeking",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Emotional_Vulnerability_Avoidance",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 23.0,
+          "marker_type": "facial_expression",
+          "description": "Immediate grimace/wince."
+        },
+        {
+          "timestamp_seconds": 24.0,
+          "marker_type": "verbal_interruption",
+          "description": "Rapid repetition of 'No, no.'"
+        }
+      ],
+      "visual_marker_of_change": "The moment he starts his sentence, her eyes squeeze shut briefly and she physically recoils/shakes her head.",
+      "psychological_interpretation": "Anticipatory Coping: She predicts a distress-inducing social interaction (a goodbye) and attempts to preemptively block it to maintain emotional regulation."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 7.0,
+      "timestamp_end_seconds": 12.0,
+      "character_id": "male_uniform",
+      "behavior_category": "verbal_behavior",
+      "behavior_description": "Rapid, breathless explanation of shelter physics",
+      "intensity": "strong",
+      "target": "female_dark_hair",
+      "inferred_mental_state": "Anxiety masked by intellectualization",
+      "relevance_to_desire": "Indicates desire to control the uncontrollable situation through knowledge (Safety)."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 26.0,
+      "timestamp_end_seconds": 30.0,
+      "character_id": "female_dark_hair",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Furrowed brows, direct eye contact, shaking head",
+      "intensity": "strong",
+      "target": "male_uniform",
+      "inferred_mental_state": "Refusal/Denial",
+      "relevance_to_desire": "Direct evidence of Emotional_Vulnerability_Avoidance; she is fighting the social script of 'dying together'."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 46.0,
+      "timestamp_end_seconds": 48.0,
+      "character_id": "male_uniform",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Smirking/Smiling despite the shouting",
+      "intensity": "moderate",
+      "target": "female_dark_hair",
+      "inferred_mental_state": "Satisfaction/Amusement",
+      "relevance_to_desire": "Indicates satisfaction of Social_Affiliation_Seeking; he interprets her frustration as confirmation of love."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "qa_seg_01",
+      "start_timestamp_seconds": 19.0,
+      "end_timestamp_seconds": 30.0,
+      "segment_description": "The transition from technical safety talk to emotional confrontation.",
+      "psychological_significance": "Clear example of Mortality Salience triggering different coping mechanisms in two individuals (Approach vs. Avoidance).",
+      "potential_qa_types": [
+        "transition_detection",
+        "desire_identification",
+        "conflict_analysis"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "male_uniform__female_dark_hair",
+      "character_1_id": "male_uniform",
+      "character_2_id": "female_dark_hair",
+      "relationship_type": "Romantic/Estranged (implied history)",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Male seeks to escalate intimacy; Female seeks to de-escalate/block intimacy. This creates a 'Pursuer-Distancer' dynamic.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 23.0,
+          "description": "Male initiates emotional bid; Female rejects it."
+        },
+        {
+          "timestamp_seconds": 46.0,
+          "description": "Male reframes Female's rejection ('It doesn't matter') as acceptance ('So that's a yes?')."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene is high-contrast with heavy visual effects (fire). Audio cues (dialogue) are critical for distinguishing specific desires, as facial expressions alone show generalized fear. The 'Parsimony Principle' is challenged here: while 'Safety' is the base need, the characters actively ignore it to focus on 'Belonging', suggesting a psychological override common in terminal situations.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": true,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "1-19.json",
+  "generated_filename": "fire_shelter_survival_panic.json"
+}

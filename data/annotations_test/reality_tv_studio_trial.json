@@ -1,0 +1,471 @@
+{
+  "video_id": "1.13",
+  "video_path": "data\\Youtube_videos\\1.13.mp4",
+  "duration_seconds": 52,
+  "annotation_timestamp": "2025-12-08T13:42:52.220726",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Television studio set with ornate decor (Reality TV stage)",
+    "social_context": "Group adjudication/social trial",
+    "temporal_context": "Evening broadcast (Weekend special)",
+    "emotional_atmosphere": "Tense, judgmental, fluctuating between amusement and confrontation",
+    "salient_objects": [
+      "Microphones",
+      "Seating arrangement",
+      "Screen showing past events"
+    ],
+    "activity_type": "Social conflict resolution/Interrogation"
+  },
+  "characters": [
+    {
+      "character_id": "woman_red_dress",
+      "physical_description": "Female, long dark hair, wearing a pink/red halter neck outfit",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Accused/Defendant",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Smiling broadly, relaxed posture, laughing",
+        "apparent_goal": "Enjoying the social interaction/flashback",
+        "behavioral_evidence": [
+          "Broad Duchenne smile",
+          "Relaxed shoulders",
+          "Laughing in reaction to screen"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 51,
+        "emotional_state": {
+          "primary_emotion": "Embarrassment/Nervousness",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Awkward smile, slight head tilt, less animated",
+        "apparent_goal": "Mitigating social tension",
+        "behavioral_evidence": [
+          "Smile becomes fixed/awkward",
+          "Gaze shifts",
+          "Defensive hand gestures cease"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_confidence",
+          "psychological_basis": "Self-efficacy in social interactions",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "moderate",
+          "peak_moment_seconds": 5,
+          "behavioral_evidence": [
+            "Initially laughing freely",
+            "Later resorting to frantic hand gestures to explain",
+            "Finally smiling awkwardly under scrutiny"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "man_green_blazer",
+      "physical_description": "Male, short hair, wearing olive green blazer and black t-shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Authority Figure/Judge",
+      "initial_state": {
+        "timestamp_seconds": 3,
+        "emotional_state": {
+          "primary_emotion": "Serious/Authoritative",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing upright, hand in pocket, direct gaze",
+        "apparent_goal": "Controlling the discourse",
+        "behavioral_evidence": [
+          "Dominant stance",
+          "Direct eye contact with participants",
+          "Steady vocal delivery (implied by posture)"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 47,
+        "emotional_state": {
+          "primary_emotion": "Contemplative/Judgmental",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Hand stroking chin, thoughtful expression",
+        "apparent_goal": "Evaluating the arguments",
+        "behavioral_evidence": [
+          "Chin stroke gesture",
+          "Narrowed eyes",
+          "Silence/Listening posture"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "dominance_display",
+          "psychological_basis": "Social hierarchy maintenance",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 12,
+          "behavioral_evidence": [
+            "Center stage positioning",
+            "Uninterrupted speaking turns",
+            "Judgmental gestures"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "woman_black_dress",
+      "physical_description": "Female, dark hair, wearing black ethnic wear with heavy jewelry",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Accuser/Critic",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Disapproval",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Stoic face, minimal movement, observing",
+        "apparent_goal": "Observing the playback critically",
+        "behavioral_evidence": [
+          "Lack of smile compared to others",
+          "Fixed gaze",
+          "Upright, stiff posture"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 51,
+        "emotional_state": {
+          "primary_emotion": "Resignation/Sadness",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Looking down, slumped shoulders",
+        "apparent_goal": "Accepting the verdict/feedback",
+        "behavioral_evidence": [
+          "Gaze aversion (looking down)",
+          "Reduced facial tension",
+          "Passive hands"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "assertiveness",
+          "psychological_basis": "Tendency to defend rights or opinions",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": 21,
+          "behavioral_evidence": [
+            "Quiet observation",
+            "Raising hand to interrupt",
+            "Passivity at the end"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_001",
+      "character_id": "woman_red_dress",
+      "desire_label": "Esteem_Reputation_Defense",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 22,
+        "end_seconds": 45,
+        "duration_seconds": 23
+      },
+      "reasoning_chain": "Character is questioned by authority -> Perceives threat to social standing -> Initiates rapid speech and gestures to explain intent -> Motivation is to restore positive evaluation",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 25,
+          "behavior_type": "gesture",
+          "description": "Bilateral hand gestures moving outward (explanatory/pleading)"
+        },
+        {
+          "timestamp_seconds": 27,
+          "behavior_type": "facial_expression",
+          "description": "Furrowed brows, mouth open in active speech, direct eye contact with accuser"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Avoidance",
+          "reasoning": "She might just want the argument to stop rather than win it.",
+          "why_not_primary": "Her energy is high and confrontational (explaining 'why' she did it), suggesting defense rather than just avoidance."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_002",
+      "character_id": "man_green_blazer",
+      "desire_label": "Social_Norm_Enforcement",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 3,
+        "end_seconds": 48,
+        "duration_seconds": 45
+      },
+      "reasoning_chain": "Character holds authority position -> Questions the authenticity of an apology -> Uses judgment gestures (chin stroke) -> Motivation is to enforce social standards of sincerity",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 12,
+          "behavior_type": "posture",
+          "description": "Standing center stage, commanding attention"
+        },
+        {
+          "timestamp_seconds": 47,
+          "behavior_type": "gesture",
+          "description": "Touching chin while listening (evaluative)"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_003",
+      "character_id": "woman_black_dress",
+      "desire_label": "Esteem_Moral_Assertion",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 21,
+        "end_seconds": 40,
+        "duration_seconds": 19
+      },
+      "reasoning_chain": "Character interrupts to correct the narrative -> Critiques the 'genuineness' of the other's action -> Motivation is to establish her own moral correctness/perceptiveness",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 21,
+          "behavior_type": "gesture",
+          "description": "Raises hand/finger to interject"
+        },
+        {
+          "timestamp_seconds": 30,
+          "behavior_type": "facial_expression",
+          "description": "Serious, unsmiling expression while speaking"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Aggression_Expression",
+          "reasoning": "Could be motivated simply by dislike of the other person.",
+          "why_not_primary": "The context implies a debate about 'genuineness' (values), making moral assertion more specific than general aggression."
+        }
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "woman_red_dress",
+      "transition_type": "conflict",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 16,
+        "offset_timestamp_seconds": 22,
+        "transition_duration_seconds": 6
+      },
+      "trigger_event": {
+        "timestamp_seconds": 19,
+        "description": "Authority figure (man_green_blazer) questions the sincerity of her actions",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Esteem_Reputation_Defense",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 22,
+          "marker_type": "facial_shift",
+          "description": "Smile drops, eyebrows furrow"
+        },
+        {
+          "timestamp_seconds": 25,
+          "marker_type": "gesture_onset",
+          "description": "Starts using explanatory hand gestures"
+        }
+      ],
+      "visual_marker_of_change": "The moment her relaxed laughter shifts to active, tense speaking and gesturing.",
+      "psychological_interpretation": "Shift from enjoying group belonging to defending individual status against criticism."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "woman_black_dress",
+      "transition_type": "attenuation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 45,
+        "offset_timestamp_seconds": 51,
+        "transition_duration_seconds": 6
+      },
+      "trigger_event": {
+        "timestamp_seconds": 47,
+        "description": "Authority figure makes a concluding judgment/statement",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Esteem_Moral_Assertion",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Submissiveness_Display",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 51,
+          "marker_type": "gaze_redirect",
+          "description": "Eyes look down, breaking contact"
+        },
+        {
+          "timestamp_seconds": 51,
+          "marker_type": "postural_change",
+          "description": "Shoulders slump slightly, stillness returns"
+        }
+      ],
+      "visual_marker_of_change": "When she stops arguing and drops her gaze to her lap.",
+      "psychological_interpretation": "Acceptance of the authority's ruling or realization that further argument is futile (Learned Helplessness or Strategic Withdrawal)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 5,
+      "character_id": "woman_red_dress",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Laughing, Duchenne smile",
+      "intensity": "strong",
+      "target": "screen/group",
+      "inferred_mental_state": "Amusement/Joy",
+      "relevance_to_desire": "Indicates satisfaction of belonging needs"
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 21,
+      "timestamp_end_seconds": 22,
+      "character_id": "woman_black_dress",
+      "behavior_category": "gesture",
+      "behavior_description": "Raises index finger/hand while seated",
+      "intensity": "moderate",
+      "target": "man_green_blazer",
+      "inferred_mental_state": "Desire to speak/interject",
+      "relevance_to_desire": "Preparatory action for asserting opinion (Esteem)"
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 47,
+      "timestamp_end_seconds": 49,
+      "character_id": "man_green_blazer",
+      "behavior_category": "gesture",
+      "behavior_description": "Stroking chin/beard area",
+      "intensity": "subtle",
+      "target": null,
+      "inferred_mental_state": "Cognitive evaluation/Thinking",
+      "relevance_to_desire": "Indicates processing of information before judgment"
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_001",
+      "start_timestamp_seconds": 19,
+      "end_timestamp_seconds": 28,
+      "segment_description": "The host questions the participants, leading to a defensive reaction from woman_red_dress.",
+      "psychological_significance": "Clear example of desire transition from affiliation to defense triggered by social threat.",
+      "potential_qa_types": [
+        "transition_detection",
+        "desire_identification",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "woman_red_vs_woman_black",
+      "character_1_id": "woman_red_dress",
+      "character_2_id": "woman_black_dress",
+      "relationship_type": "adversaries",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "woman_black_dress's criticism triggers woman_red_dress's defensive behavior.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 21,
+          "description": "woman_black_dress interrupts to critique woman_red_dress"
+        },
+        {
+          "timestamp_seconds": 33,
+          "description": "Simultaneous gesturing/arguing"
+        }
+      ]
+    },
+    {
+      "dyad_id": "host_vs_participants",
+      "character_1_id": "man_green_blazer",
+      "character_2_id": "woman_red_dress",
+      "relationship_type": "judge_defendant",
+      "interaction_quality": "mixed",
+      "mutual_influence": "man_green_blazer's questioning dictates the emotional state of woman_red_dress.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 19,
+          "description": "Host addresses the group, shifting the mood"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene is highly performative (Reality TV), so 'genuine' desires are layered with 'performative' desires (desire to be seen as good on camera). Parsimony principle applied to focus on immediate social dynamics.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "1.13.json",
+  "generated_filename": "reality_tv_studio_trial.json"
+}

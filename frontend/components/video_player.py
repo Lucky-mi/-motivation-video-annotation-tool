@@ -13,7 +13,15 @@ class VideoPlayer:
         if Path(video_path).exists():
             with open(video_path, 'rb') as f:
                 video_bytes = f.read()
-            st.video(video_bytes)
+            placeholder = st.empty()
+            
+            # 2. 强制清空容器（这步至关重要，它会把旧的播放器彻底删掉！）
+            # 这样浏览器就不会记住“5:30”这个进度了
+            placeholder.empty()
+            
+            # 3. 在干净的容器里放入新视频
+            # 注意：这里不要加 key 参数，因为 st.video 不支持
+            placeholder.video(video_bytes)
         else:
             st.warning("视频文件不存在")
 

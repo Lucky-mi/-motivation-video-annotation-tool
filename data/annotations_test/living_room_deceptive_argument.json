@@ -1,0 +1,382 @@
+{
+  "video_id": "085babee-8d5b-4a5b-a671-7d7e615300c8",
+  "video_path": "data\\Youtube_videos\\085babee-8d5b-4a5b-a671-7d7e615300c8.mp4",
+  "duration_seconds": 40,
+  "annotation_timestamp": "2025-12-08T12:32:35.665391",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Domestic living room environment; couch, decor visible",
+    "social_context": "Dyadic interaction; likely romantic partners or housemates",
+    "temporal_context": "Daytime",
+    "emotional_atmosphere": "Volatile shifting from hostile to empathetic to comedic",
+    "salient_objects": [
+      "Mobile phone",
+      "Couch",
+      "Door"
+    ],
+    "activity_type": "Interpersonal conflict resolution (deceptive)"
+  },
+  "characters": [
+    {
+      "character_id": "male_green_shirt",
+      "physical_description": "Adult male, beard, green shirt, shorts",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The strategist/deceiver",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Expansive posture, arms stretched wide, relaxed muscle tone",
+        "apparent_goal": "Relaxation and leisure",
+        "behavioral_evidence": [
+          "Stretching arms",
+          "Leaning back on couch",
+          "Verbalizing 'Life is good'"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 40,
+        "emotional_state": {
+          "primary_emotion": "Pride",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Upright posture, adjusting clothing, smug facial expression",
+        "apparent_goal": "Self-validation of successful deception",
+        "behavioral_evidence": [
+          "Adjusting shirt",
+          "Smiling at camera",
+          "Verbalizing 'I'm too good'"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "perceived_threat_level",
+          "psychological_basis": "Safety needs (Maslow)",
+          "trajectory": "DECREASING",
+          "initial_level": "low",
+          "final_level": "low",
+          "peak_moment_seconds": 4,
+          "behavioral_evidence": [
+            "Startle response at 00:03",
+            "Defensive posture at 00:06",
+            "Relaxation after female leaves at 00:30"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "female_white_shirt",
+      "physical_description": "Adult female, white t-shirt, jeans, headband",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The aggressor turned caregiver",
+      "initial_state": {
+        "timestamp_seconds": 3,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "high"
+        },
+        "body_language_summary": "Aggressive approach, rapid movements, loud vocal projection",
+        "apparent_goal": "Confrontation and expression of grievance",
+        "behavioral_evidence": [
+          "Storming into room",
+          "Yelling name",
+          "Pointing fingers"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 38,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Relaxed exit, compliant demeanor",
+        "apparent_goal": "Providing care/coffee",
+        "behavioral_evidence": [
+          "Smiling",
+          "Walking away calmly",
+          "Accepting the male's compliment"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "empathy_level",
+          "psychological_basis": "Theory of Mind (Affective)",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 22,
+          "behavioral_evidence": [
+            "Initial yelling (low empathy)",
+            "Shift to soft tone 'What happened?' (increasing)",
+            "Offer of coffee (high empathy)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_male_01",
+      "character_id": "male_green_shirt",
+      "desire_label": "Safety_Conflict_Avoidance",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 3,
+        "end_seconds": 30,
+        "duration_seconds": 27
+      },
+      "reasoning_chain": "Male perceives threat (yelling female) -> Activates avoidance motivation -> Selects strategy (fake phone call) to deflect aggression -> Maintains ruse until threat withdraws.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 3,
+          "behavior_type": "physiological_indicator",
+          "description": "Startle response, widening eyes upon entry of female"
+        },
+        {
+          "timestamp_seconds": 10,
+          "behavior_type": "action_execution",
+          "description": "Abruptly picking up phone and feigning conversation to interrupt the conflict"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Dominance_Assertion",
+          "reasoning": "He might be trying to assert dominance by ignoring her, but the startle response suggests fear/avoidance is the primary driver.",
+          "why_not_primary": "The behavior is defensive (hiding behind a task) rather than directly confrontational."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_female_01",
+      "character_id": "female_white_shirt",
+      "desire_label": "Social_Support_Provision",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 18,
+        "end_seconds": 30,
+        "duration_seconds": 12
+      },
+      "reasoning_chain": "Female observes male's distress (fake) -> Belief about situation changes from 'he is lazy' to 'he is stressed' -> Desire shifts from conflict to caregiving.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 18,
+          "behavior_type": "facial_expression",
+          "description": "Brows unfurrow, expression softens from anger to concern"
+        },
+        {
+          "timestamp_seconds": 27,
+          "behavior_type": "verbal_commitment",
+          "description": "Offers 'I'll get you some coffee'"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_02",
+      "character_id": "male_green_shirt",
+      "desire_label": "Esteem_Competence_Display",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 30,
+        "end_seconds": 40,
+        "duration_seconds": 10
+      },
+      "reasoning_chain": "Threat removed -> Male reflects on successful manipulation -> Experiences pride -> Displays competence to audience (breaking fourth wall).",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 31,
+          "behavior_type": "facial_expression",
+          "description": "Smug smile, direct eye contact with camera"
+        },
+        {
+          "timestamp_seconds": 32,
+          "behavior_type": "gesture",
+          "description": "Self-congratulatory hand gesture/adjustment of clothes"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_female_01",
+      "character_id": "female_white_shirt",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 15,
+        "offset_timestamp_seconds": 19,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 15,
+        "description": "Male character yells 'If you want something done right, do it yourself' into the phone.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Conflict_Initiation",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 17,
+          "marker_type": "postural_change",
+          "description": "Aggressive forward lean retracts to neutral standing posture"
+        },
+        {
+          "timestamp_seconds": 18,
+          "marker_type": "facial_shift",
+          "description": "Mouth closes, eyebrows raise in confusion"
+        }
+      ],
+      "visual_marker_of_change": "The moment her shouting stops abruptly and her hands drop to her sides.",
+      "psychological_interpretation": "The male's behavior violated the female's expectation (BDI violation), causing an orienting response that interrupted the anger/conflict loop."
+    },
+    {
+      "transition_id": "trans_male_01",
+      "character_id": "male_green_shirt",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 3,
+        "offset_timestamp_seconds": 6,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 3,
+        "description": "Female enters screaming.",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Physiological_Rest_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "physiological"
+      },
+      "desire_after": {
+        "label": "Safety_Threat_Avoidance",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 3,
+          "marker_type": "physiological_indicator",
+          "description": "Startle reflex (arms retract, head turns)"
+        }
+      ],
+      "visual_marker_of_change": "The moment his relaxed posture snaps into tension upon hearing his name screamed.",
+      "psychological_interpretation": "Immediate shift from physiological need (rest) to safety need due to perceived social aggression."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 10,
+      "timestamp_end_seconds": 17,
+      "character_id": "male_green_shirt",
+      "behavior_category": "body_movement",
+      "behavior_description": "Pacing, aggressive gesturing with phone, loud vocalization directed at imaginary interlocutor",
+      "intensity": "strong",
+      "target": "imaginary_person_on_phone",
+      "inferred_mental_state": "Feigned Anger / Strategic Deception",
+      "relevance_to_desire": "This performance is the mechanism for Safety_Conflict_Avoidance."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 22,
+      "timestamp_end_seconds": 25,
+      "character_id": "female_white_shirt",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Steps back, lowers hands, tilts head",
+      "intensity": "moderate",
+      "target": "male_green_shirt",
+      "inferred_mental_state": "Concern / Empathy",
+      "relevance_to_desire": "Indicates shift to Social_Support_Provision."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_deception",
+      "start_timestamp_seconds": 10,
+      "end_timestamp_seconds": 20,
+      "segment_description": "Male initiates fake phone call to confuse female.",
+      "psychological_significance": "Demonstrates high-level ToM (manipulating another's belief state) and emotional regulation (feigning anger to mask fear).",
+      "potential_qa_types": [
+        "intention_prediction",
+        "desire_identification",
+        "social_strategy_analysis"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "male_green_shirt__female_white_shirt",
+      "character_1_id": "male_green_shirt",
+      "character_2_id": "female_white_shirt",
+      "relationship_type": "partners",
+      "interaction_quality": "mixed",
+      "mutual_influence": "The female's aggression triggers the male's deception; the male's deception triggers the female's empathy.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 3,
+          "description": "Conflict initiation by female"
+        },
+        {
+          "timestamp_seconds": 18,
+          "description": "De-escalation via male's distraction technique"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video is a skit, meaning behaviors are exaggerated for comedic effect. However, the underlying psychological mechanisms (avoidance, empathy, deception) remain valid for annotation.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "085babee-8d5b-4a5b-a671-7d7e615300c8.json",
+  "generated_filename": "living_room_deceptive_argument.json"
+}

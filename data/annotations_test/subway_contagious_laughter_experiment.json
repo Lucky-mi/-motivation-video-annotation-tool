@@ -1,0 +1,360 @@
+{
+  "video_id": "082c6df7-5ed3-41bf-b9dc-1e2d10ed42f3",
+  "video_path": "data\\Youtube_videos\\082c6df7-5ed3-41bf-b9dc-1e2d10ed42f3.mp4",
+  "duration_seconds": 110,
+  "annotation_timestamp": "2025-12-08T12:30:34.587811",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Underground train carriage (subway/metro), artificial lighting, nighttime or tunnel environment.",
+    "social_context": "Public transport setting initially characterized by 'civil inattention' (strangers ignoring each other), shifting to a 'shared social experience'.",
+    "temporal_context": "Evening/Night (suggested by dark windows and fatigue of passengers).",
+    "emotional_atmosphere": "Starts neutral/detached, shifts to confusion, then escalates to high-arousal collective joy/hilarity.",
+    "salient_objects": [
+      "Smartphone (man in white)",
+      "Smartphones (passengers)",
+      "Yellow handrails"
+    ],
+    "activity_type": "Social Intervention / Social Experiment"
+  },
+  "characters": [
+    {
+      "character_id": "man_white_shirt",
+      "physical_description": "Adult male, white button-down shirt, glasses, black shoulder bag, holding smartphone to ear.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Instigator / Social Catalyst",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Neutral/Serious",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Standing holding pole, phone to ear, neutral facial expression, gaze directed vaguely forward.",
+        "apparent_goal": "Conducting a phone conversation.",
+        "behavioral_evidence": [
+          "Holding phone to ear",
+          "Stable posture",
+          "Lack of interaction with others"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 108,
+        "emotional_state": {
+          "primary_emotion": "Joy/Satisfaction",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Relaxed posture, smiling, acknowledging the camera/crowd.",
+        "apparent_goal": "Concluding the social interaction.",
+        "behavioral_evidence": [
+          "Wiping eyes",
+          "Smiling at surroundings",
+          "Relaxed stance"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_projection",
+          "psychological_basis": "Esteem_Competence_Display",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 45,
+          "behavioral_evidence": [
+            "Volume of laughter increases",
+            "Gaze scans the room to ensure others are watching/listening"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "woman_beige_coat",
+      "physical_description": "Adult female, long beige coat, dark hair, holding smartphone.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Observer / Participant",
+      "initial_state": {
+        "timestamp_seconds": 5,
+        "emotional_state": {
+          "primary_emotion": "Confusion/Annoyance",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Looking at phone, furrowed brow, glancing sideways at the noise.",
+        "apparent_goal": "Ignoring disturbance / checking phone.",
+        "behavioral_evidence": [
+          "Gaze fixed on phone",
+          "Side-eye glances"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 50,
+        "emotional_state": {
+          "primary_emotion": "Joy/Amusement",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Smiling broadly, recording with phone, looking at the man.",
+        "apparent_goal": "Capturing the moment / Participating.",
+        "behavioral_evidence": [
+          "Holding phone up to record",
+          "Duchenne smile",
+          "Laughing"
+        ]
+      }
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001_man_white_shirt",
+      "character_id": "man_white_shirt",
+      "desire_label": "Social_Affective_State_Induction",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 7,
+        "end_seconds": 100,
+        "duration_seconds": 93
+      },
+      "reasoning_chain": "Subject initiates loud, exaggerated laughter in a quiet space. His gaze is not fixed on a void (as in a private call) but scans the faces of other passengers (checking for reaction). This indicates the laughter is a tool to influence the environment rather than a private reaction.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 7,
+          "behavior_type": "vocal_expression",
+          "description": "Sudden onset of loud, rhythmic laughter."
+        },
+        {
+          "timestamp_seconds": 25,
+          "behavior_type": "eye_gaze",
+          "description": "Looking directly at other passengers while laughing, seeking eye contact."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Emotional_Release_Seeking",
+          "reasoning": "He mentions 'it's been a tough day', suggesting the laughter could be a genuine cathartic breakdown.",
+          "why_not_primary": "The end logo 'The Liberators International' and the performative nature of the scanning gaze suggest a planned intervention/stunt rather than spontaneous breakdown."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002_passengers_collective",
+      "character_id": "woman_beige_coat",
+      "desire_label": "Epistemic_Causal_Attribution_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "belief",
+      "desire_type": "avoidance",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 7,
+        "end_seconds": 20,
+        "duration_seconds": 13
+      },
+      "reasoning_chain": "When the loud laughter begins, the woman (and others) display orienting responses and 'freezing' behaviors. They are assessing if the man is a threat (mentally unstable) or harmless.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 10,
+          "behavior_type": "facial_expression",
+          "description": "Furrowed brows, side-glances without head turning (covert monitoring)."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001_man_white_shirt",
+      "character_id": "man_white_shirt",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 6,
+        "offset_timestamp_seconds": 8,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 6,
+        "description": "Internal decision to begin the performance/act.",
+        "trigger_type": "internal_state_change"
+      },
+      "desire_before": {
+        "label": "Social_Norm_Adherence_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Atmosphere_Modification_Seeking",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 7,
+          "marker_type": "vocal_shift",
+          "description": "Transition from silence/murmur to loud laughter."
+        },
+        {
+          "timestamp_seconds": 7,
+          "marker_type": "postural_change",
+          "description": "Hand tightens on strap, head tilts back."
+        }
+      ],
+      "visual_marker_of_change": "The moment his mouth opens wide and he breaks the silence with the first loud laugh.",
+      "psychological_interpretation": "Shift from passive passenger behavior to active social agent intending to disrupt the social script."
+    },
+    {
+      "transition_id": "trans_002_woman_beige_coat",
+      "character_id": "woman_beige_coat",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 20,
+        "offset_timestamp_seconds": 28,
+        "transition_duration_seconds": 8
+      },
+      "trigger_event": {
+        "timestamp_seconds": 20,
+        "description": "Realization that the laughter is non-threatening and contagious.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Safety_Threat_Monitoring",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 22,
+          "marker_type": "facial_shift",
+          "description": "Eyebrows relax, corners of mouth turn up."
+        },
+        {
+          "timestamp_seconds": 28,
+          "marker_type": "action_preparation",
+          "description": "Lifts phone to record (engaging with the event rather than avoiding it)."
+        }
+      ],
+      "visual_marker_of_change": "When her expression shifts from a confused frown to a suppressed smile.",
+      "psychological_interpretation": "Resolution of safety concerns allows the 'belonging' need to take precedence, manifesting as mirroring the laughter (emotional contagion)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 6,
+      "character_id": "man_white_shirt",
+      "behavior_category": "posture_shift",
+      "behavior_description": "Standing still, holding strap, phone to ear.",
+      "intensity": "low",
+      "target": null,
+      "inferred_mental_state": "Preparation/Waiting",
+      "relevance_to_desire": "Establishes baseline behavior before the 'act' begins."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 30,
+      "timestamp_end_seconds": 45,
+      "character_id": "passengers_group",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Multiple passengers looking at each other and smiling/laughing.",
+      "intensity": "moderate",
+      "target": "man_white_shirt",
+      "inferred_mental_state": "Shared Amusement / Relief",
+      "relevance_to_desire": "Indicates successful fulfillment of the man's desire to modify the social atmosphere."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 120,
+      "timestamp_end_seconds": 125,
+      "character_id": "man_white_shirt",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Wiping tears from eyes, deep exhalation.",
+      "intensity": "moderate",
+      "target": null,
+      "inferred_mental_state": "Physiological recovery from intense laughter",
+      "relevance_to_desire": "Signals the 'Resolution' phase of the desire cycle."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_001_onset",
+      "start_timestamp_seconds": 5,
+      "end_timestamp_seconds": 15,
+      "segment_description": "The man starts laughing; passengers react with confusion.",
+      "psychological_significance": "Demonstrates 'Expectation Violation' in a social setting and the immediate 'Orienting Response' of observers.",
+      "potential_qa_types": [
+        "desire_identification",
+        "emotion_recognition",
+        "social_norm_violation"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_002_contagion",
+      "start_timestamp_seconds": 35,
+      "end_timestamp_seconds": 55,
+      "segment_description": "The laughter spreads to the whole carriage.",
+      "psychological_significance": "Classic example of 'Emotional Contagion' and the shift from individual safety concerns to group belonging.",
+      "potential_qa_types": [
+        "transition_detection",
+        "group_dynamics"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "man_white_shirt__crowd",
+      "character_1_id": "man_white_shirt",
+      "character_2_id": "passengers_group",
+      "relationship_type": "strangers",
+      "interaction_quality": "mixed",
+      "mutual_influence": "The man acts as an emotional stimulus. The crowd initially resists (confusion/avoidance) but eventually synchronizes (mirroring). The crowd's positive feedback (joining in) reinforces the man's behavior.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 10,
+          "description": "Man laughs, crowd freezes/stares (Mismatch)."
+        },
+        {
+          "timestamp_seconds": 40,
+          "description": "Man laughs, crowd laughs (Synchronization)."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video is a documented social experiment by 'The Liberators International'. While the man's laughter appears to be a performance (Intention), the physiological response of the crowd (mirror neurons/contagion) is genuine. The annotation focuses on these observable psychological shifts.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": true,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "082c6df7-5ed3-41bf-b9dc-1e2d10ed42f3.json",
+  "generated_filename": "subway_contagious_laughter_experiment.json"
+}

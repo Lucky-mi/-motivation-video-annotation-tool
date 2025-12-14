@@ -1,0 +1,364 @@
+{
+  "video_id": "1042bfc9-deaa-4fed-9df2-16325b1e6234",
+  "video_path": "data\\Youtube_videos\\1042bfc9-deaa-4fed-9df2-16325b1e6234.mp4",
+  "duration_seconds": 56,
+  "annotation_timestamp": "2025-12-08T20:02:32.703763",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Montage of various locations: an urban sidewalk, a restaurant exterior, a home dining area, a living room, and a restaurant interior.",
+    "social_context": "Reunion scenarios involving family members (likely adult children surprising mothers).",
+    "temporal_context": "Various times of day; events appear to be special occasions or long-awaited returns.",
+    "emotional_atmosphere": "Initially mundane/neutral, transitioning rapidly to high-arousal joy and emotional release.",
+    "salient_objects": [
+      "flowers",
+      "luggage/backpacks",
+      "mobile phones",
+      "dining tables"
+    ],
+    "activity_type": "social_reunion"
+  },
+  "characters": [
+    {
+      "character_id": "sidewalk_woman_beige",
+      "physical_description": "Adult female, wearing a long beige trench coat and black boots.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "surprise_recipient",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Anticipation",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing on sidewalk, pacing slightly, head turning to scan the environment.",
+        "apparent_goal": "Waiting for someone or something.",
+        "behavioral_evidence": [
+          "Visual scanning of the street",
+          "Holding phone but looking up",
+          "Orienting body toward street traffic"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 5.0,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Embracing another individual, tight grip, body pressed close.",
+        "apparent_goal": "Maintain physical contact with the greeter.",
+        "behavioral_evidence": [
+          "Reciprocating hug",
+          "Leaning into the other person",
+          "Ceasing environmental scanning"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "arousal_level",
+          "psychological_basis": "circumplex_model",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 3.5,
+          "behavioral_evidence": [
+            "Sudden turn",
+            "Rapid arm movement",
+            "Immediate embrace"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "dining_woman_pink",
+      "physical_description": "Adult female, wearing a pink sweatshirt/long-sleeve top and glasses.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "surprise_recipient",
+      "initial_state": {
+        "timestamp_seconds": 20.0,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Sitting at a dining table, engaged in conversation or eating.",
+        "apparent_goal": "Socializing with current group.",
+        "behavioral_evidence": [
+          "Seated posture",
+          "Relaxed facial muscles",
+          "Attention focused on table"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 26.0,
+        "emotional_state": {
+          "primary_emotion": "Ecstasy",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Standing, jumping slightly, tight embrace.",
+        "apparent_goal": "Physical connection with the newcomer.",
+        "behavioral_evidence": [
+          "Rapid transition from sitting to standing",
+          "Hands covering mouth (shock)",
+          "Audible vocalization (implied by open mouth)",
+          "Tight hug"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "surprise_response",
+          "psychological_basis": "tom_belief_revision",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 22.0,
+          "behavioral_evidence": [
+            "Jaw drop",
+            "Hands flying to face",
+            "Freezing momentarily before action"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_sidewalk_01",
+      "character_id": "sidewalk_woman_beige",
+      "desire_label": "Epistemic_Environmental_Monitoring",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 2.5,
+        "duration_seconds": 2.5
+      },
+      "reasoning_chain": "Subject is standing still on a sidewalk but actively looking around -> Suggests expectation of an event or person -> Behavior is information-seeking.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 0.5,
+          "behavior_type": "eye_gaze",
+          "description": "Scanning the street and sidewalk environment."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Expectation_Maintenance",
+          "reasoning": "She may be specifically waiting for a person rather than generally monitoring, but specific target is unknown until the hug.",
+          "why_not_primary": "Monitoring is the observable behavior; the social target is an inference confirmed later."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_dining_01",
+      "character_id": "dining_woman_pink",
+      "desire_label": "Social_Affiliation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 22.0,
+        "end_seconds": 28.0,
+        "duration_seconds": 6.0
+      },
+      "reasoning_chain": "Subject identifies newcomer -> Immediate high-arousal reaction (standing, screaming) -> Rapid approach behavior -> Consummatory behavior (hugging) indicates strong desire for proximity.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 22.5,
+          "behavior_type": "body_movement",
+          "description": "Explosive movement from seated to standing position."
+        },
+        {
+          "timestamp_seconds": 24.0,
+          "behavior_type": "proxemic_change",
+          "description": "Closing distance to zero (embrace)."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_sidewalk_01",
+      "character_id": "sidewalk_woman_beige",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 2.8,
+        "offset_timestamp_seconds": 4.0,
+        "transition_duration_seconds": 1.2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 2.8,
+        "description": "Another individual approaches from behind and initiates physical contact.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Environmental_Monitoring",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 3.0,
+          "marker_type": "postural_change",
+          "description": "Subject turns 180 degrees."
+        },
+        {
+          "timestamp_seconds": 3.2,
+          "marker_type": "gesture",
+          "description": "Arms raise to reciprocate embrace."
+        }
+      ],
+      "visual_marker_of_change": "The moment the subject turns, recognizes the person, and shifts from a startled defensive posture to an open embracing posture.",
+      "psychological_interpretation": "A 'startle' response (Safety_Threat_Avoidance) is almost instantly inhibited and replaced by Social_Affiliation_Seeking upon recognition of the stimulus as a loved one."
+    },
+    {
+      "transition_id": "trans_dining_01",
+      "character_id": "dining_woman_pink",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 21.5,
+        "offset_timestamp_seconds": 23.0,
+        "transition_duration_seconds": 1.5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 21.5,
+        "description": "Visual identification of the entering male subject.",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Physiological_Nutrition_Maintenance",
+        "intensity": "weak",
+        "maslow_level": "physiological"
+      },
+      "desire_after": {
+        "label": "Social_Reconnection_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 21.8,
+          "marker_type": "facial_shift",
+          "description": "Mouth opens wide, eyes widen (surprise)."
+        },
+        {
+          "timestamp_seconds": 22.0,
+          "marker_type": "body_movement",
+          "description": "Hands fly to face/head (emotional regulation)."
+        }
+      ],
+      "visual_marker_of_change": "The exact frame where the subject stops chewing/eating and freezes with widened eyes before standing up.",
+      "psychological_interpretation": "The sudden appearance of a significant other violates the subject's world-model (Belief), triggering an Orienting Response followed by intense Affiliation desire."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0.0,
+      "timestamp_end_seconds": 5.0,
+      "character_id": "sidewalk_woman_beige",
+      "behavior_category": "body_movement",
+      "behavior_description": "Pacing, scanning, then turning rapidly upon touch.",
+      "intensity": "moderate",
+      "target": "environment",
+      "inferred_mental_state": "Alertness transitioning to Recognition",
+      "relevance_to_desire": "Scanning indicates a search/wait state; rapid turn indicates reaction to unexpected stimulus."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 21.0,
+      "timestamp_end_seconds": 26.0,
+      "character_id": "dining_woman_pink",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Transition from neutral to extreme surprise (O-mouth) to joy (Duchenne smile/crying).",
+      "intensity": "strong",
+      "target": "entering_male",
+      "inferred_mental_state": "Shock followed by Overwhelming Joy",
+      "relevance_to_desire": "The intensity of the expression confirms the high value of the social target (Belonging need)."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_dining_surprise",
+      "start_timestamp_seconds": 20.0,
+      "end_timestamp_seconds": 28.0,
+      "segment_description": "A woman at a dinner table is surprised by a man entering the room.",
+      "psychological_significance": "Classic example of belief revision (surprise) triggering a shift in desire hierarchy from physiological (eating) to belonging (hugging).",
+      "potential_qa_types": [
+        "desire_identification",
+        "transition_detection",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_sidewalk_surprise",
+      "start_timestamp_seconds": 0.0,
+      "end_timestamp_seconds": 8.0,
+      "segment_description": "A woman on the street is surprised from behind.",
+      "psychological_significance": "Demonstrates the fine line between Safety_Threat_Avoidance (startle) and Social_Affiliation_Seeking.",
+      "potential_qa_types": [
+        "reaction_time_analysis",
+        "intent_inference"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "dining_dyad",
+      "character_1_id": "dining_woman_pink",
+      "character_2_id": "entering_male_backpack",
+      "relationship_type": "close_family_likely_mother_son",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The male's presence acts as a catalyst, instantly altering the female's emotional and motivational state.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 24.0,
+          "description": "Mutual embrace showing synchronized desire for contact."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video is a compilation. Annotation focused on two distinct, high-clarity examples (sidewalk scene and dining scene) to demonstrate the model's capability. Other clips follow similar psychological patterns of Surprise -> Recognition -> Affiliation.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "1042bfc9-deaa-4fed-9df2-16325b1e6234.json",
+  "generated_filename": "emotional_family_reunion_montage.json"
+}

@@ -1,0 +1,368 @@
+{
+  "video_id": "03b8ec49-4152-4232-9bf2-06fbaa505322",
+  "video_path": "data\\Youtube_videos\\03b8ec49-4152-4232-9bf2-06fbaa505322.mp4",
+  "duration_seconds": 60.0,
+  "annotation_timestamp": "2025-12-07T22:49:40.033913",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Residential entryway/foyer with hardwood floors and holiday decorations",
+    "social_context": "Family gathering involving a surprise gift presentation",
+    "temporal_context": "Evening (dark outside open door)",
+    "emotional_atmosphere": "High anticipation transitioning to overwhelming joy and emotional release",
+    "salient_objects": [
+      "Large decorated box",
+      "Balloons",
+      "Puppy",
+      "Wreath"
+    ],
+    "activity_type": "Gift giving / Surprise reveal"
+  },
+  "characters": [
+    {
+      "character_id": "woman_purple_jacket",
+      "physical_description": "Adult female, dark hair, wearing purple zip-up jacket, jeans, and sneakers",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Recipient of surprise",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Surprise",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Walking upright, then slowing pace, visual orientation toward unexpected object",
+        "apparent_goal": "Enter house and investigate obstacle",
+        "behavioral_evidence": [
+          "Slowing walking speed upon entry",
+          "Fixed gaze on the box",
+          "Hesitant approach"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Sitting on floor, hugging animal, rocking slightly",
+        "apparent_goal": "Bond with new pet",
+        "behavioral_evidence": [
+          "Physical embrace of puppy",
+          "Sitting on floor level",
+          "Tearful smiling"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "emotional_arousal",
+          "psychological_basis": "Circumplex Model of Affect",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "moderate",
+          "final_level": "moderate",
+          "peak_moment_seconds": 20,
+          "behavioral_evidence": [
+            "Sudden drop to knees",
+            "Hands covering mouth",
+            "Audible sobbing/gasping"
+          ],
+          "confidence": "high"
+        },
+        {
+          "attribute_name": "social_connectedness",
+          "psychological_basis": "Maslow_Belonging",
+          "trajectory": "INCREASING",
+          "initial_level": "moderate",
+          "final_level": "high",
+          "peak_moment_seconds": 55,
+          "behavioral_evidence": [
+            "Transition from solitary entry to group interaction",
+            "Physical contact with puppy"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "child_glasses",
+      "physical_description": "Young girl, glasses, grey shirt, sitting on floor",
+      "estimated_age_group": "child",
+      "role_in_scene": "Observer/Participant in surprise",
+      "initial_state": {
+        "timestamp_seconds": 5,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Sitting, watching intently, hands clasped",
+        "apparent_goal": "Witness reaction",
+        "behavioral_evidence": [
+          "Gaze fixed on woman_purple_jacket",
+          "Smiling",
+          "Suppressed movement"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Sitting near woman, observing interaction",
+        "apparent_goal": "Share in the moment",
+        "behavioral_evidence": [
+          "Proximity maintenance",
+          "Relaxed posture"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "anticipation",
+          "psychological_basis": "Desire_Dynamics",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 15,
+          "behavioral_evidence": [
+            "Hands clasped near face initially",
+            "Relaxing hands after reveal"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001_woman_purple",
+      "character_id": "woman_purple_jacket",
+      "desire_label": "Epistemic_Information_Seeking",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 16,
+        "duration_seconds": 16
+      },
+      "reasoning_chain": "Subject enters -> Encounters unexpected large object blocking path -> Slows down -> Visually inspects -> Physically engages to identify contents. This indicates a need to resolve uncertainty about the environment.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 2,
+          "behavior_type": "body_movement",
+          "description": "Deceleration of walking pace upon seeing the box"
+        },
+        {
+          "timestamp_seconds": 14,
+          "behavior_type": "body_movement",
+          "description": "Reaching out to lift the lid of the box"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Safety_Threat_Assessment",
+          "reasoning": "She might be checking if the object is dangerous, though the balloons make this less likely.",
+          "why_not_primary": "The festive decoration (balloons) suggests a positive surprise rather than a threat, making curiosity more likely than fear."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002_woman_purple",
+      "character_id": "woman_purple_jacket",
+      "desire_label": "Social_Affiliation_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 17,
+        "end_seconds": 60,
+        "duration_seconds": 43
+      },
+      "reasoning_chain": "Subject identifies puppy -> Immediate high-arousal emotional response (tears, gasps) -> Drops to floor level (reducing hierarchy/distance) -> Initiates physical contact (hugging). This sequence demonstrates a powerful desire for connection and affection.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 18,
+          "behavior_type": "body_movement",
+          "description": "Collapsing to knees (emotional overwhelm/getting closer to subject)"
+        },
+        {
+          "timestamp_seconds": 50,
+          "behavior_type": "body_movement",
+          "description": "Lifting puppy and holding it tightly against chest"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003_child_glasses",
+      "character_id": "child_glasses",
+      "desire_label": "Social_Shared_Experience_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 40,
+        "duration_seconds": 40
+      },
+      "reasoning_chain": "Child is positioned to watch the woman, not the box. Her reactions mirror the woman's timeline. She seeks to participate in the emotional event.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 20,
+          "behavior_type": "facial_expression",
+          "description": "Smiling while watching the woman's reaction"
+        },
+        {
+          "timestamp_seconds": 38,
+          "behavior_type": "gesture",
+          "description": "Clasping hands together in anticipation/empathy"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001_woman_purple",
+      "character_id": "woman_purple_jacket",
+      "transition_type": "transformation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 16,
+        "offset_timestamp_seconds": 19,
+        "transition_duration_seconds": 3
+      },
+      "trigger_event": {
+        "timestamp_seconds": 16,
+        "description": "Visual confirmation of the puppy inside the box",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Epistemic_Information_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 17,
+          "marker_type": "facial_shift",
+          "description": "Mouth opens in gasp, hands fly to face"
+        },
+        {
+          "timestamp_seconds": 18,
+          "marker_type": "postural_change",
+          "description": "Rapid descent from standing to kneeling"
+        }
+      ],
+      "visual_marker_of_change": "The exact moment her hands release the box lid and cover her mouth while her knees buckle.",
+      "psychological_interpretation": "The resolution of the epistemic uncertainty (seeing the puppy) immediately triggers a high-intensity belonging need, overwhelming the previous state of curiosity."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 5,
+      "character_id": "woman_purple_jacket",
+      "behavior_category": "body_movement",
+      "behavior_description": "Enters door, slows gait significantly upon seeing box.",
+      "intensity": "moderate",
+      "target": "box",
+      "inferred_mental_state": "Confusion/Curiosity",
+      "relevance_to_desire": "Indicates interruption of routine and activation of information seeking."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 17,
+      "timestamp_end_seconds": 25,
+      "character_id": "woman_purple_jacket",
+      "behavior_category": "physiological_indicator",
+      "behavior_description": "Crying, gasping, covering face with hands.",
+      "intensity": "strong",
+      "target": "puppy",
+      "inferred_mental_state": "Overwhelming Joy/Shock",
+      "relevance_to_desire": "High arousal positive affect confirms the desirability of the stimulus (puppy)."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 48,
+      "timestamp_end_seconds": 55,
+      "character_id": "woman_purple_jacket",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Reaches into box, pulls puppy out, holds against chest.",
+      "intensity": "strong",
+      "target": "puppy",
+      "inferred_mental_state": "Affection",
+      "relevance_to_desire": "Consummatory behavior satisfying the desire for affiliation/contact."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_reveal",
+      "start_timestamp_seconds": 14,
+      "end_timestamp_seconds": 20,
+      "segment_description": "The moment the box is opened and the reaction begins.",
+      "psychological_significance": "Clear example of expectation violation leading to positive emotional flooding and desire transformation.",
+      "potential_qa_types": [
+        "transition_detection",
+        "emotion_recognition",
+        "trigger_identification"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "woman_purple__child_glasses",
+      "character_1_id": "woman_purple_jacket",
+      "character_2_id": "child_glasses",
+      "relationship_type": "family (likely mother/daughter)",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The child's anticipation complements the woman's surprise; the woman's joy validates the child's excitement.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 40,
+          "description": "Child leans in while woman is crying, sharing the emotional space."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 1,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video contains other peripheral characters (woman in grey, boy in red) but annotation focused on the primary subject and the most visible observer for clarity.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "03b8ec49-4152-4232-9bf2-06fbaa505322.json",
+  "generated_filename": "emotional_holiday_puppy_surprise.json"
+}

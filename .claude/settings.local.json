@@ -4,7 +4,9 @@
       "Bash(python -c:*)",
       "Bash(./venv/Scripts/python:*)",
       "Bash(mkdir:*)",
-      "Bash(python scripts/advanced_visualization.py:*)"
+      "Bash(python scripts/advanced_visualization.py:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

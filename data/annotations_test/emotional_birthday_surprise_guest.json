@@ -1,0 +1,399 @@
+{
+  "video_id": "1cf32d9a-cede-456d-aac0-c0ea1b40c31d",
+  "video_path": "data\\Youtube_videos\\1cf32d9a-cede-456d-aac0-c0ea1b40c31d.mp4",
+  "duration_seconds": 130,
+  "annotation_timestamp": "2025-12-08T20:33:27.440862",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Residential living room; crowded with furniture and people",
+    "social_context": "group activity; birthday celebration involving family and friends",
+    "temporal_context": "Daytime",
+    "emotional_atmosphere": "Sentimental, celebratory, shifting to overwhelming joy",
+    "salient_objects": [
+      "Television (off-screen)",
+      "Leather couch",
+      "Tissue/Handkerchief"
+    ],
+    "activity_type": "Social ritual (birthday)"
+  },
+  "characters": [
+    {
+      "character_id": "seated_man_black_hoodie",
+      "physical_description": "Adult male, grey hair, wearing black hoodie with orange logo, seated on leather couch",
+      "estimated_age_group": "older_adult",
+      "role_in_scene": "The celebrant/focus of attention",
+      "initial_state": {
+        "timestamp_seconds": 10,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Seated, relaxed posture, gaze fixed on off-screen TV, slight smiling",
+        "apparent_goal": "To receive social validation and watch the video message",
+        "behavioral_evidence": [
+          "Stationary posture on couch",
+          "Gaze directed forward at screen",
+          "Passive reception of 'Happy Birthday' song"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 125,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Standing, tight embrace, sobbing, face buried in other man's shoulder",
+        "apparent_goal": "To maintain physical closeness with the surprise guest",
+        "behavioral_evidence": [
+          "Standing up from couch",
+          "Wrapping arms around surprise_guest_plaid_shirt",
+          "Audible sobbing",
+          "Refusal to let go"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "emotional_arousal",
+          "psychological_basis": "Circumplex Model of Affect",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 105,
+          "behavioral_evidence": [
+            "Transition from relaxed sitting to wiping eyes",
+            "Sudden startle response (jump)",
+            "Transition to sobbing and tight hugging"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "surprise_guest_plaid_shirt",
+      "physical_description": "Adult male, short hair, wearing blue plaid shirt",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The surprise element/friend",
+      "initial_state": {
+        "timestamp_seconds": 100,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Approaching stealthily from behind, leaning over couch",
+        "apparent_goal": "To surprise the seated man",
+        "behavioral_evidence": [
+          "Quiet approach from rear",
+          "Leaning over the back of the couch",
+          "Reaching out to touch seated_man_black_hoodie"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 125,
+        "emotional_state": {
+          "primary_emotion": "Joy",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing, embracing seated_man_black_hoodie, patting his back",
+        "apparent_goal": "To comfort and connect with the celebrant",
+        "behavioral_evidence": [
+          "Reciprocating the hug",
+          "Rubbing seated_man_black_hoodie's back",
+          "Smiling while holding the embrace"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "proximity_seeking",
+          "psychological_basis": "Maslow - Belonging",
+          "trajectory": "STABLE",
+          "initial_level": "high",
+          "final_level": "high",
+          "peak_moment_seconds": 102,
+          "behavioral_evidence": [
+            "Initiates contact from behind",
+            "Maintains embrace despite the other man's overwhelming emotion"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001",
+      "character_id": "seated_man_black_hoodie",
+      "desire_label": "Social_Affiliation_Maintenance",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 100,
+        "duration_seconds": 100
+      },
+      "reasoning_chain": "Subject is passively receiving social signals (song, video message). He remains seated and attentive, wiping tears, indicating emotional resonance with the social content.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 45,
+          "behavior_type": "facial_expression",
+          "description": "Wiping eyes while watching screen"
+        },
+        {
+          "timestamp_seconds": 10,
+          "behavior_type": "body_movement",
+          "description": "Sitting still, oriented toward the screen"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002",
+      "character_id": "seated_man_black_hoodie",
+      "desire_label": "Epistemic_Uncertainty_Resolution",
+      "maslow_level": "safety",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 101,
+        "end_seconds": 104,
+        "duration_seconds": 3
+      },
+      "reasoning_chain": "Unexpected tactile stimulus (hands on shoulders) and auditory stimulus (voice behind him) violates his belief state (that the friend is on the screen). Immediate reaction is a startle response and rapid orienting to identify the source.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 102,
+          "behavior_type": "body_movement",
+          "description": "Violent startle/jump reaction"
+        },
+        {
+          "timestamp_seconds": 103,
+          "behavior_type": "body_movement",
+          "description": "Rapid head turn and twisting of torso to see behind"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Safety_Threat_Avoidance",
+          "reasoning": "The startle response is a defensive reflex, suggesting a momentary fear of threat before recognition.",
+          "why_not_primary": "The context is a safe environment and recognition happens almost instantly, making it an epistemic shock rather than a genuine safety threat."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003",
+      "character_id": "seated_man_black_hoodie",
+      "desire_label": "Social_Intimacy_Seeking",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 105,
+        "end_seconds": 130,
+        "duration_seconds": 25
+      },
+      "reasoning_chain": "Upon recognizing the friend, the subject immediately transitions from shock to seeking close physical contact. He stands up to facilitate a full embrace, prioritizing this connection over the video or the rest of the room.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 106,
+          "behavior_type": "body_movement",
+          "description": "Standing up from the couch to face the guest"
+        },
+        {
+          "timestamp_seconds": 108,
+          "behavior_type": "proxemic_change",
+          "description": "Closing distance to zero, initiating tight hug"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001",
+      "character_id": "seated_man_black_hoodie",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 101,
+        "offset_timestamp_seconds": 105,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 101,
+        "description": "surprise_guest_plaid_shirt touches his shoulders and speaks from behind",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 102,
+          "marker_type": "postural_change",
+          "description": "Sudden contraction of muscles (startle reflex)"
+        },
+        {
+          "timestamp_seconds": 103,
+          "marker_type": "gaze_redirect",
+          "description": "Eyes widen, head snaps 180 degrees"
+        }
+      ],
+      "visual_marker_of_change": "The exact moment his body jolts and he breaks gaze with the TV to look behind him.",
+      "psychological_interpretation": "A classic 'Expectation Violation' where the BDI model's belief state (friend is remote) clashes with sensory input (friend is tactile), triggering an immediate re-orienting reflex."
+    },
+    {
+      "transition_id": "trans_002",
+      "character_id": "seated_man_black_hoodie",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 105,
+        "offset_timestamp_seconds": 110,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 105,
+        "description": "Visual recognition of the friend's face",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Uncertainty_Resolution",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Intimacy_Seeking",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 106,
+          "marker_type": "facial_shift",
+          "description": "Expression shifts from shock to emotional release (crying/smiling)"
+        },
+        {
+          "timestamp_seconds": 107,
+          "marker_type": "body_movement",
+          "description": "Arms reaching out to wrap around the guest"
+        }
+      ],
+      "visual_marker_of_change": "When the tension of the startle releases and he actively pulls the other man into a hug.",
+      "psychological_interpretation": "The resolution of the epistemic uncertainty leads immediately to the satisfaction of a high-priority Belonging need."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_001",
+      "timestamp_start_seconds": 40,
+      "timestamp_end_seconds": 100,
+      "character_id": "seated_man_black_hoodie",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Wiping tears from eyes, slight nodding",
+      "intensity": "moderate",
+      "target": "TV Screen",
+      "inferred_mental_state": "Moved/Sentimental",
+      "relevance_to_desire": "Indicates the high value placed on the relationship being depicted, setting the stage for the intensity of the reunion."
+    },
+    {
+      "sequence_id": "seq_002",
+      "timestamp_start_seconds": 101,
+      "timestamp_end_seconds": 103,
+      "character_id": "seated_man_black_hoodie",
+      "behavior_category": "body_movement",
+      "behavior_description": "Whole-body startle response, jumping in seat",
+      "intensity": "strong",
+      "target": null,
+      "inferred_mental_state": "Shock/Disbelief",
+      "relevance_to_desire": "Marks the interruption of the previous state and the urgent need to identify the stimulus."
+    },
+    {
+      "sequence_id": "seq_003",
+      "timestamp_start_seconds": 110,
+      "timestamp_end_seconds": 130,
+      "character_id": "seated_man_black_hoodie",
+      "behavior_category": "proxemic_change",
+      "behavior_description": "Sustained tight embrace, burying face",
+      "intensity": "strong",
+      "target": "surprise_guest_plaid_shirt",
+      "inferred_mental_state": "Overwhelming Joy/Relief",
+      "relevance_to_desire": "Demonstrates the fulfillment of the Social_Affiliation desire."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_surprise_reveal",
+      "start_timestamp_seconds": 100,
+      "end_timestamp_seconds": 110,
+      "segment_description": "The moment the guest reveals himself and the celebrant reacts.",
+      "psychological_significance": "Perfect example of belief violation and rapid emotional state transition (Shock -> Joy).",
+      "potential_qa_types": [
+        "transition_detection",
+        "emotion_recognition",
+        "desire_identification"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "celebrant_guest_dyad",
+      "character_1_id": "seated_man_black_hoodie",
+      "character_2_id": "surprise_guest_plaid_shirt",
+      "relationship_type": "Close friends/Brothers (implied by 'brother' in audio)",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The guest's presence triggers a massive emotional release in the celebrant; the celebrant's reaction validates the guest's effort.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 101,
+          "description": "Physical touch initiating the surprise"
+        },
+        {
+          "timestamp_seconds": 108,
+          "description": "The mutual embrace"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The audio context (video message saying 'wish I could be there') is crucial for understanding the intensity of the belief violation when the guest actually appears.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "1cf32d9a-cede-456d-aac0-c0ea1b40c31d.json",
+  "generated_filename": "emotional_birthday_surprise_guest.json"
+}

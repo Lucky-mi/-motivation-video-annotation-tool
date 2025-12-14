@@ -1,0 +1,439 @@
+{
+  "video_id": "194eb16c-276c-40c8-a843-49ecd0323f44",
+  "video_path": "data\\Youtube_videos\\194eb16c-276c-40c8-a843-49ecd0323f44.mp4",
+  "duration_seconds": 208,
+  "annotation_timestamp": "2025-12-08T20:15:46.985721",
+  "annotator": "AI_Model_5.0",
+  "scene_context": {
+    "physical_setting": "Domestic kitchen, cluttered table, morning light",
+    "social_context": "Dyadic conflict within a family setting (parents arguing while children are present/nearby)",
+    "temporal_context": "Morning (indicated by breakfast items, pancakes, lighting)",
+    "emotional_atmosphere": "High tension, hostile, passive-aggressive",
+    "salient_objects": [
+      "Liquor bottle on table",
+      "Pancakes",
+      "Cooking utensils",
+      "Money/Check (implied)"
+    ],
+    "activity_type": "Domestic dispute overlapping with meal preparation"
+  },
+  "characters": [
+    {
+      "character_id": "adult_male_seated",
+      "physical_description": "Adult male, heavy build, wearing blue t-shirt with 'Royals' text, facial hair",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Conflict participant / Accused",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Seated, relaxed posture, eating/drinking, minimal engagement with others initially",
+        "apparent_goal": "Consume breakfast/drink",
+        "behavioral_evidence": [
+          "Sitting at table",
+          "Hand-to-mouth movement with fork"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 208,
+        "emotional_state": {
+          "primary_emotion": "Disgust",
+          "valence": "negative",
+          "arousal": "low"
+        },
+        "body_language_summary": "Seated, slumped shoulders, avoiding eye contact, passive demeanor",
+        "apparent_goal": "Endure situation/Wait for food",
+        "behavioral_evidence": [
+          "Slumped posture",
+          "Silence",
+          "Staring forward"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "defensiveness_level",
+          "psychological_basis": "Safety_Threat_Response",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "moderate",
+          "peak_moment_seconds": 55,
+          "behavioral_evidence": [
+            "Exaggerated yawning to dismiss accusation",
+            "Hand gestures denying actions",
+            "Turning away"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "adult_female_standing",
+      "physical_description": "Adult female, blonde hair, white tank top, patterned pajama pants/shorts",
+      "estimated_age_group": "adult",
+      "role_in_scene": "Conflict initiator / Caregiver",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anger",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing, active movement, pacing between table and counter",
+        "apparent_goal": "Manage children and confront male",
+        "behavioral_evidence": [
+          "Rapid movements",
+          "Directing children out",
+          "Orienting body toward male"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 208,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Task-focused, serving food, masked emotion",
+        "apparent_goal": "Serve breakfast to child",
+        "behavioral_evidence": [
+          "Carrying plate of biscuits",
+          "Placing food on table",
+          "Neutral facial expression"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "agitation_level",
+          "psychological_basis": "Arousal_Regulation",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 45,
+          "behavioral_evidence": [
+            "Rapid hand gestures",
+            "Pacing",
+            "Sudden shift to calm upon child entry"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "adolescent_female_entering",
+      "physical_description": "Young female, long hair, blue t-shirt",
+      "estimated_age_group": "adolescent",
+      "role_in_scene": "Observer / Catalyst for behavioral shift",
+      "initial_state": {
+        "timestamp_seconds": 190,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Walking in, casual gait",
+        "apparent_goal": "Get breakfast",
+        "behavioral_evidence": [
+          "Enters frame",
+          "Approaches table"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 208,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Standing at table, waiting",
+        "apparent_goal": "Get breakfast",
+        "behavioral_evidence": [
+          "Standing by table",
+          "Looking at food"
+        ]
+      },
+      "attribute_dynamics": []
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "analysis_male_01",
+      "character_id": "adult_male_seated",
+      "desire_label": "Social_Accountability_Avoidance",
+      "maslow_level": "esteem",
+      "bdi_component": "desire",
+      "desire_type": "avoidance",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 12,
+        "end_seconds": 120,
+        "duration_seconds": 108
+      },
+      "reasoning_chain": "Male is confronted about behavior. He uses exaggerated yawning (dismissal) and verbal denial. He physically orients away or makes dismissive gestures to avoid accepting the premise of the female's argument.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 9,
+          "behavior_type": "body_movement",
+          "description": "Exaggerated, loud yawn and stretch immediately following female's exit/re-entry"
+        },
+        {
+          "timestamp_seconds": 50,
+          "behavior_type": "gesture",
+          "description": "Open palm gestures indicating 'I don't know' or feigned ignorance"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Physiological_Rest_Seeking",
+          "reasoning": "He may genuinely be tired.",
+          "why_not_primary": "The timing of the yawn (loud, performative) coincides perfectly with the start of the confrontation, suggesting it is a social signal of dismissal rather than pure fatigue."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_female_01",
+      "character_id": "adult_female_standing",
+      "desire_label": "Social_Separation_Pursuit",
+      "maslow_level": "safety",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 135,
+        "end_seconds": 180,
+        "duration_seconds": 45
+      },
+      "reasoning_chain": "Female explicitly negotiates the male's departure. Her body language is firm, she offers financial incentive (money) to facilitate his removal, prioritizing the end of cohabitation.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 145,
+          "behavior_type": "gesture",
+          "description": "Firm nodding and direct gaze while discussing the timeline for him leaving"
+        },
+        {
+          "timestamp_seconds": 150,
+          "behavior_type": "body_movement",
+          "description": "Resumes cooking immediately after stating terms, indicating decision is made"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "analysis_female_02",
+      "character_id": "adult_female_standing",
+      "desire_label": "Physiological_Sustenance_Provision",
+      "maslow_level": "physiological",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 208,
+        "duration_seconds": 208
+      },
+      "reasoning_chain": "Throughout the conflict, she continues to mix batter, cook pancakes, and serve food. This indicates a maintenance goal that persists despite the social conflict.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 155,
+          "behavior_type": "body_movement",
+          "description": "Whisking batter vigorously while arguing"
+        },
+        {
+          "timestamp_seconds": 200,
+          "behavior_type": "body_movement",
+          "description": "Carrying tray of biscuits to table"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Role_Performance",
+          "reasoning": "She is fulfilling the 'mother' role to maintain normalcy for the children.",
+          "why_not_primary": "While true, the physical act is provisioning; the role performance is the higher-level driver."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_01",
+      "character_id": "adult_male_seated",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 8,
+        "offset_timestamp_seconds": 12,
+        "transition_duration_seconds": 4
+      },
+      "trigger_event": {
+        "timestamp_seconds": 7,
+        "description": "Female looks at him/bottle and makes a comment",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Physiological_Sustenance_Consumption",
+        "intensity": "moderate",
+        "maslow_level": "physiological"
+      },
+      "desire_after": {
+        "label": "Social_Conflict_Dismissal",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 8,
+          "marker_type": "body_movement",
+          "description": "Arms raise in exaggerated stretch"
+        },
+        {
+          "timestamp_seconds": 9,
+          "marker_type": "vocalization",
+          "description": "Loud, theatrical yawn"
+        }
+      ],
+      "visual_marker_of_change": "The moment he throws his arms up and leans back, breaking the eating rhythm to perform the yawn.",
+      "psychological_interpretation": "Shift from basic need satisfaction to social signaling (feigned indifference/boredom) to de-escalate or dismiss the incoming threat (confrontation)."
+    },
+    {
+      "transition_id": "trans_female_01",
+      "character_id": "adult_female_standing",
+      "transition_type": "attenuation",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 190,
+        "offset_timestamp_seconds": 195,
+        "transition_duration_seconds": 5
+      },
+      "trigger_event": {
+        "timestamp_seconds": 190,
+        "description": "Adolescent female enters the room",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Conflict_Engagement",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "desire_after": {
+        "label": "Social_Composure_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 192,
+          "marker_type": "facial_shift",
+          "description": "Face relaxes, angry expression dissipates"
+        },
+        {
+          "timestamp_seconds": 193,
+          "marker_type": "body_movement",
+          "description": "Shifts focus entirely to the food tray, ignoring the male"
+        }
+      ],
+      "visual_marker_of_change": "The moment she turns away from the male toward the door, sees the child, and her body tension visibly drops.",
+      "psychological_interpretation": "Classic 'masking' behavior where social norms regarding parenting (protecting child from conflict) override the desire to continue the argument."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 8,
+      "timestamp_end_seconds": 12,
+      "character_id": "adult_male_seated",
+      "behavior_category": "body_movement",
+      "behavior_description": "Exaggerated stretching and loud yawning",
+      "intensity": "strong",
+      "target": "adult_female_standing",
+      "inferred_mental_state": "Dismissiveness / Feigned Fatigue",
+      "relevance_to_desire": "Indicates desire to avoid serious engagement or belittle the accuser."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 155,
+      "timestamp_end_seconds": 165,
+      "character_id": "adult_female_standing",
+      "behavior_category": "body_movement",
+      "behavior_description": "Aggressive whisking/stirring while speaking",
+      "intensity": "moderate",
+      "target": "adult_male_seated",
+      "inferred_mental_state": "Frustration / Agitation",
+      "relevance_to_desire": "Displacement activity showing high arousal and desire to release tension while maintaining the cooking task."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_yawn_dismissal",
+      "start_timestamp_seconds": 5,
+      "end_timestamp_seconds": 15,
+      "segment_description": "Male yawns loudly when female approaches.",
+      "psychological_significance": "Demonstrates non-verbal communication of dismissal/contempt.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "emotion_recognition"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_child_entry_masking",
+      "start_timestamp_seconds": 188,
+      "end_timestamp_seconds": 200,
+      "segment_description": "Argument stops abruptly when child enters.",
+      "psychological_significance": "Shows social regulation of emotion and desire suppression based on audience.",
+      "potential_qa_types": [
+        "transition_detection",
+        "desire_identification"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "male_female_conflict",
+      "character_1_id": "adult_male_seated",
+      "character_2_id": "adult_female_standing",
+      "relationship_type": "spouses/partners (estranged)",
+      "interaction_quality": "conflictual",
+      "mutual_influence": "Negative feedback loop: Female's accusations trigger Male's withdrawal/defensiveness, which triggers further accusations.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 10,
+          "description": "Male yawns to dismiss Female's presence."
+        },
+        {
+          "timestamp_seconds": 140,
+          "description": "Female dictates terms of separation (money/leaving)."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 3,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The scene is a clear example of domestic conflict. The male's behavior is characterized by passive avoidance, while the female displays active confrontation followed by negotiation. The presence of children acts as a regulatory mechanism for the conflict intensity.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": true,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "194eb16c-276c-40c8-a843-49ecd0323f44.json",
+  "generated_filename": "hostile_morning_kitchen_dispute.json"
+}

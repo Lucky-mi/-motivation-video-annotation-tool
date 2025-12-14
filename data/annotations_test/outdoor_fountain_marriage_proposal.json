@@ -1,0 +1,423 @@
+{
+  "video_id": "0f8c2671-8b97-47b9-a9ba-68126da5bd7e",
+  "video_path": "data\\Youtube_videos\\0f8c2671-8b97-47b9-a9ba-68126da5bd7e.mp4",
+  "duration_seconds": 59,
+  "annotation_timestamp": "2025-12-08T13:28:29.463005",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Outdoor upscale shopping district with paved walkways, manicured hedges, and a central stone fountain.",
+    "social_context": "Dyadic romantic interaction in a public space, transitioning into a public performance/ritual.",
+    "temporal_context": "Daytime, sunny weather.",
+    "emotional_atmosphere": "Initially casual and relaxed, shifting to high-stakes anticipation, then intense joyful surprise.",
+    "salient_objects": [
+      "Red umbrella",
+      "Ring box",
+      "Stone fountain",
+      "Paved walkway"
+    ],
+    "activity_type": "Marriage proposal"
+  },
+  "characters": [
+    {
+      "character_id": "male_grey_shirt",
+      "physical_description": "Adult male, short brown hair, wearing a grey t-shirt and beige shorts.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The proposer/initiator",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Anticipation/Anxiety",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Walking with purpose, holding an umbrella behind his back (concealment behavior), guiding the partner.",
+        "apparent_goal": "Guide partner to a specific location without revealing intent.",
+        "behavioral_evidence": [
+          "Holding umbrella behind back potentially to hide hand movements or ring",
+          "Guiding partner by hand",
+          "Scanning the environment for the specific spot (fountain)"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Joy/Relief",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Standing, embracing partner, smiling broadly.",
+        "apparent_goal": "Celebrate the acceptance of the proposal.",
+        "behavioral_evidence": [
+          "Rising from kneeling position",
+          "Engaging in tight embrace",
+          "Duchenne smile visible"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "anxiety_level",
+          "psychological_basis": "Circumplex Model (Arousal)",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 29,
+          "behavioral_evidence": [
+            "Fidgeting with ring box before kneeling",
+            "Rigid posture while waiting for her to turn",
+            "Relaxation of muscles upon embrace"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "female_white_dress",
+      "physical_description": "Adult female, long hair, wearing a white jumpsuit/dress.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The recipient/proposee",
+      "initial_state": {
+        "timestamp_seconds": 0,
+        "emotional_state": {
+          "primary_emotion": "Contentment",
+          "valence": "positive",
+          "arousal": "low"
+        },
+        "body_language_summary": "Relaxed walking gait, loose limbs, looking around at scenery.",
+        "apparent_goal": "Enjoy a leisure walk.",
+        "behavioral_evidence": [
+          "Casual pace",
+          "Gaze directed at environment rather than partner",
+          "Swinging arms loosely"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 59,
+        "emotional_state": {
+          "primary_emotion": "Ecstasy/Joy",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Jumping slightly, embracing partner, playful aggression (hitting with umbrella).",
+        "apparent_goal": "Express overwhelming emotion and accept the proposal.",
+        "behavioral_evidence": [
+          "Hands covering mouth",
+          "Knees bending in shock",
+          "Playful hit with umbrella",
+          "Tight embrace"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "situational_awareness",
+          "psychological_basis": "ToM (Belief State)",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 54,
+          "behavioral_evidence": [
+            "Completely oblivious to partner kneeling behind her (00:29-00:53)",
+            "Sudden orientation response upon turning around (00:54)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "male_proposal_intent",
+      "character_id": "male_grey_shirt",
+      "desire_label": "Social_PairBonding_Initiation",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 59,
+        "duration_seconds": 59
+      },
+      "reasoning_chain": "Subject guides partner to specific location -> Prepares object (ring) -> Adopts ritualistic posture (kneeling) -> Waits for attention -> This sequence is the cultural script for marriage proposal, indicating a desire for long-term social commitment.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 25,
+          "behavior_type": "body_movement",
+          "description": "Retrieves ring box from pocket/hand while partner is distracted."
+        },
+        {
+          "timestamp_seconds": 30,
+          "behavior_type": "posture_shift",
+          "description": "Lowers body to one knee, a culturally specific signal for proposal."
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "female_leisure_state",
+      "character_id": "female_white_dress",
+      "desire_label": "Social_Leisure_Participation",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0,
+        "end_seconds": 53,
+        "duration_seconds": 53
+      },
+      "reasoning_chain": "Subject is walking casually, looking at the fountain, and shows no signs of urgency or specific task orientation. Her back is turned to her partner, indicating a belief that they are simply observing the scenery.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 22,
+          "behavior_type": "eye_gaze",
+          "description": "Fixated on the water in the fountain."
+        },
+        {
+          "timestamp_seconds": 40,
+          "behavior_type": "body_orientation",
+          "description": "Body remains facing away from partner for an extended period."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Esthetic_Appreciation_Seeking",
+          "reasoning": "Her focus is primarily on the visual aspects of the fountain.",
+          "why_not_primary": "The context is a shared social walk, making the social component primary over the aesthetic one."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "male_execution_transition",
+      "character_id": "male_grey_shirt",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 23,
+        "offset_timestamp_seconds": 30,
+        "transition_duration_seconds": 7
+      },
+      "trigger_event": {
+        "timestamp_seconds": 23,
+        "description": "Arrival at the target location (fountain).",
+        "trigger_type": "goal_progress"
+      },
+      "desire_before": {
+        "label": "Social_Affiliation_Maintenance",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_PairBonding_Initiation",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 24,
+          "marker_type": "postural_change",
+          "description": "Stops walking and separates slightly from partner."
+        },
+        {
+          "timestamp_seconds": 29,
+          "marker_type": "postural_change",
+          "description": "Drops to one knee."
+        }
+      ],
+      "visual_marker_of_change": "The moment he stops walking, checks the ring box, and deliberately lowers himself to the ground.",
+      "psychological_interpretation": "Transition from preparatory phase (intention) to execution phase (action) of the proposal plan."
+    },
+    {
+      "transition_id": "female_surprise_transition",
+      "character_id": "female_white_dress",
+      "transition_type": "emergence",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 53,
+        "offset_timestamp_seconds": 55,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 53,
+        "description": "Turning around and seeing the partner kneeling with a ring.",
+        "trigger_type": "external_stimulus"
+      },
+      "desire_before": {
+        "label": "Social_Leisure_Participation",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Epistemic_Reality_Reorientation",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 54,
+          "marker_type": "facial_shift",
+          "description": "Hands fly to mouth (shock/surprise)."
+        },
+        {
+          "timestamp_seconds": 55,
+          "marker_type": "postural_change",
+          "description": "Knees buckle slightly, body drops."
+        }
+      ],
+      "visual_marker_of_change": "The exact frame she turns, freezes, and her hands rapidly move to cover her face.",
+      "psychological_interpretation": "A massive violation of expectation (belief update) triggers an immediate orienting response and emotional surge, temporarily overriding the previous leisure desire."
+    },
+    {
+      "transition_id": "female_acceptance_transition",
+      "character_id": "female_white_dress",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 56,
+        "offset_timestamp_seconds": 58,
+        "transition_duration_seconds": 2
+      },
+      "trigger_event": {
+        "timestamp_seconds": 56,
+        "description": "Processing the proposal.",
+        "trigger_type": "internal_state_change"
+      },
+      "desire_before": {
+        "label": "Epistemic_Reality_Reorientation",
+        "intensity": "strong",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_PairBonding_Acceptance",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 57,
+          "marker_type": "proxemic_change",
+          "description": "Closes distance to partner."
+        },
+        {
+          "timestamp_seconds": 58,
+          "marker_type": "gesture",
+          "description": "Embraces partner."
+        }
+      ],
+      "visual_marker_of_change": "When she steps forward and wraps her arms around him.",
+      "psychological_interpretation": "Resolution of the surprise leads to consummatory behavior (acceptance of the social offer)."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0,
+      "timestamp_end_seconds": 22,
+      "character_id": "male_grey_shirt",
+      "behavior_category": "body_movement",
+      "behavior_description": "Walking while holding umbrella behind back.",
+      "intensity": "moderate",
+      "target": "female_white_dress",
+      "inferred_mental_state": "Concealment/Preparation",
+      "relevance_to_desire": "Indicates he is hiding something or maintaining a specific formation to execute a plan."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 29,
+      "timestamp_end_seconds": 53,
+      "character_id": "male_grey_shirt",
+      "behavior_category": "posture_shift",
+      "behavior_description": "Holding a kneeling pose (static) for an extended duration.",
+      "intensity": "strong",
+      "target": "female_white_dress",
+      "inferred_mental_state": "Committed Intention/Waiting",
+      "relevance_to_desire": "Demonstrates high commitment to the goal; he does not interrupt her view of the fountain, choosing to wait for her to turn naturally (or until prompted by the bystander)."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 58,
+      "timestamp_end_seconds": 59,
+      "character_id": "female_white_dress",
+      "behavior_category": "gesture",
+      "behavior_description": "Hits male playfully with the red umbrella.",
+      "intensity": "moderate",
+      "target": "male_grey_shirt",
+      "inferred_mental_state": "Playful Aggression/High Arousal Joy",
+      "relevance_to_desire": "Dimorphous expression of positive emotion; confirms the 'yes' is enthusiastic."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_waiting",
+      "start_timestamp_seconds": 29,
+      "end_timestamp_seconds": 53,
+      "segment_description": "Male kneels behind female while she is unaware.",
+      "psychological_significance": "Classic 'False Belief' scenario in Theory of Mind: The male knows the state of the world (proposal imminent), while the female holds a false belief (casual walk).",
+      "potential_qa_types": [
+        "desire_identification",
+        "belief_inference",
+        "intention_prediction"
+      ],
+      "difficulty_level": "easy",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_reaction",
+      "start_timestamp_seconds": 53,
+      "end_timestamp_seconds": 59,
+      "segment_description": "Female turns, reacts, and accepts.",
+      "psychological_significance": "Rapid emotional processing and desire transition from epistemic shock to social affiliation.",
+      "potential_qa_types": [
+        "emotion_recognition",
+        "transition_detection"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "male_grey_shirt__female_white_dress",
+      "character_1_id": "male_grey_shirt",
+      "character_2_id": "female_white_dress",
+      "relationship_type": "romantic_partners",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The male orchestrates the environment to alter the female's emotional state. The female's reaction validates the male's risk-taking behavior.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 22,
+          "description": "Male guides female to the edge of the fountain."
+        },
+        {
+          "timestamp_seconds": 57,
+          "description": "Reunion/Embrace after the reveal."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 3,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video clearly depicts a standard cultural script for a marriage proposal. The 'umbrella' behavior is notable: initially held by the male behind his back (likely to occupy hands/conceal nervousness), then ends up in the female's hand (likely handed off during the unrecorded cut or while she was looking at the fountain), which she then uses to playfully hit him.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": false
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "0f8c2671-8b97-47b9-a9ba-68126da5bd7e.json",
+  "generated_filename": "outdoor_fountain_marriage_proposal.json"
+}

@@ -1,0 +1,412 @@
+{
+  "video_id": "1.6",
+  "video_path": "data\\Youtube_videos\\1.6.mp4",
+  "duration_seconds": 24.0,
+  "annotation_timestamp": "2025-12-08T20:00:54.696715",
+  "annotator": "AI_Model_v5.0",
+  "scene_context": {
+    "physical_setting": "Domestic interior; transitions from kitchen to living room to doorway",
+    "social_context": "Dyadic interaction between a couple (implied husband and wife)",
+    "temporal_context": "Daytime",
+    "emotional_atmosphere": "Tense but performative; fluctuates between conflict, sulking, and playful aggression",
+    "salient_objects": [
+      "gold_container",
+      "notebook",
+      "tiffin_box",
+      "smartphone",
+      "broom"
+    ],
+    "activity_type": "domestic_conflict"
+  },
+  "characters": [
+    {
+      "character_id": "male_green_shirt",
+      "physical_description": "Adult male, short dark hair, beard, wearing light green t-shirt and blue jeans",
+      "estimated_age_group": "adult",
+      "role_in_scene": "husband/partner",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Frustration",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Reaching upward with tension in shoulders, then gesturing defensively",
+        "apparent_goal": "To retrieve an object from the upper shelf",
+        "behavioral_evidence": [
+          "Arm extended fully overhead",
+          "Fumbling with gold container",
+          "Turning to face partner with furrowed brow after fumbling"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 24.0,
+        "emotional_state": {
+          "primary_emotion": "Excitement",
+          "valence": "positive",
+          "arousal": "high"
+        },
+        "body_language_summary": "Standing in doorway, holding broom raised high in a blocking or mock-striking posture",
+        "apparent_goal": "To block passage or engage in playful conflict",
+        "behavioral_evidence": [
+          "Broom held horizontally above head level",
+          "Direct gaze at partner",
+          "Assertive stance blocking the door"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "dominance_display",
+          "psychological_basis": "Social Hierarchy/Esteem",
+          "trajectory": "FLUCTUATING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 23.0,
+          "behavioral_evidence": [
+            "Initially fails task (low dominance)",
+            "Passively accepts forced feeding (low dominance)",
+            "Physically blocks door with broom (high dominance)"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "female_red_dress",
+      "physical_description": "Adult female, long dark hair, wearing red patterned traditional dress",
+      "estimated_age_group": "adult",
+      "role_in_scene": "wife/partner",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Annoyance",
+          "valence": "negative",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Standing with rigid posture, observing partner's failure",
+        "apparent_goal": "To criticize or monitor the partner",
+        "behavioral_evidence": [
+          "Fixed gaze on partner's action",
+          "Hand gestures indicating dismissal or correction"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 24.0,
+        "emotional_state": {
+          "primary_emotion": "Surprise",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Looking upward at the broom, holding phone",
+        "apparent_goal": "To exit the room or check phone",
+        "behavioral_evidence": [
+          "Head tilted back looking at broom",
+          "Movement arrested by the blockage"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "aggression_level",
+          "psychological_basis": "Affective State/Arousal",
+          "trajectory": "DECREASING",
+          "initial_level": "moderate",
+          "final_level": "low",
+          "peak_moment_seconds": 18.0,
+          "behavioral_evidence": [
+            "Verbally confronting in kitchen",
+            "Forcefully shoving food into partner's mouth (peak)",
+            "Passively looking at phone in doorway"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_001_male_kitchen",
+      "character_id": "male_green_shirt",
+      "desire_label": "Physiological_Resource_Acquisition_Seeking",
+      "maslow_level": "physiological",
+      "bdi_component": "intention",
+      "desire_type": "extrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 3.0,
+        "duration_seconds": 3.0
+      },
+      "reasoning_chain": "Subject is observed reaching for a specific container on a high shelf. The motor action is goal-directed toward the object.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 0.5,
+          "behavior_type": "body_movement",
+          "description": "Extension of arm toward upper cabinet shelf"
+        }
+      ],
+      "alternative_interpretations": [],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_002_female_sofa",
+      "character_id": "female_red_dress",
+      "desire_label": "Social_Control_Assertion",
+      "maslow_level": "esteem",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 10.0,
+        "end_seconds": 19.0,
+        "duration_seconds": 9.0
+      },
+      "reasoning_chain": "Subject forcefully feeds the partner. While feeding is typically caregiving (Belonging), the aggressive manner (shoving food, rigid posture) suggests a desire to assert dominance or express anger while maintaining the relationship bond.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 18.0,
+          "behavior_type": "body_movement",
+          "description": "Forceful thrust of hand containing food toward male's mouth"
+        },
+        {
+          "timestamp_seconds": 18.5,
+          "behavior_type": "facial_expression",
+          "description": "Stern, unsmiling expression during the feeding action"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Care_Provision_Maintenance",
+          "reasoning": "She is ensuring he eats despite the fight.",
+          "why_not_primary": "The kinetic force used is excessive for simple care; it indicates emotional venting/control."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_003_male_doorway",
+      "character_id": "male_green_shirt",
+      "desire_label": "Social_Play_Initiation",
+      "maslow_level": "belonging",
+      "bdi_component": "intention",
+      "desire_type": "intrinsic",
+      "intensity": "strong",
+      "temporal_scope": {
+        "start_seconds": 21.0,
+        "end_seconds": 24.0,
+        "duration_seconds": 3.0
+      },
+      "reasoning_chain": "Subject blocks the doorway with a broom held high. This is an exaggerated, non-functional use of the tool, suggesting a shift from genuine conflict to playful aggression or 'mock' fighting common in intimate relationships.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 23.0,
+          "behavior_type": "body_movement",
+          "description": "Holding broom horizontally overhead like a barrier"
+        },
+        {
+          "timestamp_seconds": 23.5,
+          "behavior_type": "facial_expression",
+          "description": "Expression appears engaged and less genuinely angry than the kitchen scene"
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Safety_Territory_Defense",
+          "reasoning": "He is physically blocking her exit.",
+          "why_not_primary": "The posture is theatrical and the object (broom) is non-threatening, suggesting play frame."
+        }
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_001_male_kitchen",
+      "character_id": "male_green_shirt",
+      "transition_type": "frustration",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 2.0,
+        "offset_timestamp_seconds": 4.0,
+        "transition_duration_seconds": 2.0
+      },
+      "trigger_event": {
+        "timestamp_seconds": 2.0,
+        "description": "Fumbling/dropping the container",
+        "trigger_type": "obstacle_encounter"
+      },
+      "desire_before": {
+        "label": "Physiological_Resource_Acquisition_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "physiological"
+      },
+      "desire_after": {
+        "label": "Esteem_Competence_Defense",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 3.0,
+          "marker_type": "facial_shift",
+          "description": "Brows furrow, mouth tightens"
+        },
+        {
+          "timestamp_seconds": 3.5,
+          "marker_type": "body_orientation",
+          "description": "Turns abruptly from shelf to partner"
+        }
+      ],
+      "visual_marker_of_change": "The moment he stops reaching for the jar and turns his torso to face the female with a defensive hand gesture.",
+      "psychological_interpretation": "The failure to perform the physical task (getting the jar) in front of an audience (the wife) triggers a shift from the task itself to defending his competence against perceived judgment."
+    },
+    {
+      "transition_id": "trans_002_female_sofa",
+      "character_id": "female_red_dress",
+      "transition_type": "intensification",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 16.0,
+        "offset_timestamp_seconds": 18.0,
+        "transition_duration_seconds": 2.0
+      },
+      "trigger_event": {
+        "timestamp_seconds": 16.0,
+        "description": "Male eating casually while ignoring her",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Social_Disengagement_Seeking",
+        "intensity": "moderate",
+        "maslow_level": "belonging"
+      },
+      "desire_after": {
+        "label": "Social_Control_Assertion",
+        "intensity": "strong",
+        "maslow_level": "esteem"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 17.0,
+          "marker_type": "postural_change",
+          "description": "Rapid lean forward toward male"
+        }
+      ],
+      "visual_marker_of_change": "When she abruptly stops eating her own food and aggressively extends her hand to feed him.",
+      "psychological_interpretation": "Her desire to remain disengaged is overridden by a need to provoke a reaction or assert control, leading to the aggressive feeding behavior."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0.0,
+      "timestamp_end_seconds": 5.0,
+      "character_id": "male_green_shirt",
+      "behavior_category": "body_movement",
+      "behavior_description": "Reaches for shelf, fumbles object, turns to argue.",
+      "intensity": "moderate",
+      "target": "gold_container",
+      "inferred_mental_state": "Task focus shifting to defensive annoyance",
+      "relevance_to_desire": "Indicates failure of initial physiological goal leading to social conflict."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 10.0,
+      "timestamp_end_seconds": 15.0,
+      "character_id": "male_green_shirt",
+      "behavior_category": "body_movement",
+      "behavior_description": "Writing in notebook, avoiding eye contact.",
+      "intensity": "low",
+      "target": "notebook",
+      "inferred_mental_state": "Sulking / Withdrawal",
+      "relevance_to_desire": "Evidence of Social_Conflict_Avoidance or Withdrawal."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 21.0,
+      "timestamp_end_seconds": 24.0,
+      "character_id": "male_green_shirt",
+      "behavior_category": "gesture",
+      "behavior_description": "Raises broom horizontally to block doorway.",
+      "intensity": "strong",
+      "target": "female_red_dress",
+      "inferred_mental_state": "Playful dominance / Mock threat",
+      "relevance_to_desire": "Signals a shift from withdrawal to active engagement (Social_Play_Initiation)."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_feeding",
+      "start_timestamp_seconds": 15.0,
+      "end_timestamp_seconds": 20.0,
+      "segment_description": "The female character forcefully feeds the male character while they are sitting on the sofa.",
+      "psychological_significance": "This segment illustrates a complex mix of 'caregiving' and 'aggression', requiring the annotator to distinguish between the physical act (feeding) and the manner (aggressive), leading to a nuanced ToM inference about control vs. care.",
+      "potential_qa_types": [
+        "intention_prediction",
+        "emotion_recognition",
+        "social_dynamics_analysis"
+      ],
+      "difficulty_level": "hard",
+      "recommended_for_qa": true
+    },
+    {
+      "segment_id": "seg_broom",
+      "start_timestamp_seconds": 21.0,
+      "end_timestamp_seconds": 24.0,
+      "segment_description": "Male blocks door with broom.",
+      "psychological_significance": "Requires distinguishing between actual threat (Safety) and play/mock-threat (Social/Belonging).",
+      "potential_qa_types": [
+        "belief_inference",
+        "context_interpretation"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "male_green_shirt__female_red_dress",
+      "character_1_id": "male_green_shirt",
+      "character_2_id": "female_red_dress",
+      "relationship_type": "spouses/partners",
+      "interaction_quality": "mixed",
+      "mutual_influence": "High mutual influence; the male's failure triggers the female's criticism; the female's withdrawal triggers the male's playful provocation.",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 3.0,
+          "description": "Verbal/Gestural conflict in kitchen"
+        },
+        {
+          "timestamp_seconds": 18.0,
+          "description": "Aggressive feeding interaction"
+        },
+        {
+          "timestamp_seconds": 23.0,
+          "description": "Broom blocking interaction"
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 2,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video appears to be a staged skit depicting 'Love Marriage Fight' tropes. While the emotions are performed, the annotation treats the characters within the diegesis of the scene as real psychological agents. The 'broom' scene is interpreted as playful escalation rather than genuine physical threat based on the 'Love Marriage' context implying a romantic bond.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": true
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "1.6.json",
+  "generated_filename": "tense_domestic_couple_conflict.json"
+}

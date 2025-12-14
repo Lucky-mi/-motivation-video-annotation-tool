@@ -15,7 +15,8 @@ import json
 from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime
 import base64
-
+import pandas as pd
+import altair as alt
 sys.path.append(str(Path(__file__).parent.parent))
 
 # 页面配置
@@ -26,81 +27,115 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# 自定义CSS
+# 自定义CSS - 优化版
 st.markdown("""
 <style>
     /* 隐藏Streamlit默认元素 */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
 
-    /* 主容器样式 */
+    /* 主容器 */
     .main {
-        padding: 1rem;
+        padding: 0.5rem 1rem;
+        background: #f5f7fa;
     }
 
-    /* 卡片样式 */
+    /* 改进的卡片样式 */
     .segment-card {
-        border: 2px solid #e0e0e0;
-        border-radius: 12px;
-        padding: 16px;
-        margin: 12px 0;
-        background: linear-gradient(to bottom, #ffffff, #f8f9fa);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
+        border: 1px solid #e1e8ed;
+        border-radius: 16px;
+        padding: 20px;
+        margin: 16px 0;
+        background: white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .segment-card:hover {
-        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        transform: translateY(-3px);
+        border-color: #cbd5e0;
     }
 
     .segment-card.approved {
-        border-left: 6px solid #28a745;
-        background: linear-gradient(to bottom, #f0fff4, #e6f9ef);
+        border-left: 5px solid #10b981;
+        background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
     }
 
     .segment-card.needs-mod {
-        border-left: 6px solid #ffc107;
-        background: linear-gradient(to bottom, #fffbf0, #fff8e1);
+        border-left: 5px solid #f59e0b;
+        background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
     }
 
     .segment-card.to-delete {
-        border-left: 6px solid #dc3545;
-        background: linear-gradient(to bottom, #fff5f5, #ffebee);
+        border-left: 5px solid #ef4444;
+        background: linear-gradient(135deg, #ffffff 0%, #fef2f2 100%);
     }
 
-    /* 徽章样式 */
+    /* 现代徽章样式 */
     .type-badge {
         display: inline-block;
-        padding: 4px 12px;
-        border-radius: 16px;
-        font-size: 13px;
-        font-weight: 600;
-        margin: 2px;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 4px;
+        letter-spacing: 0.3px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
     }
 
     .type-desire-motivation {
-        background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-        color: #155724;
-        border: 1px solid #b1dfbb;
+        background: #10b981;
+        color: white;
     }
 
     .type-desire-transition {
-        background: linear-gradient(135deg, #cce5ff 0%, #b8daff 100%);
-        color: #004085;
-        border: 1px solid #9fcdff;
+        background: #3b82f6;
+        color: white;
     }
 
     .type-behavioral-sequence {
-        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-        color: #856404;
-        border: 1px solid #ffe69c;
+        background: #f59e0b;
+        color: white;
     }
 
     .type-key-segment-qa {
-        background: linear-gradient(135deg, #e2d5f1 0%, #d6c8e6 100%);
-        color: #6f42c1;
-        border: 1px solid #c9b8df;
+        background: #8b5cf6;
+        color: white;
+    }
+
+    /* 可编辑字段样式 */
+    .editable-field {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 8px 12px;
+        margin: 6px 0;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: inline-block;
+        min-width: 100px;
+    }
+
+    .editable-field:hover {
+        background: #fff;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .field-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+    }
+
+    .field-value {
+        font-size: 14px;
+        color: #1e293b;
+        font-weight: 500;
     }
 
     /* 统计卡片 */
@@ -547,39 +582,79 @@ def create_video_player(video_path: Path, start_time: float, end_time: float, se
 
 
 def render_video_player_with_segment(video_path: Path, segment: Dict):
-    """渲染视频播放器（片段播放）"""
+    """渲染视频播放器（修复版：防止 removeChild 报错）"""
     if not video_path or not video_path.exists():
-        st.error("❌ 视频文件不存在")
-        st.info(f"尝试路径: {video_path}")
-
-        # 显示调试信息
-        with st.expander("🔍 查看所有尝试的路径"):
-            st.markdown("**已检查的视频目录：**")
-            for vdir in VIDEOS_DIRS:
-                exists = "✅" if vdir.exists() else "❌"
-                st.text(f"{exists} {vdir}")
+        st.error(f"❌ 视频文件不存在: {video_path.name if video_path else '未找到'}")
         return
 
     st.markdown(f"### 🎬 视频片段播放")
-
-    # 显示视频信息
+    
+    # 获取文件信息
     file_size_mb = video_path.stat().st_size / (1024 * 1024)
-    st.caption(f"📁 {video_path.name} ({file_size_mb:.2f} MB)")
+    file_ext = video_path.suffix.lower()
+    
+    # 1. 自动检测风险
+    use_native_default = False
+    warning_msg = []
+    
+    if file_ext not in ['.mp4', '.webm']:
+        warning_msg.append(f"⚠️ 格式 {file_ext} 浏览器可能不支持")
+        use_native_default = True
+        
+    if file_size_mb > 80:
+        warning_msg.append(f"⚠️ 文件较大 ({file_size_mb:.0f}MB) 可能加载缓慢")
+        use_native_default = True
 
-    if file_size_mb > 100:
-        st.warning(f"⚠️ 视频文件较大 ({file_size_mb:.0f} MB)，加载可能需要一些时间...")
-
-    # 创建自定义视频播放器
-    with st.spinner("🔄 正在加载视频..."):
-        video_html = create_video_player(
-            video_path,
-            segment['start'],
-            segment['end'],
-            segment['id']
+    # 2. 播放器模式切换开关
+    col_mode, col_info = st.columns([1, 2])
+    with col_mode:
+        use_native = st.toggle(
+            "使用原生播放器", 
+            value=use_native_default,
+            help="如果视频无法播放或黑屏，请开启此选项",
+            key=f"toggle_player_{segment['id']}" # 给开关也加个key，防止状态混淆
         )
+    
+    with col_info:
+        if warning_msg:
+            st.caption(" | ".join(warning_msg))
+        else:
+            st.caption(f"📁 {video_path.name}")
 
-    # 渲染HTML
-    components.html(video_html, height=600, scrolling=False)
+    # 3. 渲染播放器 (关键修复点)
+    # 创建一个空的占位符容器
+    player_container = st.empty()
+
+    # 每次渲染前，先强制清空容器！
+    # 这就像先把桌子擦干净再上菜，防止旧的 DOM 元素残留导致 removeChild 错误
+    player_container.empty()
+
+    with player_container.container():
+        if use_native:
+            # --- 模式 A: 原生播放器 ---
+            st.info("ℹ️ 原生模式：支持大文件和更多格式，但不会在片段结束时自动停止。")
+            # 关键：加上 key，强制 React 识别这是个新组件
+            st.video(
+                str(video_path), 
+                start_time=int(segment['start']), 
+                key=f"native_vid_{segment['id']}"
+            )
+            
+        else:
+            # --- 模式 B: 自定义播放器 ---
+            try:
+                with st.spinner("🔄 加载自定义播放器..."):
+                    video_html = create_video_player(
+                        video_path,
+                        segment['start'],
+                        segment['end'],
+                        segment['id']
+                    )
+                # 使用 components.html 渲染 iframe，添加唯一key避免冲突
+                components.html(video_html, height=550, scrolling=False, key=f"player_{segment['id']}")
+            except Exception as e:
+                st.error(f"加载失败: {str(e)}")
+                st.warning("👉 请尝试切换上方的 '使用原生播放器'")
 
     # 显示时间信息
     col1, col2, col3 = st.columns(3)
@@ -711,6 +786,59 @@ def render_timeline_visualization(segments: List[Dict], duration: float, current
     # 使用 components.html 渲染
     components.html(timeline_html, height=200, scrolling=False)
 
+def render_interactive_timeline(segments: List[Dict], duration: float, current_idx: int):
+    """渲染交互式时间轴 (支持点击跳转)"""
+    st.markdown("### 📊 时间轴 (点击条块跳转)")
+
+    # 1. 准备数据
+    data = []
+    for i, seg in enumerate(segments):
+        type_info = SEGMENT_TYPES.get(seg['type'], {})
+        data.append({
+            'index': i,  # 关键：用于标识是第几个片段
+            'Start': seg['start'],
+            'End': seg['end'],
+            'Duration': seg['end'] - seg['start'],
+            'Type': type_info.get('name', seg['type']),
+            'Label': seg['label'],
+            'Color': type_info.get('color', '#808080'),
+            'Opacity': 1.0 if i == current_idx else 0.5, # 当前选中的高亮
+            'Border': 3 if i == current_idx else 0
+        })
+
+    if not data:
+        st.warning("无数据")
+        return None
+
+    df = pd.DataFrame(data)
+
+    # 2. 构建 Altair 图表
+    # 基础图表
+    base = alt.Chart(df).encode(
+        x=alt.X('Start', title='时间 (秒)', scale=alt.Scale(domain=[0, duration])),
+        x2='End',
+        y=alt.Y('Type', title=None), # 按类型分行显示，避免重叠
+        tooltip=['Type', 'Label', 'Start', 'End', 'Duration']
+    )
+
+    # 绘制条块
+    bars = base.mark_bar(cornerRadius=3, height=20).encode(
+        color=alt.Color('Color', scale=None), # 使用自定义颜色
+        opacity=alt.Opacity('Opacity', scale=None), # 动态透明度
+        stroke=alt.value('black'), # 边框颜色
+        strokeWidth=alt.StrokeWidth('Border', scale=None) # 选中时加粗边框
+    )
+
+    # 3. 渲染并捕获点击事件
+    # on_select="rerun" 会在点击时重新运行脚本并返回选中项
+    selection = st.altair_chart(
+        bars.interactive(), # 允许缩放和平移
+        use_container_width=True,
+        on_select="rerun",
+        theme="streamlit"
+    )
+
+    return selection
 
 def render_segment_detail_panel(segment: Dict, annotation: Dict):
     """渲染片段详情面板"""
@@ -1187,10 +1315,25 @@ def main():
 
             # 时间轴
             if st.session_state.show_timeline:
-                render_timeline_visualization(segments, annotation.get('duration_seconds', 60), st.session_state.selected_segment_idx)
+                # 调用新的交互式时间轴
+                timeline_selection = render_interactive_timeline(
+                    segments,
+                    annotation.get('duration_seconds', 60),
+                    st.session_state.selected_segment_idx
+                )
 
+                # 处理点击事件
+                if timeline_selection and 'selection' in timeline_selection:
+                    # 获取被点击的点的索引 (point_indices)
+                    selected_points = timeline_selection['selection'].get('point_indices', [])
+                    if selected_points:
+                        # 获取第一个被点击的片段索引
+                        new_idx = selected_points[0]
+                        # 如果点击了不同的片段，更新状态并刷新
+                        if new_idx != st.session_state.selected_segment_idx:
+                            st.session_state.selected_segment_idx = new_idx
+                            st.rerun()
             st.markdown("---")
-
             # 当前片段
             current_segment = segments[st.session_state.selected_segment_idx]
 

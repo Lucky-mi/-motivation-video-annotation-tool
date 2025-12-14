@@ -1,0 +1,329 @@
+{
+  "video_id": "0b40852f-0fdb-4792-878f-8b6e4106a1ec",
+  "video_path": "data\\Youtube_videos\\0b40852f-0fdb-4792-878f-8b6e4106a1ec.mp4",
+  "duration_seconds": 30.0,
+  "annotation_timestamp": "2025-12-08T13:13:13.202500",
+  "annotator": "AI_Model_5.0",
+  "scene_context": {
+    "physical_setting": "Indoor domestic environment, likely a living room or bedroom, indicated by wall colors and lighting.",
+    "social_context": "Dyadic interaction, intimate or close acquaintance level.",
+    "temporal_context": "Unknown time of day.",
+    "emotional_atmosphere": "Starts with tension/ambiguity, shifts to playful/affectionate.",
+    "salient_objects": [
+      "Earrings (jhumkas) on female character"
+    ],
+    "activity_type": "Non-verbal communication / Social engagement"
+  },
+  "characters": [
+    {
+      "character_id": "female_long_hair",
+      "physical_description": "Young adult female, long dark hair, wearing a bindi and large jhumka earrings.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The initiator/observer",
+      "initial_state": {
+        "timestamp_seconds": 0.0,
+        "emotional_state": {
+          "primary_emotion": "Interest/Anticipation",
+          "valence": "neutral",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Head slightly turned, steady gaze directed at the male, minimal facial movement.",
+        "apparent_goal": "Monitoring the male's reaction.",
+        "behavioral_evidence": [
+          "Fixed gaze on the other character",
+          "Still posture",
+          "Neutral but attentive facial expression"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 29.0,
+        "emotional_state": {
+          "primary_emotion": "Joy/Amusement",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Smiling (Duchenne), relaxed facial muscles, maintaining eye contact.",
+        "apparent_goal": "Sharing positive affect.",
+        "behavioral_evidence": [
+          "Sustained smile",
+          "Softened eyes",
+          "Continued orientation toward the male"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "social_expectancy",
+          "psychological_basis": "Theory of Mind - Anticipating other's reaction",
+          "trajectory": "DECREASING",
+          "initial_level": "high",
+          "final_level": "low",
+          "peak_moment_seconds": 10.0,
+          "behavioral_evidence": [
+            "Intense staring in first half",
+            "Relaxation into smile once he reacts"
+          ],
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "character_id": "male_blue_shirt",
+      "physical_description": "Young adult male, short dark hair, wearing a light blue patterned shirt.",
+      "estimated_age_group": "adult",
+      "role_in_scene": "The reactor",
+      "initial_state": {
+        "timestamp_seconds": 2.0,
+        "emotional_state": {
+          "primary_emotion": "Confusion/Concentration",
+          "valence": "neutral",
+          "arousal": "low"
+        },
+        "body_language_summary": "Stiff neck posture, unsmiling, staring blankly or intently.",
+        "apparent_goal": "Processing information or waiting.",
+        "behavioral_evidence": [
+          "Furrowed brow",
+          "Fixed stare",
+          "Lack of facial mobility"
+        ]
+      },
+      "final_state": {
+        "timestamp_seconds": 29.0,
+        "emotional_state": {
+          "primary_emotion": "Joy/Relief",
+          "valence": "positive",
+          "arousal": "moderate"
+        },
+        "body_language_summary": "Smiling broadly, head movement (nodding/turning), relaxed shoulders.",
+        "apparent_goal": "Reciprocating social connection.",
+        "behavioral_evidence": [
+          "Broad smile",
+          "Breaking tension with movement",
+          "Engaged eye contact"
+        ]
+      },
+      "attribute_dynamics": [
+        {
+          "attribute_name": "affective_synchrony",
+          "psychological_basis": "Social Resonance",
+          "trajectory": "INCREASING",
+          "initial_level": "low",
+          "final_level": "high",
+          "peak_moment_seconds": 20.0,
+          "behavioral_evidence": [
+            "Initial mismatch in expression (neutral vs neutral/stern)",
+            "Final matching smiles"
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "desire_motivation_analysis": [
+    {
+      "analysis_id": "desire_female_01",
+      "character_id": "female_long_hair",
+      "desire_label": "Social_Affiliation_Maintenance",
+      "maslow_level": "belonging",
+      "bdi_component": "desire",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 30.0,
+        "duration_seconds": 30.0
+      },
+      "reasoning_chain": "Subject maintains steady gaze -> Facial expression softens into a smile -> This behavior invites connection -> Fits definition of affiliation seeking/maintenance.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 0.0,
+          "behavior_type": "eye_gaze",
+          "description": "Unbroken gaze directed at the male character."
+        },
+        {
+          "timestamp_seconds": 14.0,
+          "behavior_type": "facial_expression",
+          "description": "Transition to a subtle smile, signaling invitation or affection."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Dominance_Display",
+          "reasoning": "The intense staring could be interpreted as a challenge.",
+          "why_not_primary": "The eventual smile is warm (Duchenne markers) rather than smug or aggressive, suggesting affiliation over dominance."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "analysis_id": "desire_male_01",
+      "character_id": "male_blue_shirt",
+      "desire_label": "Epistemic_Social_Cue_Decoding",
+      "maslow_level": "safety",
+      "bdi_component": "belief",
+      "desire_type": "intrinsic",
+      "intensity": "moderate",
+      "temporal_scope": {
+        "start_seconds": 0.0,
+        "end_seconds": 18.0,
+        "duration_seconds": 18.0
+      },
+      "reasoning_chain": "Subject displays neutral/confused expression -> Stares without acting -> Suggests he is trying to interpret the situation or the female's gaze -> Epistemic need to understand social context.",
+      "supporting_evidence": [
+        {
+          "timestamp_seconds": 2.0,
+          "behavior_type": "facial_expression",
+          "description": "Static, serious expression with slight brow furrow."
+        },
+        {
+          "timestamp_seconds": 10.0,
+          "behavior_type": "body_movement",
+          "description": "Lack of movement indicates processing/freezing rather than action."
+        }
+      ],
+      "alternative_interpretations": [
+        {
+          "alternative_label": "Social_Conflict_Avoidance",
+          "reasoning": "He might be freezing due to perceived threat/anger from the female.",
+          "why_not_primary": "His reaction to her smile is immediate relief/joy, suggesting he was unsure rather than afraid."
+        }
+      ],
+      "confidence": "moderate"
+    }
+  ],
+  "desire_transitions": [
+    {
+      "transition_id": "trans_male_01",
+      "character_id": "male_blue_shirt",
+      "transition_type": "resolution",
+      "temporal_boundaries": {
+        "onset_timestamp_seconds": 18.0,
+        "offset_timestamp_seconds": 22.0,
+        "transition_duration_seconds": 4.0
+      },
+      "trigger_event": {
+        "timestamp_seconds": 18.0,
+        "description": "The female character smiles clearly.",
+        "trigger_type": "social_interaction"
+      },
+      "desire_before": {
+        "label": "Epistemic_Social_Cue_Decoding",
+        "intensity": "moderate",
+        "maslow_level": "safety"
+      },
+      "desire_after": {
+        "label": "Social_Affiliation_Reciprocation",
+        "intensity": "strong",
+        "maslow_level": "belonging"
+      },
+      "behavioral_markers": [
+        {
+          "timestamp_seconds": 19.0,
+          "marker_type": "facial_shift",
+          "description": "Sudden break from serious face to broad smile."
+        },
+        {
+          "timestamp_seconds": 20.0,
+          "marker_type": "postural_change",
+          "description": "Head turns slightly, shoulders relax."
+        }
+      ],
+      "visual_marker_of_change": "The exact moment (approx 00:19) when his mouth opens into a smile and his eyebrows lift, breaking the static stare.",
+      "psychological_interpretation": "The resolution of ambiguity (understanding she is playful/happy) allows the shift from safety/monitoring needs to belonging/affiliation needs."
+    }
+  ],
+  "behavioral_sequence": [
+    {
+      "sequence_id": "seq_01",
+      "timestamp_start_seconds": 0.0,
+      "timestamp_end_seconds": 7.0,
+      "character_id": "female_long_hair",
+      "behavior_category": "eye_gaze",
+      "behavior_description": "Maintains steady, unblinking eye contact with the male.",
+      "intensity": "strong",
+      "target": "male_blue_shirt",
+      "inferred_mental_state": "Expectancy / Waiting",
+      "relevance_to_desire": "Indicates a desire for engagement or a response."
+    },
+    {
+      "sequence_id": "seq_02",
+      "timestamp_start_seconds": 14.0,
+      "timestamp_end_seconds": 17.0,
+      "character_id": "female_long_hair",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Lips curve into a closed-mouth smile, eyebrows raise slightly.",
+      "intensity": "moderate",
+      "target": "male_blue_shirt",
+      "inferred_mental_state": "Affection / Playfulness",
+      "relevance_to_desire": "Signals safety and invitation, modifying the social context."
+    },
+    {
+      "sequence_id": "seq_03",
+      "timestamp_start_seconds": 19.0,
+      "timestamp_end_seconds": 23.0,
+      "character_id": "male_blue_shirt",
+      "behavior_category": "facial_expression",
+      "behavior_description": "Rapid transition to open-mouth smile/laugh, gaze momentarily breaks then returns.",
+      "intensity": "strong",
+      "target": "female_long_hair",
+      "inferred_mental_state": "Relief / Joy",
+      "relevance_to_desire": "Marks the satisfaction of the epistemic need (understanding) and the start of affiliation."
+    }
+  ],
+  "key_segments_for_qa": [
+    {
+      "segment_id": "seg_transition",
+      "start_timestamp_seconds": 14.0,
+      "end_timestamp_seconds": 22.0,
+      "segment_description": "The interaction shifts from a silent stare-down to a shared smile.",
+      "psychological_significance": "Demonstrates non-verbal communication of affect and the resolution of social ambiguity.",
+      "potential_qa_types": [
+        "transition_detection",
+        "emotion_recognition",
+        "social_cue_interpretation"
+      ],
+      "difficulty_level": "medium",
+      "recommended_for_qa": true
+    }
+  ],
+  "inter_character_dynamics": [
+    {
+      "dyad_id": "female_long_hair__male_blue_shirt",
+      "character_1_id": "female_long_hair",
+      "character_2_id": "male_blue_shirt",
+      "relationship_type": "intimate_or_close_friends",
+      "interaction_quality": "cooperative",
+      "mutual_influence": "The female's affective state (calm -> smiling) directly regulates the male's state (tense -> smiling).",
+      "key_interaction_moments": [
+        {
+          "timestamp_seconds": 19.0,
+          "description": "Affective contagion: Her smile triggers his smile."
+        }
+      ]
+    }
+  ],
+  "annotation_metadata": {
+    "model_used": "gemini-3-pro-preview",
+    "annotation_version": "5.0",
+    "frameworks_applied": [
+      "BDI",
+      "Maslow",
+      "ToM",
+      "Circumplex",
+      "Desire_Dynamics"
+    ],
+    "total_characters_annotated": 2,
+    "total_transitions_detected": 1,
+    "overall_annotation_confidence": "high",
+    "annotation_notes": "The video relies heavily on micro-expressions. The male's initial state is ambiguous (could be blank, thinking, or stern), but the reaction confirms it was a state of waiting/uncertainty rather than hostility.",
+    "quality_flags": {
+      "video_quality_issues": false,
+      "occlusion_present": false,
+      "multiple_simultaneous_events": false,
+      "ambiguous_behaviors": true
+    },
+    "prompt_version": "5.1"
+  },
+  "is_renamed": true,
+  "original_filename": "0b40852f-0fdb-4792-878f-8b6e4106a1ec.json",
+  "generated_filename": "playful_couple_earrings_indoor.json"
+}
