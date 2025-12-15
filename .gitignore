@@ -28,7 +28,7 @@ venv/
 env/
 ENV/
 .venv
-
+*.env
 # IDE
 
 .idea/

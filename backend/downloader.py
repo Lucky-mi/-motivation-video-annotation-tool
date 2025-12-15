@@ -125,16 +125,21 @@ class VideoDownloader:
             'socket_timeout': 30,  # 增加超时容忍
             # ... 其他配置保持不变 ...
             'http_chunk_size': 10485760,
+            # ============== YouTube反爬虫配置 ==============
             'extractor_args': {
                 'youtube': {
-                    'player_client': ['android', 'web'], # 增加 web 客户端作为备选
+                    'player_client': ['android', 'web'],  # 使用移动端和web客户端
+                    'skip': ['hls', 'dash'],  # 跳过某些可能触发检测的格式
+                    'player_skip': ['webpage'],  # 减少请求次数
                 }
             },
-            # ============== 新增/修改以下部分 ==============
-            # 强制关闭长连接，下载完立刻释放端口
+            # HTTP请求头配置
             'http_headers': {
                 'Connection': 'close',
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'en-us,en;q=0.5',
+                'Sec-Fetch-Mode': 'navigate',
             },
             # 强制使用 IPv4（IPv6 在 Windows 上有时会加剧此问题）
             'force_ipv4': True,
@@ -145,13 +150,20 @@ class VideoDownloader:
             opts['proxy'] = self.proxy
             logger.info(f"🌐 使用代理: {self.proxy}")
 
-        cookies_path = Path("cookies.txt")
-        if cookies_path.exists():
-            opts['cookiefile'] = str(cookies_path)
-            logger.debug("🍪 使用 cookies.txt")
-        else:
-            logger.warning("⚠️ cookies.txt 不存在，可能会被限制访问")
+        # 使用项目根目录的绝对路径，避免工作目录问题
+        project_root = Path(__file__).parent.parent  # backend/ -> video_anno/
+        cookies_path = project_root / "cookies.txt"
 
+        if cookies_path.exists():
+            opts['cookiefile'] = str(cookies_path.absolute())
+            logger.info(f"🍪 使用 cookies.txt: {cookies_path}")
+        else:
+            logger.error(f"❌ cookies.txt 不存在于: {cookies_path}")
+            logger.error("请按以下步骤导出cookies:")
+            logger.error("1. 安装浏览器扩展: 'Get cookies.txt LOCALLY' 或 'cookies.txt'")
+            logger.error("2. 访问 https://www.youtube.com 并登录")
+            logger.error("3. 点击扩展图标，导出cookies.txt")
+            logger.error(f"4. 将文件保存到: {cookies_path}")
         return opts
 
     def _load_links_database(self) -> Dict:
@@ -253,6 +265,9 @@ class VideoDownloader:
             self.links_db["metadata"]["approved_count"] += 1
         elif approved is False:
             self.links_db["metadata"]["rejected_count"] += 1
+
+        # 立即保存到文件，防止中途停止导致数据丢失
+        self._save_links_database()
 
         logger.info(f"✅ 已添加视频: {title[:50]}...")
         return True
@@ -731,6 +746,50 @@ class VideoDownloader:
                 return True
 
         logger.warning(f"⚠️ 未找到视频: {url}")
+        return False
+
+    def update_video_by_path(self, old_path: str, new_path: Optional[str] = None,
+                            approved: Optional[bool] = None, review_reason: Optional[str] = None):
+        """通过视频路径查找并更新记录
+
+        Args:
+            old_path: 原始视频路径（用于查找记录）
+            new_path: 新视频路径（如果文件被移动）
+            approved: 新的审核状态
+            review_reason: 审核理由
+
+        Returns:
+            bool: 是否成功更新
+        """
+        for video in self.links_db["videos"]:
+            if video.get("video_path") == old_path:
+                old_status = video["approved"]
+
+                # 更新路径
+                if new_path is not None:
+                    video["video_path"] = new_path
+
+                # 更新审核状态
+                if approved is not None:
+                    video["approved"] = approved
+
+                    # 更新统计
+                    if old_status is None:
+                        if approved:
+                            self.links_db["metadata"]["approved_count"] += 1
+                        else:
+                            self.links_db["metadata"]["rejected_count"] += 1
+
+                # 更新审核理由
+                if review_reason is not None:
+                    video["review_reason"] = review_reason
+
+                self._save_links_database()
+                from pathlib import Path
+                logger.info(f"✅ 已更新视频记录: {Path(old_path).name} -> approved={approved}")
+                return True
+
+        logger.warning(f"⚠️ 未找到视频路径: {old_path}")
         return False
 
 

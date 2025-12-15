@@ -109,7 +109,7 @@ def filter_already_processed(videos: list, downloader: VideoDownloader) -> list:
     skipped = len(videos) - len(new_videos)
     if skipped > 0:
         print(f"⏭️ 跳过 {skipped} 个已下载的视频（包括在ai_check_errors中的）")
-     if error_count > 0:
+    if error_count > 0:
         print(f"   💡 ai_check_errors 中有 {error_count} 个视频可用 retry_review.py 重新审核")
 
     return new_videos

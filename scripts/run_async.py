@@ -6,8 +6,8 @@ if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8')
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
-import asyncio, json, time, argparse, logging
-from config.search_config import ENABLE_AI_REVIEW, STRICT_MODE, AUTO_DELETE_REJECTED, AI_REVIEW_WORKERS
+import asyncio, json, time, argparse, logging, shutil
+from config.search_config import ENABLE_AI_REVIEW, STRICT_MODE, FILTER_MODE, AUTO_DELETE_REJECTED, AI_REVIEW_WORKERS
 from backend.downloader import VideoDownloader
 from backend.content_filter import ContentFilter
 logging.basicConfig(level=logging.INFO)
@@ -44,21 +44,68 @@ class AsyncVideoProcessor:
             video_info = download_result['video_info']
             try:
                 logger.info(f"[{index}/{total}] Reviewing...")
-                review_result = await self.content_filter.check_video_content(video_path, strict_mode=STRICT_MODE)
+                review_result = await self.content_filter.check_video_content(video_path, strict_mode=STRICT_MODE, filter_mode=FILTER_MODE)
                 self.stats['reviewed'] += 1
-                approved = review_result.get('pass', False)
-                if approved:
-                    self.stats['approved'] += 1
+
+                # 检查是否是AI解析错误或系统错误
+                is_parsing_error = review_result.get('parsing_error', False)
+                is_system_error = "error" in review_result or "异常" in review_result.get("reason", "")
+
+                if is_parsing_error or is_system_error:
+                    # 标记为待审核（approved=None），保留文件
+                    approved = None
+                    self.stats['pending'] = self.stats.get('pending', 0) + 1
+                    error_type = "AI解析异常" if is_parsing_error else "系统错误"
+                    logger.warning(f"[{index}/{total}] {error_type}: {Path(video_path).name} - 标记为待审核")
+
+                    # 移动到错误文件夹
+                    error_dir = Path("data/ai_check_errors")
+                    error_dir.mkdir(parents=True, exist_ok=True)
+                    try:
+                        target_path = error_dir / Path(video_path).name
+                        shutil.move(str(video_path), str(target_path))
+                        video_path = str(target_path)
+                        logger.info(f"       ↳ 已移至: {target_path.name}")
+                    except Exception as move_err:
+                        logger.error(f"       移动文件失败: {move_err}")
                 else:
-                    self.stats['rejected'] += 1
-                self.downloader.add_video_link(url=video_info['url'], title=video_info['title'], duration=download_result['duration'], keyword=video_info.get('search_keyword', 'Unknown'), approved=approved, review_reason=review_result.get('reason', ''), video_path=video_path)
-                if not approved and AUTO_DELETE_REJECTED:
-                    Path(video_path).unlink(missing_ok=True)
+                    # 正常审核结果
+                    approved = review_result.get('pass', False)
+                    if approved:
+                        self.stats['approved'] += 1
+                    else:
+                        self.stats['rejected'] += 1
+                        # 只删除正常拒绝的视频，不删除错误视频
+                        if AUTO_DELETE_REJECTED:
+                            Path(video_path).unlink(missing_ok=True)
+
+                # 入库
+                self.downloader.add_video_link(
+                    url=video_info['url'],
+                    title=video_info['title'],
+                    duration=download_result['duration'],
+                    keyword=video_info.get('search_keyword', 'Unknown'),
+                    approved=approved,
+                    review_reason=review_result.get('reason', ''),
+                    video_path=video_path
+                )
                 return {'approved': approved}
             except Exception as e:
                 self.stats['review_failed'] += 1
                 logger.error(f"[{index}/{total}] Review failed: {e}")
-                return {'approved': False}
+                import traceback
+                traceback.print_exc()
+                # 审核失败时，标记为待审核并保留视频
+                self.downloader.add_video_link(
+                    url=video_info['url'],
+                    title=video_info['title'],
+                    duration=download_result['duration'],
+                    keyword=video_info.get('search_keyword', 'Unknown'),
+                    approved=None,
+                    review_reason=f"审核异常: {str(e)}",
+                    video_path=video_path
+                )
+                return {'approved': None}
     
     async def process_video_pipeline(self, video_info, index, total):
         download_result = await self.download_video(video_info, index, total)
@@ -81,6 +128,8 @@ class AsyncVideoProcessor:
         print(f"Downloaded: {self.stats['downloaded']} | Skipped: {self.stats['skipped']} | Failed: {self.stats['download_failed']}")
         if self.content_filter:
             print(f"Reviewed: {self.stats['reviewed']} | Approved: {self.stats['approved']} | Rejected: {self.stats['rejected']}")
+            if self.stats.get('pending', 0) > 0:
+                print(f"⏳ Pending (AI errors): {self.stats['pending']}")
             if self.stats['reviewed'] > 0:
                 print(f"Approval Rate: {self.stats['approved'] / self.stats['reviewed'] * 100:.1f}%")
 
