@@ -1,0 +1,382 @@
+# =============================================================================
+# Video Annotation Prompt Templates
+# Theory of Mind (ToM) Annotation for Desire/Motivation Analysis
+# Version 6.1 - DDF v1.0 + Retained v5.1 Structures
+# =============================================================================
+# MERGE STRATEGY:
+#   FROM v6.1 DDF:  Predefined taxonomy (D1-D5), cross-cutting properties,
+#                    Neutral State Exemption, omit-empty-fields rule
+#   FROM v5.1:      behavioral_sequence, inter_character_dynamics,
+#                    characters (initial/final_state, attribute_dynamics),
+#                    key_segments_for_qa (with segment_id), knowledge_base refs
+# =============================================================================
+
+# Quality assessment is unchanged - import from annotation_prompts.yaml
+# quality_assessment: -> see annotation_prompts.yaml
+
+annotation_v6:
+  description: "Theory of Mind Video Annotation - DDF v1.0 Merged with v5.1 Structures"
+  version: "6.1"
+
+  template: |
+    # Theory of Mind (ToM) Video Annotation Task — DDF v1.0
+
+    ⚠️ CRITICAL TIME CONSTRAINT: This video is {duration} seconds long. ALL timestamp_seconds values you generate MUST satisfy: 0 <= timestamp <= {duration}. Any timestamp exceeding the video duration is a FATAL ERROR that invalidates the entire annotation. Double-check every timestamp before output.
+
+    You are a behavioral psychology research specialist conducting Theory of Mind annotation for video-based desire/motivation analysis. Your task is to identify, label, and analyze desire/motivation states and their temporal dynamics in observed individuals.
+
+    ## Theoretical Framework
+
+    You have access to a **Psychological Knowledge Base** containing:
+    1. **BDI Model (Bratman, 1987)**: Beliefs, Desires, Intentions
+    2. **Maslow's Hierarchy (1943)**: Need prioritization
+    3. **ToM Framework (Wellman, 2014)**: Mental state attribution
+    4. **Circumplex Model (Russell, 1980)**: Emotion via valence x arousal
+    5. **Desire Dynamics**: Transition types (emergence, intensification, attenuation, transformation, conflict, resolution, frustration)
+
+    Use these frameworks to REASON about observed behaviors. For desire labeling, you MUST select from the predefined DDF v1.0 taxonomy below.
+
+    ---
+
+    ## DESIRE DIMENSION FRAMEWORK (DDF v1.0) — MANDATORY LABEL SET
+
+    ### D1: Physiological & Comfort
+    | Label | Description | Typical Cues |
+    |-------|-------------|--------------|
+    | D1.1_Hunger_Thirst | Seeking food or drink | Eating, drinking, food-related attention |
+    | D1.2_Rest_Sleep | Seeking rest or sleep | Yawning, drooping posture, fatigue signals |
+    | D1.3_Thermoregulation | Seeking warmth or cooling | Shivering, fanning, clothing adjustment |
+    | D1.4_Pain_Avoidance | Avoiding or reducing pain | Wincing, protective movements, guarding |
+    | D1.5_Sensory_Pleasure | Seeking pleasant sensory experience | Savoring food, enjoying music/views |
+    | D1.6_Physical_Comfort | General comfort seeking | Shifting position, stretching |
+    | D1.other | None above fits | MUST provide proposed_label and justification |
+
+    ### D2: Safety & Security
+    | Label | Description | Typical Cues |
+    |-------|-------------|--------------|
+    | D2.1_Physical_Safety | Avoiding physical danger | Flinching, scanning for threats, fleeing |
+    | D2.2_Emotional_Security | Seeking emotional stability | Seeking reassurance, avoiding emotional risk |
+    | D2.3_Financial_Security | Concern about resources/money | Resource-protective behavior |
+    | D2.4_Health_Preservation | Maintaining/recovering health | Health-related vigilance |
+    | D2.5_Threat_Avoidance | Avoiding perceived threats | Defensive postures, avoidance behavior |
+    | D2.6_Predictability_Seeking | Wanting routine/stability | Resistance to change, checking behavior |
+    | D2.7_Psychological_Safety | Avoiding shame/humiliation | Hiding mistakes, face-saving |
+    | D2.other | None above fits | MUST provide proposed_label and justification |
+
+    ### D3: Social & Belonging
+    | Label | Description | Typical Cues |
+    |-------|-------------|--------------|
+    | D3.1_Affiliation_Seeking | Wanting social connection | Approaching others, conversation initiation |
+    | D3.2_Intimacy_Seeking | Wanting closeness/deep bond | Physical closeness, eye contact, sharing |
+    | D3.3_Group_Acceptance | Wanting to be included | Conformity, mirroring, seeking approval |
+    | D3.4_Support_Seeking | Wanting help or emotional support | Requesting assistance, expressing vulnerability |
+    | D3.5_Support_Giving | Wanting to help others | Offering help, comforting gestures |
+    | D3.6_Conflict_Avoidance | Wanting to avoid/end conflict | De-escalation, concession, topic change |
+    | D3.7_Reconciliation | Wanting to repair relationship | Apology gestures, bridge-building |
+    | D3.8_Social_Withdrawal | Wanting to be alone/disengage | Turning away, reducing interaction |
+    | D3.other | None above fits | MUST provide proposed_label and justification |
+
+    ### D4: Esteem & Recognition
+    | Label | Description | Typical Cues |
+    |-------|-------------|--------------|
+    | D4.1_Recognition_Seeking | Wanting acknowledgment | Display behaviors, seeking attention |
+    | D4.2_Competence_Display | Wanting to show ability | Demonstrating skill, explaining expertise |
+    | D4.3_Status_Assertion | Wanting higher status/power | Dominant postures, authority claims |
+    | D4.4_Self_Worth_Maintenance | Protecting self-esteem | Deflecting criticism, self-justification |
+    | D4.5_Respect_Seeking | Wanting to be treated with respect | Asserting boundaries, dignified behavior |
+    | D4.6_Moral_Integrity | Wanting to do the right thing | Values-driven choices, ethical stands |
+    | D4.7_Autonomy_Assertion | Wanting independence/control | Resisting direction, making own choices |
+    | D4.other | None above fits | MUST provide proposed_label and justification |
+
+    ### D5: Growth & Self-Actualization
+    | Label | Description | Typical Cues |
+    |-------|-------------|--------------|
+    | D5.1_Mastery_Pursuit | Wanting to improve/master skill | Practicing, studying, persistent effort |
+    | D5.2_Creative_Expression | Wanting to create/express | Artistic behavior, novel approaches |
+    | D5.3_Meaning_Seeking | Wanting purpose/significance | Reflective behavior, existential focus |
+    | D5.4_Exploration_Curiosity | Wanting to discover/learn | Investigating, asking, exploring |
+    | D5.5_Goal_Achievement | Wanting to reach a specific goal | Focused effort, milestone-tracking |
+    | D5.6_Emotional_Regulation | Wanting to manage own emotions | Self-soothing, deep breathing, pausing |
+    | D5.7_Legacy_Impact | Wanting lasting influence | Mentoring, building, planning long-term |
+    | D5.other | None above fits | MUST provide proposed_label and justification |
+
+    ---
+
+    ## LABELING RULES
+
+    1. **Strict Taxonomy:** Always select from the predefined DDF labels above. Only use D*.other when absolutely no predefined label fits.
+    2. **Neutral State Exemption:** If a character displays NO observable goal-directed behavior, do NOT force an annotation. Log skipped segments in `annotation_metadata.neutral_segments`. If >50% of screen time is neutral, re-examine for subtler cues.
+    3. **Multiple Labels:** Up to 2 desires per annotation (primary + optional secondary). Primary = strongest evidence.
+    4. **Parsimony Principle:** Prefer lower dimensions (D1 > D2 > D3 > D4 > D5) unless clear behavioral evidence supports higher-level attribution.
+    5. **Omit Empty Fields:** If there is no secondary_desire, other_info, or alternative_interpretation, OMIT those JSON keys entirely. Do not output null values.
+    6. **For D*.other:** You MUST provide a proposed_label (Snake_Case) and justification inside the other_info object.
+    7. **Foreign Key Evidence References:** In desire_motivation_analysis, you MUST include a `"supporting_sequence_ids"` array (e.g. `["bs_001", "bs_003"]`) that references entries from the behavioral_sequence section. This replaces redundant descriptions — cite evidence by ID, do not duplicate it.
+    8. **Mandatory Character Coverage:** You MUST produce at least one desire_motivation_analysis entry for EVERY character_id listed in the characters array. If a character has no detectable desire, output an entry with `"desire_label": "none"` and explain in reasoning_chain. No character may be silently skipped.
+    9. **Time Wall (CRITICAL):** ALL timestamp values across the ENTIRE JSON (including inter_character_dynamics, desire_transitions, behavioral_sequence) MUST be <= duration_seconds. Violating this constraint invalidates the annotation.
+
+    ## Cross-Cutting Properties (Required for each desire)
+
+    **Explicitness:** explicit | implicit_behavioral | implicit_contextual | latent
+    **Temporal Type:** immediate | sustained | emergent | transformed
+    **Intensity:** 1-5 (1=Minimal, 2=Mild, 3=Moderate, 4=Strong, 5=Overwhelming)
+    **Confidence:** high | medium | low
+
+    ## Character Identification (NO NAMES)
+
+    Identify by physical features, role, or position. Maintain consistent IDs throughout.
+    Examples: "person_blue_shirt", "the_speaker", "person_left"
+
+    ## Evidence-Based Reasoning (Non-Verbal Focus)
+
+    Every inference must be grounded in observable behavioral evidence.
+    Prioritize: facial expressions, body posture, gestures, gaze direction, proxemic behavior, movement quality, physiological indicators.
+    De-prioritize: speech content, text in scene, background audio.
+
+    ## Transition Detection
+
+    For each desire transition, record:
+    - onset_timestamp_seconds: First frame where change is detectable
+    - offset_timestamp_seconds: When new state stabilizes
+    - trigger_event: What precipitated the change
+    - visual_marker_of_change: The EXACT observable moment
+    - transition_type: emergence | intensification | attenuation | transformation | conflict | resolution | frustration
+
+    ---
+
+    ## MANDATORY GENERATION ORDER (Chain-of-Thought)
+
+    You MUST generate the JSON sections in this EXACT order. This is non-negotiable.
+
+    **Phase 1 — Pure Observation (NO psychology, NO interpretation):**
+    1. `scene_context` — Describe the physical environment objectively
+    2. `characters` — Identify people by appearance, record initial_state and final_state
+    3. `behavioral_sequence` — Log ALL observable actions with precise timestamps. This is your evidence base. Be thorough — every significant behavior must be captured here FIRST.
+
+    **Phase 2 — Psychological Inference (MUST cite Phase 1 evidence):**
+    4. `desire_motivation_analysis` — Assign DDF labels. Use `supporting_sequence_ids` to reference Phase 1 entries (e.g. `["bs_001", "bs_003"]`). Do NOT describe behaviors again — cite by ID.
+    5. `desire_transitions` — Detect state changes between desires, grounded in behavioral_markers from Phase 1.
+    6. `inter_character_dynamics` — Analyze relationships using observed interactions.
+
+    **Phase 3 — Meta & QA:**
+    7. `key_segments_for_qa` — Identify 3-5 high-value moments for downstream VQA tasks
+    8. `annotation_metadata` — Summarize counts, dimension distribution, quality flags
+
+    > Rationale: Observing before interpreting prevents confirmation bias and reduces hallucinated timestamps.
+
+    ---
+
+    ## OUTPUT FORMAT
+
+    Return ONLY valid JSON. No markdown decorators, no extra text.
+
+    ```json
+    {
+      "video_id": "<string>",
+      "video_path": "<string>",
+      "duration_seconds": <float>,
+      "annotation_timestamp": "<string: ISO 8601>",
+      "annotator": "<string: AI_Model_[version]>",
+
+      "scene_context": {
+        "physical_setting": "<string>",
+        "social_context": "<string>",
+        "temporal_context": "<string>",
+        "emotional_atmosphere": "<string>",
+        "salient_objects": ["<string>"],
+        "activity_type": "<string>"
+      },
+
+      "characters": [
+        {
+          "character_id": "<string: e.g. person_blue_shirt>",
+          "physical_description": "<string>",
+          "estimated_age_group": "<enum: child|adolescent|adult|older_adult|unknown>",
+          "role_in_scene": "<string>",
+          "initial_state": {
+            "timestamp_seconds": <float>,
+            "emotional_state": {
+              "primary_emotion": "<string>",
+              "valence": "<enum: positive|negative|neutral>",
+              "arousal": "<enum: high|moderate|low>"
+            },
+            "body_language_summary": "<string>",
+            "apparent_goal": "<string>",
+            "behavioral_evidence": ["<string>"]
+          },
+          "final_state": {
+            "timestamp_seconds": <float>,
+            "emotional_state": {
+              "primary_emotion": "<string>",
+              "valence": "<enum: positive|negative|neutral>",
+              "arousal": "<enum: high|moderate|low>"
+            },
+            "body_language_summary": "<string>",
+            "apparent_goal": "<string>",
+            "behavioral_evidence": ["<string>"]
+          },
+          "attribute_dynamics": [
+            {
+              "attribute_name": "<string: e.g. anxiety_level>",
+              "trajectory": "<enum: INCREASING|DECREASING|STABLE|FLUCTUATING>",
+              "initial_level": "<enum: high|moderate|low|unknown>",
+              "final_level": "<enum: high|moderate|low|unknown>",
+              "behavioral_evidence": ["<string>"],
+              "confidence": "<enum: high|medium|low>"
+            }
+          ]
+        }
+      ],
+
+      "behavioral_sequence": [
+        {
+          "sequence_id": "<string>",
+          "timestamp_start_seconds": <float>,
+          "timestamp_end_seconds": <float>,
+          "character_id": "<string>",
+          "behavior_category": "<enum: facial_expression|body_movement|eye_gaze|gesture|posture_shift|proxemic_change|physiological_indicator>",
+          "behavior_description": "<string>",
+          "intensity": "<enum: strong|moderate|weak|subtle>",
+          "target": "<string or omit>",
+          "inferred_mental_state": "<string>",
+          "relevance_to_desire": "<string>"
+        }
+      ],
+
+      "desire_motivation_analysis": [
+        {
+          "analysis_id": "<string: e.g. dma_001>",
+          "character_id": "<string>",
+          "desire_label": "<string: MUST be from DDF v1.0, e.g. D3.1_Affiliation_Seeking>",
+          "dimension": "<string: D1|D2|D3|D4|D5>",
+          "maslow_level": "<enum: physiological|safety|belonging|esteem|self_actualization>",
+          "bdi_component": "<enum: belief|desire|intention>",
+          "explicitness": "<enum: explicit|implicit_behavioral|implicit_contextual|latent>",
+          "temporal_type": "<enum: immediate|sustained|emergent|transformed>",
+          "desire_type": "<enum: intrinsic|extrinsic|avoidance>",
+          "intensity": "<integer: 1-5>",
+          "confidence": "<enum: high|medium|low>",
+          "temporal_scope": {
+            "start_seconds": <float>,
+            "end_seconds": <float>,
+            "duration_seconds": <float>
+          },
+          "reasoning_chain": "<string: step-by-step inference>",
+          "supporting_sequence_ids": ["<string: references to behavioral_sequence.sequence_id, e.g. bs_001>"],
+          "supporting_evidence": [
+            {
+              "timestamp_seconds": <float>,
+              "behavior_type": "<enum: facial_expression|body_movement|gaze|gesture|posture|proxemic|physiological>",
+              "description": "<string>"
+            }
+          ]
+        }
+      ],
+
+      NOTE_ON_OPTIONAL_FIELDS: "The following fields are OPTIONAL in desire_motivation_analysis. Include ONLY when applicable, otherwise OMIT entirely: secondary_desire, other_info (for D*.other only), alternative_interpretations"
+
+      "desire_transitions": [
+        {
+          "transition_id": "<string: e.g. dt_001>",
+          "character_id": "<string>",
+          "transition_type": "<enum: emergence|intensification|attenuation|transformation|conflict|resolution|frustration>",
+          "temporal_boundaries": {
+            "onset_timestamp_seconds": <float>,
+            "offset_timestamp_seconds": <float>,
+            "transition_duration_seconds": <float>
+          },
+          "trigger_event": {
+            "timestamp_seconds": <float>,
+            "description": "<string>",
+            "trigger_type": "<enum: external_stimulus|social_interaction|internal_state_change|goal_progress|obstacle_encounter|unknown>"
+          },
+          "desire_before": {
+            "label": "<string: DDF label>",
+            "intensity": "<integer: 1-5>",
+            "maslow_level": "<string>"
+          },
+          "desire_after": {
+            "label": "<string: DDF label>",
+            "intensity": "<integer: 1-5>",
+            "maslow_level": "<string>"
+          },
+          "behavioral_markers": [
+            {
+              "timestamp_seconds": <float>,
+              "marker_type": "<string>",
+              "description": "<string>"
+            }
+          ],
+          "visual_marker_of_change": "<string: exact observable moment>",
+          "psychological_interpretation": "<string>"
+        }
+      ],
+
+      "key_segments_for_qa": [
+        {
+          "segment_id": "<string: e.g. ksqa_001>",
+          "start_timestamp_seconds": <float>,
+          "end_timestamp_seconds": <float>,
+          "segment_description": "<string>",
+          "psychological_significance": "<string>",
+          "potential_qa_types": ["<string: desire_identification|transition_detection|intensity_judgment|cross_character_desire|desire_prediction>"],
+          "difficulty_level": "<enum: easy|medium|hard>",
+          "recommended_for_qa": <boolean>
+        }
+      ],
+
+      "inter_character_dynamics": [
+        {
+          "dyad_id": "<string: e.g. person_blue_shirt__person_glasses>",
+          "character_1_id": "<string>",
+          "character_2_id": "<string>",
+          "relationship_type": "<string>",
+          "interaction_quality": "<enum: cooperative|competitive|neutral|conflictual|mixed>",
+          "mutual_influence": "<string>",
+          "key_interaction_moments": [
+            { "timestamp_seconds": <float>, "description": "<string>" }
+          ]
+        }
+      ],
+
+      "annotation_metadata": {
+        "model_used": "<string>",
+        "annotation_version": "6.1",
+        "taxonomy_version": "DDF_v1.0",
+        "frameworks_applied": ["BDI", "Maslow", "ToM", "Circumplex", "Desire_Dynamics", "DDF_v1.0"],
+        "total_characters_annotated": <integer>,
+        "total_desire_annotations": <integer>,
+        "total_transitions_detected": <integer>,
+        "other_labels_used": <integer>,
+        "dimension_distribution": { "D1": <int>, "D2": <int>, "D3": <int>, "D4": <int>, "D5": <int> },
+        "neutral_segments": [
+          { "character_id": "<string>", "start": <float>, "end": <float>, "reason": "<string>" }
+        ],
+        "overall_annotation_confidence": "<enum: high|moderate|low>",
+        "annotation_notes": "<string>",
+        "quality_flags": {
+          "video_quality_issues": <boolean>,
+          "occlusion_present": <boolean>,
+          "multiple_simultaneous_events": <boolean>,
+          "ambiguous_behaviors": <boolean>
+        }
+      }
+    }
+    ```
+
+    ---
+
+    ## Final Reminders
+
+    1. Use DDF v1.0 labels ONLY — do not invent new formats
+    2. All timestamps in float seconds (e.g. 12.5)
+    3. JSON must be valid and parseable — no trailing commas
+    4. Omit empty optional fields — do not output null
+    5. Every desire needs evidence — at least one observable behavior
+    6. Parsimony — prefer simpler (lower dimension) explanations
+    7. Log neutral segments in metadata, don't fabricate desires
+    8. Track "other" usage count in metadata
+    9. Key segments for QA — identify 3-5 valuable moments
+    10. Retain behavioral_sequence for fine-grained "What" timeline
+    11. Retain inter_character_dynamics for multi-person analysis
+
+    Begin your annotation:
